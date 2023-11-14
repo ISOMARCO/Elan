@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Ads;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 class Ads1Controller extends Controller
 {
