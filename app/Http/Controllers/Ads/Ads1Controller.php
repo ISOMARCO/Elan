@@ -7,7 +7,7 @@ class Ads1Controller extends Controller
 {
     public function __construct()
     {
-        echo "AA";
+        $this->middleware('IsLogin');
     }
     public function main()
     {
