@@ -13,15 +13,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('Home');
-
-Route::get('/home', function() {
-    return view('Frontend.Home.main');
-});
-
-Route::get('/login', function() {
-    return view('Frontend.Login.main');
-});
-Route::get('register', function() {
-    return view('Frontend.Login.main');
-});
+Route::get('/', [HomeController::class, 'main'])->name('Home');
+Route::get('/home', [HomeController::class, 'main'])->name('Home');
+Route::get('/login', [LoginController::class, 'main'])->name('Login');
+Route::get('register', [LoginController::class, 'main'])->name('Login');
