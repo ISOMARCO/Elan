@@ -7,7 +7,10 @@ class HomeController extends Controller
 {
     public function main()
     {
-        print_r(Users::where("Id", '1')->first());
+        foreach(Users::where("Id", '1')->get() as $value)
+        {
+            echo $value->Name." ".$value->Surname."<br>";
+        }
         return view('Frontend.Home.main');
     }
 }
