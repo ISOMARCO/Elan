@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-class Users
+class Users extends Model
 {
     protected  $table = "Users";
     public $timestamps = false;
