@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-class AdsController extends Controller
+class Ads1Controller extends Controller
 {
     public function main()
     {
