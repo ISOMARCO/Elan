@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\AdsController;
+use App\Http\Controllers\Ads\AdsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
