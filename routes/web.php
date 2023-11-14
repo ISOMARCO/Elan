@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Ads\AdsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,4 @@ Route::get('/', [HomeController::class, 'main'])->name('Home');
 Route::get('/home', [HomeController::class, 'main'])->name('Home');
 Route::get('/login', [LoginController::class, 'main'])->name('Login');
 Route::get('/register', [LoginController::class, 'main'])->name('Login');
+Route::get('/demo', [AdsController::class, 'main'])->name("Demo");
