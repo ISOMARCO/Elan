@@ -7,7 +7,7 @@ class LoginController extends Controller
     public function main()
     {
         $users = new Users();
-        $users->insertUser();
+        $users->deleteUser();
         return view('Frontend.Login.main');
     }
 }

@@ -9,12 +9,16 @@ use Illuminate\Support\Facades\DB;
 class Users extends Model
 {
     use HasFactory;
-    public function insertUser() : bool
+    public function insertUser() : void
     {
         DB::table('Users')->insert([
             'Name' => 'Ismayil',
             'Surname' => 'Nagiyev'
         ]);
-        return false;
+    }
+
+    public function deleteUser() : void
+    {
+        return DB::table('Users')->where('Id', '=', '1')->delete();
     }
 }
