@@ -109,6 +109,7 @@
     </div>
 </section>
 </body>
+@include('Frontend.Login.Sections.footer')
 <script>
     $(document).ready(function(){
         alert(window.location.hash);
@@ -119,5 +120,4 @@
         }
     });
 </script>
-@include('Frontend.Login.Sections.footer')
 </html>
