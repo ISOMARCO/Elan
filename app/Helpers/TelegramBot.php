@@ -15,6 +15,11 @@ class TelegramBot
         return $this;
     }
 
+    public function demo()
+    {
+        return "OKEY";
+    }
+
     private function request($method, $posts = [], $file = false)
     {
         if($file)
