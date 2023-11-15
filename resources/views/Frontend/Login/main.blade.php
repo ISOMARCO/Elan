@@ -55,6 +55,7 @@
                         </div>
                     </div>
                 </div>
+                @csrf
             </form>
             <div class="user-form-direction"><p>Don't have an account? click on the <span>( sign up )</span>button
                     above.</p></div>
