@@ -20,7 +20,7 @@
             <div class="header-left">
                 <button type="button" class="header-widget sidebar-btn"><i class="fas fa-align-left"></i></button>
                 <a href="index.html" class="header-logo"><img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo"></a><a
-                    href="{{url('/login')}}" class="header-widget header-user"><img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user"><span>join me</span></a>
+                    href="{{url('/login')}}" class="header-widget header-user"><img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user"><span>Login / Register</span></a>
                 <button type="button" class="header-widget search-btn"><i class="fas fa-search"></i></button>
             </div>
             <form class="header-form">
