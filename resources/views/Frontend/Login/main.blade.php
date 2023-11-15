@@ -110,4 +110,9 @@
 </section>
 </body>
 @include('Frontend.Login.Sections.footer')
+<script>
+    $(document).ready(function(){
+       alert("OK");
+    });
+</script>
 </html>
