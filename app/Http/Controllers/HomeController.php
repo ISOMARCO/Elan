@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function main()
     {
-        $telegram = TelegramBot();
+        $telegram = new TelegramBot();
         echo $telegram->demo();
         return view('Frontend.Home.main');
     }
