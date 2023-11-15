@@ -111,6 +111,7 @@
 </body>
 @include('Frontend.Login.Sections.footer')
 <script>
+    alert({{ request()->routeIs('Register') ? 'active' : 'not active' }});
     $(document).ready(function(){
         if(window.location.hash == '#register-tab' || {{ request()->routeIs('Register') ? 'active' : 'not_active' }} == 'active')
         {
