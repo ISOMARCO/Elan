@@ -18,7 +18,7 @@ class IsLogin
         $session = 1;
         if($session)
         {
-            return false;
+            echo $request." ".$next;
         }
         return $next($request);
     }
