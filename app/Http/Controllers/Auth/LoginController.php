@@ -10,4 +10,9 @@ class LoginController extends Controller
         $users->deleteUser();
         return view('Frontend.Login.main');
     }
+
+    public function loginAction()
+    {
+        echo "OK";
+    }
 }
