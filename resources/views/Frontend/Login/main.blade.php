@@ -115,10 +115,10 @@
         alert(window.location.hash);
         if(window.location.hash == '#register-tab')
         {
-            $("#login-tab").removeClass("active");
-            $("#register-tab").addClass("active");
-            $("#login_li").removeClass("active");
-            $("#register_li").addClass("active");
+            $("#login-tab, #login_li").removeClass("active");
+            $("#register-tab, #register_li").addClass("active");
+            //$("#login_li").removeClass("active");
+            //$("#register_li").addClass("active");
         }
     });
 </script>
