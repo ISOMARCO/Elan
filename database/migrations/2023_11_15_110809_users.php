@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('Users', function (Blueprint $table) {
             $table->id('Id');
-            $table->string('Name', 50);
-            $table->string('Surname', 50);
-            $table->tinyInteger('Status')->default(0);
-            $table->timestamps();
+            $table->string('Name', 50)->nullable();
+            $table->string('Surname', 50)->nullable();
+            $table->enum('Is_Active', ['ACTIVE', 'BAN'])->default('ACTIVE');
+            $table->string('Password', 255)->nullable();
+            $table->string('Phone', 25)->nullable();
         });
     }
 
