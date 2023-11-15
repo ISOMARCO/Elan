@@ -18,7 +18,7 @@ class IsLogin
         $session = 1;
         if($session)
         {
-            return redirect()->route('Home');
+            return false;
         }
         return $next($request);
     }
