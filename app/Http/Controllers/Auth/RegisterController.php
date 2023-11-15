@@ -7,5 +7,5 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    //
+    return view('Frontend.Login.main');
 }
