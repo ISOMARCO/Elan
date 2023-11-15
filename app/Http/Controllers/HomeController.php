@@ -9,7 +9,7 @@ class HomeController extends Controller
     public function main()
     {
         $telegram = new TelegramBot();
-        echo $telegram->demo();
+        echo $telegram->setWebhook();
         return view('Frontend.Home.main');
     }
 }

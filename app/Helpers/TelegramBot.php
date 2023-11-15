@@ -3,7 +3,7 @@ namespace App\Helpers;
 class TelegramBot
 {
     const API_URL = 'https://api.telegram.org/bot';
-    private $token = '6604390062:AAGqb2pLJ_uiKLF9Xhgi3U-sZW496JDw7k4';
+    private $token = '6724022422:AAHXw3Zg0tBCslFrco-3bi8nPTECUWzhdbg';
     public $chatId = NULL;
     protected $userId = NULL;
     protected $file_path = NULL;

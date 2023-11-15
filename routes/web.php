@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Media\TelegramWebhookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,4 @@ Route::post('/login/loginAction', [LoginController::class, 'loginAction']);
 Route::get('/login/loginAction', [LoginController::class, 'loginAction']);
 Route::get('/login', [LoginController::class, 'main'])->name('Login');
 Route::get('/register', [RegisterController::class, 'main'])->name('Register');
+Route::get('/telegram_webhook', [TelegramWebhookController::class, 'main']);
