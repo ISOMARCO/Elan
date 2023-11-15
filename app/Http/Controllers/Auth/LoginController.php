@@ -14,7 +14,7 @@ class LoginController extends Controller
     public function loginAction(Request $request) : void
     {
         if ($request->ajax() || $request->wantsJson()) {
-            echo "OK";
+            dd('ok');
         } else {
             abort(403, 'Unauthorized');
         }
