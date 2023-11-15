@@ -122,9 +122,7 @@
             $.ajax({
                 type: "post",
                 url: "{{url('/login/loginAction')}}",
-                data: {
-                  '_token' : {{csrf_token()}}
-                },
+                data: $("#login_form").serialize(),
                 success: function(e)
                 {
                     alert(e);
