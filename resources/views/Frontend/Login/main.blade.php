@@ -127,6 +127,7 @@
                 success: function(e)
                 {
                     alert(e.ok);
+                    window.location.href = "{{route("Home")}}";
                 }
             });
         });
