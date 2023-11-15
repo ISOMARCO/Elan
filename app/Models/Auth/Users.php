@@ -15,6 +15,6 @@ class Users extends Model
             'Name' => 'Ismayil',
             'Surname' => 'Nagiyev'
         ]);
-        return true;
+        return false;
     }
 }
