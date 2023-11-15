@@ -5,6 +5,7 @@
 </head>
 <body>
 @include('Frontend.Login.Sections.header')
+{{Route::is()}}
 <section class="user-form-part">
     <div class="user-form-banner">
         <div class="user-form-content"><a href="#"><img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo"></a>
