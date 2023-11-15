@@ -6,7 +6,7 @@ class LoginController extends Controller
 {
     public function main()
     {
-        echo Route::is();
+        echo request()->route()->getName();
         return view('Frontend.Login.main');
     }
 }
