@@ -120,7 +120,11 @@
         $("#login_btn").on("click", function() {
             $.ajax({
                 type: "post",
-                url: "{{url('/login')}}"
+                url: "{{url('/login/loginAction')}}",
+                success: function(e)
+                {
+                    alert(e);
+                }
             });
         });
     });
