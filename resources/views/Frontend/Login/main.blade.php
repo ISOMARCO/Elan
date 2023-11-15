@@ -111,6 +111,7 @@
 </body>
 <script>
     $(document).ready(function(){
+        alert(window.location.hash);
         if(window.location.hash == '#register-tab')
         {
             $("#login-tab").removeClass("active");
