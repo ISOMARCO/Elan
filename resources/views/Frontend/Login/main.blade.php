@@ -123,9 +123,10 @@
                 type: "post",
                 url: "{{url('login/loginAction')}}",
                 data: $("#login_form").serialize(),
+                dataType: "json",
                 success: function(e)
                 {
-                    alert(e);
+                    alert(e.ok);
                 }
             });
         });
