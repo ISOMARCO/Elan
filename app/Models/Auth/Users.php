@@ -19,6 +19,6 @@ class Users extends Model
 
     public function deleteUser() : void
     {
-        return DB::table('Users')->where('Id', '=', '1')->delete();
+        DB::table('Users')->where('Id', '=', '1')->delete();
     }
 }
