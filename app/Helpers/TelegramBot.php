@@ -58,10 +58,6 @@ class TelegramBot
             return 'Error:' . curl_error($ch);
         }
         curl_close($ch);
-        DB::insert('logs', [
-            'Text' => $result,
-            'Line' => '62'
-        ]);
         return json_decode($result);
     }
 
@@ -140,10 +136,6 @@ class TelegramBot
                 $this->userId = $data['message']['from']['id'];
             }
         }
-        DB::insert('logs', [
-            'Text' => json_encode($data, true),
-            'Line' => '122'
-        ]);
         return $data;
     }
 
@@ -154,10 +146,6 @@ class TelegramBot
             $data['chat_id'] = $this->chatId;
         }
         $send = $this->request('sendMessage', $data);
-        DB::insert('logs', [
-            'Text' => $send,
-            'Line' => '154'
-        ]);
         return $send;
     }
 
