@@ -5,7 +5,6 @@
 </head>
 <body>
 @include('Frontend.Login.Sections.header')
-{{ request()->routeIs('Register') ? 'active' : 'not active' }}
 <section class="user-form-part">
     <div class="user-form-banner">
         <div class="user-form-content"><a href="#"><img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo"></a>
@@ -113,7 +112,7 @@
 @include('Frontend.Login.Sections.footer')
 <script>
     $(document).ready(function(){
-        if(window.location.hash == '#register-tab')
+        if(window.location.hash == '#register-tab' || {{ request()->routeIs('Register') ? 'active' : 'not_active' }} == 'active')
         {
             $("#login-tab, #login_li").removeClass("active");
             $("#register-tab, #register_li").addClass("active");
