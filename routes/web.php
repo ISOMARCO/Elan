@@ -14,7 +14,11 @@ use App\Http\Controllers\Ads\Ads1Controller;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+$session = 1;
+if($session == 1 && Route::is("Login"))
+{
+    echo "OK";
+}
 Route::get('/', [HomeController::class, 'main'])->name('Home');
 Route::get('/home', [HomeController::class, 'main'])->name('Home');
 Route::get('/login', [LoginController::class, 'main'])->name('Login');
