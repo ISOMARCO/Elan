@@ -134,5 +134,3 @@
 <script src="{{asset('Assets/Frontend/js/vendor/slick.min.js')}}"></script>
 <script src="{{asset('Assets/Frontend/js/custom/slick.js')}}"></script>
 <script src="{{asset('Assets/Frontend/js/custom/main.js')}}"></script>
-</body>
-</html>
