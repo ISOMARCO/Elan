@@ -109,13 +109,14 @@
     </div>
 </section>
 </body>
-@include('Frontend.Login.Sections.footer')
 <script>
     $(document).ready(function(){
-       if(window.location.hash == '#register')
-       {
-           alert("OK");
-       }
+        if(window.location.hash == '#register')
+        {
+            $("#login-tab").removeClass("active");
+            $("#register-tab").addClass("active");
+        }
     });
 </script>
+@include('Frontend.Login.Sections.footer')
 </html>
