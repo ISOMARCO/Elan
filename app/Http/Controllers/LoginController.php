@@ -6,8 +6,7 @@ class LoginController extends Controller
 {
     public function main()
     {
-        echo class_basename($this);
-        echo request()->route()->getName();
+        echo request()->route()->getName()."Controller";
         return view('Frontend.Login.main');
     }
 }
