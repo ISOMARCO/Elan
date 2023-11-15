@@ -17,8 +17,8 @@
         </div>
         <div class="user-form-category-btn">
             <ul class="nav nav-tabs">
-                <li><a href="#login-tab" class="nav-link active" data-toggle="tab">Sign in</a></li>
-                <li><a href="#register-tab" class="nav-link" data-toggle="tab">Sign up</a></li>
+                <li><a href="#login-tab" class="nav-link active" id="login_li" data-toggle="tab">Sign in</a></li>
+                <li><a href="#register-tab" class="nav-link" id="register_li" data-toggle="tab">Sign up</a></li>
             </ul>
         </div>
         <div class="tab-pane active" id="login-tab">
@@ -117,6 +117,8 @@
         {
             $("#login-tab").removeClass("active");
             $("#register-tab").addClass("active");
+            $("#login_li").removeClass("active");
+            $("#register_li").addClass("active");
         }
     });
 </script>
