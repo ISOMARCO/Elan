@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-inline"><i class="fas fa-unlock"></i><span>Enter your account</span></button>
+                            <button type="button" class="btn btn-inline" id="login_btn"><i class="fas fa-unlock"></i><span>Enter your account</span></button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 <li><a href="#"><i class="fab fa-google"></i><span>google</span></a></li>
             </ul>
             <div class="user-form-devider"><p>or</p></div>
-            <form>
+            <form method="post" id="register_form">
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group"><input type="text" class="form-control"
@@ -117,6 +117,12 @@
             $("#login-tab, #login_li").removeClass("active");
             $("#register-tab, #register_li").addClass("active");
         }
+        $("#login_btn").on("click", function() {
+            $.ajax({
+                type: "post",
+                url: "{{url('/login')}}"
+            });
+        });
     });
 </script>
 </html>
