@@ -121,7 +121,7 @@
         $("#login_btn").on("click", function() {
             $.ajax({
                 type: "post",
-                url: "{{url('/loginAction')}}",
+                url: "{{url('login/loginAction')}}",
                 data: $("#login_form").serialize(),
                 success: function(e)
                 {
