@@ -9,11 +9,12 @@ use Illuminate\Support\Facades\DB;
 class Users extends Model
 {
     use HasFactory;
-    public function insertUser() : void
+    public function insertUser() : bool
     {
         DB::table('Users')->insert([
             'Name' => 'Ismayil',
             'Surname' => 'Nagiyev'
         ]);
+        return true;
     }
 }
