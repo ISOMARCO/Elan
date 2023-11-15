@@ -58,7 +58,7 @@ class TelegramBot
             return 'Error:' . curl_error($ch);
         }
         curl_close($ch);
-        return json_decode($result);
+        return json_decode($result, true);
     }
 
     public function getUserProfilePhotos()
