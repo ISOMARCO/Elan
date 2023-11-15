@@ -111,9 +111,9 @@
 </body>
 @include('Frontend.Login.Sections.footer')
 <script>
-    alert("{{ request()->routeIs('Register') ? 'active' : 'not active' }}");
     $(document).ready(function(){
-        if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') ? 'active' : 'not_active' }}" == 'active')
+        alert("{{ request()->routeIs('Register') }}");
+        if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == 'register')
         {
             $("#login-tab, #login_li").removeClass("active");
             $("#register-tab, #register_li").addClass("active");
