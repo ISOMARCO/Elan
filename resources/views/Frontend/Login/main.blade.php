@@ -113,7 +113,7 @@
 <script>
     $(document).ready(function(){
         alert("{{ request()->routeIs('Register') }}");
-        if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == 'register')
+        if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
         {
             $("#login-tab, #login_li").removeClass("active");
             $("#register-tab, #register_li").addClass("active");
