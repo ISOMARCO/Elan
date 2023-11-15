@@ -1,5 +1,5 @@
 <?php
-namespace \App\Helpers;
+#namespace \App\Helpers;
 class TelegramBot
 {
     const API_URL = 'https://api.telegram.org/bot';
