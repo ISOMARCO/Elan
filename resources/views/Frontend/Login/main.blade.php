@@ -112,7 +112,10 @@
 @include('Frontend.Login.Sections.footer')
 <script>
     $(document).ready(function(){
-       alert(window.location.hash);
+       if(window.location.hash == '#register')
+       {
+           alert("OK");
+       }
     });
 </script>
 </html>
