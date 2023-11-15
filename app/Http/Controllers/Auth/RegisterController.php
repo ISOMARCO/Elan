@@ -6,5 +6,8 @@ use App\Http\Controllers\Controller;
 
 class RegisterController extends Controller
 {
-    return view('Frontend.Login.main');
+    public function main()
+    {
+        return view('Frontend.Login.main');
+    }
 }
