@@ -18,7 +18,6 @@ return new class extends Migration
             $table->enum('Is_Active', ['ACTIVE', 'BAN'])->default('ACTIVE');
             $table->string('Password', 255)->nullable();
             $table->string('Phone', 25)->nullable();
-            $table->timestamps();
         });
     }
 
