@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Authentication\LoginController;
 use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Media\TelegramWebhookController;
