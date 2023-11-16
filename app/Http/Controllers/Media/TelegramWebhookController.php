@@ -10,7 +10,7 @@ class TelegramWebhookController extends Controller
 {
     public function main()
     {
-        //$request->merge(['_token' => csrf_token()]);
+        echo "OK";
         $telegram = new TelegramBot();
         $data = $telegram->getData();
         if(!empty($data))
