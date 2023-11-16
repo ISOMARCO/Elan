@@ -61,8 +61,11 @@ class TelegramBot
             return 'Error:' . curl_error($ch);
         }
         curl_close($ch);
-        $logs = new Logs();
-        $logs->insertTelegramBotLog($result, '65');
+        if(!empty($result))
+        {
+            $logs = new Logs();
+            $logs->insertTelegramBotLog($result, '65');
+        }
         return json_decode($result, true);
     }
 
@@ -141,8 +144,11 @@ class TelegramBot
                 $this->userId = $data['message']['from']['id'];
             }
         }
-        $logs = new Logs();
-        $logs->insertTelegramBotLog(json_encode($data, true), '145');
+        if(!empty($data))
+        {
+            $logs = new Logs();
+            $logs->insertTelegramBotLog(json_encode($data, true), '145');
+        }
         return $data;
     }
 
