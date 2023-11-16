@@ -23,4 +23,4 @@ Route::get('/login/loginAction', [LoginController::class, 'loginAction']);
 Route::get('/login', [LoginController::class, 'main'])->name('Login');
 Route::get('/register', [RegisterController::class, 'main'])->name('Register');
 Route::get('/telegram_webhook', [TelegramWebhookController::class, 'main']);
-Route::post('/telegram_webhook', [TelegramWebhookController::class, 'main'])->withoutMiddleware(['VerifyCsrfToken']);
+Route::post('/telegram_webhook', [TelegramWebhookController::class, 'request'])->withoutMiddleware(['VerifyCsrfToken']);
