@@ -8,11 +8,7 @@ use Illuminate\Http\Request;
 
 class TelegramWebhookController extends Controller
 {
-    public function main()
-    {
-
-    }
-    public function request(Request $request)
+    public function main(Request $request)
     {
         $request->merge(['_token' => csrf_token()]);
         $telegram = new TelegramBot();
