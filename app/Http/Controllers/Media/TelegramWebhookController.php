@@ -15,7 +15,7 @@ class TelegramWebhookController extends Controller
             if(strtolower($data['message']['text']) == 'hello')
             {
                 $telegram->sendMessage([
-                    'text' => 'Sanada hello gardas'
+                    'text' => 'Hello'
                 ]);
             }
         }
