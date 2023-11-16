@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Users;
+use App\Models\Auth\Users;
 use App\Helpers\TelegramBot;
 class HomeController extends Controller
 {
-    public function main()
+    public function main() : string
     {
         $telegram = new TelegramBot();
         print_r($telegram->getWebhookInfo());
