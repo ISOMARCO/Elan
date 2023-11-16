@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Media\TelegramWebhookController;
@@ -22,4 +23,4 @@ Route::post('/login/loginAction', [LoginController::class, 'loginAction']);
 Route::get('/login/loginAction', [LoginController::class, 'loginAction']);
 Route::get('/login', [LoginController::class, 'main'])->name('Login');
 Route::get('/register', [RegisterController::class, 'main'])->name('Register');
-Route::match(['post', 'get'],'/telegram_webhook', [TelegramWebhookController::class, 'main'])->name('Telegram_Webhook');
+Route::match(['post', 'get'],'/telegram_webhook', [TelegramWebhookController::class, 'main'])->withoutMiddleware([VerifyCsrfToken::class]);

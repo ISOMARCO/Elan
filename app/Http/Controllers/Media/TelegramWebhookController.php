@@ -8,9 +8,6 @@ use App\Helpers\TelegramBot;
 
 class TelegramWebhookController extends Controller
 {
-    protected $middleware = [
-
-    ];
     public function main() : void
     {
         $telegram = new TelegramBot();
