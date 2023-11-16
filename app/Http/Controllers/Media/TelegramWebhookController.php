@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Media;
 
 use App\Http\Controllers\Controller;
 use App\Helpers\TelegramBot;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 
 class TelegramWebhookController extends Controller
 {
-    public function main(Request $request)
+    public function main()
     {
-        $request->merge(['_token' => csrf_token()]);
+        //$request->merge(['_token' => csrf_token()]);
         $telegram = new TelegramBot();
         $data = $telegram->getData();
         if(!empty($data))
