@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Media;
 
 use App\Http\Controllers\Controller;
 use App\Helpers\TelegramBot;
-use http\Env\Request;
+use Illuminate\Http\Request;
 
 class TelegramWebhookController extends Controller
 {
