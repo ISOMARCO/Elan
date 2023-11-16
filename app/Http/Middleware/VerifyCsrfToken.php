@@ -12,6 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        "https://laravel.iso.com.az/public/telegram_webhook"
     ];
 }
