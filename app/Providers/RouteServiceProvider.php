@@ -39,7 +39,6 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
 
             Route::middleware('authentication')
-                ->prefix('')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/Authentication/authentication.php'));
         });
