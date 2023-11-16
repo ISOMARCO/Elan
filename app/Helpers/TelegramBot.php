@@ -1,7 +1,6 @@
 <?php
 namespace App\Helpers;
 use App\Models\Logs\Logs;
-use Illuminate\Support\Facades\Log;
 
 class TelegramBot
 {
