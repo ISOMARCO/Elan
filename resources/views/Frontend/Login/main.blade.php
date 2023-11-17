@@ -166,8 +166,9 @@
                     {
                         if(e.error)
                         {
+                            alert(e.fields);
                             $.each(e.fields, function (index, value) {
-                                $("#"+e.value+" div small").html(e.error).show();
+                                $("#"+e.value+" div small").html(e.error);
                             });
                         }
                     }
