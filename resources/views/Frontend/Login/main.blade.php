@@ -73,8 +73,26 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" name="name">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Surname" name="surname">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
                             <input type="text" class="form-control" placeholder="Phone number" name="phone_number">
                             <small class="form-alert">Please follow this example - 0501234567</small>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <select class="form-control" name="gender">
+                                <option value="MALE" selected>Male</option>
+                                <option value="FEMALE">Female</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-12">
