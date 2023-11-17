@@ -166,9 +166,9 @@
                     {
                         if(e.error)
                         {
+                            $("small").hide();
                             $.each(e.fields, function (index, value)
                             {
-                                $("small").hide();
                                 $("[name='"+value+"']").siblings('small').html(e.error).addClass("alert alert-danger").show();
                             });
                         }
