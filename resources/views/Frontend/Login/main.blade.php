@@ -169,7 +169,7 @@
                             $.each(e.fields, function (index, value)
                             {
                                 //$("#"+value+" div small").html(e.error).show();
-                                $("[name='"+value+"']").siblings('small').html(e.error).show();
+                                $("[name='"+value+"']").siblings('small').html(e.error).addClass("alert alert-danger").show();
                             });
                         }
                     }
