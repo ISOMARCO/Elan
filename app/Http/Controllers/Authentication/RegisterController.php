@@ -16,7 +16,7 @@ class RegisterController extends Controller
     {
         if ($request->ajax() || $request->wantsJson())
         {
-            echo json_encode(['ok' => $request->post('email_or_phone')]);
+            echo json_encode(['ok' => $request->post('phone_number')]);
         }
         else
         {
