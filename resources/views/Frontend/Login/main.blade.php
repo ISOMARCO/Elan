@@ -140,7 +140,7 @@
             $("#register_btn").on("click", function() {
                 $.ajax({
                     type: "post",
-                    url: "{{url('/register/registerAction')}}}",
+                    url: "{{url('/register/registerAction')}}",
                     data: $("#register_form").serialize(),
                     dataType: "json",
                     success: function(e)

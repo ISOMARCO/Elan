@@ -17,7 +17,7 @@ class LoginController extends Controller
         }
         else
         {
-            abort(403, 'Unauthorized'); // Ajax isteği değilse 403 hatası fırlat
+            abort(403, 'Unauthorized');
         }
     }
 }
