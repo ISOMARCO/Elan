@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Authentication;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Authentication\Users;
 
 class RegisterController extends Controller
 {
@@ -12,7 +13,7 @@ class RegisterController extends Controller
         return view('Frontend.Login.main');
     }
 
-    public function registerAction(Request $request)
+    public function registerAction(Request $request) : void
     {
         if ($request->ajax() || $request->wantsJson())
         {
@@ -28,7 +29,28 @@ class RegisterController extends Controller
                 echo json_encode(['error' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'fields' => ['password', 'repeat_password']]);
                 exit;
             }
-            echo json_encode(['success' => 'OKEYDI']);
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+            {
+                echo json_encode(['error' => 'Email adresi doğru yazılmayıb', 'fields' => ['email']]);
+                exit;
+            }
+            $users = new Users();
+            $register = $users->registerUser([
+                'name' => $name,
+                'surname' => $surname,
+                'phone_number' => $phoneNumber,
+                'email' => $email,
+                'gender' => $gender,
+                'password' => $password
+            ]);
+            if($register)
+            {
+                echo json_encode(['success' => 'Qeydiyyatdan keçdiniz.']);
+                exit;
+            }
+            echo json_encode(['error' => 'Bilinməyən xəta', 'fields' => ['name']]);
+            exit;
+
         }
         else
         {

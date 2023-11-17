@@ -181,6 +181,7 @@
                         else if(e.success)
                         {
                             $("small").hide();
+                            alert(e.success);
                         }
                     }
                 });
