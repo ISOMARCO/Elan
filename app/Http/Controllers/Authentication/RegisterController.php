@@ -17,6 +17,16 @@ class RegisterController extends Controller
         if ($request->ajax() || $request->wantsJson())
         {
             $name = $request->post('name');
+            $surname = $request->post('surname');
+            $phoneNumber = $request->post('phone_number');
+            $gender = $request->post('gender');
+            $password = $request->post('password');
+            $repeatPassword = $request->post('repeat_password');
+            if($password != $repeatPassword)
+            {
+                echo json_encode(['error' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']);
+                exit;
+            }
         }
         else
         {
