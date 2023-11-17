@@ -172,9 +172,9 @@
                                 $("[name='"+value+"']").siblings('small').html(e.error).addClass("alert alert-danger").show();
                             });
                         }
-                        if(!e.error)
+                        elseif(e.success)
                         {
-                            alert("OK");
+                            alert(e.success);
                         }
                     }
                 });
