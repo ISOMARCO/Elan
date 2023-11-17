@@ -174,7 +174,7 @@
                         }
                         else
                         {
-                            $("small").hide();
+                            $("small").css({"display" : "none"});
                         }
                     }
                 });
