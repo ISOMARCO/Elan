@@ -36,7 +36,7 @@ class RegisterController extends Controller
             }
             $users = new Users();
             $register = $users->registerUser([
-                'name' => $name,
+                'name2' => $name,
                 'surname' => $surname,
                 'phone_number' => $phoneNumber,
                 'email' => $email,
