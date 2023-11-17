@@ -73,41 +73,44 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone number">
-                            <small class="form-alert">Please follow this example - 01XXXXXXXXX</small>
+                            <input type="text" class="form-control" placeholder="Phone number" name="phone_number">
+                            <small class="form-alert">Please follow this example - 0501234567</small>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="form-group"><input type="password" class="form-control" placeholder="Password">
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
-                            <small class="form-alert">Password must be 6 characters</small></div>
+                            <small class="form-alert">Password must be 6 characters</small>
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Repeat Password">
+                            <input type="password" class="form-control" placeholder="Repeat Password" name="repeat_password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
-                            <small class="form-alert">Password must be 6 characters</small></div>
+                            <small class="form-alert">Password must be 6 characters</small>
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="signup-check">
+                                <input type="checkbox" class="custom-control-input" id="signup-check" name="agree">
                                 <label class="custom-control-label" for="signup-check">I agree to the all <a href="#">terms & consitions</a>of bebostha.</label>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-inline">
+                            <button type="button" class="btn btn-inline" id="register_btn">
                                 <i class="fas fa-user-check"></i><span>Create new account</span>
                             </button>
                         </div>
                     </div>
                 </div>
             </form>
-            <div class="user-form-direction">
-                <p>Already have an account? click on the <span>( sign in )</span>button above.</p>
-            </div>
+{{--            <div class="user-form-direction">--}}
+{{--                <p>Already have an account? click on the <span>( Sign in )</span>button above.</p>--}}
+{{--            </div>--}}
         </div>
     </div>
 </section>
@@ -130,6 +133,19 @@
                     success: function(e)
                     {
                         console.log(e);
+                    }
+                });
+            });
+
+            $("#register_btn").on("click", function() {
+                $.ajax({
+                    type: "post",
+                    url: "{{url('/register/registerAction')}}}",
+                    data: $("#register_form").serialize(),
+                    dataType: "json",
+                    success: function(e)
+                    {
+                        alert(e);
                     }
                 });
             });

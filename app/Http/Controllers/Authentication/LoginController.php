@@ -11,9 +11,12 @@ class LoginController extends Controller
 
     public function loginAction(Request $request)
     {
-        if ($request->ajax() || $request->wantsJson()) {
+        if ($request->ajax() || $request->wantsJson())
+        {
             echo json_encode(['ok' => $request->post('email_or_phone')]);
-        } else {
+        }
+        else
+        {
             abort(403, 'Unauthorized'); // Ajax isteği değilse 403 hatası fırlat
         }
     }
