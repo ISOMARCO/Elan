@@ -69,48 +69,50 @@
                 <li><a href="#"><i class="fab fa-google"></i><span>google</span></a></li>
             </ul>
             <div class="user-form-devider"><p>or</p></div>
-            <span id="msg"></span>
             <form method="post" id="register_form">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12" id="name">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Name" name="name">
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="surname">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Surname" name="surname">
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="phone_number">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Phone number" name="phone_number">
-                            <small class="form-alert">Please follow this example - 0501234567</small>
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="gender">
                         <div class="form-group">
                             <select class="form-control" name="gender">
                                 <option value="MALE" selected>Male</option>
                                 <option value="FEMALE">Female</option>
                             </select>
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="password">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" name="password">
+                            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
-                            <small class="form-alert">Password must be 6 characters</small>
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="repeat_password">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Repeat Password" name="repeat_password">
+                            <input type="password" class="form-control" placeholder="Repeat Password" name="repeat_password" id="repeat_password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
-                            <small class="form-alert">Password must be 6 characters</small>
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12" id="agree">
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="signup-check" name="agree">
@@ -164,7 +166,9 @@
                     {
                         if(e.error)
                         {
-                            $("#msg").addClass("alert alert-warning").html(e.error);
+                            $.each(e.fields, function (index, value) {
+                                $("#"+e.value+" div small").html(e.error).show();
+                            });
                         }
                     }
                 });

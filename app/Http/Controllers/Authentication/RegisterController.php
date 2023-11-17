@@ -24,7 +24,7 @@ class RegisterController extends Controller
             $repeatPassword = $request->post('repeat_password');
             if($password != $repeatPassword)
             {
-                echo json_encode(['error' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']);
+                echo json_encode(['error' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'fields' => ['password', 'repeat_password']]);
                 exit;
             }
         }
