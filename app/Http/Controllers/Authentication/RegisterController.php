@@ -27,6 +27,7 @@ class RegisterController extends Controller
                 echo json_encode(['error' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'fields' => ['password', 'repeat_password']]);
                 exit;
             }
+            echo json_encode(['success' => 'OKEYDI']);
         }
         else
         {
