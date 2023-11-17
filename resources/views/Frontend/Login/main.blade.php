@@ -72,9 +72,10 @@
             <form method="post" id="register_form">
                 <div class="row">
                     <div class="col-12">
-                        <div class="form-group"><input type="text" class="form-control"
-                                                       placeholder="Phone number"><small class="form-alert">Please
-                                follow this example - 01XXXXXXXXX</small></div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Phone number">
+                            <small class="form-alert">Please follow this example - 01XXXXXXXXX</small>
+                        </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group"><input type="password" class="form-control" placeholder="Password">
@@ -82,54 +83,57 @@
                             <small class="form-alert">Password must be 6 characters</small></div>
                     </div>
                     <div class="col-12">
-                        <div class="form-group"><input type="password" class="form-control"
-                                                       placeholder="Repeat Password">
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Repeat Password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
                             <small class="form-alert">Password must be 6 characters</small></div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="custom-control custom-checkbox"><input type="checkbox"
-                                                                               class="custom-control-input"
-                                                                               id="signup-check"><label
-                                    class="custom-control-label" for="signup-check">I agree to the all <a href="#">terms
-                                        & consitions</a>of bebostha.</label></div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="signup-check">
+                                <label class="custom-control-label" for="signup-check">I agree to the all <a href="#">terms & consitions</a>of bebostha.</label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-inline"><i class="fas fa-user-check"></i><span>Create new account</span>
+                            <button type="submit" class="btn btn-inline">
+                                <i class="fas fa-user-check"></i><span>Create new account</span>
                             </button>
                         </div>
                     </div>
                 </div>
             </form>
-            <div class="user-form-direction"><p>Already have an account? click on the <span>( sign in )</span>button
-                    above.</p></div>
+            <div class="user-form-direction">
+                <p>Already have an account? click on the <span>( sign in )</span>button above.</p>
+            </div>
         </div>
     </div>
 </section>
 </body>
-@include('Frontend.Login.Sections.footer')
-<script>
-    $(document).ready(function(){
-        if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
-        {
-            $("#login-tab, #login_li").removeClass("active");
-            $("#register-tab, #register_li").addClass("active");
-        }
-        $("#login_btn").on("click", function() {
-            $.ajax({
-                type: "post",
-                url: "{{url('login/loginAction')}}",
-                data: $("#login_form").serialize(),
-                dataType: "json",
-                success: function(e)
-                {
-                    console.log(e);
-                }
+<footer>
+    @include('Frontend.Login.Sections.footer')
+    <script>
+        $(document).ready(function(){
+            if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
+            {
+                $("#login-tab, #login_li").removeClass("active");
+                $("#register-tab, #register_li").addClass("active");
+            }
+            $("#login_btn").on("click", function() {
+                $.ajax({
+                    type: "post",
+                    url: "{{url('login/loginAction')}}",
+                    data: $("#login_form").serialize(),
+                    dataType: "json",
+                    success: function(e)
+                    {
+                        console.log(e);
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
+</footer>
 </html>
