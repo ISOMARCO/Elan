@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('Email', 100)->nullable();
             $table->string('Is_Active', 6)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
             $table->string('Password', 255)->nullable();
-            $table->string('Phone', 25)->nullable();
+            $table->string('Phone_Number', 25)->nullable();
             $table->timestamp('Last_Login_Date')->nullable();
             $table->string('Gender', 6)->default('MALE')->comment('Enum: MALE, FEMALE');
         });
