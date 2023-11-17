@@ -5,7 +5,6 @@
 </head>
 <body>
 @include('Frontend.Login.Sections.header')
-<span id="msg"></span>
 <section class="user-form-part">
     <div class="user-form-banner">
         <div class="user-form-content"><a href="#"><img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo"></a>
@@ -70,6 +69,7 @@
                 <li><a href="#"><i class="fab fa-google"></i><span>google</span></a></li>
             </ul>
             <div class="user-form-devider"><p>or</p></div>
+            <span id="msg"></span>
             <form method="post" id="register_form">
                 <div class="row">
                     <div class="col-12">
