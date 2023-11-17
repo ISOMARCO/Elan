@@ -107,6 +107,7 @@
                         </div>
                     </div>
                 </div>
+                @csrf
             </form>
 {{--            <div class="user-form-direction">--}}
 {{--                <p>Already have an account? click on the <span>( Sign in )</span>button above.</p>--}}
