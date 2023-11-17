@@ -168,13 +168,13 @@
                         {
                             $.each(e.fields, function (index, value)
                             {
-                                //$("#"+value+" div small").html(e.error).show();
+                                $("small").hide();
                                 $("[name='"+value+"']").siblings('small').html(e.error).addClass("alert alert-danger").show();
                             });
                         }
                         else if(e.success)
                         {
-                            alert(e.success);
+                            $("small").hide();
                         }
                     }
                 });
