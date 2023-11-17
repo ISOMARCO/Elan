@@ -172,7 +172,7 @@
                                 $("[name='"+value+"']").siblings('small').html(e.error).addClass("alert alert-danger").show();
                             });
                         }
-                        elseif(e.success)
+                        else if(e.success)
                         {
                             alert(e.success);
                         }
