@@ -15,7 +15,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $session = 1;
+        $session = false;
         if($session)
         {
             return redirect('/home');
