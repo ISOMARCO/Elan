@@ -14,7 +14,7 @@ class RegisterController extends Controller
 
     public function registerAction(Request $request)
     {
-        if ($request->ajax() || $request->wantsJson())
+        if (!$request->ajax() || $request->wantsJson())
         {
             echo json_encode(['ok' => $request->post('phone_number')]);
         }
