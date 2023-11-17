@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('Name', 50)->nullable();
             $table->string('Surname', 50)->nullable();
             $table->string('Email', 100)->nullable();
-            $table->string('Is_Active', 10)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
+            $table->string('Is_Active', 6)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
             $table->string('Password', 255)->nullable();
             $table->string('Phone', 25)->nullable();
             $table->timestamp('Last_Login_Date')->nullable();
-            $table->enum('Gender', ['MALE', 'FEMALE'])->default('MALE');
+            $table->string('Gender', 6)->default('MALE')->comment('Enum: MALE, FEMALE');
         });
     }
 
