@@ -71,25 +71,31 @@
             <div class="user-form-devider"><p>or</p></div>
             <form method="post" id="register_form">
                 <div class="row">
-                    <div class="col-12" id="name">
+                    <div class="col-12">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Name" name="name">
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12" id="surname">
+                    <div class="col-12">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Surname" name="surname">
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12" id="phone_number">
+                    <div class="col-12">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Phone number" name="phone_number">
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12" id="gender">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email" name="email">
+                            <small class="form-alert" style="display: none"></small>
+                        </div>
+                    </div>
+                    <div class="col-12">
                         <div class="form-group">
                             <select class="form-control" name="gender">
                                 <option value="MALE" selected>Male</option>
@@ -98,21 +104,21 @@
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12" id="password">
+                    <div class="col-12">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12" id="repeat_password">
+                    <div class="col-12">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Repeat Password" name="repeat_password" id="repeat_password">
+                            <input type="password" class="form-control" placeholder="Repeat Password" name="repeat_password">
                             <button class="form-icon"><i class="eye fas fa-eye"></i></button>
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
-                    <div class="col-12" id="agree">
+                    <div class="col-12">
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="signup-check" name="agree">

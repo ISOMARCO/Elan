@@ -19,6 +19,7 @@ class RegisterController extends Controller
             $name = $request->post('name');
             $surname = $request->post('surname');
             $phoneNumber = $request->post('phone_number');
+            $email = $request->post('email');
             $gender = $request->post('gender');
             $password = $request->post('password');
             $repeatPassword = $request->post('repeat_password');
