@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function main() : string
     {
-        Cache::store('redis')->put('Key', 'Value', 120);
+        #Cache::store('redis')->put('Key', 'Value', 120);
         if(Cache::store('redis')->has('Key'))
         {
             echo "var";
