@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('Name', 50)->nullable();
             $table->string('Surname', 50)->nullable();
             $table->string('Email', 100)->nullable();
-            $table->enum('Is_Active', ['ACTIVE', 'BAN'])->default('ACTIVE')->length(10);
+            $table->string('Is_Active', 10)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
             $table->string('Password', 255)->nullable();
             $table->string('Phone', 25)->nullable();
             $table->timestamp('Last_Login_Date')->nullable();
