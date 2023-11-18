@@ -52,6 +52,7 @@ class Users extends Model
 
     public function String_Replace($string) : String
     {
+        $string = strpos($string, ':') === 0 ? $string : ':' . $string;
         $fields = [
             ':name' => 'Ad',
             ':surname' => 'Soyad',
