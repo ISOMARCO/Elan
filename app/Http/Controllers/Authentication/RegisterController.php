@@ -64,12 +64,12 @@ class RegisterController extends Controller
                 'gender' => $gender,
                 'password' => $password
             ]);
-            if($register)
+            if($register[0] === false)
             {
-                echo json_encode(['success' => 'Qeydiyyatdan keçdiniz.']);
+                echo json_encode(['error' => [$register[1]['key'] => 'Email artıq qeydiyyatdan keçib']]);
                 exit;
             }
-            echo json_encode(['error' => 'Bilinməyən xəta', 'fields' => ['name']]);
+            echo json_encode(['success' => 'Qeydiyyatdan keçdiniz.']);
             exit;
 
         }
