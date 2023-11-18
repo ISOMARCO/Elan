@@ -8,7 +8,7 @@ use App\Models\Authentication\Users;
 
 class RegisterController extends Controller
 {
-    public function main()
+    public function main() : String
     {
         return view('Frontend.Login.main');
     }
