@@ -19,6 +19,9 @@ class Users extends Model
         $phone = preg_replace("/[^0-9]/", "", $data['phone_number']);
         if(strlen($phone) == 9) {
             $phone = "994".$phone;
+        }elseif(strlen($phone) == 10)
+        {
+            $phone = "994".ltrim($phone, '0');
         }
         return DB::table('Users')->insert([
             'Name' => $data['name'],

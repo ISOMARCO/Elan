@@ -41,6 +41,11 @@ class RegisterController extends Controller
                     $emptyErrorArray[$key] = "Bu xana boş buraxıla bilməz";
                 }
             }
+            if(count($emptyErrorArray) > 0)
+            {
+                echo json_encode(['error' => $emptyErrorArray]);
+                exit;
+            }
             if($password != $repeatPassword)
             {
                 echo json_encode(['error' => ['password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'repeat_password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']]);
