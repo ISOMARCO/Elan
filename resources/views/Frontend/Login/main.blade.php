@@ -144,7 +144,7 @@
     <script src="{{asset('Assets/Frontend/sweetalert2/sweetalert2.js')}}"></script>
     <script>
         $(document).ready(function(){
-            swal("Hello world!");
+            Swal.fire('Any fool can use a computer')
             if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
             {
                 $("#login-tab, #login_li").removeClass("active");
