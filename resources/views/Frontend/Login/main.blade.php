@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('Frontend.Login.Sections.head')
-    <link rel="stylesheet" href="{{assert('Assets/Frontend/sweetalert2/sweetalert2.css')}}">
+    <link rel="stylesheet" href="{{asset('Assets/Frontend/sweetalert2/sweetalert2.css')}}">
 </head>
 <body>
 @include('Frontend.Login.Sections.header')
