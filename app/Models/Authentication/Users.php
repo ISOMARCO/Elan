@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class Users extends Model
 {
     use HasFactory;
-    public function registerUser($data = [], $encrypt_password = true) : Array
+    public function RegisterUser($data = [], $encrypt_password = true) : Array
     {
         $password = $data['password'];
         if($encrypt_password === true)
@@ -48,5 +48,19 @@ class Users extends Model
             return [false];
         }
 
+    }
+
+    public function String_Replace($string) : String
+    {
+        $fields = [
+            ':name' => 'Ad',
+            ':surname' => 'Soyad',
+            ':email' => 'Email',
+            ':phone_number' => 'Telefon nömrəsi',
+            ':gender' => 'Cins',
+            ':password' => 'Şifrə',
+            ':repeat_password' => 'Şifrə təkrarı'
+        ];
+        return str_replace(array_keys($fields), array_values($fields), $string);
     }
 }

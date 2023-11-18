@@ -56,7 +56,7 @@ class RegisterController extends Controller
                 exit;
             }
             $users = new Users();
-            $register = $users->registerUser([
+            $register = $users->RegisterUser([
                 'name' => $name,
                 'surname' => $surname,
                 'phone_number' => $phoneNumber,
@@ -66,7 +66,7 @@ class RegisterController extends Controller
             ]);
             if($register[0] === false)
             {
-                echo json_encode(['error' => [$register[1]['key'] => 'Email artıq qeydiyyatdan keçib']]);
+                echo json_encode(['error' => [$register[1]['key'] => ':'.$users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib']]);
                 exit;
             }
             echo json_encode(['success' => 'Qeydiyyatdan keçdiniz.']);
