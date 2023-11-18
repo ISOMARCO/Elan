@@ -7,7 +7,8 @@ class LoginController extends Controller
 {
     public function main()
     {
-        echo __(en.messages.welcome);
+        App::setLocale('en');
+        echo __(messages.welcome);
         return view('Frontend.Login.main');
     }
 
