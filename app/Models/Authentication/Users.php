@@ -47,7 +47,6 @@ class Users extends Model
             }
             return [false];
         }
-
     }
 
     public function String_Replace($string) : String
