@@ -24,17 +24,16 @@ class RegisterController extends Controller
             $gender = $request->post('gender');
             $password = $request->post('password');
             $repeatPassword = $request->post('repeat_password');
-            $variables = [
+            $checkEmpty = [
                 'name' => $name,
                 'surname' => $surname,
                 'phone_number' => $phoneNumber,
                 'email' => $email,
-                'gender' => $gender,
                 'password' => $password,
                 'repeat_password' => $repeatPassword
             ];
             $emptyErrorArray = [];
-            foreach($variables as $key => $value)
+            foreach($checkEmpty as $key => $value)
             {
                 if($value == NULL)
                 {
