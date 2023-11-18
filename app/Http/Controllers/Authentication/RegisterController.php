@@ -24,6 +24,23 @@ class RegisterController extends Controller
             $gender = $request->post('gender');
             $password = $request->post('password');
             $repeatPassword = $request->post('repeat_password');
+            $variables = [
+                'name' => $name,
+                'surname' => $surname,
+                'phone_number' => $phoneNumber,
+                'email' => $email,
+                'gender' => $gender,
+                'password' => $password,
+                'repeat_password' => $repeatPassword
+            ];
+            $emptyErrorArray = [];
+            foreach($variables as $key => $value)
+            {
+                if($value == NULL)
+                {
+                    $emptyErrorArray[$key] = "Bu xana boş buraxıla bilməz";
+                }
+            }
             if($password != $repeatPassword)
             {
                 echo json_encode(['error' => ['password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'repeat_password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']]);
