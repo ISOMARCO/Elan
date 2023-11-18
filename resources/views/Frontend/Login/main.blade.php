@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     @include('Frontend.Login.Sections.head')
+    <link rel="stylesheet" href="{{assert('Assets/Frontend/sweetalert2/sweetalert2.css')}}">
 </head>
 <body>
 @include('Frontend.Login.Sections.header')
@@ -140,8 +141,10 @@
 </body>
 <footer>
     @include('Frontend.Login.Sections.footer')
+    <script src="{{asset('Assets/Frontend/sweetalert2/sweetalert2.js')}}"></script>
     <script>
         $(document).ready(function(){
+            swal("Hello world!");
             if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
             {
                 $("#login-tab, #login_li").removeClass("active");
