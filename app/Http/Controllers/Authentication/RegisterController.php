@@ -31,7 +31,7 @@ class RegisterController extends Controller
             }
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
-                echo json_encode(['error' => 'Email adresi doğru yazılmayıb', 'fields' => ['email']]);
+                echo json_encode(['error' => ['email' => 'Email adresi doğru yazılmayıb']], true);
                 exit;
             }
             $users = new Users();

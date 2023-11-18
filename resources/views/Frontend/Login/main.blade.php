@@ -173,9 +173,9 @@
                         if(e.error)
                         {
                             $("small").hide();
-                            $.each(e.fields, function (index, value)
+                            $.each(e.error, function (index, value)
                             {
-                                $("[name='"+value+"']").siblings('small').html(e.error).addClass("alert alert-danger").show();
+                                $("[name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             });
                         }
                         else if(e.success)
