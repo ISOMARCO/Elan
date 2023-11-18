@@ -144,15 +144,6 @@
     <script src="{{asset('Assets/Frontend/sweetalert2/sweetalert2.js')}}"></script>
     <script>
         $(document).ready(function(){
-            Swal.fire({
-                title: "",
-                text: "ok",
-                icon: 'success'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    alert("OKU secdin");
-                }
-            });
             if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
             {
                 $("#login-tab, #login_li").removeClass("active");
@@ -186,11 +177,30 @@
                             {
                                 $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             });
+                            Swal.fire({
+                                title: "",
+                                text: e.success,
+                                icon: 'success'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    $("#login-tab, #login_li").addClass("active");
+                                    $("#register-tab, #register_li").removeClass("active");
+                                }
+                            });
                         }
                         else if(e.success)
                         {
                             $("small").hide();
-                            alert(e.success);
+                            Swal.fire({
+                                title: "",
+                                text: e.success,
+                                icon: 'success'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    $("#login-tab, #login_li").addClass("active");
+                                    $("#register-tab, #register_li").removeClass("active");
+                                }
+                            });
                         }
                     }
                 });
