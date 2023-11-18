@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('Id');
             $table->string('Name', 50)->nullable();
             $table->string('Surname', 50)->nullable();
-            $table->string('Email', 100)->nullable();
+            $table->string('Email', 100)->nullable()->unique();
             $table->string('Is_Active', 6)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
             $table->string('Password', 255)->nullable();
             $table->string('Phone_Number', 25)->nullable();
