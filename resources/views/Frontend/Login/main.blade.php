@@ -144,7 +144,15 @@
     <script src="{{asset('Assets/Frontend/sweetalert2/sweetalert2.js')}}"></script>
     <script>
         $(document).ready(function(){
-            Swal.fire('Any fool can use a computer')
+            Swal.fire({
+                title: "",
+                text: "ok",
+                icon: 'success'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    alert("OKU secdin");
+                }
+            });
             if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
             {
                 $("#login-tab, #login_li").removeClass("active");
