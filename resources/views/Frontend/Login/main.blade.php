@@ -175,7 +175,7 @@
                             $("small").hide();
                             $.each(e.error, function (index, value)
                             {
-                                $("#register_tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                                $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             });
                         }
                         else if(e.success)
