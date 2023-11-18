@@ -2,13 +2,10 @@
 namespace App\Http\Controllers\Authentication;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
 class LoginController extends Controller
 {
     public function main()
     {
-        App::setLocale('en');
-        echo __(messages.welcome);
         return view('Frontend.Login.main');
     }
 
