@@ -24,6 +24,8 @@ class RegisterController extends Controller
             $gender = $request->post('gender');
             $password = $request->post('password');
             $repeatPassword = $request->post('repeat_password');
+
+            $users = new Users();
             $checkEmpty = [
                 'name' => $name,
                 'surname' => $surname,
@@ -37,7 +39,7 @@ class RegisterController extends Controller
             {
                 if($value == NULL)
                 {
-                    $emptyErrorArray[$key] = "Bu xana boş buraxıla bilməz";
+                    $emptyErrorArray[$key] = $users->String_Replace($key)." boş buraxıla bilməz";
                 }
             }
             if(count($emptyErrorArray) > 0)
@@ -55,7 +57,6 @@ class RegisterController extends Controller
                 echo json_encode(['error' => ['email' => 'Email adresi doğru yazılmayıb']], true);
                 exit;
             }
-            $users = new Users();
             $register = $users->RegisterUser([
                 'name' => $name,
                 'surname' => $surname,
