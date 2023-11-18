@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <input type="password" class="form-control" name="password" id="pass" placeholder="Password">
                             <button type="button" class="form-icon"><i class="eye fas fa-eye"></i></button>
-                            <small class="form-alert">Password must be 6 characters</small>
+                            <small class="form-alert"></small>
                         </div>
                     </div>
                     <div class="col-6">
@@ -57,8 +57,6 @@
                 </div>
                 @csrf
             </form>
-            <div class="user-form-direction"><p>Don't have an account? click on the <span>( sign up )</span>button
-                    above.</p></div>
         </div>
         <div class="tab-pane" id="register-tab">
             <div class="user-form-title"><h2>Register</h2>
