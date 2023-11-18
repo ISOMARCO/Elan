@@ -152,6 +152,9 @@
             $("#register_li").on("click", function() {
                 window.location.hash = 'register-tab';
             });
+            $("#login_li").on("click", function() {
+                history.replaceState({}, document.title, window.location.pathname + window.location.search);
+            });
             $("#login_btn").on("click", function() {
                 $.ajax({
                     type: "post",
