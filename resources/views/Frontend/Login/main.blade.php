@@ -148,8 +148,10 @@
             {
                 $("#login-tab, #login_li").removeClass("active");
                 $("#register-tab, #register_li").addClass("active");
-                window.location.hash = 'register-tab';
             }
+            $("#register_li").on("click", function() {
+                window.location.hash = 'register-tab';
+            });
             $("#login_btn").on("click", function() {
                 $.ajax({
                     type: "post",
