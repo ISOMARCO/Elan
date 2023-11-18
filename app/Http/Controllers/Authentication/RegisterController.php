@@ -70,7 +70,7 @@ class RegisterController extends Controller
                 echo json_encode(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib']]);
                 exit;
             }
-            echo json_encode(['success' => 'Qeydiyyatdan keçdiniz.']);
+            echo json_encode(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.']);
             exit;
 
         }

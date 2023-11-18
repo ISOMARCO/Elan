@@ -177,16 +177,6 @@
                             {
                                 $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             });
-                            Swal.fire({
-                                title: "",
-                                text: e.success,
-                                icon: 'success'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    $("#login-tab, #login_li").addClass("active");
-                                    $("#register-tab, #register_li").removeClass("active");
-                                }
-                            });
                         }
                         else if(e.success)
                         {
