@@ -163,7 +163,7 @@
                     dataType: "json",
                     success: function(e)
                     {
-                        console.log(e);
+                        alert(e.ok);
                     }
                 });
             });
