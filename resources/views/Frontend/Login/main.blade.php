@@ -199,8 +199,9 @@
                     },
                     error: function(x)
                     {
+                        var errorResponse = x.responseJSON || x.responseText;
                         $("small").hide();
-                        $.each(x.error, function (index, value)
+                        $.each(errorResponse.error, function (index, value)
                         {
                             $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             console.error(x.status+" "+value);
