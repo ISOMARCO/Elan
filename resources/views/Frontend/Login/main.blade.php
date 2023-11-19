@@ -163,7 +163,7 @@
                     dataType: "json",
                     success: function(e)
                     {
-                        alert(e.ok);
+                        alert(e.success);
                     },
                     error: function(x)
                     {
