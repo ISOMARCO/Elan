@@ -5,7 +5,6 @@ use App\Models\Logs\Logs;
 class TelegramBot
 {
     const API_URL = 'https://api.telegram.org/bot';
-    private $token = '6724022422:AAHXw3Zg0tBCslFrco-3bi8nPTECUWzhdbg';
     public $chatId = NULL;
     protected $userId = NULL;
     protected $file_path = NULL;
@@ -21,7 +20,7 @@ class TelegramBot
     {
         if($file)
         {
-            $url = 'https://api.telegram.org/file/bot'.$this->token.'/'.$this->file_path;
+            $url = 'https://api.telegram.org/file/bot'.env('TELEGRAM_TOKEN').'/'.$this->file_path;
         }
         else
         {
