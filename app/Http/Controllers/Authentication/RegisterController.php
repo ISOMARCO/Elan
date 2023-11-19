@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Authentication;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Authentication\Users;
-use Illuminate\Http\Response;
 
 class RegisterController extends Controller
 {
@@ -14,7 +13,7 @@ class RegisterController extends Controller
         return view('Frontend.Login.main');
     }
 
-    public function registerAction(Request $request) : Response
+    public function registerAction(Request $request) : string
     {
         if ($request->ajax() || $request->wantsJson())
         {
