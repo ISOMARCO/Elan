@@ -15,6 +15,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        echo "OK";
         return $next($request);
     }
 }
