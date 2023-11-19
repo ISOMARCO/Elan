@@ -168,7 +168,7 @@
                     error: function(jqXHR, textStatus, errorThrown)
                     {
                         alert('Hata Kodu: ' + jqXHR.status);
-                        alert('Hata Mesajı: ' + textStatus);
+                        alert('Hata Mesajı: ' + textStatus.error);
                     }
                 });
             });
