@@ -13,7 +13,7 @@ class RegisterController extends Controller
         return view('Frontend.Login.main');
     }
 
-    public function registerAction(Request $request) : string
+    public function registerAction(Request $request) : Json
     {
         if ($request->ajax() || $request->wantsJson())
         {
