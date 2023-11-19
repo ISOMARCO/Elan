@@ -9,13 +9,6 @@ class TelegramBot
     protected $userId = NULL;
     protected $file_path = NULL;
     protected  $callBackQueryId = NULL;
-
-    public function setToken($token)
-    {
-        $this->token = $token;
-        return $this;
-    }
-
     private function request($method, $posts = [], $file = false)
     {
         if($file)
@@ -24,7 +17,7 @@ class TelegramBot
         }
         else
         {
-            $url = self::API_URL.$this->token.'/'.$method;
+            $url = self::API_URL.env('TELEGRAM_TOKEN').'/'.$method;
         }
 
         $ch = curl_init();
