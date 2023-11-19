@@ -184,28 +184,27 @@
                     dataType: "json",
                     success: function(e)
                     {
-                        if(e.error)
+                        $("small").hide();
+                        Swal.fire({
+                            title: "",
+                            text: e.success,
+                            icon: 'success'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                $("#login-tab, #login_li").addClass("active");
+                                $("#register-tab, #register_li").removeClass("active");
+                            }
+                        });
+                        console.log(e.status+" "+e.success);
+                    },
+                    error: function(x)
+                    {
+                        $("small").hide();
+                        $.each(x.error, function (index, value)
                         {
-                            $("small").hide();
-                            $.each(e.error, function (index, value)
-                            {
-                                $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
-                            });
-                        }
-                        else if(e.success)
-                        {
-                            $("small").hide();
-                            Swal.fire({
-                                title: "",
-                                text: e.success,
-                                icon: 'success'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    $("#login-tab, #login_li").addClass("active");
-                                    $("#register-tab, #register_li").removeClass("active");
-                                }
-                            });
-                        }
+                            $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                            console.error(x.status+" "+value);
+                        });
                     }
                 });
             });

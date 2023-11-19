@@ -13,7 +13,7 @@ class RegisterController extends Controller
         return view('Frontend.Login.main');
     }
 
-    public function registerAction(Request $request) : Void
+    public function registerAction(Request $request) : String
     {
         if ($request->ajax() || $request->wantsJson())
         {
@@ -44,18 +44,15 @@ class RegisterController extends Controller
             }
             if(count($emptyErrorArray) > 0)
             {
-                echo json_encode(['error' => $emptyErrorArray]);
-                exit;
+                return response()->json(['error' => $emptyErrorArray], 422);
             }
             if($password != $repeatPassword)
             {
-                echo json_encode(['error' => ['password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'repeat_password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']]);
-                exit;
+                return response()->json(['error' => ['password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'repeat_password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']], 422);
             }
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
-                echo json_encode(['error' => ['email' => 'Email adresi doğru yazılmayıb']], true);
-                exit;
+                return response()->json(['error' => ['email' => 'Email adresi doğru yazılmayıb']], 422);
             }
             $register = $users->RegisterUser([
                 'name' => $name,
@@ -67,16 +64,14 @@ class RegisterController extends Controller
             ]);
             if($register[0] === false)
             {
-                echo json_encode(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib']]);
-                exit;
+                return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib']], 422);
             }
-            echo json_encode(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.']);
-            exit;
+            return response()->json(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.'], 200);
 
         }
         else
         {
-            abort(403, 'Unauthorized');
+            return abort(403, 'Unauthorized');
         }
     }
 }
