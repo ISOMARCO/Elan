@@ -167,8 +167,9 @@
                     },
                     error: function(jqXHR, textStatus, errorThrown)
                     {
-                        alert('Hata Kodu: ' + jqXHR.status);
-                        alert('Hata Mesajı: ' + textStatus.error);
+                        var errorResponse = jqXHR.responseJSON || jqXHR.responseText;
+                        alert("Hata Kodu: " + jqXHR.status);
+                        alert("Hata Mesajı: " + errorResponse.error);
                     }
                 });
             });
