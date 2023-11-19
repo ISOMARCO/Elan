@@ -6,7 +6,6 @@ class LoginController extends Controller
 {
     public function main()
     {
-        echo "OK1";
         return view('Frontend.Login.main');
     }
 
