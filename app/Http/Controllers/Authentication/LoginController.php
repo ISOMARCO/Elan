@@ -13,7 +13,7 @@ class LoginController extends Controller
     {
         if ($request->ajax() || $request->wantsJson())
         {
-            return response()->json(['ok' => $request->post('email_or_phone')], 401);
+            return response()->json(['error' => $request->post('email_or_phone')], 401);
         }
         else
         {

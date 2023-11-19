@@ -164,6 +164,11 @@
                     success: function(e)
                     {
                         alert(e.ok);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown)
+                    {
+                        alert('Hata Kodu: ' + jqXHR.status);
+                        alert('Hata Mesajı: ' + textStatus);
                     }
                 });
             });
