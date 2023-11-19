@@ -15,7 +15,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo "OK";
+        return response()->json(['error' => ['name' => 'Qeydiyyat baglidi']]);
         return $next($request);
     }
 }
