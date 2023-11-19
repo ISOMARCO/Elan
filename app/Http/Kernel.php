@@ -39,7 +39,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            PullFromGit::class
+            "PullFromGit" => PullFromGit::class
         ],
 
         'api' => [
@@ -54,7 +54,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            "IsLogin" => IsLogin::class
+            "IsLogin" => IsLogin::class,
+            "PullFromGit" => PullFromGit::class
         ]
     ];
 
