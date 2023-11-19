@@ -206,6 +206,7 @@
                             $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             console.error(x.status+" "+value);
                         });
+                        console.error(errorResponse.location);
                     }
                 });
             });

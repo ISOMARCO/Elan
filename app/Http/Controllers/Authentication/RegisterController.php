@@ -48,11 +48,11 @@ class RegisterController extends Controller
             }
             if($password != $repeatPassword)
             {
-                return response()->json(['error' => ['password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'repeat_password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır']], 422);
+                return response()->json(['error' => ['password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır', 'repeat_password' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır'], 'location' => 'RegisterController@registerAction@51'], 422);
             }
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
-                return response()->json(['error' => ['email' => 'Email adresi doğru yazılmayıb']], 422);
+                return response()->json(['error' => ['email' => 'Email adresi doğru yazılmayıb'], 'location' => 'RegisterController@registerAction@55'], 422);
             }
             $register = $users->RegisterUser([
                 'name' => $name,
@@ -64,7 +64,7 @@ class RegisterController extends Controller
             ]);
             if($register[0] === false)
             {
-                return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib']], 422);
+                return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib'], 'location' => 'RegisterController@registerAction@67'], 422);
             }
             return response()->json(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.'], 200);
 
