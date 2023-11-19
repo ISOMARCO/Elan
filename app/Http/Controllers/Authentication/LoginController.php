@@ -6,6 +6,7 @@ class LoginController extends Controller
 {
     public function main()
     {
+        echo env('TELEGRAM_TOKEN');
         return view('Frontend.Login.main');
     }
 
