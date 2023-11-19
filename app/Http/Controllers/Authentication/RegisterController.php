@@ -44,7 +44,7 @@ class RegisterController extends Controller
             }
             if(count($emptyErrorArray) > 0)
             {
-                return response()->json(['error' => $emptyErrorArray], 422);
+                return response()->json(['error' => $emptyErrorArray, 'location' => 'RegisterController@registerAction@47'], 422);
             }
             if($password != $repeatPassword)
             {
