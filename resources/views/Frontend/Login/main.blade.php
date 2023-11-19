@@ -165,11 +165,13 @@
                     {
                         alert(e.ok);
                     },
-                    error: function(jqXHR, textStatus, errorThrown)
+                    error: function(x)
                     {
-                        var errorResponse = jqXHR.responseJSON || jqXHR.responseText;
-                        alert("Hata Kodu: " + jqXHR.status);
+                        var errorResponse = x.responseJSON || x.responseText;
+                        alert("Hata Kodu: " + x.status);
                         alert("Hata Mesajı: " + errorResponse.error);
+                        console.error(x.status);
+                        console.error(errorResponse.error);
                     }
                 });
             });
