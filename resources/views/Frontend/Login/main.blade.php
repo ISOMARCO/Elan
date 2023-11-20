@@ -72,7 +72,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name" name="name">
+                            <input type="text" class="form-control" placeholder="Name" name="name" required="required">
                             <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="signup-check" name="agree">
+                                <input type="checkbox" class="custom-control-input" id="signup-check" name="agree" required="required">
                                 <label class="custom-control-label" for="signup-check">I agree to the all <a href="#">terms & consitions</a>of bebostha.</label>
                             </div>
                         </div>
@@ -155,6 +155,7 @@
             $("#login_li").on("click", function() {
                 history.replaceState({}, document.title, window.location.pathname + window.location.search);
             });
+
             $("#login_btn").on("click", function() {
                 $.ajax({
                     type: "post",
