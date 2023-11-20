@@ -157,7 +157,7 @@
             });
             $("input[required]").on("keyup", function() {
                 //$(this).siblings("small").html("test");
-                alert($(this));
+                console.log($(this));
             });
             $("#login_btn").on("click", function() {
                 $.ajax({
