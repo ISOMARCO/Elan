@@ -156,7 +156,7 @@
                 history.replaceState({}, document.title, window.location.pathname + window.location.search);
             });
             $("input[required]").on("keyup", function() {
-                console.log($(this).siblings("small"));
+                console.log($(this).siblings("small").text());
             });
             $("#login_btn").on("click", function() {
                 $.ajax({
