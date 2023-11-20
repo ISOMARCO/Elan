@@ -163,15 +163,22 @@
                     dataType: "json",
                     success: function(e)
                     {
-                        alert(e.success);
+                        $("small").hide();
+                        Swal.fire({
+                            title: "",
+                            text: e.success,
+                            icon: 'success'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = "{{url('/')}}";
+                            }
+                        });
+                        console.log(e.status+" "+e.success);
                     },
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        alert("Hata Kodu: " + x.status);
-                        alert("Hata Mesajı: " + errorResponse.error);
-                        console.error(x.status);
-                        console.error(errorResponse.error);
+
                     }
                 });
             });
@@ -200,7 +207,16 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
+                        var count = 5;
                         $("small").hide();
+                        var interval = setInterval(function() {
+                            console.log("Count: "+count);
+                            count--;
+                            if(count<0)
+                            {
+                                clearInterval(interval);
+                            }
+                        }, 2000);
                         $.each(errorResponse.error, function (index, value)
                         {
                             $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
