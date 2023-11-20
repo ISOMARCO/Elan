@@ -156,7 +156,8 @@
                 history.replaceState({}, document.title, window.location.pathname + window.location.search);
             });
             $("input[required]").on("keyup", function() {
-                $(this).siblings("small").html("test");
+                //$(this).siblings("small").html("test");
+                alert($(this));
             });
             $("#login_btn").on("click", function() {
                 $.ajax({
