@@ -209,14 +209,14 @@
                         var errorResponse = x.responseJSON || x.responseText;
                         var count = 5;
                         $("small").hide();
-                        var interval = setInterval(function() {
-                            console.log("Count: "+count);
+                        var interval = console.log(setInterval(function() {
                             count--;
                             if(count<0)
                             {
                                 clearInterval(interval);
                             }
-                        }, 2000);
+                            return count;
+                        }, 2000));
                         $.each(errorResponse.error, function (index, value)
                         {
                             $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
