@@ -155,9 +155,8 @@
             $("#login_li").on("click", function() {
                 history.replaceState({}, document.title, window.location.pathname + window.location.search);
             });
-            $.each($("input[required]"), function ()
-            {
-                $(this).siblings("small").html($(this).attr("name")+" bos buraxila bilmezde ala");
+            $("input[required]").on("keyup", function() {
+                $(this).siblings("small").html("test");
             });
             $("#login_btn").on("click", function() {
                 $.ajax({
