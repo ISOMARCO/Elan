@@ -55,6 +55,7 @@ class Users extends Model
         {
             $password = hash('sha256', md5($password));
         }
+
         return [true];
     }
 
