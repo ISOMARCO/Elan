@@ -18,7 +18,7 @@ class LoginController extends Controller
             $password = $request->post('password');
             $users = new Users();
             $checkEmpty = [
-                'email_or_phone' => $email_or_phone,
+                'email_phone' => $email_or_phone,
                 'password' => $password
             ];
             $emptyErrorArray = [];
@@ -26,7 +26,7 @@ class LoginController extends Controller
             {
                 if($value == NULL)
                 {
-                    return response()->json(['error' => ['email_or_phone' => $users->String_Replace(':email_or_phone')]], 422);
+                    return response()->json(['error' => ['email_or_phone' => $users->String_Replace('email_phone')]], 200);
                     $emptyErrorArray[$key] = $users->String_Replace($key)." boş buraxıla bilməz";
                 }
             }
