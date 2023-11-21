@@ -26,7 +26,6 @@ class LoginController extends Controller
             {
                 if($value == NULL)
                 {
-                    echo json_encode(['success' => "key: ".$key]);
                     $emptyErrorArray[$key] = $users->String_Replace($key)." boş buraxıla bilməz";
                 }
             }
