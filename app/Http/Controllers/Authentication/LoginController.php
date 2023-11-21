@@ -39,7 +39,7 @@ class LoginController extends Controller
                         ':email_or_phone' => 'Email və ya telefon nömrəsi'
                     ];
                     $string = str_replace(array_keys($fields), array_values($fields), $string);
-                    return response()->json(['error' => ['email_or_phone' => "DENEME"]], 422);
+                    return response()->json(['error' => ['email_or_phone' => $fields[':email_or_phone']]], 422);
                     $emptyErrorArray[$key] = $users->String_Replace(strtolower($key))." boş buraxıla bilməz";
                 }
             }
