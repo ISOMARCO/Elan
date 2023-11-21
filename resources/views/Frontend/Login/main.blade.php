@@ -178,6 +178,14 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
+                        $("small").hide();
+                        $.each(errorResponse.error, function (index, value)
+                        {
+                            $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                            console.error(x.status+" "+value);
+                        });
+                        console.error(errorResponse.location);
+
 
                     }
                 });
@@ -207,16 +215,7 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        var count = 5;
                         $("small").hide();
-                        var interval = console.log(setInterval(function() {
-                            count--;
-                            if(count<0)
-                            {
-                                clearInterval(interval);
-                            }
-                            return count;
-                        }, 2000));
                         $.each(errorResponse.error, function (index, value)
                         {
                             $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
