@@ -26,7 +26,7 @@ class LoginController extends Controller
             {
                 if($value == NULL)
                 {
-                    return response()->json(['error' => $key], 422);
+                    return response()->json(['error' => "key"], 422);
                     $emptyErrorArray[$key] = $users->String_Replace($key)." boş buraxıla bilməz";
                 }
             }
