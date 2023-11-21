@@ -24,7 +24,7 @@
         </div>
         <div class="tab-pane active" id="login-tab">
             <div class="user-form-title"><h2>Welcome!</h2>
-                <p>Use credentials to access your account.</p></div>
+{{--                <p>Use credentials to access your account.</p></div>--}}
             <form method="post" id="login_form">
                 <div class="row">
                     <div class="col-12">
