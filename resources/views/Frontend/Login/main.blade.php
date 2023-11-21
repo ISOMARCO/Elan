@@ -23,7 +23,9 @@
             </ul>
         </div>
         <div class="tab-pane active" id="login-tab">
-            <div class="user-form-title"><h2>Welcome!</h2>
+            <div class="user-form-title">
+                <h2>Welcome!</h2>
+            </div>
             <form method="post" id="login_form">
                 <div class="row">
                     <div class="col-12">
