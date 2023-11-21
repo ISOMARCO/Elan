@@ -70,7 +70,7 @@ class Users extends Model
             ':gender' => 'Cins',
             ':password' => 'Şifrə',
             ':repeat_password' => 'Şifrə təkrarı',
-            ':email_phone' => 'Email və ya telefon nömrəsi'
+            ':email_or_phone' => 'Email və ya telefon nömrəsi'
         ];
         return str_replace(array_keys($fields), array_values($fields), $string);
     }
