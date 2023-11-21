@@ -72,6 +72,7 @@ class Users extends Model
             ':repeat_password' => 'Şifrə təkrarı',
             ':email_or_phone' => 'Email və ya telefon nömrəsi'
         ];
-        return str_replace(array_keys($fields), array_values($fields), $string);
+        #return str_replace(array_keys($fields), array_values($fields), $string);
+        return $fields[$string];
     }
 }
