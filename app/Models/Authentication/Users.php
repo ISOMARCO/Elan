@@ -55,7 +55,14 @@ class Users extends Model
         {
             $password = hash('sha256', md5($password));
         }
-
+        if(filter_var($email_or_phone, FILTER_VALIDATE_EMAIL))
+        {
+            $totalRows = DB::table('Users')->whereRaw("Email = ? and Password = ?", [$email_or_phone, $password])->count();
+            if($totalRows == 0)
+            {
+                return [false];
+            }
+        }
         return [true];
     }
 
