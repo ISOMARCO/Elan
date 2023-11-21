@@ -24,19 +24,19 @@
         </div>
         <div class="tab-pane active" id="login-tab">
             <div class="user-form-title"><h2>Welcome!</h2>
-{{--                <p>Use credentials to access your account.</p></div>--}}
             <form method="post" id="login_form">
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
                             <input type="text" name="email_or_phone" class="form-control" placeholder="Email or Phone">
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
                             <input type="password" class="form-control" name="password" id="pass" placeholder="Password">
                             <button type="button" class="form-icon"><i class="eye fas fa-eye"></i></button>
-                            <small class="form-alert"></small>
+                            <small class="form-alert" style="display: none"></small>
                         </div>
                     </div>
                     <div class="col-6">
