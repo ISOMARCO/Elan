@@ -26,7 +26,7 @@ class LoginController extends Controller
             {
                 if($value == NULL)
                 {
-                    $emptyErrorArray[$key] = $users->String_Replace($key)." boş buraxıla bilməz";
+                    $emptyErrorArray[strtolower($key)] = $users->String_Replace($key)." boş buraxıla bilməz";
                 }
             }
             if(count($emptyErrorArray) > 0)
