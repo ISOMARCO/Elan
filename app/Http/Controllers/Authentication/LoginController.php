@@ -18,7 +18,7 @@ class LoginController extends Controller
             $password = $request->post('password');
             $users = new Users();
             $checkEmpty = [
-                'email_phone' => $email_or_phone,
+                'email_or_phone' => $email_or_phone,
                 'password' => $password
             ];
             $emptyErrorArray = [];
