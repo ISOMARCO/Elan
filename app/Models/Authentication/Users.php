@@ -53,7 +53,7 @@ class Users extends Model
     {
         if($encryptPassword === true)
         {
-            $password = hash('sha256', md5($data['password']));
+            $password = hash('sha256', md5($password));
         }
         if()
         return [true];
