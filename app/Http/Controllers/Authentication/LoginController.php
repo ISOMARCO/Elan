@@ -38,8 +38,8 @@ class LoginController extends Controller
                         ':repeat_password' => 'Şifrə təkrarı',
                         ':email_or_phone' => 'Email və ya telefon nömrəsi'
                     ];
-                    $string = str_replace(array_keys($fields), array_values($fields), $string);
-                    return response()->json(['error' => ['email_or_phone' => $fields[':email_or_phone']]], 422);
+                    #string = str_replace(array_keys($fields), array_values($fields), $string);
+                    return response()->json(['error' => ['email_or_phone' => $string]], 422);
                     $emptyErrorArray[$key] = $users->String_Replace(strtolower($key))." boş buraxıla bilməz";
                 }
             }
