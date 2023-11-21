@@ -49,6 +49,16 @@ class Users extends Model
         }
     }
 
+    public function login($email_or_phone, $password, $encryptPassword = true) : Array
+    {
+        if($encryptPassword === true)
+        {
+            $password = hash('sha256', md5($password));
+        }
+
+        return [true];
+    }
+
     public function String_Replace($string) : String
     {
         $string = strpos($string, ':') === 0 ? $string : ':' . $string;
@@ -59,7 +69,8 @@ class Users extends Model
             ':phone_number' => 'Telefon nömrəsi',
             ':gender' => 'Cins',
             ':password' => 'Şifrə',
-            ':repeat_password' => 'Şifrə təkrarı'
+            ':repeat_password' => 'Şifrə təkrarı',
+            ':email_or_phone' => 'Email və ya telefon nömrəsi'
         ];
         return str_replace(array_keys($fields), array_values($fields), $string);
     }
