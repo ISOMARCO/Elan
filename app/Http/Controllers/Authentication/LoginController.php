@@ -33,7 +33,7 @@ class LoginController extends Controller
             {
                 return response()->json(['error' => $emptyErrorArray, 'location' => 'LoginController@loginAction@34'], 422);
             }
-            //$users->login();
+
         }
         else
         {
