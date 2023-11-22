@@ -220,7 +220,6 @@
                         $("small").hide();
                             $.each(errorResponse.error, function (index, value)
                             {
-                                alert(index);
                                 if(index == 'show_alert')
                                 {
                                     Swal.fire({
@@ -233,7 +232,7 @@
                                 {
                                     $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                                 }
-                                console.error(x.status+" "+value);
+                                console.error(x.status+" "+value+" "+index);
                             });
                         console.error(errorResponse.location);
                     }
