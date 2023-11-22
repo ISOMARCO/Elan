@@ -166,7 +166,7 @@
                     success: function(e)
                     {
                         $("small").hide();
-                        var response = x.responseJSON || x.responseText;
+                        var response = e.responseJSON || e.responseText;
                         $.each(response.success, function (index, value)
                         {
                             if(index == 'show_alert')
@@ -185,7 +185,6 @@
                             {
                                 $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
                             }
-                            console.error(x.status+" "+value);
                         });
                         console.log(e.status+" "+e.success);
                     },
