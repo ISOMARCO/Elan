@@ -7,7 +7,7 @@ class HomeController extends Controller
 {
     public function main() : string
     {
-        print_r(DB::table('Users')->whereRaw("Email = ? and Password = ?", [$email_or_phone, $password]));
+        print_r(DB::table('Users')->whereRaw("Email = ? and Password = ?", [$email_or_phone, $password])->count());
         return view('Frontend.Home.main');
     }
 }
