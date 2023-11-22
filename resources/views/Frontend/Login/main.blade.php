@@ -166,27 +166,15 @@
                     success: function(e)
                     {
                         $("small").hide();
-                        var response = e.responseJSON || e.responseText;
-                        $.each(response.success, function (index, value)
-                        {
-                            if(index == 'show_alert')
-                            {
-                                Swal.fire({
-                                    title: "",
-                                    text: value,
-                                    icon: 'success'
-                                }).then((result) => {
-                                    if (result.isConfirmed) {
-                                        window.location.href = "{{url('/')}}";
-                                    }
-                                });
-                            }
-                            else
-                            {
-                                $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
-                            }
-                        });
-                        console.log(e.status+" "+e.success);
+                            Swal.fire({
+                                title: "",
+                                text: e.success,
+                                icon: 'success'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    window.location.href = "{{url('/')}}";
+                                }
+                            });
                     },
                     error: function(x)
                     {
