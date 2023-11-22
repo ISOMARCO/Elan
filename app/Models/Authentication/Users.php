@@ -57,11 +57,12 @@ class Users extends Model
         }
         if(filter_var($email_or_phone, FILTER_VALIDATE_EMAIL))
         {
-            $totalRows = DB::table('Users')->whereRaw("Email = ? and Password = ?", [$email_or_phone, $password])->count();
-            if($totalRows == 0)
+            $user = DB::table('Users')->whereRaw("Email = ? and Password = ?", [$email_or_phone, $password]);
+            if($user->count() == 0)
             {
                 return [false];
             }
+            return $user->get();
         }
         return [true];
     }
