@@ -218,11 +218,22 @@
                     {
                         var errorResponse = x.responseJSON || x.responseText;
                         $("small").hide();
-                        $.each(errorResponse.error, function (index, value)
+                        if(errorResponse.show_alert == true)
                         {
-                            $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
-                            console.error(x.status+" "+value);
-                        });
+                            Swal.fire({
+                                title: "",
+                                text: errorResponse.error,
+                                icon: 'error'
+                            });
+                        }
+                        else
+                        {
+                            $.each(errorResponse.error, function (index, value)
+                            {
+                                $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                                console.error(x.status+" "+value);
+                            });
+                        }
                         console.error(errorResponse.location);
                     }
                 });
