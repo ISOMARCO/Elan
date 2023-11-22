@@ -36,7 +36,7 @@ class LoginController extends Controller
             $user = $users->login($email_or_phone, $password);
             if($user[0] === false)
             {
-                return response()->json(['error' => ['password' => 'Giriş məlumatları doğru deyil'], 'location' => 'LoginController@loginAction@39'], 422);
+                return response()->json(['error' => ['show_alert' => 'Giriş məlumatları doğru deyil'], 'location' => 'LoginController@loginAction@39'], 422);
             }
         }
         else
