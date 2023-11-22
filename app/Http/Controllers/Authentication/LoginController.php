@@ -40,7 +40,8 @@ class LoginController extends Controller
             {
                 return response()->json(['error' => ['show_alert' => 'Giriş məlumatları doğru deyil'], 'location' => 'LoginController@loginAction@39'], 422);
             }
-            Session::put('id', $user[1]->Id);
+            $userInfo = $user[1];
+            Session::put('id', $userInfo->Id);
             return response()->json(['success' => 'Giriş məlumatları doğrudur. Ana səhifəyə yönləndirilirsiniz...', 'location' => 'LoginController@loginAction@41']);
         }
         else
