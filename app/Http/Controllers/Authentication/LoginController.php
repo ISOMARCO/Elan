@@ -3,6 +3,8 @@ namespace App\Http\Controllers\Authentication;
 use App\Http\Controllers\Controller;
 use App\Models\Authentication\Users;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 class LoginController extends Controller
 {
     public function main()
@@ -38,6 +40,7 @@ class LoginController extends Controller
             {
                 return response()->json(['error' => ['show_alert' => 'Giriş məlumatları doğru deyil'], 'location' => 'LoginController@loginAction@39'], 422);
             }
+            Session::put('id', $user->Id);
             return response()->json(['success' => 'Giriş məlumatları doğrudur. Ana səhifəyə yönləndirilirsiniz...', 'location' => 'LoginController@loginAction@41']);
         }
         else
