@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Cache;
-
+use Illuminate\Support\Facades\Session;
 class HomeController extends Controller
 {
     public function main() : string
     {
-        Cache::store('redis')->put('key', ['name' => 'Ismayil'], 360);
-        print_r(Cache::store('redis')->get('key'));
+        Cache::store('redis')->get('user_info_'.Session::get('id'));
         return view('Frontend.Home.main');
     }
 }

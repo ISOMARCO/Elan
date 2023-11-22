@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Authentication;
 use App\Http\Controllers\Controller;
 use App\Models\Authentication\Users;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
@@ -42,6 +43,7 @@ class LoginController extends Controller
             }
             $userInfo = $user[1];
             Session::put('id', $userInfo->Id);
+            Cache::store('redis')->put('user_info_'.$userInfo->Id, $userInfo, 360);
             return response()->json(['success' => 'Giriş məlumatları doğrudur. Ana səhifəyə yönləndirilirsiniz...', 'location' => 'LoginController@loginAction@41']);
         }
         else
