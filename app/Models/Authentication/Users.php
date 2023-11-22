@@ -55,16 +55,21 @@ class Users extends Model
         {
             $password = hash('sha256', md5($password));
         }
+        $users = new Users();
+        $user = $users->table('Users')->where('Password', '=', $password);
         if(filter_var($email_or_phone, FILTER_VALIDATE_EMAIL))
         {
-            $user = DB::table('Users')->whereRaw("Email = ? and Password = ?", [$email_or_phone, $password]);
-            if($user->count() == 0)
-            {
-                return [false];
-            }
-            return $user->get();
+            $user->where('Email', '=', $email_or_phone);
         }
-        return [true];
+        else
+        {
+            $user->where('Phone', '=', $email_or_phone);
+        }
+        if($user->count() == 0)
+        {
+            return [false];
+        }
+        return [true, $user->first()];
     }
 
     public function String_Replace($string) : String

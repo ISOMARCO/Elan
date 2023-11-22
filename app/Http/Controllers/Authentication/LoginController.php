@@ -33,7 +33,11 @@ class LoginController extends Controller
             {
                 return response()->json(['error' => $emptyErrorArray, 'location' => 'LoginController@loginAction@34'], 422);
             }
-
+            $user = $users->login($email_or_phone, $password);
+            if($user[0] === false)
+            {
+                return response()->json(['error' => 'Giriş məlumatları doğru deyil', 'location' => 'LoginController@loginAction@39'], 422);
+            }
         }
         else
         {
