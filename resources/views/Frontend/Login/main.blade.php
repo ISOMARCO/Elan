@@ -220,6 +220,7 @@
                         $("small").hide();
                             $.each(errorResponse.error, function (index, value)
                             {
+                                console.log(index+" "+value);
                                 if(index == 'show_alert')
                                 {
                                     Swal.fire({
