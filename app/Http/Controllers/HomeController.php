@@ -8,7 +8,8 @@ class HomeController extends Controller
 {
     public function main() : string
     {
-        print_r(Cache::store('redis')->get('user_info_'.Session::get('id')));
+        $user = Cache::store('redis')->get('user_info_'.Session::get('id'));
+        echo $user->Name;
         return view('Frontend.Home.main');
     }
 }
