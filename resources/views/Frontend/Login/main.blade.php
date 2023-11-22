@@ -166,14 +166,26 @@
                     success: function(e)
                     {
                         $("small").hide();
-                        Swal.fire({
-                            title: "",
-                            text: e.success,
-                            icon: 'success'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                window.location.href = "{{url('/')}}";
+                        var response = x.responseJSON || x.responseText;
+                        $.each(response.success, function (index, value)
+                        {
+                            if(index == 'show_alert')
+                            {
+                                Swal.fire({
+                                    title: "",
+                                    text: value,
+                                    icon: 'success'
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        window.location.href = "{{url('/')}}";
+                                    }
+                                });
                             }
+                            else
+                            {
+                                $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                            }
+                            console.error(x.status+" "+value);
                         });
                         console.log(e.status+" "+e.success);
                     },
