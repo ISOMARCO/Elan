@@ -183,12 +183,21 @@
                         $("small").hide();
                         $.each(errorResponse.error, function (index, value)
                         {
-                            $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                            if(index == 'show_alert')
+                            {
+                                Swal.fire({
+                                    title: "",
+                                    text: value,
+                                    icon: 'error'
+                                });
+                            }
+                            else
+                            {
+                                $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                            }
                             console.error(x.status+" "+value);
                         });
                         console.error(errorResponse.location);
-
-
                     }
                 });
             });
@@ -220,19 +229,8 @@
                         $("small").hide();
                             $.each(errorResponse.error, function (index, value)
                             {
-                                if(index == 'show_alert')
-                                {
-                                    Swal.fire({
-                                        title: "",
-                                        text: value,
-                                        icon: 'error'
-                                    });
-                                }
-                                else
-                                {
-                                    $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
-                                }
-                                console.error(x.status+" "+value+" "+index);
+                                $("#register-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
+                                console.error(x.status+" "+value);
                             });
                         console.error(errorResponse.location);
                     }
