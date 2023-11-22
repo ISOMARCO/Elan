@@ -55,8 +55,7 @@ class Users extends Model
         {
             $password = hash('sha256', md5($password));
         }
-        $users = new Users();
-        $user = $users->table('Users')->where('Password', '=', $password);
+        $user = DB::table('Users')->where('Password', '=', $password);
         if(filter_var($email_or_phone, FILTER_VALIDATE_EMAIL))
         {
             $user->where('Email', '=', $email_or_phone);
