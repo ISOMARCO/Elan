@@ -152,7 +152,7 @@
                 cancelButtonText: 'Xeyr'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = this.attr("href");
+                    window.location.href = "{{url('/logout')}}";
                 }
             })
         });
