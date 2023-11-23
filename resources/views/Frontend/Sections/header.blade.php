@@ -160,7 +160,7 @@
                         </li>
                         <li class="navbar-item navbar-dropdown"><a class="navbar-link" href="notification.html"><span>Notification</span><span>0</span></a>
                         </li>
-                        <li class="navbar-item"><a class="navbar-link" href="user-form.html">Logout</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="{{url('/logout')}}">Logout</a></li>
                     </ul>
                 </div>
             </div>
