@@ -52,9 +52,9 @@ class LoginController extends Controller
         }
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        session()->flush();
+        $request->session()->flush();
         return redirect()->back();
     }
 }
