@@ -7,8 +7,11 @@
                         Exercitationem soluta provident non.</p></div>
             </div>
             <div class="col-lg-6">
-                <form class="news-form"><input type="text" placeholder="Enter Your Email Address">
-                    <button class="btn btn-inline"><i class="fas fa-envelope"></i><span>Subscribe</span></button>
+                <form class="news-form">
+                    <input type="text" placeholder="Enter Your Email Address">
+                    <button class="btn btn-inline">
+                        <i class="fas fa-envelope"></i>
+                        <span>Subscribe</span></button>
                 </form>
             </div>
         </div>
