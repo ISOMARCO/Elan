@@ -54,7 +54,7 @@ class LoginController extends Controller
 
     public function logout()
     {
-        Session::flush();
+        session()->flush();
         return redirect()->back();
     }
 }
