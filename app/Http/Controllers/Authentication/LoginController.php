@@ -51,11 +51,4 @@ class LoginController extends Controller
             abort(403, 'Unauthorized');
         }
     }
-
-    public function logout(Request $request)
-    {
-        echo "OK";
-        #$request->session()->forget('id');
-        #return redirect()->back();
-    }
 }
