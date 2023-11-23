@@ -51,4 +51,10 @@ class LoginController extends Controller
             abort(403, 'Unauthorized');
         }
     }
+
+    public function logout()
+    {
+        Session::flush();
+        return redirect()->back();
+    }
 }
