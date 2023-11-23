@@ -134,3 +134,24 @@
 <script src="{{asset('Assets/Frontend/js/vendor/slick.min.js')}}"></script>
 <script src="{{asset('Assets/Frontend/js/custom/slick.js')}}"></script>
 <script src="{{asset('Assets/Frontend/js/custom/main.js')}}"></script>
+<script src="{{asset('Assets/Frontend/sweetalert2/sweetalert2.js')}}"></script>
+<script>
+    $(document).ready(function() {
+        $("#logout_url").on("click", function() {
+            Swal.fire({
+                title: '',
+                text: "Çıxmaq istədiyinizdən əminsiniz ?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Bəli',
+                cancelButtonText: 'Xeyr'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = this.attr("href");
+                }
+            })
+        });
+    });
+</script>

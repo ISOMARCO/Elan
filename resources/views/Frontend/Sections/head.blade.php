@@ -9,3 +9,4 @@
 <link rel="stylesheet" href="{{asset('Assets/Frontend/css/vendor/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('Assets/Frontend/css/custom/main.css')}}">
 <link rel="stylesheet" href="{{asset('Assets/Frontend/css/custom/index.css')}}">
+<link rel="stylesheet" href="{{asset('Assets/Frontend/sweetalert2/sweetalert2.css')}}">
