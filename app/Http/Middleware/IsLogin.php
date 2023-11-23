@@ -18,7 +18,7 @@ class IsLogin
     {
         if(Session::has('id'))
         {
-            return redirect()->route('Home');
+            return redirect()->back();
         }
         return $next($request);
     }
