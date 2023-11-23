@@ -6,10 +6,14 @@
                 <a href="{{url('/')}}" class="header-logo">
                     <img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo">
                 </a>
-                <a href="{{url('/login')}}" class="header-widget header-user">
-                    <img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user">
-                    <span>Login / Register</span>
-                </a>
+                @if(Session::has('id'))
+                    Guest
+                @else
+                    <a href="{{url('/login')}}" class="header-widget header-user">
+                        <img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user">
+                        <span>Login / Register</span>
+                    </a>
+                @endif
                 <button type="button" class="header-widget search-btn"><i class="fas fa-search"></i></button>
             </div>
             <form class="header-form">
