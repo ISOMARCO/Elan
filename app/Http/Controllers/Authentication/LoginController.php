@@ -54,7 +54,8 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        $request->session()->forget('id');
-        return redirect()->back();
+        echo "OK";
+        #$request->session()->forget('id');
+        #return redirect()->back();
     }
 }
