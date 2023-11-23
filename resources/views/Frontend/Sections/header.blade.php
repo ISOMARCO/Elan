@@ -6,9 +6,7 @@
                 <a href="{{url('/')}}" class="header-logo">
                     <img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo">
                 </a>
-                @if(Session::has('id'))
-                    Guest
-                @else
+                @if(!Session::has('id'))
                     <a href="{{url('/login')}}" class="header-widget header-user">
                         <img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user">
                         <span>Login / Register</span>
