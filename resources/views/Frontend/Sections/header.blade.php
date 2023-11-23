@@ -179,9 +179,13 @@
                 <a href="{{url('/login')}}" class="mobile-widget">
                     <i class="fas fa-user"></i><span>Login</span>
                 </a>
+            @else
+                <a href="#" class="mobile-widget">
+                    <i class="fas fa-user"></i><span>My Ads</span>
+                </a>
             @endif
             <a href="ad-post.html" class="mobile-widget plus-btn">
-                <i class="fas fa-plus"></i><span>Ad Post</span>
+                <i class="fas fa-bullhorn"></i><span>Ad Post</span>
             </a>
             <a href="notification.html" class="mobile-widget">
                 <i class="fas fa-bell"></i><span>notify</span>
