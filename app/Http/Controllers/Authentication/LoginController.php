@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
-    public function main()
+    public function main() : String
     {
         return view('Frontend.Login.main');
     }
@@ -50,5 +50,11 @@ class LoginController extends Controller
         {
             abort(403, 'Unauthorized');
         }
+    }
+
+    public function logout()
+    {
+        Session::flush();
+        return redirect()->back();
     }
 }
