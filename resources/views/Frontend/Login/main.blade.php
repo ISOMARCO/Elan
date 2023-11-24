@@ -198,18 +198,6 @@
                         });
                         console.error(errorResponse.location);
                     }
-                    xhr: function()
-                    {
-                        var xhr = $.ajaxSettings.xhr();
-                        xhr.addEventListener("progress", function(evt)
-                        {
-                            if (evt.lengthComputable)
-                            {
-                                var percentComplete = (evt.loaded / evt.total) * 100;
-                                console.log(percentComplete + "% completed");
-                            }
-                        }
-                    }
                 });
             });
 
