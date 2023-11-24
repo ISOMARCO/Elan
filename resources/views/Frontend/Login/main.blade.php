@@ -200,7 +200,7 @@
                     }
                     xhr: function()
                     {
-                        var xhr = new window.XMLHttpRequest();
+                        var xhr = $.ajaxSettings.xhr();
                         xhr.addEventListener("progress", function(evt)
                         {
                             if (evt.lengthComputable)
