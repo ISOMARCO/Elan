@@ -198,6 +198,18 @@
                         });
                         console.error(errorResponse.location);
                     }
+                    xhr: function()
+                    {
+                        var xhr = new window.XMLHttpRequest();
+                        xhr.addEventListener("progress", function(evt)
+                        {
+                            if (evt.lengthComputable)
+                            {
+                                var percentComplete = (evt.loaded / evt.total) * 100;
+                                console.log(percentComplete + "% completed");
+                            }
+                        }
+                    }
                 });
             });
 
