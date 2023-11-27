@@ -201,7 +201,7 @@
                             console.error(x.status+" "+value);
                         });
                         console.error(errorResponse.location);
-                    }
+                    },
                     complete: function() {
                         $("#login_spinner").hide();
                     }
