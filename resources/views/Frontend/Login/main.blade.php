@@ -26,7 +26,7 @@
             <div class="user-form-title">
                 <h2>Welcome!</h2>
             </div>
-            ABC
+            <i class="fad fa-spinner fa-spin fa-lg" id="login_spinner" style="--fa-primary-color: #4b0aff; --fa-secondary-color: #4b0aff; display: none"></i>
             <form method="post" id="login_form">
                 <div class="row">
                     <div class="col-12">
@@ -164,6 +164,9 @@
                     url: "{{url('login/loginAction')}}",
                     data: $("#login_form").serialize(),
                     dataType: "json",
+                    beforeSend: function() {
+                      $("#login_spinner").show();
+                    },
                     success: function(e)
                     {
                         $("small").hide();
@@ -199,6 +202,9 @@
                         });
                         console.error(errorResponse.location);
                     }
+                    complete: function() {
+                        $("#login_spinner").hide();
+                    }
                 });
             });
 
@@ -208,9 +214,6 @@
                     url: "{{url('/register/registerAction')}}",
                     data: $("#register_form").serialize(),
                     dataType: "json",
-                    beforeSend: function() {
-
-                    },
                     success: function(e)
                     {
                         $("small").hide();
