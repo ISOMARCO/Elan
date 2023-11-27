@@ -26,6 +26,7 @@
             <div class="user-form-title">
                 <h2>Welcome!</h2>
             </div>
+            ABC
             <form method="post" id="login_form">
                 <div class="row">
                     <div class="col-12">
@@ -207,6 +208,9 @@
                     url: "{{url('/register/registerAction')}}",
                     data: $("#register_form").serialize(),
                     dataType: "json",
+                    beforeSend: function() {
+
+                    },
                     success: function(e)
                     {
                         $("small").hide();
