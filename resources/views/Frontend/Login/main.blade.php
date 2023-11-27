@@ -172,7 +172,7 @@
                         $("small").hide();
                             Swal.fire({
                                 html: true,
-                                title: swal.showLoading(),
+                                title: '',
                                 html: e.success,
                                 icon: 'success'
                             }).then((result) => {
