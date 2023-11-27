@@ -171,9 +171,7 @@
                     {
                         $("small").hide();
                             Swal.fire({
-                                html: true,
-                                title: '',
-                                html: e.success,
+                                html: e.success+'<i class="fas fa-spinner fa-spin fa-lg" id="login_spinner" style="--fa-primary-color: #4b0aff; --fa-secondary-color: #4b0aff; display: none"></i>',
                                 icon: 'success'
                             }).then((result) => {
                                 if (result.isConfirmed) {
