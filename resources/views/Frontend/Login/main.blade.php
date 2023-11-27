@@ -26,7 +26,7 @@
             <div class="user-form-title">
                 <h2>Welcome!</h2>
             </div>
-            <i class="fad fa-spinner fa-spin fa-lg" id="login_spinner" style="--fa-primary-color: #4b0aff; --fa-secondary-color: #4b0aff; display: none"></i>
+            <i class="fad fa-spinner fa-spin fa-lg" id="login_spinner" style="--fa-primary-color: #4b0aff; --fa-secondary-color: #4b0aff;></i>
             <form method="post" id="login_form">
                 <div class="row">
                     <div class="col-12">
