@@ -60,13 +60,17 @@ class Users extends Model
         {
             $user->where('Email', '=', $email_or_phone);
         }
-        else
+        elseif(is_numeric($email_or_phone))
         {
             $user->where('Phone', '=', $email_or_phone);
         }
+        else
+        {
+            return [false, 'undefined_email_or_phone'];
+        }
         if($user->count() == 0)
         {
-            return [false];
+            return [false, 'no_user'];
         }
         return [true, $user->first()];
     }
