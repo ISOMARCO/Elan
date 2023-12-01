@@ -37,6 +37,7 @@ class LoginController extends Controller
                 return response()->json(['error' => $emptyErrorArray, 'location' => 'LoginController@loginAction@34'], 422);
             }
             $user = $users->login($email_or_phone, $password);
+            return response()->json(['error' => ['show_alert' => $user[1]]]);
             if($user[0] === false)
             {
                 switch($user[1])
