@@ -55,30 +55,32 @@ class Users extends Model
         {
             $password = hash('sha256', md5($password));
         }
-        try
+        $user = DB::table('Users')->where('Password', '=', $password);
+        if(filter_var($email_or_phone, FILTER_VALIDATE_EMAIL))
         {
-            $user = DB::table('Users')->where('Password', '=', $password);
-            if(filter_var($email_or_phone, FILTER_VALIDATE_EMAIL))
-            {
-                $user->where('Email', '=', $email_or_phone);
-            }
-            elseif(is_numeric($email_or_phone))
-            {
-                $user->where('Phone', '=', $email_or_phone);
-            }
-            else
-            {
-                return [false, 'undefined_email_or_phone'];
-            }
-        }catch(QueryException $e)
+            $user->where('Email', '=', $email_or_phone);
+        }
+        elseif(is_numeric($email_or_phone))
         {
-            return [false, $e->getMessage()];
+            $user->where('Phone', '=', $email_or_phone);
+        }
+        else
+        {
+            return [false, 'undefined_email_or_phone'];
         }
         if($user->count() == 0)
         {
             return [false, 'no_user'];
         }
-        return [true, $user->first()];
+        try
+        {
+            return [true, $user->first()];
+        }
+        catch(QueryException $e)
+        {
+            return [false, $e->getMessage()];
+        }
+
     }
 
     public function String_Replace($string) : String
