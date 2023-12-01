@@ -48,7 +48,7 @@ class LoginController extends Controller
                         return response()->json(['error' => ['email_or_phone' => 'Email adres və ya telefon nömrəsi yazmalısınız']], 422);
                     break;
                     default:
-                        return response()->json(['error' => ['show_alert' => 'Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin', 'console' => $user[1]]]);
+                        return response()->json(['error' => ['show_alert' => 'Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin', 'console' => $user[1]]], 422);
                     break;
                 }
 
