@@ -74,7 +74,11 @@ class Users extends Model
             {
                 return [false, 'no_user'];
             }
-            return [true, $user->first()];
+            $result = $user->first();
+            DB::table('Users')->where('Id', $result->Id)->update([
+                'Last_Login_Date' => date('Y-m-d H:i:s')
+            ]);
+            return [true, $result];
         }
         catch(QueryException $e)
         {
