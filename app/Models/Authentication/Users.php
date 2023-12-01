@@ -62,7 +62,7 @@ class Users extends Model
         }
         elseif(is_numeric($email_or_phone))
         {
-            $user->where('Phone', '=', $email_or_phone);
+            $user->where('Phone_Number', '=', $email_or_phone);
         }
         else
         {
