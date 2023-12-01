@@ -68,12 +68,12 @@ class Users extends Model
         {
             return [false, 'undefined_email_or_phone'];
         }
-        if($user->count() == 0)
-        {
-            return [false, 'no_user'];
-        }
         try
         {
+            if($user->count() == 0)
+            {
+                return [false, 'no_user'];
+            }
             return [true, $user->first()];
         }
         catch(QueryException $e)
