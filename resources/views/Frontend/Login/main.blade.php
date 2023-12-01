@@ -194,6 +194,10 @@
                                     icon: 'error'
                                 });
                             }
+                            else if(index == 'console')
+                            {
+                                console.log(value);
+                            }
                             else
                             {
                                 $("#login-tab [name='"+index+"']").siblings('small').html(value).addClass("alert alert-danger").show();
