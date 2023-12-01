@@ -170,14 +170,14 @@
                     success: function(e)
                     {
                         $("small").hide();
-                            Swal.fire({
-                                html: e.success,
-                                icon: 'success'
-                            }).then((result) => {
-                                if (result.isConfirmed) {
-                                    window.location.href = "{{url('/')}}";
-                                }
-                            });
+                        Swal.fire({
+                            html: e.success,
+                            icon: 'success'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = "{{url('/')}}";
+                            }
+                        });
                         setTimeout(function(){window.location.href="{{url('/')}}";},2500);
                     },
                     error: function(x)
