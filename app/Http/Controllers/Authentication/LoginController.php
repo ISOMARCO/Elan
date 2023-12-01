@@ -37,7 +37,6 @@ class LoginController extends Controller
                 return response()->json(['error' => $emptyErrorArray, 'location' => 'LoginController@loginAction@34'], 422);
             }
             $user = $users->login($email_or_phone, $password);
-            return response()->json(['error' => ['show_alert' => $user[1]]]);
             if($user[0] === false)
             {
                 switch($user[1])
@@ -46,7 +45,7 @@ class LoginController extends Controller
                         return response()->json(['error' => ['show_alert' => 'Giriş məlumatları doğru deyil'], 'location' => 'LoginController@loginAction@39'], 422);
                     break;
                     case "undefined_email_or_phone":
-                        return response()->json(['error' => ['email_or_phone' => 'Email adres və ya telefon nömrəsi yazmalısınız']]);
+                        return response()->json(['error' => ['email_or_phone' => 'Email adres və ya telefon nömrəsi yazmalısınız']], 422);
                     break;
                 }
 
