@@ -175,9 +175,10 @@
                                 icon: 'success'
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    setTimeout(function(){window.location.href="{{url('/')}}";},2500);
+                                    window.location.href = "{{url('/')}}";
                                 }
                             });
+                        setTimeout(function(){window.location.href="{{url('/')}}";},2500);
                     },
                     error: function(x)
                     {
