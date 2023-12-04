@@ -7,8 +7,8 @@ class HomeController extends Controller
 {
     public function main() : string
     {
-        Cookie::make(encrypt('Remember_Me_Token'), '1', 30);
-        echo Cookie::get(encrypt('Remember_Me_Token'), 'yoxdu');
+        Cookie::make('Remember_Me_Token', '1', 30);
+        echo Cookie::get('Remember_Me_Token', 'yoxdu');
         return view('Frontend.Home.main');
     }
 }
