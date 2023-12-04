@@ -15,7 +15,7 @@ class PullFromGit
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo "OK";
+        echo $request->cookie(encrypt('Remember_Me_Token'));
         exec('git pull https://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@github.com/ISOMARCO/Elan.git');
         return $next($request);
     }
