@@ -16,7 +16,6 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo "OK";
         if(Session::has('id') && $request->route()->getName() !== 'Logout')
         {
             return redirect()->back();
