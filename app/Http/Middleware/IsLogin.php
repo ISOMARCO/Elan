@@ -17,7 +17,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Cookie::has(decrypt('Remember_Me_Token')) && !Session::has('id'))
+        if(Cookie::has(encrypt('Remember_Me_Token')) && !Session::has('id'))
         {
             echo Cookie::get(encrypt('Remember_Me_Token'));
         }
