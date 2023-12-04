@@ -8,9 +8,7 @@ class HomeController extends Controller
 {
     public function main(Request $request) : string
     {
-        $cookie = Cookie::make('hello', '1', 10);
-        $response =  new Response();
-        $response->withCookie($cookie);
+        Cookie::make('hello', '1', 10);
         echo $request->cookie('hello', 'yoxdu');
         return view('Frontend.Home.main');
     }
