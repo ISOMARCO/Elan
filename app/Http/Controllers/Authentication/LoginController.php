@@ -4,6 +4,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Authentication\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
@@ -68,6 +69,7 @@ class LoginController extends Controller
     public function logout()
     {
         Session::flush();
+        Cookie::forget(encrypt('Remember_Me_Token'));
         return redirect()->back();
     }
 }
