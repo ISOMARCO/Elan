@@ -8,7 +8,7 @@ class HomeController extends Controller
     public function main() : string
     {
         $cookie = Cookie::make('Remember_Me_Token', '1', 30);
-        echo request()->cookie('Remember_Me_Token');
+        echo response(request()->cookie('Remember_Me_Token'))->withCookie($cookie);
         return view('Frontend.Home.main');
     }
 }
