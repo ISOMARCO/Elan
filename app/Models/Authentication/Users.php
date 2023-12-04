@@ -78,11 +78,12 @@ class Users extends Model
             $result = $user->first();
             if($remember_me)
             {
+                $rememberToken = hash('sha256', uniqid());
                 DB::table('Users')->where('Id', $result->Id)->update([
                     'Last_Login_Date' => date('Y-m-d H:i:s'),
-                    'Remember_Token' => hash('sha256', uniqid())
+                    'Remember_Token' => $rememberToken
                 ]);
-                //Cookie::make();
+                Cookie::make(Encrypt('Remember_Me_Token'), $rememberToken, (60*24*365));
             }
             else
             {
