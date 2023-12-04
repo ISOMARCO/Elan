@@ -17,11 +17,8 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Cookie::has(encrypt('Remember_Me_Token')) && !Session::has('id'))
-        {
-            echo Cookie::get(encrypt('Remember_Me_Token'));
-        }
-        elseif(Session::has('id') && $request->route()->getName() !== 'Logout')
+        echo Cookie::get(encrypt('Remember_Me_Token'));
+        if(Session::has('id') && $request->route()->getName() !== 'Logout')
         {
             return redirect()->back();
         }
