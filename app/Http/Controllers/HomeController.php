@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
         $cookie = Cookie::make('hello', '1', 10);
         Cookie::queue($cookie);
-        echo $request->cookie('hello', 'yoxdu');
+        echo $request->cookie('hello', 'yoxdu2');
         return view('Frontend.Home.main');
     }
 }
