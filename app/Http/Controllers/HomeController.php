@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Cookie;
+use App\Helpers\Functions;
 
 class HomeController extends Controller
 {
