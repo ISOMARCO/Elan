@@ -5,6 +5,7 @@ namespace App\Models\Authentication;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 
 class Users extends Model
@@ -49,7 +50,7 @@ class Users extends Model
         }
     }
 
-    public function login($email_or_phone, $password, $encryptPassword = true) : Array
+    public function login($email_or_phone, $password, $remember_me, $encryptPassword = true) : Array
     {
         if($encryptPassword === true)
         {
@@ -75,9 +76,20 @@ class Users extends Model
                 return [false, 'no_user'];
             }
             $result = $user->first();
-            DB::table('Users')->where('Id', $result->Id)->update([
-                'Last_Login_Date' => date('Y-m-d H:i:s')
-            ]);
+            if($remember_me)
+            {
+                DB::table('Users')->where('Id', $result->Id)->update([
+                    'Last_Login_Date' => date('Y-m-d H:i:s'),
+                    'Remember_Token' => hash('sha256', uniqid())
+                ]);
+                //Cookie::make();
+            }
+            else
+            {
+                DB::table('Users')->where('Id', $result->Id)->update([
+                    'Last_Login_Date' => date('Y-m-d H:i:s')
+                ]);
+            }
             return [true, $result];
         }
         catch(QueryException $e)

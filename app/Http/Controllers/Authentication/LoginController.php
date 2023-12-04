@@ -19,6 +19,7 @@ class LoginController extends Controller
         {
             $email_or_phone = $request->post('email_or_phone');
             $password = $request->post('password');
+            $remember_me = $request->post('remember_me');
             $users = new Users();
             $checkEmpty = [
                 'email_or_phone' => $email_or_phone,
@@ -36,7 +37,7 @@ class LoginController extends Controller
             {
                 return response()->json(['error' => $emptyErrorArray, 'location' => 'LoginController@loginAction@34'], 422);
             }
-            $user = $users->login($email_or_phone, $password);
+            $user = $users->login($email_or_phone, $password, $remember_me);
             if($user[0] === false)
             {
                 switch($user[1])

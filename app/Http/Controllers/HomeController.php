@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Session;
+
 class HomeController extends Controller
 {
     public function main() : string
     {
-        //echo Session::has('id');
+        echo Encrypt('123');
         return view('Frontend.Home.main');
     }
 }
