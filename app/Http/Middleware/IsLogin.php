@@ -21,11 +21,6 @@ class IsLogin
         {
             return redirect()->back();
         }
-        if(!Session::has('id') && Cookie::has(encrypt('Remember_Me_Token')))
-        {
-            echo "var";
-        }
-        echo "var";
         return $next($request);
     }
 }
