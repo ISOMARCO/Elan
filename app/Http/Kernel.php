@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\AutoLogin;
 use App\Http\Middleware\IsLogin;
 use App\Http\Middleware\PullFromGit;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -39,7 +40,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            "PullFromGit" => PullFromGit::class
+            "PullFromGit" => PullFromGit::class,
+            "AutoLogin" => AutoLogin::class
         ],
 
         'api' => [
