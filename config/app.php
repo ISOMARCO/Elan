@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'elan'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,9 +55,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://laravel.iso.com.az'),
+    'url' => env('APP_URL', 'https://elan.iso.com.az'),
 
-    'asset_url' => env('ASSET_URL', 'https://laravel.iso.com.az'),
+    'asset_url' => env('ASSET_URL', 'https://elan.iso.com.az'),
 
     /*
     |--------------------------------------------------------------------------
