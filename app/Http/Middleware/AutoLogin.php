@@ -15,7 +15,6 @@ class AutoLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo "OKEY";
         return $next($request);
     }
 }
