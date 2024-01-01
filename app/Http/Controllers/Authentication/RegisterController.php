@@ -65,7 +65,7 @@ class RegisterController extends Controller
             {
                 return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib'], 'location' => 'RegisterController@registerAction@67'], 422);
             }
-            elseif(!isset($register[1]))
+            elseif($register[0] === false && !isset($register[1]))
             {
                 return response()->json(['error' => ['show_alert' => 'Bilinməyən xəta'], 'location' => 'RegisterController@registerAction@70'], 422);
             }
