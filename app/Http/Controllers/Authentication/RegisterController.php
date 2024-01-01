@@ -67,7 +67,7 @@ class RegisterController extends Controller
             }
             elseif($register[0] === false)
             {
-                return response()->json(['error' => ['show_alert' => 'Bilinməyən xəta baş verdi'], 'location' => 'RegisterController@registerAction@70']);
+                return response()->json(['error' => ['show_alert' => 'Bilinməyən xəta baş verdi'], 'location' => 'RegisterController@registerAction@70'], 422);
             }
             return response()->json(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.'], 200);
 
