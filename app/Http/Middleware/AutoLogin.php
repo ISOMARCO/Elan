@@ -17,6 +17,7 @@ class AutoLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        echo substr(0, 10, 'remembertoken');
         if(!Session::has('id') && Cookie::has(encrypt('Remember_Me_Token')))
         {
             echo "Auto login olmalidi";
