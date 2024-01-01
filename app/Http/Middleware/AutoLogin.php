@@ -19,7 +19,7 @@ class AutoLogin
     {
         if(!Session::has('id') && Cookie::has('Remember_Me'))
         {
-
+            Session::put('id');
         }
         return $next($request);
     }
