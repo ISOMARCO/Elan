@@ -47,7 +47,7 @@ class Users extends Model
                     return [false, ['key' => 'email', 'type' => 'duplicate']];
                 }
             }
-            return [false, ['key' => 'email']];
+            return [false];
         }
     }
 

@@ -61,9 +61,13 @@ class RegisterController extends Controller
                 'gender' => $gender,
                 'password' => $password
             ]);
-            if($register[0] === false)
+            if($register[0] === false && $register[1]['type'] === 'duplicate')
             {
                 return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib'], 'location' => 'RegisterController@registerAction@67'], 422);
+            }
+            elseif($register[0] === false)
+            {
+                return response()->json(['error' => ['show_alert' => 'Bilinməyən xəta baş verdi']]);
             }
             return response()->json(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.'], 200);
 
