@@ -41,7 +41,6 @@ class RegisterController extends Controller
                     $emptyErrorArray[$key] = $users->String_Replace($key)." boş buraxıla bilməz";
                 }
             }
-            return response()->json(['error' => ['email' => 'OK']], 300);
             if(count($emptyErrorArray) > 0)
             {
                 return response()->json(['error' => $emptyErrorArray, 'location' => 'RegisterController@registerAction@47'], 422);
@@ -62,6 +61,7 @@ class RegisterController extends Controller
                 'gender' => $gender,
                 'password' => $password
             ]);
+            return response()->json(['error' => ['email' => 'OK']], 300);
             if($register[0] === false)
             {
                 return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib'], 'location' => 'RegisterController@registerAction@67'], 422);
