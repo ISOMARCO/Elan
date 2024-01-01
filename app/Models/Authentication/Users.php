@@ -5,8 +5,10 @@ namespace App\Models\Authentication;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\QueryException;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class Users extends Model
 {
@@ -115,5 +117,24 @@ class Users extends Model
         ];
         #return str_replace(array_keys($fields), array_values($fields), $string);
         return $fields[$string];
+    }
+
+    public function Login_With_Token($token = NULL) : Boolean
+    {
+        if($token === NULL)
+        {
+            $token = Cookie::get('Remember_Me');
+        }
+        $user = DB::table('Users')->where('Remember_Token', '=', $token);
+        if($user->count() == 0)
+        {
+            return false;
+        }
+        $result = $user->first();
+        Session::put('id', $result->Id);
+        DB::table('Users')->where('Id', $result->Id)->update([
+            'Last_Login_Date' => date('Y-m-d H:i:s')
+        ]);
+        return true;
     }
 }

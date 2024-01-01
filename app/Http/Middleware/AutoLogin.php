@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Authentication\Users;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -19,7 +20,8 @@ class AutoLogin
     {
         if(!Session::has('id') && Cookie::has('Remember_Me'))
         {
-            Session::put('id');
+            $users = new Users();
+            $users->Login_With_Token(Cookie::get('Remember_Me'));
         }
         return $next($request);
     }
