@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function main(Request $request) : string
     {
-        Cookie::queue(Cookie::forget(encrypt('Remember_Me_Token')));
+        echo Cookie::make('name', 'value', 10);
         return view('Frontend.Home.main');
     }
 }
