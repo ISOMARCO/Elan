@@ -239,7 +239,6 @@
                         $("small").hide();
                             $.each(errorResponse.error, function (index, value)
                             {
-                                alert(index);
                                 if(index == 'show_alert')
                                 {
                                     Swal.fire({
