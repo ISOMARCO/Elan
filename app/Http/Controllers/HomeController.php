@@ -10,6 +10,7 @@ class HomeController extends Controller
     {
         Cookie::queue(Cookie::make('name', 'value', 100));
         print_r(Cookie::getQueuedCookies());
+        echo Cookie::get('name');
         return view('Frontend.Home.main');
     }
 }
