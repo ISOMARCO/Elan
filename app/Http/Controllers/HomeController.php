@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function main(Request $request) : string
     {
-        Cookie::make('name', 'value', 100);
+        Cookie::queue(Cookie::make('name', 'value', 100));
         echo Cookie::get('name');
         return view('Frontend.Home.main');
     }
