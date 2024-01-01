@@ -63,8 +63,10 @@ class RegisterController extends Controller
             ]);
             if($register[0] === false)
             {
+                return response()->json(['error' => ['email' => 'OK']], 366);
                 return response()->json(['error' => [$register[1]['key'] => $users->String_Replace($register[1]['key']).' artıq qeydiyyatdan keçib'], 'location' => 'RegisterController@registerAction@67'], 422);
             }
+            return response()->json(['error' => ['email' => 'OK']], 369);
             return response()->json(['success' => 'Uğurla qeydiyyatdan keçdiniz. Giriş edə bilərsiniz.'], 200);
 
         }
