@@ -83,7 +83,7 @@ class Users extends Model
                     'Last_Login_Date' => date('Y-m-d H:i:s'),
                     'Remember_Token' => $rememberToken
                 ]);
-                Cookie::queue(Cookie::make('Remember_Me_Token', $rememberToken, (60*24*365)));
+                Cookie::queue(Cookie::make('Remember_Me', $rememberToken, (60*24*365)));
             }
             else
             {

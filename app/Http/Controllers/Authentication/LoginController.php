@@ -69,7 +69,7 @@ class LoginController extends Controller
     public function logout()
     {
         Session::flush();
-        Cookie::queue(Cookie::forget('Remember_Me_Token'));
+        Cookie::queue(Cookie::forget('Remember_Me'));
         return redirect()->back();
     }
 }
