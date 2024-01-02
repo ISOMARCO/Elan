@@ -118,7 +118,7 @@ class Users extends Model
         return $fields[$string];
     }
 
-    public function Login_With_Token($token = NULL) : Boolean
+    public function Login_With_Token($token = NULL) : Bool
     {
         if($token === NULL)
         {
