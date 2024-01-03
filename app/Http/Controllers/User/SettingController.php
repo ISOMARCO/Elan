@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
-    //
+    public function main()
+    {
+        return view('Frontend.User.setting');
+    }
 }
