@@ -251,7 +251,7 @@
                                         <div class="feature-meta"><span class="feature-price">$1200<small>/Monthly</small></span><span class="feature-time"><i class="fas fa-clock"></i>56 minute ago</span></div>
                                     </div>
                                 </div>
-                                <div class="feature-card"><a href="#" class="feature-img"><img src="images/product/01.jpg" alt="feature"></a>
+                                <div class="feature-card"><a href="#" class="feature-img"><img src="{{asset('Assets/Frontend/images/product/01.jpg')}}" alt="feature"></a>
                                     <div class="cross-inline-badge feature-badge"><span>featured</span><i class="fas fa-book-open"></i></div><button type="button" class="feature-wish"><i class="fas fa-heart"></i></button>
                                     <div class="feature-content">
                                         <ol class="breadcrumb feature-category">
@@ -263,7 +263,7 @@
                                         <div class="feature-meta"><span class="feature-price">$800<small>/perday</small></span><span class="feature-time"><i class="fas fa-clock"></i>56 minute ago</span></div>
                                     </div>
                                 </div>
-                                <div class="feature-card"><a href="#" class="feature-img"><img src="images/product/08.jpg" alt="feature"></a>
+                                <div class="feature-card"><a href="#" class="feature-img"><img src="{{asset('Assets/Frontend/images/product/08.jpg')}}" alt="feature"></a>
                                     <div class="cross-inline-badge feature-badge"><span>featured</span><i class="fas fa-book-open"></i></div><button type="button" class="feature-wish"><i class="fas fa-heart"></i></button>
                                     <div class="feature-content">
                                         <ol class="breadcrumb feature-category">
@@ -275,7 +275,7 @@
                                         <div class="feature-meta"><span class="feature-price">$1150<small>/Negotiable</small></span><span class="feature-time"><i class="fas fa-clock"></i>56 minute ago</span></div>
                                     </div>
                                 </div>
-                                <div class="feature-card"><a href="#" class="feature-img"><img src="images/product/06.jpg" alt="feature"></a>
+                                <div class="feature-card"><a href="#" class="feature-img"><img src="{{asset('Assets/Frontend/images/product/06.jpg')}}" alt="feature"></a>
                                     <div class="cross-inline-badge feature-badge"><span>featured</span><i class="fas fa-book-open"></i></div><button type="button" class="feature-wish"><i class="fas fa-heart"></i></button>
                                     <div class="feature-content">
                                         <ol class="breadcrumb feature-category">
@@ -294,7 +294,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/07.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/07.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-clipboard-check"></i><span>recommend</span></div>
                                     <div class="product-type"><span class="flat-badge booking">booking</span></div>
                                     <ul class="product-action">
