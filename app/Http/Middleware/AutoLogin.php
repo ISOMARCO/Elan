@@ -18,6 +18,7 @@ class AutoLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
+        echo Cookie::get('Remember_Me')."<br>";
         if(!Session::has('id') && Cookie::has('Remember_Me'))
         {
             $users = new Users();
