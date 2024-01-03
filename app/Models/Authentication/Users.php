@@ -89,7 +89,7 @@ class Users extends Model
                 }
                 else
                 {
-                    $rememberToken = $user->Remember_Token;
+                    $rememberToken = $result->Remember_Token;
                 }
                 Cookie::queue(Cookie::make('Remember_Me', $rememberToken, (60*24*365)));
             }
