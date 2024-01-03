@@ -134,6 +134,7 @@ class Users extends Model
         $user = DB::table('Users')->where('Remember_Token', '=', $token);
         if($user->count() == 0)
         {
+            Cookie::queue(Cookie::forget('Remember_Me'));
             return false;
         }
         $result = $user->first();
