@@ -21,7 +21,7 @@ class AutoLogin
         if(!Session::has('id') && Cookie::has('Remember_Me'))
         {
             $users = new Users();
-            echo $users->Login_With_Token(Cookie::get('Remember_Me'))." ok";
+            $users->Login_With_Token(Cookie::get('Remember_Me'));
         }
         return $next($request);
     }
