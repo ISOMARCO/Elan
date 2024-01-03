@@ -321,7 +321,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/08.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/08.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-clipboard-check"></i><span>recommend</span></div>
                                     <div class="product-type"><span class="flat-badge sale">sale</span></div>
                                     <ul class="product-action">
@@ -348,7 +348,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/09.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/09.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-clipboard-check"></i><span>recommend</span></div>
                                     <div class="product-type"><span class="flat-badge sale">sale</span></div>
                                     <ul class="product-action">
@@ -375,7 +375,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/10.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/10.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-bolt"></i><span>trending</span></div>
                                     <div class="product-type"><span class="flat-badge rent">rent</span></div>
                                     <ul class="product-action">
@@ -402,7 +402,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/11.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/11.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-bolt"></i><span>trending</span></div>
                                     <div class="product-type"><span class="flat-badge booking">booking</span></div>
                                     <ul class="product-action">
@@ -429,7 +429,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/13.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/13.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-bolt"></i><span>trending</span></div>
                                     <div class="product-type"><span class="flat-badge sale">sale</span></div>
                                     <ul class="product-action">
@@ -456,7 +456,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/14.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/14.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-fire"></i><span>top niche</span></div>
                                     <div class="product-type"><span class="flat-badge rent">rent</span></div>
                                     <ul class="product-action">
@@ -483,7 +483,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/15.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/15.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-fire"></i><span>top niche</span></div>
                                     <div class="product-type"><span class="flat-badge sale">sale</span></div>
                                     <ul class="product-action">
@@ -510,7 +510,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/16.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/16.jpg')}}" alt="product"></div>
                                     <div class="cross-vertical-badge product-badge"><i class="fas fa-fire"></i><span>top niche</span></div>
                                     <div class="product-type"><span class="flat-badge booking">booking</span></div>
                                     <ul class="product-action">
@@ -537,7 +537,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/02.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/02.jpg')}}" alt="product"></div>
                                     <div class="product-type"><span class="flat-badge sale">sale</span></div>
                                     <ul class="product-action">
                                         <li class="view"><i class="fas fa-eye"></i><span>264</span></li>
@@ -563,7 +563,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/03.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/03.jpg')}}" alt="product"></div>
                                     <div class="product-type"><span class="flat-badge rent">rent</span></div>
                                     <ul class="product-action">
                                         <li class="view"><i class="fas fa-eye"></i><span>264</span></li>
@@ -589,7 +589,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="product-card">
                                 <div class="product-media">
-                                    <div class="product-img"><img src="images/product/04.jpg" alt="product"></div>
+                                    <div class="product-img"><img src="{{asset('Assets/Frontend/images/product/04.jpg')}}" alt="product"></div>
                                     <div class="product-type"><span class="flat-badge sale">sale</span></div>
                                     <ul class="product-action">
                                         <li class="view"><i class="fas fa-eye"></i><span>264</span></li>
