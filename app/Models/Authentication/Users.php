@@ -125,7 +125,6 @@ class Users extends Model
             $token = Cookie::get('Remember_Me');
         }
         $user = DB::table('Users')->where('Remember_Token', '=', $token);
-        echo $token;
         if($user->count() == 0)
         {
             return false;
