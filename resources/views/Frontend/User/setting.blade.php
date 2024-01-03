@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="dash-header-left">
-                        <div class="dash-avatar"><img src="{{asset('Assets/Frontend/images/avatar/01.jpg')}}" alt="avatar"></div>
+                        <div class="dash-avatar"><a href="javascript:void(0)"><img src="{{asset('Assets/Frontend/images/avatar/01.jpg')}}" alt="avatar"></a></div>
                         <div class="dash-intro">
                             <h4><a href="#">gackon Honson</a></h4>
                             <h5>new seller</h5>
