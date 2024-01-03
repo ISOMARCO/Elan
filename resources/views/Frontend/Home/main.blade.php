@@ -5,12 +5,19 @@
 </head>
 <body>
     @include("Frontend.Sections.header")
-    <section class="banner-part">
+    <section class="inner-section single-banner">
         <div class="container">
-            <div class="banner-content"><h1>You can #Buy, #Rent, #Booking anything from here.</h1>
-                <p>Buy and sell everything from used cars to mobile phones and computers, or search for property, jobs and
-                    more in the world.</p><a href="#" class="btn btn-outline"><i
-                        class="fas fa-eye"></i><span>Show all ads</span></a></div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-content">
+                        <h2>ad list column 3</h2>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">ad-list-column3</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="inner-section ad-list-part">
