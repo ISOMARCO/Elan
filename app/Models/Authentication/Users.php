@@ -79,7 +79,7 @@ class Users extends Model
             $result = $user->first();
             if($remember_me)
             {
-                if($user->Remember_Token == NULL)
+                if($result->Remember_Token == NULL)
                 {
                     $rememberToken = hash('sha256', uniqid());
                     DB::table('Users')->where('Id', $result->Id)->update([
