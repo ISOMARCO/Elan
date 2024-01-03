@@ -79,11 +79,18 @@ class Users extends Model
             $result = $user->first();
             if($remember_me)
             {
-                $rememberToken = hash('sha256', uniqid());
-                DB::table('Users')->where('Id', $result->Id)->update([
-                    'Last_Login_Date' => date('Y-m-d H:i:s'),
-                    'Remember_Token' => $rememberToken
-                ]);
+                if($user->Remember_Token == NULL)
+                {
+                    $rememberToken = hash('sha256', uniqid());
+                    DB::table('Users')->where('Id', $result->Id)->update([
+                        'Last_Login_Date' => date('Y-m-d H:i:s'),
+                        'Remember_Token' => $rememberToken
+                    ]);
+                }
+                else
+                {
+                    $rememberToken = $user->Remember_Token;
+                }
                 Cookie::queue(Cookie::make('Remember_Me', $rememberToken, (60*24*365)));
             }
             else
@@ -124,7 +131,6 @@ class Users extends Model
         {
             $token = Cookie::get('Remember_Me');
         }
-        echo $token;
         $user = DB::table('Users')->where('Remember_Token', '=', $token);
         if($user->count() == 0)
         {
