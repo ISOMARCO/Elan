@@ -77,7 +77,6 @@ class Users extends Model
                 return [false, 'no_user'];
             }
             $result = $user->first();
-            return [false, $result->Remember_Token];
             if($remember_me)
             {
                 if($result->Remember_Token == NULL)
