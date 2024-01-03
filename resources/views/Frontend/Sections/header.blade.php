@@ -152,7 +152,7 @@
                         <li class="navbar-item"><a class="navbar-link" href="profile.html">Profile</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="ad-post.html">Ad Post</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="my-ads.html">My Ads</a></li>
-                        <li class="navbar-item"><a class="navbar-link" href="{{url('/user_setting')}}">Settings</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="{{url('/user_setting')}}">Parametrlər</a></li>
                         <li class="navbar-item navbar-dropdown"><a class="navbar-link" href="bookmark.html"><span>bookmark</span><span>0</span></a>
                         </li>
                         <li class="navbar-item navbar-dropdown"><a class="navbar-link"
