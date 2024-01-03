@@ -239,7 +239,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="ad-feature-slider slider-arrow">
-                                <div class="feature-card"><a href="#" class="feature-img"><img src="images/product/10.jpg" alt="feature"></a>
+                                <div class="feature-card"><a href="#" class="feature-img"><img src="{{asset('Assets/Frontend/images/product/10.jpg')}}" alt="feature"></a>
                                     <div class="cross-inline-badge feature-badge"><span>featured</span><i class="fas fa-book-open"></i></div><button type="button" class="feature-wish"><i class="fas fa-heart"></i></button>
                                     <div class="feature-content">
                                         <ol class="breadcrumb feature-category">
