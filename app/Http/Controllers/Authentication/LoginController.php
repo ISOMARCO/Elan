@@ -53,7 +53,6 @@ class LoginController extends Controller
                         return response()->json(['error' => ['show_alert' => $user[1], 'console' => $user[1]]], 422);
                     break;
                 }
-
             }
             $userInfo = $user[1];
             Session::put('id', $userInfo->Id);

@@ -22,7 +22,7 @@
     </section>
     <section class="inner-section ad-list-part">
         <div class="container">
-            <div class="row content-reverse">
+            <div class="row">
                 <div class="col-lg-4 col-xl-3">
                     <div class="row">
                         <div class="col-md-6 col-lg-12">
