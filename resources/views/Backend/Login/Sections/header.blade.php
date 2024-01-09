@@ -32,7 +32,7 @@
         }
     </style>
     <!--end::Page bg image-->
-
+</div>
     <!--begin::Authentication - Sign-in -->
     <div class="d-flex flex-column flex-lg-row flex-column-fluid">
         <!--begin::Aside-->
