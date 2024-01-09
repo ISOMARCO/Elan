@@ -200,7 +200,7 @@
                                 <div class="menu-item px-3">
                                     <a href="#" class="menu-link d-flex px-5" data-kt-lang="Japanese">
                                         <span class="symbol symbol-20px me-4">
-                                            <img data-kt-element="lang-flag" class="rounded-1" src="{{asset('Assets/Backend/flags/japan.svg')}}" alt="">
+                                            <img data-kt-element="lang-flag" class="rounded-1" src="{{asset('Assets/Backend/media/flags/japan.svg')}}" alt="">
                                         </span>
                                         <span data-kt-element="lang-name">Japanese</span>
                                     </a>
