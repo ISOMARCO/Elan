@@ -9,6 +9,9 @@ class HomeController extends Controller
 {
     public function main(Request $request) : string
     {
+        $method = 'print';
+        $telegram = new TelegramActions();
+        echo $telegram->$method;
         #print_r(DB::table('Users')->get());
         return view('Frontend.Home.main');
     }
