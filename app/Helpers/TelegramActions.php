@@ -1,7 +1,7 @@
 <?php
 namespace App\Helpers;
 
-class TelegramActions extends TelegramBot
+class TelegramActions
 {
     public function print()
     {
