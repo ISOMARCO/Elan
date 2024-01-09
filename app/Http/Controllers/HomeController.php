@@ -12,7 +12,7 @@ class HomeController extends Controller
         $method = 'print';
         $telegram = new TelegramActions();
         //echo call_user_func([$telegram, $method]);
-        echo $telegram->{$method}();
+        //echo $telegram->{$method}();
         #print_r(DB::table('Users')->get());
         return view('Frontend.Home.main');
     }
