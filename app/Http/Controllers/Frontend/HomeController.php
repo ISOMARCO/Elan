@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 #use App\Helpers\TelegramActions;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 #use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller

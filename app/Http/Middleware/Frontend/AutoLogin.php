@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\Frontend;
 
-use App\Models\Authentication\Users;
+use App\Models\Frontend\Authentication\Users;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;

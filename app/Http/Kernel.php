@@ -2,10 +2,9 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\AutoLogin;
-use App\Http\Middleware\IsLogin;
+use App\Http\Middleware\Frontend\AutoLogin;
+use App\Http\Middleware\Frontend\IsLogin;
 use App\Http\Middleware\PullFromGit;
-use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel

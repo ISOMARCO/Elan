@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Authentication;
+namespace App\Http\Controllers\Frontend\Authentication;
 
 use App\Http\Controllers\Controller;
+use App\Models\Frontend\Authentication\Users;
 use Illuminate\Http\Request;
-use App\Models\Authentication\Users;
+
 class RegisterController extends Controller
 {
     public function main() : String
