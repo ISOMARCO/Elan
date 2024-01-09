@@ -157,7 +157,7 @@
                         <div class="me-10">
                             <!--begin::Toggle-->
                             <button class="btn btn-flex btn-link btn-color-gray-700 btn-active-color-primary rotate fs-base" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">
-                                <img data-kt-element="current-lang-flag" class="w-20px h-20px rounded me-3" src="../../../assets/media/flags/united-states.svg" alt="">
+                                <img data-kt-element="current-lang-flag" class="w-20px h-20px rounded me-3" src="{{asset('Assets/Backend/media/flags/united-states.svg')}}" alt="">
 
                                 <span data-kt-element="current-lang-name" class="me-1">English</span>
 
