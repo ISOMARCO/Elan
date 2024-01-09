@@ -9,17 +9,3 @@
 <link href="{{asset('Assets/Backend/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('Assets/Backend/css/style.bundle.css')}}" rel="stylesheet" type="text/css">
 <!--end::Global Stylesheets Bundle-->
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-37564768-1');
-</script>
-<!--end::Google tag-->
-<script>
-    // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
-    if (window.top != window.self) {
-        window.top.location.replace(window.self.location.href);
-    }
-</script>
