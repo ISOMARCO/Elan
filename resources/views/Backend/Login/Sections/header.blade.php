@@ -124,14 +124,11 @@
                                 <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
 
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">
-    Sign In</span>
+                                    <span class="indicator-label">Sign In</span>
                                     <!--end::Indicator label-->
 
                                     <!--begin::Indicator progress-->
-                                    <span class="indicator-progress">
-    Please wait...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-</span>
+                                    <span class="indicator-progress">Please wait...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                     <!--end::Indicator progress-->        </button>
                             </div>
                             <!--end::Submit button-->
@@ -229,5 +226,4 @@
             <!--end::Wrapper-->
         </div>
         <!--end::Body-->
-    </div>
     </div>
