@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Backend\Authentication;
 
 use App\Http\Controllers\Controller;
+use App\Models\Backend\Authentication\Users;
 use Illuminate\Http\Request;
-
+use App\Exceptions\Backend\Authentication\Authentication;
 class LoginController extends Controller
 {
     public function main()
@@ -18,6 +19,15 @@ class LoginController extends Controller
         {
             $email = $request->post('email');
             $password = $request->post('password');
+            try
+            {
+                $users = new Users();
+                $users->login($email, $password);
+                return response()->json(['success' => 'Okeydi'], 200);
+            }catch(Authentication $e)
+            {
+                return response()->json(['error' => $e->getMessage()], $e->getCode());
+            }
         }
         abort(403, 'Unauthorized');
     }

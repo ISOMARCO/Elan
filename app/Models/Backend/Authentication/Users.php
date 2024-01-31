@@ -2,15 +2,17 @@
 
 namespace App\Models\Backend\Authentication;
 
+use App\Exceptions\Backend\Authentication\Authentication;
+
 class Users
 {
     use HasFactory;
-    public function login($email, $password) : Array
+    public function login($email, $password) : Bool
     {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            return [false, 'undefined_email_or_phone'];
+            throw new Authentication('Email yanlış yazdınız', 1000 );
         }
-        return [];
+        return true;
     }
 }
