@@ -6,8 +6,8 @@ use Exception;
 
 class Authentication extends Exception
 {
-    public function __construct($message = null, $statusCode = null)
+    public function __construct($message = NULL, $statusCode = NULL, Exception $previous = NULL)
     {
-        parent::__construct($message, $statusCode);
+        parent::__construct($message, $statusCode, $previous);
     }
 }
