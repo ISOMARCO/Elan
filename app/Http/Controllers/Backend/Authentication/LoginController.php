@@ -19,16 +19,19 @@ class LoginController extends Controller
         {
             $email = $request->post('email');
             $password = $request->post('password');
-            try
-            {
-                $users = new Users();
-                $users->login($email, $password);
-                return response()->json(['success' => 'Okeydi']);
-            }
-            catch(Authentication $e)
-            {
-                return response()->json(['error' => 'errordu bu'], 1000);
-            }
+            $users = new Users();
+            $x = $users->login($email, $password);
+            return resonse()->json(['success' => 'okkk']);
+//            try
+//            {
+//                $users = new Users();
+//                $users->login($email, $password);
+//                return response()->json(['success' => 'Okeydi']);
+//            }
+//            catch(Authentication $e)
+//            {
+//                return response()->json(['error' => 'errordu bu'], 1000);
+//            }
         }
         abort(403, 'Unauthorized');
     }
