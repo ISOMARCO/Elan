@@ -65,7 +65,7 @@
                                 <div class="form-group">
                                     <input type="password" class="form-control" placeholder="Password" name="password">
                                     <button class="form-icon"><i class="eye fas fa-eye"></i></button>
-                                    <small class="form-alert" style="display: none"></small>
+                                    <small class="form-alert">Deneme</small>
                                 </div>
 {{--                                <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent">--}}
 {{--                                <div class="alert alert-danger">Mesaj</div>--}}
