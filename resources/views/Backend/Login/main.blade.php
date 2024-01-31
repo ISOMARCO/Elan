@@ -111,7 +111,8 @@
 <footer>
     @include('Backend.Login.Sections.footer')
     <script>
-        $(document).ready(function(){
+        $(document).ready(function()
+        {
             $("#kt_sign_in_submit").on("click", function(){
                 alert($("#kt_sign_in_form").serialize());
             });
