@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     @include('Backend.Login.Sections.head')
-    <script>
-        alert("ok");
-    </script>
 </head>
 <body id="kt_body" class="app-blank bgi-size-cover bgi-attachment-fixed bgi-position-center">
     @include('Backend.Login.Sections.header')
@@ -27,12 +24,7 @@
 
                 <!--begin::Text-->
                 <div class="text-gray-600 fs-base text-center fw-semibold">
-                    In this kind of post, <a href="#" class="opacity-75-hover text-primary me-1">the blogger</a>
-
-                    introduces a person they’ve interviewed <br> and provides some background information about
-
-                    <a href="#" class="opacity-75-hover text-primary me-1">the interviewee</a>
-                    and their <br> work following this is a transcript of the interview.
+                    Burada yazılar ola bilər
                 </div>
                 <!--end::Text-->
             </div>
@@ -55,13 +47,13 @@
                             <div class="text-center mb-11">
                                 <!--begin::Title-->
                                 <h1 class="text-gray-900 fw-bolder mb-3">
-                                    Sign In
+                                    Giriş
                                 </h1>
                                 <!--end::Title-->
 
                                 <!--begin::Subtitle-->
                                 <div class="text-gray-500 fw-semibold fs-6">
-                                    Your Social Campaigns
+                                    Elan
                                 </div>
                                 <!--end::Subtitle--->
                             </div>
@@ -77,7 +69,7 @@
                             <!--end::Input group--->
                             <div class="fv-row mb-3">
                                 <!--begin::Password-->
-                                <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent">
+                                <input type="password" placeholder="Şifrə" name="password" autocomplete="off" class="form-control bg-transparent">
                                 <!--end::Password-->
                             </div>
                             <!--end::Input group--->
@@ -92,14 +84,13 @@
                             <!--begin::Submit button-->
                             <div class="d-grid mb-10">
                                 <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
-
                                     <!--begin::Indicator label-->
-                                    <span class="indicator-label">Sign In</span>
+                                    <span class="indicator-label">Giriş</span>
                                     <!--end::Indicator label-->
-
                                     <!--begin::Indicator progress-->
-                                    <span class="indicator-progress">Please wait...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-                                    <!--end::Indicator progress-->        </button>
+                                    <span class="indicator-progress">Zəhmət olmasa gözləyin...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                </button>
+                                    <!--end::Indicator progress-->
                             </div>
                             <!--end::Submit button-->
 
