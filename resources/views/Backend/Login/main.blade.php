@@ -35,7 +35,7 @@
                 <div class="d-flex flex-center flex-column align-items-stretch h-lg-100 w-md-400px">
                     <div class="d-flex flex-center flex-column flex-column-fluid pb-15 pb-lg-20">
 
-                        <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form">
+                        <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="{{url('login/loginAction')}}">
                             <div class="text-center mb-11">
                                 <h1 class="text-gray-900 fw-bolder mb-3">
                                     Admin panelə giriş
@@ -58,7 +58,7 @@
                             </div>
 
                             <div class="d-grid mb-10">
-                                <button type="button" id="kt_sign_in_submit" class="btn btn-primary">
+                                <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
                                     <span class="indicator-label">Giriş</span>
                                     <span class="indicator-progress">Zəhmət olmasa gözləyin...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                 </button>

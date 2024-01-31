@@ -15,8 +15,8 @@ class LoginController extends Controller
 
     public function loginAction(Request $request)
     {
-        if($request->ajax() || $request->wantsJson())
-        {
+        //if($request->ajax() || $request->wantsJson())
+       // {
             $email = $request->post('email');
             $password = $request->post('password');
             $users = new Users();
@@ -32,7 +32,7 @@ class LoginController extends Controller
 //            {
 //                return response()->json(['error' => 'errordu bu'], 1000);
 //            }
-        }
-        abort(403, 'Unauthorized');
+        //}
+        //abort(403, 'Unauthorized');
     }
 }
