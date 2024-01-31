@@ -63,6 +63,7 @@
                                     <span class="indicator-progress">Zəhmət olmasa gözləyin...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                 </button>
                             </div>
+                            @csrf
                         </form>
                     </div>
                 </div>
