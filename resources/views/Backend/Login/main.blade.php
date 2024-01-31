@@ -42,7 +42,7 @@
                     <div class="d-flex flex-center flex-column flex-column-fluid pb-15 pb-lg-20">
 
                         <!--begin::Form-->
-                        <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="/metronic8/demo1/../demo1/index.html" action="#">
+                        <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form">
                             <!--begin::Heading-->
                             <div class="text-center mb-11">
                                 <!--begin::Title-->
@@ -110,5 +110,12 @@
 </body>
 <footer>
     @include('Backend.Login.Sections.footer')
+    <script>
+        $(document).ready(function(){
+            $("#kt_sign_in_submit").on("click", function(){
+                alert($("#kt_sign_in_form").serialize());
+            });
+        });
+    </script>
 </footer>
 </html>
