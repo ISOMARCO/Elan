@@ -47,7 +47,7 @@
                             <div class="text-center mb-11">
                                 <!--begin::Title-->
                                 <h1 class="text-gray-900 fw-bolder mb-3">
-                                    Giriş
+                                    Admin panelə giriş
                                 </h1>
                                 <!--end::Title-->
 
