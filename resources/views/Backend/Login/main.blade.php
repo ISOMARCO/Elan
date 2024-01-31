@@ -92,7 +92,7 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        alert(errorResponse.error);
+                        console.log(errorResponse.error);
                     },
                     success: function(e)
                     {
