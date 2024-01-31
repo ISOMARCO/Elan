@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('Backend.Login.Sections.head')
-    <link rel="stylesheet" href="{{asset('Assets/Backend/css/sweetalert2/sweetalert2.css')}}">
+    <link rel="stylesheet" href="{{asset('Assets/Backend/css/sweetalert2.css')}}">
 </head>
 <body id="kt_body" class="app-blank bgi-size-cover bgi-attachment-fixed bgi-position-center">
     @include('Backend.Login.Sections.header')
@@ -77,7 +77,7 @@
 </body>
 <footer>
     @include('Backend.Login.Sections.footer')
-    <script src="{{asset('Assets/Backend/js/sweetalert2/sweetalert2.js')}}"></script>
+    <script src="{{asset('Assets/Backend/js/sweetalert2.js')}}"></script>
     <script>
         $(document).ready(function()
         {
