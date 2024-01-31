@@ -114,16 +114,28 @@
         $(document).ready(function()
         {
             $("#kt_sign_in_submit").on("click", function(){
-                $(".indicator-progress").show();
-                {{--$.ajax({--}}
-                {{--    type: "post",--}}
-                {{--    url: "{{}}",--}}
-                {{--    data: $("#kt_sign_in_form").serialize(),--}}
-                {{--    dataType: "json",--}}
-                {{--    beforeSend: function(){--}}
-                {{--        --}}
-                {{--    }--}}
-                {{--});--}}
+                $.ajax({
+                    type: "post",
+                    url: "{{}}",
+                    data: $("#kt_sign_in_form").serialize(),
+                    dataType: "json",
+                    beforeSend: function()
+                    {
+                        $(".indicator-progress").show();
+                    },
+                    error: function(x)
+                    {
+
+                    },
+                    success: function(e)
+                    {
+
+                    },
+                    complete: function()
+                    {
+                        $(".indicator-progress").hide();
+                    }
+                });
             });
         });
     </script>
