@@ -95,8 +95,8 @@
                     },
                     error: function(x)
                     {
-                        var errorResponse = x.responseJSON || x.responseText;
-                        console.log(errorResponse.error);
+                        //var errorResponse = x.responseJSON || x.responseText;
+                        console.log(x.error);
                     },
                     complete: function()
                     {
