@@ -15,25 +15,24 @@ class LoginController extends Controller
 
     public function loginAction(Request $request)
     {
-        //if($request->ajax() || $request->wantsJson())
-       // {
+        if($request->ajax() || $request->wantsJson())
+        {
             $email = $request->post('email');
             $password = $request->post('password');
             $users = new Users();
             //$users->login($email, $password);
-            //return resonse()->json(['success' => 'okkk']);
-        return 'ok';
-//            try
-//            {
-//                $users = new Users();
-//                $users->login($email, $password);
-//                return response()->json(['success' => 'Okeydi']);
-//            }
-//            catch(Authentication $e)
-//            {
-//                return response()->json(['error' => 'errordu bu'], 1000);
-//            }
-        //}
-        //abort(403, 'Unauthorized');
+            return resonse()->json(['success' => 'okkk']);
+            try
+            {
+                $users = new Users();
+                $users->login($email, $password);
+                return response()->json(['success' => 'Okeydi']);
+            }
+            catch(Authentication $e)
+            {
+                return response()->json(['error' => 'errordu bu'], 1000);
+            }
+        }
+        abort(403, 'Unauthorized');
     }
 }
