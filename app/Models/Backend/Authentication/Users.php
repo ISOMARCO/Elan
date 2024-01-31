@@ -10,7 +10,7 @@ class Users
     {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            throw new Authentication('Email yanlış yazdınız', 1000);
+            //throw new Authentication('Email yanlış yazdınız', 1000);
         }
         return true;
     }
