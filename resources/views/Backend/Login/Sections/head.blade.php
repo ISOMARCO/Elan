@@ -1,4 +1,4 @@
-<title>Admin Login</title>
+<title>Admin Login2</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:locale" content="az-AZ">
