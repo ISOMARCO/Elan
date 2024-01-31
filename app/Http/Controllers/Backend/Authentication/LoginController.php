@@ -19,12 +19,11 @@ class LoginController extends Controller
         {
             $email = $request->post('email');
             $password = $request->post('password');
-            return response()->json(['success' => $email]);
             try
             {
                 $users = new Users();
                 $users->login($email, $password);
-                return response()->json(['success' => 'Okeydi'], 200);
+                return response()->json(['success' => 'Okeydi']);
             }
             catch(Authentication $e)
             {

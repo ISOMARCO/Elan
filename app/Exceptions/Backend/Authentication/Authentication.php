@@ -8,6 +8,6 @@ class Authentication extends Exception
 {
     public function __construct($message = null, $statusCode = null)
     {
-        parent::__construct($message, $statusCode);
+        //parent::__construct($message, $statusCode);
     }
 }
