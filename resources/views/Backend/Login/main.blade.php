@@ -93,10 +93,10 @@
                     {
                         alert(e.success);
                     },
-                    error: function(x)
+                    error: function(x, status, error)
                     {
-                        //var errorResponse = x.responseJSON || x.responseText;
-                        console.log(x.error);
+                        var errorMessage = xhr.responseJSON ? xhr.responseJSON.error : error || "Bir hata oluştu.";
+                        console.log(errorMessage);
                     },
                     complete: function()
                     {
