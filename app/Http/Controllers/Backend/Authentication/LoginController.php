@@ -11,4 +11,14 @@ class LoginController extends Controller
     {
         return view('Backend.Login.main');
     }
+
+    public function loginAction(Request $request)
+    {
+        if($request->ajax() || $request->wantsJson())
+        {
+            $email = $request->post('email');
+            $password = $request->post('password');
+        }
+        abort(403, 'Unauthorized');
+    }
 }
