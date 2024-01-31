@@ -13,7 +13,7 @@ class Users extends Model
     {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            throw new Authentication('error', 422);
+            throw new Authentication('Düzgün email adresi yazın', 422);
         }
         return true;
     }

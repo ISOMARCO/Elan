@@ -96,7 +96,7 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        console.log(errorResponse);
+                        console.log(errorResponse.error);
                     },
                     complete: function()
                     {
