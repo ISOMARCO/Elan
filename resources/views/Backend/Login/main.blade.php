@@ -89,14 +89,14 @@
                     {
                         $(".indicator-progress").show();
                     },
+                    success: function(e)
+                    {
+                        alert(e.success);
+                    },
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
                         console.log(errorResponse.error);
-                    },
-                    success: function(e)
-                    {
-                        alert(e.success);
                     },
                     complete: function()
                     {
