@@ -7,7 +7,7 @@ use App\Exceptions\Backend\Authentication\Authentication;
 class Users
 {
     use HasFactory;
-    public function login($email, $password) : Bool
+    public function login($email, $password)
     {
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {

@@ -90,11 +90,12 @@
                     },
                     error: function(x)
                     {
-
+                        var errorResponse = x.responseJSON || x.responseText;
+                        alert(errorResponse.error);
                     },
                     success: function(e)
                     {
-
+                        alert(e.success);
                     },
                     complete: function()
                     {
