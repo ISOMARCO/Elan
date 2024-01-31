@@ -17,9 +17,9 @@ class LoginController extends Controller
     {
         if($request->ajax() || $request->wantsJson())
         {
-            return response()->json(['success' => 'okey']);
             $email = $request->post('email');
             $password = $request->post('password');
+            return response()->json(['success' => $email]);
             try
             {
                 $users = new Users();
