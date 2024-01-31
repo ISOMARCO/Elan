@@ -93,7 +93,7 @@
                     {
                         alert(e.success);
                     },
-                    error: function(xhr, status, error)
+                    error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
                         console.log(errorResponse);
