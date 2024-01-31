@@ -63,6 +63,7 @@
                             <div class="fv-row mb-8">
                                 <!--begin::Email-->
                                 <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent">
+                                <span>Input</span>
                                 <!--end::Email-->
                             </div>
 
