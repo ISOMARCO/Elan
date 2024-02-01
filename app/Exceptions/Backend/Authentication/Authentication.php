@@ -12,7 +12,7 @@ class Authentication extends Exception
         $this->code = $statusCode;
         if($message == NULL)
         {
-            $message = $this->errorCodes($statusCode);
+            $message = $this->errorCodes();
         }
         parent::__construct($message, $statusCode);
     }
