@@ -3,24 +3,8 @@
 <head>
     @include('Backend.Login.Sections.head')
     <link rel="stylesheet" href="{{asset('Assets/Backend/css/sweetalert2.css')}}">
-    <style>
-        body.swal2-shown {
-            overflow: hidden;
-        }
-        .swal2-popup {
-            position: fixed !important;
-        }
-    </style>
 </head>
 <body id="kt_body" class="app-blank bgi-size-cover bgi-attachment-fixed bgi-position-center">
-<style>
-    body.swal2-shown {
-        overflow: hidden;
-    }
-    .swal2-popup {
-        position: fixed !important;
-    }
-</style>
     @include('Backend.Login.Sections.header')
     <!--begin::Authentication - Sign-in -->
     <div class="d-flex flex-column flex-lg-row flex-column-fluid">
