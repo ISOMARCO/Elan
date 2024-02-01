@@ -13,7 +13,7 @@ class LoginController extends Controller
         return view('Backend.Login.main');
     }
 
-    public function loginAction(Request $request)
+    public function loginAction(Request $request) : String
     {
         if($request->ajax() || $request->wantsJson())
         {
