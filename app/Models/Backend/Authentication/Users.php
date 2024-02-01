@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Users extends Model
 {
     use HasFactory;
+    protected $table = 'Users';
     public function login($email = NULL, $password = NULL)
     {
         if(empty($email) || empty($password))
@@ -20,6 +21,11 @@ class Users extends Model
             throw new Authentication(1000);
         }
         $password = hash('sha256', md5($password));
+        $user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email);
+        if($user->count() == 0)
+        {
+            throw new Authentication(1002);
+        }
         return true;
     }
 }

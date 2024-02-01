@@ -21,7 +21,8 @@ class Authentication extends Exception
     {
         $codes = [
             '1000' => 'Email adresi düzgün yazın',
-            '1001' => 'Bütün xanaları doldurmalısınız'
+            '1001' => 'Bütün xanaları doldurmalısınız',
+            '1002' => 'Email və ya şifrə yanlışdır'
         ];
         if(isset($codes[$this->code]))
         {
