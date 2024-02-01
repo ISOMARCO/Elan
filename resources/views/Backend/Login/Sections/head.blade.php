@@ -8,12 +8,4 @@
 <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
 <link href="{{asset('Assets/Backend/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('Assets/Backend/css/style.bundle.css')}}" rel="stylesheet" type="text/css">
-<style>
-    body.swal2-shown {
-        overflow: hidden;
-    }
-    .swal2-popup {
-        position: fixed !important;
-    }
-</style>
 <!--end::Global Stylesheets Bundle-->
