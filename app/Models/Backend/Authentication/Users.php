@@ -13,11 +13,11 @@ class Users extends Model
     {
         if(empty($email) || empty($password))
         {
-            throw new Authentication("Bütün xanaları doldurmalısınız", 422);
+            throw new Authentication(1000);
         }
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            throw new Authentication('Düzgün email adresi yazın', 422);
+            throw new Authentication(1001);
         }
         $password = hash('sha256', md5($password));
         return true;
