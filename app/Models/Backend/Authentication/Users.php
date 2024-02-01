@@ -13,11 +13,11 @@ class Users extends Model
     {
         if(empty($email) || empty($password))
         {
-            throw new Authentication(1000);
+            throw new Authentication(1001);
         }
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            throw new Authentication(1001);
+            throw new Authentication(1000);
         }
         $password = hash('sha256', md5($password));
         return true;
