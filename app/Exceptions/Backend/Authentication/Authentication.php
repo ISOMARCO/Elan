@@ -6,10 +6,10 @@ use Exception;
 
 class Authentication extends Exception
 {
-    protected $code = 500;
+    //protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)
     {
-        $this->code = $statusCode;
+        //$this->code = $statusCode;
         if($message == NULL)
         {
             $message = $this->errorCodeMessage($statusCode);
