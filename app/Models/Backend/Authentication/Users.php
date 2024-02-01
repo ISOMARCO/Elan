@@ -5,6 +5,7 @@ namespace App\Models\Backend\Authentication;
 use App\Exceptions\Backend\Authentication\Authentication;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Users extends Model
 {
