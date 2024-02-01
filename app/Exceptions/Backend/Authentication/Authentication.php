@@ -28,7 +28,7 @@ class Authentication extends Exception
         {
             return $codes[$this->code];
         }
-        return "";
+        return "tapmadim";
     }
 
     public function reportErrorCodes() : String
