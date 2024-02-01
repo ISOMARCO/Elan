@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('Phone_Number', 25)->nullable();
             $table->string('Remember_Token', 255)->nullable();
             $table->string('Default_Language', 5)->default('az');
+            $table->string('Role', 15)->default('USER');
             $table->timestamp('Last_Login_Date')->nullable();
             $table->string('Gender', 6)->default('MALE')->comment('Enum: MALE, FEMALE');
         });
