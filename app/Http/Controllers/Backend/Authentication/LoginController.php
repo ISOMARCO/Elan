@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Exceptions\Backend\Authentication\Authentication;
 class LoginController extends Controller
 {
-    public function main()
+    public function main() : String
     {
         return view('Backend.Login.main');
     }
