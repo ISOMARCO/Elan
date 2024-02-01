@@ -12,5 +12,8 @@
     body.swal2-shown {
         overflow: hidden;
     }
+    .swal2-popup {
+        position: fixed !important;
+    }
 </style>
 <!--end::Global Stylesheets Bundle-->
