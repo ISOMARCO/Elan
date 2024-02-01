@@ -6,29 +6,29 @@ use Exception;
 
 class Authentication extends Exception
 {
-    public $code = 500;
+    protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)
     {
         $this->code = $statusCode;
         if($message == NULL)
         {
-            $message = $this->errorCodes();
+            $message = $this->errorCodeMessage($statusCode);
         }
         parent::__construct($message, $statusCode);
     }
 
-    protected function errorCodes() : String
+    protected function errorCodeMessage($code) : String
     {
         $codes = [
             '1000' => 'Email adresi düzgün yazın',
             '1001' => 'Bütün xanaları doldurmalısınız',
             '1002' => 'Email və ya şifrə yanlışdır'
         ];
-        if(isset($codes[$this->code]))
+        if(isset($codes[$code]))
         {
-            return $codes[$this->code];
+            return $codes[$code];
         }
-        return "tapmadim";
+        return "ERROR";
     }
 
     public function reportErrorCodes() : String
