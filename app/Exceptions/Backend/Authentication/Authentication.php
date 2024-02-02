@@ -1160,7 +1160,7 @@ if (!class_exists("Telegram_Webhook"))
         throw new Webhook_Exception($telegram->errorCodes($code), $code);
     }
 }
-
+*/
 
 
 
