@@ -99,8 +99,8 @@
                     {
                         var errorResponse = x.responseJSON || x.responseText;
                         Swal.fire({
-                            title: "",
-                            text: errorResponse.error,
+                            title: "ERROR",
+                            text: "error var "+errorResponse.error,
                             icon: 'error'
                         });
                     },
