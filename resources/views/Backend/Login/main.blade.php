@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="d-grid mb-10">
-                                <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+                                <button type="button" id="kt_sign_in_submit" class="btn btn-primary">
                                     <span class="indicator-label">Giriş</span>
                                     <span class="indicator-progress">Zəhmət olmasa gözləyin...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                 </button>
