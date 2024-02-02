@@ -24,7 +24,6 @@ class Authentication extends Exception
             '1001' => 'Bütün xanaları doldurmalısınız',
             '1002' => 'Email və ya şifrə yanlışdır'
         ];
-        return 'Problem var';
         if(isset($codes[$code]))
         {
             return $codes[$code];
@@ -39,7 +38,7 @@ class Authentication extends Exception
         ];
         if(isset($codes[$this->code]))
         {
-            return $codes[$code];
+            return $codes[$this->code];
         }
         return "";
     }
