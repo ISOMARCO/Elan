@@ -15,11 +15,11 @@ class Users extends Model
     {
         if(empty($email) || empty($password))
         {
-            throw new Authentication(1001);
+            throw new \Exception('error message', 422);
         }
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            throw new Authentication(1000);
+            throw new \Exception('Error message', 422);
         }
         $password = hash('sha256', md5($password));
         //$user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email);
