@@ -6,10 +6,8 @@ use Exception;
 
 class Authentication extends Exception
 {
-    //protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)
     {
-        //$this->code = $statusCode;
         if($message == NULL)
         {
             $message = $this->errorCodeMessage($statusCode);
@@ -17,14 +15,13 @@ class Authentication extends Exception
         parent::__construct($message, $statusCode);
     }
 
-    protected function errorCodeMessage($code) : String
+    protected function errorCodeMessage($code = 500) : String
     {
         $codes = [
             '1000' => 'Email adresi düzgün yazın',
             '1001' => 'Bütün xanaları doldurmalısınız',
             '1002' => 'Email və ya şifrə yanlışdır'
         ];
-        return 'Problem var';
         if(isset($codes[$code]))
         {
             return $codes[$code];
