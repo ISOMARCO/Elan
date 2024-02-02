@@ -15,11 +15,10 @@ class LoginController extends Controller
 
     public function loginAction(Request $request) : String
     {
-        if($request->ajax() || $request->wantsJson())
-        {
+        #if($request->ajax() || $request->wantsJson())
+        #{
             $email = $request->post('email');
             $password = $request->post('password');
-            return response()->json(['error' => 'Okeydi isdiyir bura kimi']);
             $users = new Users();
             try
             {
@@ -30,7 +29,7 @@ class LoginController extends Controller
             {
                 return response()->json(['error' => $e->getMessage()], 500);
             }
-        }
-        abort(403, 'Unauthorized');
+        #}
+        #abort(403, 'Unauthorized');
     }
 }
