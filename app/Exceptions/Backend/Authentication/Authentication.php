@@ -32,14 +32,14 @@ class Authentication extends Exception
         return "ERROR";
     }
 
-    public function reportErrorCodes() : String
+    public function reportErrorCodes($code = 500) : String
     {
         $codes = [
-
+            '5000'
         ];
-        if(isset($codes[$this->code]))
+        if(isset($codes[$code]))
         {
-            return $codes[$this->code];
+            return $codes[$code];
         }
         return "";
     }
