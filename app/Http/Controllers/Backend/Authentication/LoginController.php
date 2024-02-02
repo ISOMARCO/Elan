@@ -25,7 +25,7 @@ class LoginController extends Controller
                 $users->login($email, $password);
                 return response()->json(['success' => 'Okeydi']);
             }
-            catch(Authentication $e)
+            catch(Exception $e)
             {
                 return response()->json(['error' => "Bu bir errordu"], 422);
             }
