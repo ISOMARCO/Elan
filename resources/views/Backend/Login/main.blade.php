@@ -100,7 +100,7 @@
                     {
                         var errorResponse = x.responseJSON || x.responseText;
                         console.log(errorResponse);
-                        console.log(errorResponse.error());
+                        console.log(errorResponse.error);
                         //console.log(errorResponse);
                         Swal.fire({
                             title: "ERROR",
