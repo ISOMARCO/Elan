@@ -99,7 +99,7 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        console.log(x.statusMessage);
+                        console.log(x);
                         Swal.fire({
                             title: "ERROR",
                             text: "error var "+errorResponse.error,
