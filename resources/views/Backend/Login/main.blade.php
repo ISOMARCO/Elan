@@ -93,7 +93,11 @@
                     },
                     success: function(e)
                     {
-                        alert(e.success);
+                        Swal.fire({
+                            title: '',
+                            text: e.success,
+                            icon: 'success'
+                        });
                     },
                     error: function(x)
                     {
