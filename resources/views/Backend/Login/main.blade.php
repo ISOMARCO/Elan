@@ -99,10 +99,9 @@
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        console.log(x.responseJSON);
                         Swal.fire({
                             title: "ERROR",
-                            text: "error var "+errorResponse.error,
+                            text: errorResponse.error,
                             icon: 'error'
                         });
                     },
