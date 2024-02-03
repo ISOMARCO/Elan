@@ -93,11 +93,13 @@
                     },
                     success: function(e)
                     {
+                        console.log(e);
                         alert(e.success);
                     },
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
+                        console.log(x);
                         Swal.fire({
                             title: "ERROR",
                             text: "error var "+errorResponse.error,
