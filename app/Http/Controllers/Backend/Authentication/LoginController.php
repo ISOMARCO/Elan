@@ -20,7 +20,7 @@ class LoginController extends Controller
             $email = $request->post('email');
             $password = $request->post('password');
             $users = new Users();
-            return response()->json(['error' => 'Okeydi'], 422);
+            return response()->json(['success' => 'Okeydi'], 200);
             try
             {
                 $users->login($email, $password);
