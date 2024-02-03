@@ -100,7 +100,7 @@
                     {
                         var errorResponse = x.responseJSON || x.responseText;
                         Swal.fire({
-                            title: '<i class="fa-solid fa-envelope" style="font-size: 100px;"></i>',
+                            title: '<i class="fa-solid fa-envelope" style="font-size: 30px;"></i>',
                             text: errorResponse.error,
                             icon: 'error'
                         });
