@@ -23,7 +23,7 @@ class LoginController extends Controller
             try
             {
                 $users->login($email, $password);
-                return response()->json(['success' => 'Okeydi']);
+                return response()->json(['success' => 'Okeydi'], 200);
             }
             catch(Authentication $e)
             {
