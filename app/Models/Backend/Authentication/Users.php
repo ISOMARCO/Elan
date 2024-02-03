@@ -21,7 +21,7 @@ class Users extends Model
         {
             throw new Authentication(1000);
         }
-        $password = hash('sha256', md5($password));
+        #$password = hash('sha256', md5($password));
         //$user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email);
 //        if($user->count() == 0)
 //        {
