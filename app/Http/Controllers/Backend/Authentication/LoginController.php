@@ -27,7 +27,7 @@ class LoginController extends Controller
             }
             catch(Authentication $e)
             {
-                return response()->json(['error' => "Bu bir errordu"], 422);
+                return response()->json(['success' => "Bu bir errordu"], 200);
             }
         }
         abort(403, 'Unauthorized');
