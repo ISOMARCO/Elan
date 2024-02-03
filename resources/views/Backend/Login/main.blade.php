@@ -93,7 +93,7 @@
                     },
                     success: function(e)
                     {
-                        console.log(e.success);
+                        console.log(e.success.success);
                         alert(e.success);
                     },
                     error: function(x)
