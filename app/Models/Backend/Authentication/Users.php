@@ -21,12 +21,12 @@ class Users extends Model
         {
             throw new Authentication(1000);
         }
-        #$password = hash('sha256', md5($password));
-        //$user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email);
-//        if($user->count() == 0)
-//        {
-//            throw new Authentication(1002);
-//        }
+        $password = hash('sha256', md5($password));
+        $user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email);
+        if($user->count() == 0)
+        {
+            throw new Authentication(1002);
+        }
         return true;
     }
 }
