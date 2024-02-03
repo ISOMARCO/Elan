@@ -93,13 +93,12 @@
                     },
                     success: function(e)
                     {
-                        console.log("Mesaj" + e.success.getMessage());
+                        console.log(e);
                         alert(e.success);
                     },
                     error: function(x)
                     {
                         var errorResponse = x.responseJSON || x.responseText;
-                        console.log(JSON.parse('{"ad" : "Ismayil"}').ad);
                         Swal.fire({
                             title: "ERROR",
                             text: "error var "+errorResponse.error,
