@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'main'])->name('Home');
 Route::get('/home', [HomeController::class, 'main'])->name('Home');
 Route::match(['post', 'get'],'/telegram_webhook', [TelegramWebhookController::class, 'main'])->withoutMiddleware([VerifyCsrfToken::class]);
+Route::get('/adminHome', [\App\Http\Controllers\Backend\HomeController::class, 'main'])->name('Admin_Home');
