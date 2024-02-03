@@ -12,7 +12,6 @@ class LoginController extends Controller
 {
     public function main() : String
     {
-        echo Session::get('id');
         return view('Backend.Login.main');
     }
 
