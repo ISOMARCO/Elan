@@ -5,7 +5,9 @@ namespace App\Models\Backend\Authentication;
 use App\Exceptions\Backend\Authentication\Authentication;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class Users extends Model
 {
@@ -27,6 +29,9 @@ class Users extends Model
         {
             throw new Authentication(1002);
         }
+        $row = $user->first();
+        Session::put('id', $row->Id);
+        Cache::store('redis')->put('userInfo_'.$row->Id, json_encode($row, true), 360);
         return true;
     }
 }
