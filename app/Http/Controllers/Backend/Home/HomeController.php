@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use function App\Http\Controllers\Backend\view;
 
 class HomeController extends Controller
 {
