@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Frontend\Home;
 #use App\Helpers\TelegramActions;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use function App\Http\Controllers\Frontend\view;
 
 #use Illuminate\Support\Facades\DB;
 
