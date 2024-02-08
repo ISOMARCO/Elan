@@ -1,11 +1,12 @@
-<title>Admin Login</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:locale" content="az-AZ">
-<meta property="og:type" content="article">
-<link rel="shortcut icon" href="{{asset('Assets/Backend/media/logos/favicon.ico')}}">
+<title>AdminLTE 3 | Log in (v2)</title>
 
-<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-<link href="{{asset('Assets/Backend/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css">
-<link href="{{asset('Assets/Backend/css/style.bundle.css')}}" rel="stylesheet" type="text/css">
-<!--end::Global Stylesheets Bundle-->
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{{asset('Assets/Backend/plugins/fontawesome-free/css/all.min.css')}}">
+<!-- icheck bootstrap -->
+<link rel="stylesheet" href="{{asset('Assets/Backend/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+<!-- Theme style -->
+<link rel="stylesheet" href="{{asset('Assets/Backend/css/adminlte.min.css')}}">
