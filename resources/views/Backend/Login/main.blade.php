@@ -46,6 +46,7 @@
                         </div>
                         <!-- /.col -->
                     </div>
+                    @csrf
                 </form>
             </div>
             <!-- /.card-body -->
@@ -53,9 +54,6 @@
         <!-- /.card -->
     </div>
     <!-- /.login-box -->
-
-
-
 </body>
 <footer>
     @include('Backend.Login.Sections.footer')
