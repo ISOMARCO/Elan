@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     @include('Backend.Login.Sections.head')
-    <link rel="stylesheet" href="{{asset('Assets/Backend/sweetalert2/sweetalert2.min.css')}}">
 </head>
 <body class="hold-transition login-page">
     @include('Backend.Login.Sections.header')
@@ -60,7 +59,6 @@
 </body>
 <footer>
     @include('Backend.Login.Sections.footer')
-    <script src="{{asset('Assets/Backend/sweetalert2/sweetalert2.min.js')}}"></script>
     <script>
         $(document).ready(function()
         {
