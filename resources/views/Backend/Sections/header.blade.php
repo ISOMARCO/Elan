@@ -2562,7 +2562,7 @@
                     <!--begin::Menu-->
                     <div class="menu menu-sub menu-sub-dropdown menu-column w-350px w-lg-375px" data-kt-menu="true" id="kt_menu_notifications">
                         <!--begin::Heading-->
-                        <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('../../assets/media/misc/menu-header-bg.jpg')">
+                        <div class="d-flex flex-column bgi-no-repeat rounded-top" style="background-image:url('{{asset('Assets/Backend/media/misc/menu-header-bg.jpg')}}')">
                             <!--begin::Title-->
                             <h3 class="text-white fw-semibold px-9 mt-10 mb-6">
                                 Notifications <span class="fs-8 opacity-75 ps-3">24 reports</span>
@@ -3637,9 +3637,9 @@
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
                                     <a href="# class="menu-link d-flex px-5">
-                    <span class="symbol symbol-20px me-4">
-                        <img class="rounded-1" src="{{asset('Assets/Backend/media/flags/spain.svg')}}" alt="">
-                    </span>
+                                    <span class="symbol symbol-20px me-4">
+                                        <img class="rounded-1" src="{{asset('Assets/Backend/media/flags/spain.svg')}}" alt="">
+                                    </span>
                                         Spanish
                                     </a>
                                 </div>
