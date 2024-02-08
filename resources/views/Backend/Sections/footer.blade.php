@@ -1,22 +1,23 @@
-<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-<script src="{{asset('Assets/Backend/plugins/global/plugins.bundle.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/scripts.bundle.js')}}"></script>
-<!--end::Global Javascript Bundle-->
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+        <b>Version</b> 0.0.1
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="#">ISOMARCO</a>.</strong> All rights reserved.
+</footer>
 
-<!--begin::Vendors Javascript(used for this page only)-->
-<script src="{{asset('Assets/Backend/plugins/custom/datatables/datatables.bundle.js')}}"></script>
-<!--end::Vendors Javascript-->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
 
-<!--begin::Custom Javascript(used for this page only)-->
-<script src="{{asset('Assets/Backend/js/custom/pages/user-profile/general.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/widgets.bundle.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/widgets.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/apps/chat/chat.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/create-app.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/offer-a-deal/type.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/offer-a-deal/details.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/offer-a-deal/finance.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/offer-a-deal/complete.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/offer-a-deal/main.js')}}"></script>
-<script src="{{asset('Assets/Backend/js/custom/utilities/modals/users-search.js')}}"></script>
+<!-- jQuery -->
+<script src="{{asset('Assets/Backend/plugins/jquery/jquery.min.js')}}"></script>
+<!-- Bootstrap 4 -->
+<script src="{{asset('Assets/Backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!-- AdminLTE App -->
+<script src="{{asset('Assets/Backend/js/adminlte.min.js')}}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{asset('Assets/Backend/js/demo.js')}}"></script>
