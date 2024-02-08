@@ -31,7 +31,7 @@
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <i class="fas fa-spinner fa-spin"></i>
+                            Yüklənir <i class="fas fa-spinner fa-spin"></i>
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
