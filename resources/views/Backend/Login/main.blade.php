@@ -31,7 +31,7 @@
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <span class="progress" style="display: none;">
+                            <span id="progress" style="display: none;">
                                 Yüklənir &nbsp;&nbsp;<i class="fas fa-spinner fa-spin"></i>
                             </span>
                         </div>
@@ -63,7 +63,7 @@
                     dataType: "json",
                     beforeSend: function()
                     {
-                        $(".progress").show();
+                        $("#progress").show();
                     },
                     success: function(e)
                     {
@@ -84,7 +84,7 @@
                     },
                     complete: function()
                     {
-                        //$(".progress").hide();
+                        //$("#progress").hide();
                     }
                 });
             });
