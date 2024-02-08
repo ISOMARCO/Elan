@@ -12,10 +12,6 @@
                 <a href="javascript:void(0)" class="h1"><b>Admin Panel</b></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">
-                    <i class="fas fa-spinner fa-spin"></i>
-                </p>
-
                 <form action="{{url('/login/loginAction')}}" method="post" id="loginForm">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" name="email" placeholder="Email">
@@ -35,12 +31,7 @@
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <div class="icheck-primary">
-                                <input type="checkbox" id="remember">
-                                <label for="remember">
-                                    Remember Me
-                                </label>
-                            </div>
+                            <i class="fas fa-spinner fa-spin"></i>
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
