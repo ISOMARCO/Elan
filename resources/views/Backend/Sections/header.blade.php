@@ -176,7 +176,7 @@
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
                     <a href="{{url('/admin/home')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="fas fa-home nav-icon"></i>
                         <p>Ana Səhifə</p>
                     </a>
                 </li>
