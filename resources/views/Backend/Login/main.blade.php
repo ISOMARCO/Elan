@@ -84,7 +84,7 @@
                     },
                     complete: function()
                     {
-                        $(".progress").hide();
+                        //$(".progress").hide();
                     }
                 });
             });
