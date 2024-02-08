@@ -12,8 +12,6 @@
                 <a href="javascript:void(0)" class="h1"><b>Admin Panel</b></a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Daxil ol</p>
-
                 <form action="{{url('/login/loginAction')}}" method="post" id="loginForm">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" name="email" placeholder="Email">
