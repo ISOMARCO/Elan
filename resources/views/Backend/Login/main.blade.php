@@ -71,7 +71,12 @@
                             title: '',
                             text: e.success,
                             icon: 'success'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                window.location.href = "{{url('/admin/home')}}";
+                            }
                         });
+                        setTimeout(function(){window.location.href="{{url('/admin/home')}}";},2500);
                     },
                     error: function(x)
                     {
