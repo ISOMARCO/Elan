@@ -181,7 +181,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/admin/home')}}" class="nav-link">
+                    <a href="{{url('/admin/users')}}" class="nav-link">
                         <i class="fas fa-users nav-icon"></i>
                         <p>İstifadəçilər</p>
                     </a>
