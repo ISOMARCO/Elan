@@ -16,11 +16,12 @@ return new class extends Migration
             $table->string('Name', 50)->nullable();
             $table->string('Surname', 50)->nullable();
             $table->string('Email', 100)->nullable()->unique();
-            $table->string('Is_Active', 6)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
+            $table->string('Status', 6)->default('ACTIVE')->comment('Enum: ACTIVE, BAN');
             $table->string('Password', 255)->nullable();
             $table->string('Phone_Number', 25)->nullable();
             $table->string('Remember_Token', 255)->nullable();
             $table->string('Default_Language', 5)->default('az');
+            $table->timestamp('Registration_Date')->nullable();
             $table->string('Role', 15)->default('USER');
             $table->timestamp('Last_Login_Date')->nullable();
             $table->string('Gender', 6)->default('MALE')->comment('Enum: MALE, FEMALE');
