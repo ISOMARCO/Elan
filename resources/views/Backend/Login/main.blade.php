@@ -30,8 +30,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8 progress" style="display: none">
-                            Yüklənir &nbsp;&nbsp;<i class="fas fa-spinner fa-spin"></i>
+                        <div class="col-8">
+                            <span class="progress" style="display: none;">
+                                Yüklənir &nbsp;&nbsp;<i class="fas fa-spinner fa-spin"></i>
+                            </span>
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
