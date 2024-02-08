@@ -180,6 +180,12 @@
                         <p>Ana Səhifə</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{url('/admin/home')}}" class="nav-link">
+                        <i class="fas fa-users nav-icon"></i>
+                        <p>İstifadəçilər</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
