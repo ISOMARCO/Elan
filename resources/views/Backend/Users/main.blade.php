@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0">
+                    <div class="card-body table-responsive p-0" style="height: calc(100vh - 20px);">
                         <table class="table table-head-fixed text-nowrap">
                             <thead>
                             <tr>
