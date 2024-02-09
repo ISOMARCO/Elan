@@ -28,6 +28,7 @@ class Users extends Model
         }
         try
         {
+            date_default_timezone_set('Asia/Baku');
             DB::table('Users')->insert([
                 'Name' => $data['name'],
                 'Surname' => $data['surname'],
