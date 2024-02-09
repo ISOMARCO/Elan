@@ -65,7 +65,7 @@
                                     <td>Kişi</td>
                                     <td>ADMIN</td>
                                 </tr>
-                                <tr class="expandable-body" style="white-space: initial;">
+                                <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
                                     <td colspan="7">
                                         <p>
                                             <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
