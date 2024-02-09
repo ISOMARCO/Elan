@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\Authentication\Users;
 use Illuminate\Http\Request;
 use App\Exceptions\Backend\Authentication\Authentication;
-use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
