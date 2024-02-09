@@ -3,7 +3,7 @@
 <head>
     @include('Backend.Sections.head')
 </head>
-<body>
+<body style="overflow: hidden;">
     @include('Backend.Sections.header')
     <section class="content-header">
         <div class="container-fluid">
