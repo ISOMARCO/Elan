@@ -18,7 +18,8 @@ class IsLogin
     {
         if(!Session::has('id') && ($request->route()->getName() !== 'Logout' || $request->route()->getName() !== 'Login'))
         {
-            abort(404, 'Not Found');
+            //abort(404, 'Not Found');
+            redirect(url('/admin/login'));
         }
         if(Session::has('id') && $request->route()->getName() === 'Login')
         {

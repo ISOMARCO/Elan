@@ -80,6 +80,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             "PullFromGit" => PullFromGit::class,
+            "IsLogin" => Backend_IsLogin::class,
             "Set_Timezone" => Set_Timezone::class
         ],
         'backend_users' => [
