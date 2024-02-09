@@ -18,7 +18,6 @@ class IsLogin
     {
         if(!Session::has('id') && $request->route()->getName() != 'Logout' && $request->route()->getName() != 'Login')
         {
-            echo $request->route()->getName();
             return redirect('/admin/login');
         }
         if(Session::has('id') && $request->route()->getName() == 'Login')
