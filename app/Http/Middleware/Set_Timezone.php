@@ -15,7 +15,7 @@ class Set_Timezone
      */
     public function handle(Request $request, Closure $next): Response
     {
-        //date_default_timezone_set('Asia/Baku');
+        date_default_timezone_set('Asia/Baku');
         return $next($request);
     }
 }
