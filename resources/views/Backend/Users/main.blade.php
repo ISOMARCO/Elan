@@ -68,6 +68,7 @@
                             <tr class="expandable-body" style="white-space: initial;">
                                 <td colspan="7">
                                     <p>
+                                        <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
                                         <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
                                     </p>
                                 </td>
