@@ -47,10 +47,10 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>User</th>
-                                <th>Date</th>
-                                <th>Status</th>
-                                <th>Reason</th>
+                                <th>Ad</th>
+                                <th>Soyad</th>
+                                <th>İstifadəçi adı</th>
+                                <th>Email</th>
                             </tr>
                             </thead>
                             <tbody>
