@@ -6,7 +6,7 @@ use App\Http\Middleware\Frontend\AutoLogin;
 use App\Http\Middleware\Frontend\IsLogin;
 use App\Http\Middleware\PullFromGit;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-
+use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
 class Kernel extends HttpKernel
 {
     /**
@@ -83,7 +83,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            "PullFromGit" => PullFromGit::class
+            "PullFromGit" => PullFromGit::class,
+            "IsLogin" => Backend_IsLogin::class
         ]
     ];
 

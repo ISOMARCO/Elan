@@ -16,10 +16,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!Session::has('id') && $request->route()->getName() !== 'Logout')
-        {
-            abort(403, 'Olmaz');
-        }
+        echo "OKEY";
         return $next($request);
     }
 }
