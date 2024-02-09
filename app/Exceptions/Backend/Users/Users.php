@@ -6,6 +6,7 @@ use Exception;
 
 class Users extends Exception
 {
+    protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)
     {
         $this->code = $statusCode;
