@@ -3,10 +3,8 @@
 <head>
     @include('Backend.Sections.head')
 </head>
-<body class="hold-transition sidebar-mini">
+<body>
     @include('Backend.Sections.header')
-    <!-- Content Wrapper. Contains page content -->
-    <!-- Content Header (Page header) -->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
