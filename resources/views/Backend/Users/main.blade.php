@@ -25,7 +25,7 @@
     <section class="content">
         <div class="row">
             <div class="col-12">
-                <div class="card" style="height: 90vh; overflow: auto; padding: 5%;">
+                <div class="card" style="height: 90vh; overflow: auto; padding: 2%;">
                     <div class="card-header">
                         <h3 class="card-title">Fixed Header Table</h3>
 
