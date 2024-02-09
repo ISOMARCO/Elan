@@ -18,7 +18,7 @@ class IsLogin
     {
         if(!Session::has('id1') && $request->route()->getName() !== 'Logout')
         {
-            abort(403, 'Olmaz');
+            abort(404, 'Not Found');
         }
         return $next($request);
     }
