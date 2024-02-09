@@ -16,11 +16,14 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo $request->route()->getName();
         if(!Session::has('id') && ($request->route()->getName() !== 'Logout' || $request->route()->getName() !== 'Login'))
         {
-            //abort(404, 'Not Found');
+            echo "burdayam";
             redirect(url('/admin/login'));
+        }
+        else
+        {
+            echo "burda deyilem";
         }
         if(Session::has('id') && $request->route()->getName() === 'Login')
         {
