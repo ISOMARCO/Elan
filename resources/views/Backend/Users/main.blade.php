@@ -25,7 +25,7 @@
     <section class="content">
         <div class="row">
             <div class="col-12">
-                <div class="card">
+                <div class="card" style="height: 90vh; overflow: auto;">
                     <div class="card-header">
                         <h3 class="card-title">Fixed Header Table</h3>
 
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0" style="height: 70vh; overflow: auto;">
+                    <div class="card-body table-responsive p-0">
                         <table class="table table-head-fixed text-nowrap">
                             <thead>
                             <tr>
