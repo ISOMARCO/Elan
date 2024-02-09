@@ -18,12 +18,7 @@ class IsLogin
     {
         if(!Session::has('id') && ($request->route()->getName() !== 'Logout' || $request->route()->getName() !== 'Login'))
         {
-            echo "burdayam";
-            redirect(url('/admin/login'));
-        }
-        else
-        {
-            echo "burda deyilem";
+            redirect()->action('HomeController@main');
         }
         if(Session::has('id') && $request->route()->getName() === 'Login')
         {
