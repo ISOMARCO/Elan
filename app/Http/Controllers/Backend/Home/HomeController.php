@@ -8,7 +8,6 @@ class HomeController extends Controller
 {
     public function main(Request $request)
     {
-        echo date('Y-m-d H:i:s');
         return view('Backend.Home.main');
     }
 }

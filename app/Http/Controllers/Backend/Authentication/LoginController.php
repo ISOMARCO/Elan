@@ -12,6 +12,7 @@ class LoginController extends Controller
 {
     public function main() : String
     {
+        echo date('Y-m-d H:i:s');
         return view('Backend.Login.main');
     }
 
