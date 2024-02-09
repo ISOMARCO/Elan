@@ -5,6 +5,7 @@ namespace App\Http;
 use App\Http\Middleware\Frontend\AutoLogin;
 use App\Http\Middleware\Frontend\IsLogin;
 use App\Http\Middleware\PullFromGit;
+use App\Http\Middleware\Set_Timezone;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
 class Kernel extends HttpKernel
@@ -40,13 +41,15 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             "PullFromGit" => PullFromGit::class,
-            "AutoLogin" => AutoLogin::class
+            "AutoLogin" => AutoLogin::class,
+            "Set_Timezone" => Set_Timezone::class
         ],
 
         'api' => [
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            "Set_Timezone" => Set_Timezone::class
         ],
         'authentication' => [
             \App\Http\Middleware\EncryptCookies::class,
@@ -56,7 +59,8 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             "IsLogin" => IsLogin::class,
-            "PullFromGit" => PullFromGit::class
+            "PullFromGit" => PullFromGit::class,
+            "Set_Timezone" => Set_Timezone::class
         ],
         'user' => [
             \App\Http\Middleware\EncryptCookies::class,
@@ -65,7 +69,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            "AutoLogin" => AutoLogin::class
+            "AutoLogin" => AutoLogin::class,
+            "Set_Timezone" => Set_Timezone::class
         ],
         'backend_authentication' => [
             \App\Http\Middleware\EncryptCookies::class,
@@ -74,7 +79,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            "PullFromGit" => PullFromGit::class
+            "PullFromGit" => PullFromGit::class,
+            "Set_Timezone" => Set_Timezone::class
         ],
         'backend_users' => [
             \App\Http\Middleware\EncryptCookies::class,
@@ -84,7 +90,8 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             "PullFromGit" => PullFromGit::class,
-            "IsLogin" => Backend_IsLogin::class
+            "IsLogin" => Backend_IsLogin::class,
+            "Set_Timezone" => Set_Timezone::class
         ]
     ];
 
