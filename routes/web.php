@@ -5,7 +5,7 @@ use App\Http\Controllers\Media\TelegramWebhookController;
 use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
-use App\Http\Controllers\Backend\HomeController as BackendHomeController;
+use App\Http\Controllers\Backend\Home\HomeController as BackendHomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
