@@ -16,7 +16,7 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!Session::has('id') && $request->route()->getName() != 'Logout' && $request->route()->getName() != 'Login' && $request->route()->getName() != 'loginAction')
+        if(!Session::has('id') && $request->route()->getName() != 'Logout' && $request->route()->getName() != 'Login' && $request->route()->getName() != 'LoginAction')
         {
             return redirect('/admin/login');
         }
