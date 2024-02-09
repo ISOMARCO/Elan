@@ -34,6 +34,7 @@ class Users extends Model
                 'Phone_Number' => $phone,
                 'Email' => $data['email'],
                 'Password' => $password,
+                'Registration_Date' => date('Y-m-d H:i:s'),
                 'Gender' => $data['gender']
             ]);
             return [true];
