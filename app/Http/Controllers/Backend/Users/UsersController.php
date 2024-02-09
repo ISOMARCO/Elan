@@ -9,6 +9,6 @@ class UsersController extends Controller
 {
     public function main()
     {
-        return view('');
+        return view('Backend.Users.main');
     }
 }
