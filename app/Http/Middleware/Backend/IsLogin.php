@@ -18,11 +18,11 @@ class IsLogin
     {
         if(!Session::has('id') && ($request->route()->getName() !== 'Logout' || $request->route()->getName() !== 'Login'))
         {
-            return redirect()->url('/admin/login');
+            return redirect('/admin/login');
         }
         if(Session::has('id') && $request->route()->getName() === 'Login')
         {
-            return redirect()->url('/admin/home');
+            return redirect('admin/home');
         }
         return $next($request);
     }
