@@ -23,82 +23,29 @@
 
     <!-- Main content -->
     <section class="content">
-        <div class="row">
-            <div class="col-12">
-                <div class="card" style="height: 90vh; overflow: auto; padding: 2%;">
-                    <div class="card-header">
-                        <h3 class="card-title">Fixed Header Table</h3>
-
-                        <div class="card-tools">
-                            <div class="input-group input-group-sm">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-default">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body table-responsive p-0">
-                        <table class="table table-head-fixed text-nowrap">
-                            <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Ad</th>
-                                <th>Soyad</th>
-                                <th>Email</th>
-                                <th>Cins</th>
-                                <th>Vəzifə</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($userList as $value)
-                                <tr data-widget="expandable-table" aria-expanded="false" style="border: 1px solid skyblue;">
-                                    <td>{{$value->Id}}</td>
-                                    <td>{{$value->Name}}</td>
-                                    <td>{{$value->Surname}}</td>
-                                    <td>{{$value->Email}}</td>
-                                    <td>{{$value->Gender}}</td>
-                                    <td>{{$value->Role}}</td>
-                                </tr>
-                                <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
-                                    <td colspan="4">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>Qeydiyyat tarixi</th>
-                                                    <th>Son giriş tarixi</th>
-                                                    <th>Telefon nömrəsi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>{{$value->Registration_Date}}</td>
-                                                    <td>{{$value->Last_Login_Date}}</td>
-                                                    <td>{{$value->Phone_Number}}</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td colspan="1">
-                                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></button>
-                                    </td>
-                                    <td colspan="1">
-                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-ban"></i></button>
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- /.card-body -->
+        @foreach($userList as $value)
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">{{$value->Name}} {{$value->Surname}}</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-                <!-- /.card -->
             </div>
+            <div class="card-body">
+                Start creating your amazing application!
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+                Footer
+            </div>
+            <!-- /.card-footer-->
         </div>
+        @endforeach
     </section>
     @include('Backend.Sections.footer')
 </body>
