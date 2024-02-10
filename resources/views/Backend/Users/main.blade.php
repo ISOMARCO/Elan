@@ -45,7 +45,7 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <td colspan="7" style="text-align: center;">İstifadəçi məlumatları</td>
+                                    <td colspan="7" style="text-align: center; font-weight: bold;">İstifadəçi məlumatları</td>
                                 </tr>
                                 <tr>
                                     <th><i class="fas fa-male"></i> Ad</th>
