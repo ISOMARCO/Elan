@@ -79,7 +79,7 @@
                                                     <tr>
                                                         <td>{{$value->Registration_Date}}</td>
                                                         <td>{{$value->Last_Login_Date}}</td>
-                                                        <td>{{$value->Phone}}</td>
+                                                        <td>{{$value->Phone_Number}}</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
