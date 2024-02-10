@@ -55,7 +55,7 @@
                             <td>{{$value->Surname}}</td>
                             <td>{{$value->Email}}</td>
                             <td>{{$value->Phone_Number}}</td>
-                            <td>{{$value->Registration_Date}}</td>
+                            <td>@Date_To_String($value->Registration_Date)</td>
                             <td>{{$value->Last_Login_Date}}</td>
                             <td>{{$value->Gender}}</td>
                         </tr>
