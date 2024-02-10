@@ -10,6 +10,6 @@ class UsersController extends Controller
     {
         $users = new Users();
         $userList = $users->allUsers();
-        return view('Backend.Users.main', compacts('userList'));
+        return view('Backend.Users.main', compact('userList'));
     }
 }
