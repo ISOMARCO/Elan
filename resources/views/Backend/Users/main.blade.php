@@ -82,9 +82,14 @@
                                                         <td>{{$value->Phone_Number}}</td>
                                                     </tr>
                                                 </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>2</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                </tfoot>
                                             </table>
-                                            <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
-                                            <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
                                         </p>
                                     </td>
                                 </tr>
