@@ -24,7 +24,7 @@ class UsersController extends Controller
             '11' => 'Noyabr',
             '12' => 'Dekabr'
         ];
-        echo $dateFormat[2]." ".$months[$dateFormat[1]]." ".$dateFormat[0].$Explode.$date[1];
+        echo $dateFormat[2]." ".$months[$dateFormat[1]]." ".$dateFormat[0]." ".$date[1];
         $users = new Users();
         $userList = $users->allUsers();
         return view('Backend.Users.main', compact('userList'));
