@@ -56,8 +56,9 @@
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach($userList as $value)
                                 <tr data-widget="expandable-table" aria-expanded="false" style="border: 1px solid skyblue;">
-                                    <td>1</td>
+                                    <td>{{$value->Id}}</td>
                                     <td>Ismayil</td>
                                     <td>Nagiyev</td>
                                     <td>ISOMARCO</td>
@@ -73,6 +74,7 @@
                                         </p>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

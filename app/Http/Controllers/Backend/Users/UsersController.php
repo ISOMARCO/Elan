@@ -9,7 +9,7 @@ class UsersController extends Controller
     public function main()
     {
         $users = new Users();
-        print_r($users->allUsers()[0]->Id);
-        return view('Backend.Users.main');
+        $userList = $users->allUsers();
+        return view('Backend.Users.main', compacts('userList'));
     }
 }
