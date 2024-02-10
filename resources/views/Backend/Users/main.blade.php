@@ -66,31 +66,26 @@
                                 </tr>
                                 <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
                                     <td colspan="6">
-                                        <p>
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Qeydiyyat tarixi</th>
-                                                        <th>Son giriş tarixi</th>
-                                                        <th>Telefon nömrəsi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>{{$value->Registration_Date}}</td>
-                                                        <td>{{$value->Last_Login_Date}}</td>
-                                                        <td>{{$value->Phone_Number}}</td>
-                                                    </tr>
-                                                </tbody>
-                                                <tfoot>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>2</td>
-                                                        <td>3</td>
-                                                    </tr>
-                                                </tfoot>
-                                            </table>
-                                        </p>
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Qeydiyyat tarixi</th>
+                                                    <th>Son giriş tarixi</th>
+                                                    <th>Telefon nömrəsi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>{{$value->Registration_Date}}</td>
+                                                    <td>{{$value->Last_Login_Date}}</td>
+                                                    <td>{{$value->Phone_Number}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td colspan="6">
+                                        <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
+                                        <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
                                     </td>
                                 </tr>
                                 @endforeach
