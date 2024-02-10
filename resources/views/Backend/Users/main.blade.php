@@ -83,9 +83,11 @@
                                             </tbody>
                                         </table>
                                     </td>
-                                    <td colspan="2">
-                                        <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
-                                        <button type="button" class="btn btn-outline-danger">Ban</button>
+                                    <td colspan="1">
+                                        <button type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></button>
+                                    </td>
+                                    <td colspan="1">
+                                        <button type="button" class="btn btn-outline-danger"><i class="fas fa-ban"></i></button>
                                     </td>
                                 </tr>
                                 @endforeach
