@@ -65,7 +65,7 @@
                                     <td>{{$value->Role}}</td>
                                 </tr>
                                 <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
-                                    <td colspan="6">
+                                    <td colspan="4">
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
@@ -83,11 +83,9 @@
                                             </tbody>
                                         </table>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6">
+                                    <td colspan="2">
                                         <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
-                                        <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
+                                        <button type="button" class="btn btn-outline-danger">Ban</button>
                                     </td>
                                 </tr>
                                 @endforeach
