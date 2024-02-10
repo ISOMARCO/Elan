@@ -24,13 +24,7 @@
     <!-- Main content -->
     <section class="content">
         @foreach($userList as $value)
-            @php
-                $red = rand(0, 255);
-                $green = rand(0, 255);
-                $blue = rand(0, 255);
-                $colorCode = sprintf("#%02x%02x%02x", $red, $green, $blue);
-            @endphp
-        <div class="card" style="border: 1px solid {{$colorCode}};">
+        <div class="card" style="border: 1px solid @Border_Random_Color()">
             <div class="card-header">
                 <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> {{$value->Name}} {{$value->Surname}}</h3>
                 <div class="card-tools">
