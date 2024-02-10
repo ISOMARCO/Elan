@@ -38,7 +38,7 @@
             </div>
             <div class="card-body" style="overflow: auto">
                 <table class="table table-bordered">
-                    <thead>
+                    <thead style="display: block; white-space: nowrap;">
                         <tr>
                             <th><i class="fas fa-male"></i> Ad</th>
                             <th><i class="fas fa-male"></i> Soyad</th>
