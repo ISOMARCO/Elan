@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         \Blade::directive('Date_To_String', function ($expression) {
-            return "<?php echo \\Carbon\\Carbon::parse({$expression})->isoFormat('LL <br> a LT'); ?>";
+            return "<?php echo \\Carbon\\Carbon::parse({$expression})->isoFormat('LL LT'); ?>";
         });
     }
 }
