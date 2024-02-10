@@ -59,15 +59,14 @@
                                 @foreach($userList as $value)
                                 <tr data-widget="expandable-table" aria-expanded="false" style="border: 1px solid skyblue;">
                                     <td>{{$value->Id}}</td>
-                                    <td>Ismayil</td>
-                                    <td>Nagiyev</td>
-                                    <td>ISOMARCO</td>
-                                    <td>inagiyev@icloud.com</td>
-                                    <td>Kişi</td>
-                                    <td>ADMIN</td>
+                                    <td>{{$value->Name}}</td>
+                                    <td>{{$value->Surname}}</td>
+                                    <td>{{$value->email}}</td>
+                                    <td>{{$value->Role}}</td>
+                                    <td>{{$value->Gender}}</td>
                                 </tr>
                                 <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
-                                    <td colspan="7">
+                                    <td colspan="6">
                                         <p>
                                             <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
                                             <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
