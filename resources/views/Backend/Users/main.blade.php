@@ -36,9 +36,9 @@
                     </button>
                 </div>
             </div>
-            <div class="card-body" style="overflow: auto">
+            <div class="card-body" style="overflow: auto; display: block; white-space: nowrap;">
                 <table class="table table-bordered">
-                    <thead style="display: block; white-space: nowrap;">
+                    <thead>
                         <tr>
                             <th><i class="fas fa-male"></i> Ad</th>
                             <th><i class="fas fa-male"></i> Soyad</th>
