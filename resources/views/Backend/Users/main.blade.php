@@ -83,6 +83,8 @@
                                             </tbody>
                                         </table>
                                     </td>
+                                </tr>
+                                <tr>
                                     <td colspan="6">
                                         <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
                                         <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
