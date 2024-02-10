@@ -36,7 +36,7 @@
                     </button>
                 </div>
             </div>
-            <div class="card-body">
+            <div class="card-body" style="overflow: auto">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
