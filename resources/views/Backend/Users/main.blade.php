@@ -68,6 +68,10 @@
                                 <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
                                     <td colspan="6">
                                         <p>
+                                            <div>
+                                                Qeydiyyat tarixi: {{$value->Registration_Date}}<br>
+                                                Son giriş tarixi: {{$value->Last_Login_Date}}
+                                            </div>
                                             <button type="button" class="btn btn-outline-primary">Düzəliş et</button>
                                             <button type="button" class="btn btn-outline-danger" style="float: right;">Ban</button>
                                         </p>
