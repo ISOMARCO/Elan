@@ -24,7 +24,7 @@
     <!-- Main content -->
     <section class="content">
         @foreach($userList as $value)
-        <div class="card" style="border: 1px solid @Border_Random_Color">
+        <div class="card collapsed-card" style="border: 1px solid @Border_Random_Color">
             <div class="card-header">
                 <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> {{$value->Name}} {{$value->Surname}}</h3>
                 <div class="card-tools">
