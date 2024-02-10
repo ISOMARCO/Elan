@@ -26,7 +26,7 @@
         @foreach($userList as $value)
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">İstifadəçi nömrəsi: {{sprintf("%08d", $value->Id)}}</h3>
+                <h3 class="card-title"><i class="fas fa-sort-numeric-up-alt"></i> İstifadəçi nömrəsi: <b>{{sprintf("%08d", $value->Id)}}</b></h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -40,13 +40,13 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Ad</th>
-                            <th>Soyad</th>
-                            <th>Email</th>
-                            <th>Telefon nömrəsi</th>
-                            <th>Qeydiyyat tarixi</th>
-                            <th>Son giriş tarixi</th>
-                            <th>Cins</th>
+                            <th><i class="fas fa-male"></i> Ad</th>
+                            <th><i class="fas fa-male"></i> Soyad</th>
+                            <th><i class="fas fa-envelope"></i> Email</th>
+                            <th><i class="fas fa-phone"></i> Telefon nömrəsi</th>
+                            <th><i class="fas fa-calendar-alt"></i> Qeydiyyat tarixi</th>
+                            <th><i class="fas fa-calendar-alt"></i> Son giriş tarixi</th>
+                            <th><i class="fas fa-venus-mars"></i> Cins</th>
                         </tr>
                     </thead>
                     <tbody>
