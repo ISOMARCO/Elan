@@ -49,7 +49,6 @@
                                 <th>ID</th>
                                 <th>Ad</th>
                                 <th>Soyad</th>
-                                <th>İstifadəçi adı</th>
                                 <th>Email</th>
                                 <th>Cins</th>
                                 <th>Vəzifə</th>
@@ -62,8 +61,8 @@
                                     <td>{{$value->Name}}</td>
                                     <td>{{$value->Surname}}</td>
                                     <td>{{$value->Email}}</td>
-                                    <td>{{$value->Role}}</td>
                                     <td>{{$value->Gender}}</td>
+                                    <td>{{$value->Role}}</td>
                                 </tr>
                                 <tr class="expandable-body" style="white-space: initial; border: 1px solid skyblue;">
                                     <td colspan="6">
