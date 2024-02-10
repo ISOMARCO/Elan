@@ -61,7 +61,7 @@
                                     <td>{{$value->Id}}</td>
                                     <td>{{$value->Name}}</td>
                                     <td>{{$value->Surname}}</td>
-                                    <td>{{$value->email}}</td>
+                                    <td>{{$value->Email}}</td>
                                     <td>{{$value->Role}}</td>
                                     <td>{{$value->Gender}}</td>
                                 </tr>
