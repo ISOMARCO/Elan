@@ -21,7 +21,6 @@ class AppServiceProvider extends ServiceProvider
     {
         \Blade::directive('Date_To_String', function ($Date, $Explode = ' ') {
             $date = explode(" ", $Date);
-            $time = $date[1];
             $dateFormat = explode('-', $date[0]);
             $months = [
                 '01' => 'Yanvar',
@@ -37,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
                 '11' => 'Noyabr',
                 '12' => 'Dekabr'
             ];
-            $return = $dateFormat[2]." ".$months[$dateFormat[1]]." ".$dateFormat[0].$Explode.$time;
+            $return = $dateFormat[2]." ".$months[$dateFormat[1]]." ".$dateFormat[0].$Explode.$date[1];
             return "<?php echo $return; ?>";
         });
     }
