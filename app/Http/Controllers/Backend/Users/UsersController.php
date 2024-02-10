@@ -8,7 +8,7 @@ class UsersController extends Controller
 {
     public function main()
     {
-        $date = explode(" ", '2024-02-10 16:07:21');
+        $date = explode(" ", '2024-02-09 09:36:48');
         $dateFormat = explode('-', $date[0]);
         $months = [
             '01' => 'Yanvar',
