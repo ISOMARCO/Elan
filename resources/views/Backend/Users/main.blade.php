@@ -45,6 +45,9 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
+                                    <td colspan="7">Information</td>
+                                </tr>
+                                <tr>
                                     <th><i class="fas fa-male"></i> Ad</th>
                                     <th><i class="fas fa-male"></i> Soyad</th>
                                     <th><i class="fas fa-envelope"></i> Email</th>
