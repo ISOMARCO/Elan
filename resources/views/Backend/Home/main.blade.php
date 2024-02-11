@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">{{ __('Backend.Home.home.home') }}</a></li>
+                        <li class="breadcrumb-item"><a href="#">@lang('Backend.Home.home.home')</a></li>
                         <li class="breadcrumb-item active">Blank Page</li>
                     </ol>
                 </div>
