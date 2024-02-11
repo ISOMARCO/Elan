@@ -19,11 +19,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Blade::directive('Date_To_String', function ($expression) {
+        \Blade::directive('Date_To_String', function ($expression) {
             return "<?php echo \\Carbon\\Carbon::parse({$expression})->isoFormat('LL LT'); ?>";
         });
 
-        Blade::directive('Border_Random_Color', function(){
+        \Blade::directive('Border_Random_Color', function(){
             $red = rand(0, 255);
             $green = rand(0, 255);
             $blue = rand(0, 255);
