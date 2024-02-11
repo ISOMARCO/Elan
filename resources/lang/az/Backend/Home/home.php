@@ -1,4 +1,4 @@
 <?php
 return [
-    'home' => 'Ana səhifə'
+    'home' => 'Ana səhifə22'
 ];
