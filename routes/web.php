@@ -17,7 +17,9 @@ use App\Http\Controllers\Backend\Home\HomeController as BackendHomeController;
 |
 */
 Route::get('/', [HomeController::class, 'main'])->name('Home');
-Route::get('/home', [HomeController::class, 'main'])->name('Home');
+//Route::get('/home', [HomeController::class, 'main'])->name('Home');
+Route::redirect('/home', '/');
 Route::match(['post', 'get'],'/telegram_webhook', [TelegramWebhookController::class, 'main'])->withoutMiddleware([VerifyCsrfToken::class]);
-Route::middleware([Backend_IsLogin::class])->get('/admin/home', [BackendHomeController::class, 'main'])->name('Admin_Home');
+//Route::middleware([Backend_IsLogin::class])->get('/admin/home', [BackendHomeController::class, 'main'])->name('Admin_Home');
 Route::middleware([Backend_IsLogin::class])->get('/admin/', [BackendHomeController::class, 'main'])->name('Admin_Home');
+Route::redirect('/admin/home', '/admin/');
