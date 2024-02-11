@@ -175,7 +175,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{url('/admin/home')}}" class="nav-link">
+                    <a href="{{url('/admin/')}}" class="nav-link">
                         <i class="fas fa-home nav-icon"></i>
                         <p>Ana Səhifə</p>
                     </a>
