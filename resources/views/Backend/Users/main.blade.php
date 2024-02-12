@@ -72,7 +72,7 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <a href="#" class="btn btn-app" style="float: left;"><i class="fas fa-edit"></i></a>
+                        <a href="#" class="btn btn-app btn-sm" style="float: left;"><i class="fas fa-edit"></i></a>
                         <button type="button" class="btn btn-outline-danger" style="float: right;"><i class="fas fa-ban"></i></button>
                     </div>
                     <!-- /.card-footer-->
