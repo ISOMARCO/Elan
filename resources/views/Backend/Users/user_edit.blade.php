@@ -8,7 +8,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>One fine body {{print_r($user)}} &hellip;</p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email" value="{{$user->Email}}">
+                </div>
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
