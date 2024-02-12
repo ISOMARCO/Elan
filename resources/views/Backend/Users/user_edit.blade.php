@@ -9,10 +9,10 @@
             </div>
             <div class="modal-body">
                 <div class="input-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email" value="{{$user->Email}}">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                     </div>
-                    <input type="email" class="form-control" placeholder="Email" value="{{$user->Email}}">
                 </div>
             </div>
             <div class="modal-footer justify-content-between">
