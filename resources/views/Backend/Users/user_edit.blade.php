@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                {{$user->user_id}}
+                {{$user_id}}
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Ad" value="{{$user->Name}}">
                     <div class="input-group-append">
