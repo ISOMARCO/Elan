@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>One fine body {{$user_id}} &hellip;</p>
+                <p>One fine body {{$user[0]->Name}} &hellip;</p>
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
