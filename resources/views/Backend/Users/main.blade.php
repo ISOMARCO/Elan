@@ -93,6 +93,10 @@
             $("#surname").val(rowData[1]);
             $("#email").val(rowData[2]);
         });
+
+        $("#user_edit_btn").on("click", function(){
+            alert("clicked");
+        });
     });
 </script>
 </body>

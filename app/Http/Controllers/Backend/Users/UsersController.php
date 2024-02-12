@@ -12,9 +12,4 @@ class UsersController extends Controller
         $userList = $users->allUsers();
         return view('Backend.Users.main', compact('userList'));
     }
-
-    public function user_edit()
-    {
-        return view('Backend.Users.user_edit');
-    }
 }
