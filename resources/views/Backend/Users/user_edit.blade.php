@@ -10,19 +10,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Ad" id="name" value="">
+                        <input type="text" class="form-control" name="name" placeholder="Ad" id="name" value="">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Soyad" id="surname" value="">
+                        <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname" value="">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Email" value="">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                         </div>
