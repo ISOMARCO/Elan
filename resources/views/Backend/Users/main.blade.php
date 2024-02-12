@@ -91,16 +91,13 @@
                type: "get",
                success: function(e)
                {
-                   if($(".card-body").hasClass('table'))
-                   {
-                       alert("var");
-                   }
-                   else
-                   {
-                       alert("yoxdu");
-                   }
+                   $(".card-body").append(e);
                }
            });
+        });
+
+        $("#modal-close").on("click", function(){
+           $(".modal").remove();
         });
     });
 </script>
