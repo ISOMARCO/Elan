@@ -72,7 +72,7 @@
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit" id="user_edit_btn"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
                             <button type="button" class="btn btn-outline-danger" style="float: right;"><i class="fas fa-ban"></i></button>
                         </div>
                         <!-- /.card-footer-->
@@ -85,7 +85,7 @@
     @include('Backend.Sections.footer')
 <script>
     $(document).ready(function(){
-        $("#user_edit_btn").on("click", function(){
+        $(".card-footer button:first-child").on("click", function(){
             console.log($(this));
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
