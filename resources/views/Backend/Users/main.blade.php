@@ -97,7 +97,7 @@
         });
 
         $("#modal-close").on("click", function(){
-           $(".modal").remove();
+           $("#user_edit").remove();
         });
     });
 </script>
