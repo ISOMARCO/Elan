@@ -89,7 +89,8 @@
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
-            console.log(rowData[0]);
+            $("#name").val(rowData[0]);
+            $("#surname").val(rowData[1]);
         });
     });
 </script>
