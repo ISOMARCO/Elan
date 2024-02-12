@@ -85,7 +85,12 @@
     @include('Backend.Sections.footer')
 <script>
     $(document).ready(function(){
-
+        $("#user_edit_btn").on("click", function(){
+            var rowData = $(this).closest('tr').find('td').map(function() {
+                return $(this).text();
+            }).get();
+            console.log(rowData);
+        });
     });
 </script>
 </body>
