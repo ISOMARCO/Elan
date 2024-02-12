@@ -91,13 +91,9 @@
                type: "get",
                success: function(e)
                {
-                   $(".card-body").append(e);
+                   $(".card-body").html(e);
                }
            });
-        });
-
-        $("#modal-close").on("click", function(){
-           $("#user_edit").remove();
         });
     });
 </script>
