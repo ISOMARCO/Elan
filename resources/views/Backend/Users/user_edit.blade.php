@@ -15,6 +15,12 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Soyad" value="{{$user->Surname}}">
+                    <div class="input-group-append">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
                     <input type="email" class="form-control" placeholder="Email" value="{{$user->Email}}">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="fas fa-envelope"></i></span>
