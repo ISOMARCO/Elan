@@ -77,7 +77,7 @@
                         </div>
                         <!-- /.card-footer-->
                     </div>
-                    @include('Backend.Users.user_edit', ['user' => $value])
+                    @include('Backend.Users.user_edit', ['editUser' => $value])
                 @endforeach
             </div>
         </div>
