@@ -86,6 +86,7 @@
 <script>
     $(document).ready(function(){
         $("#user_edit_btn").on("click", function(){
+            console.log($(this));
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
