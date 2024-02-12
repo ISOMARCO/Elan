@@ -77,11 +77,11 @@
                     </div>
                     <!-- /.card-footer-->
                 </div>
+                    @include('Backend.Users.user_edit', ['user_id' => $value->Id])
                 @endforeach
             </div>
         </div>
     </section>
-    @include('Backend.Users.user_edit', ['data' => '1'])
     @include('Backend.Sections.footer')
 </body>
 </html>
