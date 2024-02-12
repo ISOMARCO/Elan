@@ -91,7 +91,7 @@
                type: "get",
                success: function(e)
                {
-                   if($(".card-body").hasClass(table))
+                   if($(".card-body").hasClass('table'))
                    {
                        alert("var");
                    }
