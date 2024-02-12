@@ -91,6 +91,7 @@
             }).get();
             $("#name").val(rowData[0]);
             $("#surname").val(rowData[1]);
+            $("#email").val(rowData[2]);
         });
     });
 </script>
