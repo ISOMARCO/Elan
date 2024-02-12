@@ -95,7 +95,16 @@
         });
 
         $("#user_edit_btn").on("click", function(){
-            alert("clicked");
+            $.ajax({
+                type: "post",
+                url: "{{url('/admin/users/saveChangesAction')}}",
+                data: $("#user_edit_form").serialize(),
+                dataType: "json",
+                success: function(e)
+                {
+                    alert(e.success);
+                }
+            });
         });
     });
 </script>

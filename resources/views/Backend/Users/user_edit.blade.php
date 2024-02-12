@@ -37,4 +37,5 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
+    @csrf
 </form>
