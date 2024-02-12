@@ -83,5 +83,10 @@
         </div>
     </section>
     @include('Backend.Sections.footer')
+<script>
+    $(document).ready(function(){
+
+    });
+</script>
 </body>
 </html>
