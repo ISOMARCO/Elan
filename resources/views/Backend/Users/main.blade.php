@@ -91,8 +91,14 @@
                type: "get",
                success: function(e)
                {
-                   $("#container").show();
-                   $("#container").html(e);
+                   if($(".card-body").hasClass(table))
+                   {
+                       alert("var");
+                   }
+                   else
+                   {
+                       alert("yoxdu");
+                   }
                }
            });
         });
