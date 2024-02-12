@@ -78,23 +78,14 @@
                         <!-- /.card-footer-->
                     </div>
                 @endforeach
-                <div id="container" style="display: none;"></div>
+                @include('Backend.Users.user_edit')
             </div>
         </div>
     </section>
     @include('Backend.Sections.footer')
 <script>
     $(document).ready(function(){
-        $("#user_edit_btn").on("click", function(){
-           $.ajax({
-               url: "{{url('/admin/users/user-edit')}}",
-               type: "get",
-               success: function(e)
-               {
-                   $(".card-body").html(e);
-               }
-           });
-        });
+
     });
 </script>
 </body>
