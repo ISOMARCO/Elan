@@ -15,6 +15,6 @@ class UsersController extends Controller
 
     public function user_edit()
     {
-        return view('Backend.Users.main');
+        return view('Backend.Users.user_edit');
     }
 }

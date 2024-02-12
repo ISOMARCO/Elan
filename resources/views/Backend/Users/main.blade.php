@@ -89,7 +89,7 @@
     $(document).ready(function(){
         $("#user_edit_btn").on("click", function(){
            $.ajax({
-               url: "{{url('/admin/users/user_edit/')}}",
+               url: "{{url('/admin/users/user_edit')}}",
                type: "get",
                success: function(e)
                {
