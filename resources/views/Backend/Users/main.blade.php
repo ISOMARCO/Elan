@@ -78,9 +78,6 @@
                         <!-- /.card-footer-->
                     </div>
                 @endforeach
-                <div id="container">
-
-                </div>
             </div>
         </div>
     </section>
@@ -93,7 +90,7 @@
                type: "get",
                success: function(e)
                {
-                   $("#container").html(e);
+                   $(".card-body").append(e);
                }
            });
         });
