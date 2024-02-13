@@ -40,19 +40,19 @@ class Users extends Model
         return DB::table($this->table)->get();
     }
 
-    public function changeUser($data = [])
+    public function changeUser()
     {
-        if($data['name'] == NULL || $data['surname'] == NULL || $data['email'] == NULL)
+        if($this->name == NULL || $this->surname == NULL || $this->email == NULL)
         {
             throw new UsersException(2001);
         }
-        if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL))
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
         {
             throw new UsersException(2000);
         }
         try
         {
-            DB::table($this->table)->where('Id', $data['id'])->update(['Name' => $data['name'], 'Surname' => $data['surname'], 'Email' => $data['email']]);
+            DB::table($this->table)->where('Id', $this->id)->update(['Name' => $this->name, 'Surname' => $this->surname, 'Email' => $this->email]);
         }
         catch(QueryException $e)
         {
