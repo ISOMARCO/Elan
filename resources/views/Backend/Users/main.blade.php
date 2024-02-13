@@ -105,6 +105,7 @@
                 beforeSend: function()
                 {
                     $("#progress").show();
+                    $("input, #user_edit_btn").attr("disabled", "disabled");
                 },
                 success: function(e)
                 {
@@ -122,6 +123,7 @@
                 complete: function()
                 {
                     $("#progress").hide();
+                    $("input, #user_edit_btn").removeAttr("disabled");
                 }
             });
         });
