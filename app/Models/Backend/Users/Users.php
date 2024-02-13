@@ -62,7 +62,7 @@ class Users extends Model
         }
         try
         {
-            DB::table($this->table)->where('Id2', $this->id)->update(['Name' => $this->name, 'Surname' => $this->surname, 'Email' => $this->email]);
+            DB::table($this->table)->where('Id', $this->id)->update(['Name' => $this->name, 'Surname' => $this->surname, 'Email' => $this->email]);
             return true;
         }
         catch(QueryException $e)
