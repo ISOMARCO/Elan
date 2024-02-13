@@ -32,7 +32,7 @@
                 @foreach($userList as $value)
                     <div class="card collapsed-card" style="border: 1px solid @Border_Random_Color">
                         <div class="card-header">
-                            <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> {{$value->Name}} {{$value->Surname}}</h3>
+                            <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> <span id="name{{$value->Id}}">{{$value->Name}}</span> <span id="surname{{$value->Id}}">{{$value->Surname}}</span></h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i class="fas fa-plus"></i>
@@ -119,6 +119,8 @@
                     $("#table"+e.id+" tbody td:nth-child(1)").text(e.name);
                     $("#table"+e.id+" tbody td:nth-child(2)").text(e.surname);
                     $("#table"+e.id+" tbody td:nth-child(3)").text(e.email);
+                    $("#name"+e.id).text(e.name);
+                    $("#surname"+e.id).text(e.surname);
                 },
                 error: function(x)
                 {
