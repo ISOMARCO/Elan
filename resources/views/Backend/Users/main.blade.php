@@ -4,7 +4,7 @@
     @include('Backend.Sections.head')
     <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.css')}}">
 </head>
-<body style="overflow: hidden;">
+<body>
     @include('Backend.Sections.header')
     <section class="content-header">
         <div class="container-fluid">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{url('/admin/home')}}">Ana Səhifə</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/admin/')}}">Ana Səhifə</a></li>
                         <li class="breadcrumb-item active">İstifadəçilər</li>
                     </ol>
                 </div>
