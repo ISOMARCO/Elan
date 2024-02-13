@@ -20,11 +20,15 @@ class UsersController extends Controller
         if($request->ajax() || $request->wantsJson())
         {
             $users = new Users();
+            $id = $request->post('user_number');
+            $name = $request->post('name');
+            $surname = $request->post('surname');
+            $email = $request->post('email');
             try
             {
-                $users->name($request->post('name'))->surname($request->post('surname'))->email($request->post('email'))->id($request->post('user_number'));
+                $users->name($name)->surname($surname)->email($email)->id($id);
                 $users->changeUser();
-                return response()->json(['success' => 'İstifadəçi dəyişdirildi'], 200);
+                return response()->json(['success' => 'İstifadəçi dəyişdirildi', 'id' => $id, 'name' => $name, 'surname' => $surname, 'email' => $email], 200);
             }
             catch(UsersException $e)
             {

@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="card-body" style="overflow: auto; white-space: nowrap;">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered" id="table{{$value->Id}}">
                                 <thead>
                                     <tr>
                                         <td colspan="7" style="text-align: center; font-weight: bold;">İstifadəçi məlumatları</td>
@@ -111,12 +111,12 @@
                 },
                 success: function(e)
                 {
-                    console.log($(".card-footer button:first-child").closest('.card').find('tbody td'));
                     Swal.fire({
                         title: '',
                         text: e.success,
                         icon: 'success'
                     });
+                    $("#table"+e.id+" tbody td:nth-child(1)").text(e.name);
                 },
                 error: function(x)
                 {
