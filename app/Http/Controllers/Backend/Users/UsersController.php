@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Users;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Users\Users;
 use Illuminate\Http\Request;
+use App\Exceptions\Backend\Users as UsersException;
 
 class UsersController extends Controller
 {
@@ -19,6 +20,16 @@ class UsersController extends Controller
         if($request->ajax() || $request->wantsJson())
         {
             $email = $request->post('email');
+            $users = new Users();
+            try
+            {
+                $users->changeUser(['email' => $email]);
+            }
+            catch(UsersException $e)
+            {
+                return response()->json(['error' => $e->getMessage()], 500);
+            }
+
         }
         abort(403, 'Unauthorized');
     }

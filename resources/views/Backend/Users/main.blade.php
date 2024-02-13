@@ -100,6 +100,10 @@
                 url: "{{url('/admin/users/saveChangesAction')}}",
                 data: $("#user_edit_form").serialize(),
                 dataType: "json",
+                beforeSend: function()
+                {
+                    $("#progress").show();
+                },
                 success: function(e)
                 {
 
@@ -112,6 +116,10 @@
                         text: errorResponse.error,
                         icon: 'error'
                     });
+                },
+                complete: function()
+                {
+                    $("#progress").hide();
                 }
             });
         });
