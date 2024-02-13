@@ -102,7 +102,16 @@
                 dataType: "json",
                 success: function(e)
                 {
-                    alert(e.success);
+
+                },
+                error: function(x)
+                {
+                    var errorResponse = x.responseJSON || x.responseText;
+                    Swal.fire({
+                        title: '',
+                        text: errorResponse.error,
+                        icon: 'error'
+                    });
                 }
             });
         });
