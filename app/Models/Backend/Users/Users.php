@@ -21,5 +21,6 @@ class Users extends Model
         {
             throw new UsersException(2000);
         }
+        return true;
     }
 }

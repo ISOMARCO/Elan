@@ -24,6 +24,7 @@ class UsersController extends Controller
             try
             {
                 $users->changeUser(['email' => $email]);
+                return response()->json(['success' => 'İstifadəçi dəyişdirildi'], 200);
             }
             catch(UsersException $e)
             {
