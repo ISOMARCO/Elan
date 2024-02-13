@@ -71,7 +71,7 @@ class Users extends Model
             {
                 if(strpos($e->getMessage(), 'email_unique') !== false)
                 {
-                    throw new UsersException(2002, ['email' => $this->email]);
+                    throw new UsersException(2002);
                 }
             }
             throw new UsersException(2003);
