@@ -117,6 +117,8 @@
                         icon: 'success'
                     });
                     $("#table"+e.id+" tbody td:nth-child(1)").text(e.name);
+                    $("#table"+e.id+" tbody td:nth-child(2)").text(e.surname);
+                    $("#table"+e.id+" tbody td:nth-child(3)").text(e.email);
                 },
                 error: function(x)
                 {
