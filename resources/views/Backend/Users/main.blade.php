@@ -109,7 +109,11 @@
                 },
                 success: function(e)
                 {
-
+                    Swal.fire({
+                        title: '',
+                        text: e.success,
+                        icon: 'success'
+                    });
                 },
                 error: function(x)
                 {
