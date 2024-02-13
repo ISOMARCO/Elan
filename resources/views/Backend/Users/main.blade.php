@@ -111,6 +111,7 @@
                 },
                 success: function(e)
                 {
+                    console.log($(".card-footer button:first-child").closest('.card').find('tbody td'));
                     Swal.fire({
                         title: '',
                         text: e.success,
