@@ -2,6 +2,7 @@
 
 namespace App\Models\Backend\Users;
 
+use Couchbase\QueryException;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -10,6 +11,14 @@ class Users extends Model
 {
     use HasFactory;
     protected $table = 'Users';
+    protected $email = NULL;
+    protected $name = NULL;
+    protected $surname = NULL;
+    protected $phone = NULL;
+    public function __construct(...$vars)
+    {
+
+    }
     public function allUsers()
     {
         return DB::table($this->table)->get();
@@ -17,10 +26,22 @@ class Users extends Model
 
     public function changeUser($data = [])
     {
+        if($data['name'] == NULL || $data['surname'] == NULL || $data['email'] == NULL)
+        {
+            throw new UsersException(2001);
+        }
         if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL))
         {
             throw new UsersException(2000);
         }
-        return true;
+        try
+        {
+            DB::table($this->table)->where('Id', $data['id'])->update(['Name' => $data['name'], 'Surname' => $data['surname'], 'Email' => $data['email']]);
+        }
+        catch(QueryException $e)
+        {
+
+        }
+
     }
 }

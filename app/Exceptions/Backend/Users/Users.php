@@ -20,7 +20,8 @@ class Users extends Exception
     protected function errorCodeMessage() : String
     {
         $codes = [
-            '2000' => 'Email adresi düzgün yazın'
+            '2000' => 'Email adresi düzgün yazın',
+            '2001' => 'Ulduzlu xanaları doldurmalısınız'
         ];
         if(isset($codes[$this->code]))
         {

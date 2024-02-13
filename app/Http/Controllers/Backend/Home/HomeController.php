@@ -7,6 +7,8 @@ class HomeController extends Controller
 {
     public function main()
     {
+        $a = '5';
+        echo varName($a);
         return view('Backend.Home.main');
     }
 }

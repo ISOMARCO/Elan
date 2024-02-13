@@ -67,6 +67,7 @@
                                         <td>@Date_To_String($value->Registration_Date)</td>
                                         <td>@Date_To_String($value->Last_Login_Date)</td>
                                         <td>{{$value->Gender}}</td>
+                                        <td style="display: none">{{$value->Id}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -94,6 +95,7 @@
             $("#name").val(rowData[0]);
             $("#surname").val(rowData[1]);
             $("#email").val(rowData[2]);
+            $("#user_number").val(rowData[7]);
         });
 
         $("#user_edit_btn").on("click", function(){

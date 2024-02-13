@@ -37,5 +37,6 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
+    <input type="hidden" name="user_number" id="user_number">
     @csrf
 </form>
