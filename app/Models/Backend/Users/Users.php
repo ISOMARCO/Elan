@@ -16,6 +16,12 @@ class Users extends Model
     protected $name = NULL;
     protected $surname = NULL;
     protected $phone = NULL;
+
+    /**
+     * @param $method
+     * @param $args
+     * @return $this
+     */
     public function __call($method, $args = [])
     {
         switch($method)
@@ -40,7 +46,11 @@ class Users extends Model
         return DB::table($this->table)->get();
     }
 
-    public function changeUser()
+    /**
+     * @return bool
+     * @throws UsersException
+     */
+    public function changeUser() : bool
     {
         if($this->name == NULL || $this->surname == NULL || $this->email == NULL)
         {
@@ -53,11 +63,18 @@ class Users extends Model
         try
         {
             DB::table($this->table)->where('Id', $this->id)->update(['Name' => $this->name, 'Surname' => $this->surname, 'Email' => $this->email]);
+            return true;
         }
         catch(QueryException $e)
         {
-
+            if($e->getCode() == '23505') #duplicate error for postgresql
+            {
+                if(strpos($e->getMessage(), 'email_unique') !== false)
+                {
+                    throw new UsersException(2002, ['email' => $this->email]);
+                }
+            }
+            throw new UsersException(2003);
         }
-
     }
 }
