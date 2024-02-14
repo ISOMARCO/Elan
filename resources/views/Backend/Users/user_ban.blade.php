@@ -10,21 +10,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="name" placeholder="Ad" id="name">
+                        <select class="form-control" nam="status" id="status">
+                            <option value="ACTIVE">Aktiv</option>
+                            <option value="DEACTIVE">Deaktiv</option>
+                            <option value="BAN">Ban</option>
+                        </select>
                         <div class="input-group-append">
-                            <label for="name" class="input-group-text"><i class="fas fa-user"></i></label>
+                            <label for="status" class="input-group-text"><i class="fas fa-ban"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname">
+                        <textarea class="form-control" name="reason" id="reason"></textarea>
                         <div class="input-group-append">
-                            <label for="surname" class="input-group-text"><i class="fas fa-user"></i></label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                        <div class="input-group-append">
-                            <label for="email" class="input-group-text"><i class="fas fa-envelope"></i></label>
+                            <label for="reason" class="input-group-text"><i class="fas fa-comments"></i></label>
                         </div>
                     </div>
                 </div>
