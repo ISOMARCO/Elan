@@ -139,6 +139,42 @@
                 }
             });
         });
+
+        $("#user_ban_btn").on("click", function(){
+            $.ajax({
+                type: "post",
+                url: "{{url('/admin/users/changeUserStatusAction')}}",
+                data: $("#user_ban_form").serialize(),
+                dataType: "json",
+                beforeSend: function()
+                {
+                    $("#user_ban_form #progress").show();
+                    $("#user_ban_form input, #user_ban_btn").attr("disabled", "disabled");
+                },
+                error: function(x)
+                {
+                    var errorResponse = x.responseJSON || x.responseText;
+                    Swal.fire({
+                        title: '',
+                        text: errorResponse.error,
+                        icon: 'error'
+                    });
+                },
+                success: function(e)
+                {
+                    Swal.fire({
+                        title: '',
+                        text: e.success,
+                        icon: 'success'
+                    });
+                },
+                complete: function()
+                {
+                    $("#user_ban_form #progress").hide();
+                    $("#user_ban_form input, #user_ban_btn").removeAttr("disabled");
+                }
+            });
+        });
     });
 </script>
 </body>
