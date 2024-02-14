@@ -18,7 +18,7 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <label for="surname" class="input-group-text"><i class="fas fa-user"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
