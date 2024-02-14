@@ -22,7 +22,7 @@ class User_Status_History extends Model
 
     }
 
-    public function changeStatus()
+    public function changeStatus() :  bool
     {
         DB::beginTransaction();
         try
@@ -39,6 +39,7 @@ class User_Status_History extends Model
                 'Updated_By' => Session::get('id')
             ]);
             DB::commit();
+            return true;
         }
         catch(QueryException $e)
         {
