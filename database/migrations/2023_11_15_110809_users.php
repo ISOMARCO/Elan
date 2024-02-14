@@ -9,9 +9,10 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    protected $table = 'Users';
     public function up(): void
     {
-        Schema::create('Users', function (Blueprint $table) {
+        Schema::create($this->table, function (Blueprint $table) {
             $table->bigIncrements('Id');
             $table->string('Name', 50)->nullable();
             $table->string('Surname', 50)->nullable();
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::drop('Users');
+        Schema::drop($this->table);
     }
 };
