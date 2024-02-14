@@ -12,15 +12,18 @@ return new class extends Migration
     protected $table = 'User_Status_History';
     public function up(): void
     {
-        Schema::create($this->table, function (Blueprint $table) {
-            $table->bigIncrements('Id');
-            $table->integer('User_Id')->nullable();
-            $table->string('From_Status', 6)->nullable();
-            $table->string('To_Status', 6)->nullable();
-            $table->longText('Reason');
-            $table->timestamp('Date')->nullable();
-            $table->integer('Updated_By')->nullable();
-        });
+        if(Schema::hasTable($this->table))
+        {
+            Schema::create($this->table, function (Blueprint $table) {
+                $table->bigIncrements('Id');
+                $table->integer('User_Id')->nullable();
+                $table->string('From_Status', 6)->nullable();
+                $table->string('To_Status', 6)->nullable();
+                $table->longText('Reason');
+                $table->timestamp('Date')->nullable();
+                $table->integer('Updated_By')->nullable();
+            });
+        }
     }
 
     /**
