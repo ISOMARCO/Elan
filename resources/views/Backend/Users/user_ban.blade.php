@@ -10,13 +10,13 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <select class="form-control" nam="status" id="status">
+                        <select class="form-control" name="toStatus" id="toStatus">
                             <option value="ACTIVE" selected>Aktiv</option>
                             <option value="DEACTIVE">Deaktiv</option>
                             <option value="BAN">Ban</option>
                         </select>
                         <div class="input-group-append">
-                            <label for="status" class="input-group-text"><i class="fas fa-ban"></i></label>
+                            <label for="toStatus" class="input-group-text"><i class="fas fa-ban"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
@@ -36,5 +36,6 @@
         <!-- /.modal-dialog -->
     </div>
     <input type="hidden" name="user_number" id="user_number">
+    <input type="hidden" name="fromStatus" id="fromStatus">
     @csrf
 </form>
