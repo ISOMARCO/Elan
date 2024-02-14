@@ -68,6 +68,7 @@
                                         <td>@Date_To_String($value->Last_Login_Date)</td>
                                         <td>{{$value->Gender}}</td>
                                         <td style="display: none">{{$value->Id}}</td>
+                                        <td style="display: none;">{{$value->Role}}</td>
                                     </tr>
                                 </tbody>
                             </table>
