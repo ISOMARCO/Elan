@@ -106,8 +106,8 @@
                 dataType: "json",
                 beforeSend: function()
                 {
-                    $("#progress").show();
-                    $("input, #user_edit_btn").attr("disabled", "disabled");
+                    $("#user_edit_form #progress").show();
+                    $("#user_edit_form input, #user_edit_btn").attr("disabled", "disabled");
                 },
                 success: function(e)
                 {
@@ -133,8 +133,8 @@
                 },
                 complete: function()
                 {
-                    $("#progress").hide();
-                    $("input, #user_edit_btn").removeAttr("disabled");
+                    $("#user_edit_form #progress").hide();
+                    $("#user_edit_form input, #user_edit_btn").removeAttr("disabled");
                 }
             });
         });
