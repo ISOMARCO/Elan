@@ -23,7 +23,8 @@ class Users extends Exception
             '2000' => 'Email adresi düzgün yazın',
             '2001' => 'Ulduzlu xanaları doldurmalısınız',
             '2002' => 'Email sistemdə mövcuddur',
-            '2003' => 'İstifadəçini dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin'
+            '2003' => 'İstifadəçini dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin',
+            '2004' => 'İstifadəçi statusunu dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin'
         ];
         if(isset($codes[$this->code]))
         {
@@ -35,7 +36,8 @@ class Users extends Exception
     protected function reportErrorCodes() : String
     {
         $codes = [
-            '2003'
+            '2003',
+            '2004'
         ];
         if(isset($codes[$this->code]))
         {
