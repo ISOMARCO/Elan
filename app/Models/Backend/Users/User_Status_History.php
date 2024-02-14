@@ -19,7 +19,25 @@ class User_Status_History extends Model
     protected $reason = NULL;
     public function __call($method, $args = [])
     {
-
+        switch($method)
+        {
+            case "fromStatus":
+                $this->fromStatus = $args[0];
+                break;
+            case "id":
+                $this->id = $args[0];
+                break;
+            case "toStatus":
+                $this->toStatus = $args[0];
+                break;
+            case "userId":
+                $this->userId = $args[0];
+                break;
+            case "reason":
+                $this->reason = $args[0];
+                break;
+        }
+        return $this;
     }
 
     public function changeStatus() :  bool
