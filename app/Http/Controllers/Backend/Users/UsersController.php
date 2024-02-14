@@ -38,4 +38,13 @@ class UsersController extends Controller
         }
         abort(403, 'Unauthorized');
     }
+
+    public function changeUserStatusAction(Request $request)
+    {
+        if($request->ajax() || $request->wantsJson())
+        {
+
+        }
+        abort(403, 'Unauthorized');
+    }
 }
