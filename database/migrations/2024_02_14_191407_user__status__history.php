@@ -12,7 +12,7 @@ return new class extends Migration
     protected $table = 'User_Status_History';
     public function up(): void
     {
-        if(Schema::hasTable($this->table))
+        if(!Schema::hasTable($this->table))
         {
             Schema::create($this->table, function (Blueprint $table) {
                 $table->bigIncrements('Id');
