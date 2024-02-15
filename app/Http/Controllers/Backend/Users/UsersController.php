@@ -51,7 +51,7 @@ class UsersController extends Controller
             }
             catch(UsersException $e)
             {
-                echo $e->getMessage();
+                #echo $e->getMessage();
             }
         #}
         #abort(403, 'Unauthorized');
