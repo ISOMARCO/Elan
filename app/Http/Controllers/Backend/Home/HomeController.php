@@ -7,7 +7,7 @@ class HomeController extends Controller
 {
     public function main()
     {
-        echo preg_replace('/(\d{1,2})(?=(\d{3})+$)/', '$1,', 10000);
+        echo preg_replace('/(\d{1,2})(?=(\d{3})+$)/', '$1,', 34018.6);
         return view('Backend.Home.main');
     }
 }
