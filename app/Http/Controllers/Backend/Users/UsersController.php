@@ -46,14 +46,14 @@ class UsersController extends Controller
         #{
             $userStatusHistory = new User_Status_History();
             echo $request->post('fromStatus');
-            try
-            {
-                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));
-            }
-            catch(UsersException $e)
-            {
-                #echo $e->getMessage();
-            }
+//            try
+//            {
+//                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));
+//            }
+//            catch(UsersException $e)
+//            {
+//                #echo $e->getMessage();
+//            }
         #}
         #abort(403, 'Unauthorized');
     }
