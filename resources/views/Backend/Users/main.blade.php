@@ -142,7 +142,7 @@
         });
 
         $("#user_ban_btn").on("click", function(){
-            alert("ok");
+            alert($("#user_ban_form").serialize());
             $.ajax({
                 type: "post",
                 url: "{{url('/admin/users/changeUserStatusAction')}}",
