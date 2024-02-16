@@ -1,4 +1,4 @@
-<form method="post" action="{{url('/admin/users/changeUserStatusAction')}}" id="user_ban_form">
+<form method="post" id="user_ban_form">
     <div class="modal fade" id="user_ban">
         <div class="modal-dialog">
             <div class="modal-content">
