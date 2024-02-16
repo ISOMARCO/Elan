@@ -142,7 +142,6 @@
         });
 
         $("#user_ban_btn").on("click", function(){
-            alert($("#user_ban_form").serialize());
             $.ajax({
                 type: "post",
                 url: "{{url('/admin/users/changeUserStatusAction')}}",
@@ -156,6 +155,7 @@
                 error: function(x)
                 {
                     var errorResponse = x.responseJSON || x.responseText;
+                    alert(errorResponse);
                     Swal.fire({
                         title: '',
                         text: errorResponse.error,
