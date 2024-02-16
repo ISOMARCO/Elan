@@ -4,7 +4,7 @@ namespace App\Exceptions\Backend\Users;
 
 use Exception;
 
-class Users extends Exception
+class UsersException extends Exception
 {
     protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)

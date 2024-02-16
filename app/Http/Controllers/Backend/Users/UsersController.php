@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend\Users;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Users\Users;
 use Illuminate\Http\Request;
-use App\Exceptions\Backend\Users\Users as UsersException;
+use App\Exceptions\Backend\Users\UsersException;
 use App\Models\Backend\Users\User_Status_History;
 
 class UsersController extends Controller

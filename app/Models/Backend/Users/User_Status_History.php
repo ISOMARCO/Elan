@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-use App\Exceptions\Backend\Users\Users as UsersException;
+use App\Exceptions\Backend\Users\UsersException;
 class User_Status_History extends Model
 {
     use HasFactory;
