@@ -46,11 +46,12 @@ class UsersController extends Controller
         {
             $userStatusHistory = new User_Status_History();
             $toStatus = $request->post('toStatus');
+            $userId = $request->post('user_number');
             try
             {
-                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($toStatus)->reason($request->post('reason'));
+                $userStatusHistory->userId($userId)->fromStatus($request->post('fromStatus'))->toStatus($toStatus)->reason($request->post('reason'));
                 $userStatusHistory->changeStatus();
-                return response()->json(['success' => 'İstifadəçi statusu dəyişdirildi', 'status' => $toStatus]);
+                return response()->json(['success' => 'İstifadəçi statusu dəyişdirildi', 'io' => $userId, 'status' => $toStatus]);
             }
             catch(UsersException $e)
             {
