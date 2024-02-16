@@ -45,7 +45,7 @@ class UsersController extends Controller
         #if($request->ajax() || $request->wantsJson())
         #{
             $userStatusHistory = new User_Status_History();
-            echo $request->post('fromStatus');
+            echo response()->json(['success' => 'Okey'], 200);
 //            try
 //            {
 //                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));

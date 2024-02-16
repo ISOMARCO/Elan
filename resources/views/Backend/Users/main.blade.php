@@ -141,7 +141,7 @@
             });
         });
 
-        $("#user_ban_btn222").on("click", function(){
+        $("#user_ban_btn").on("click", function(){
             $.ajax({
                 type: "post",
                 url: "{{url('/admin/users/changeUserStatusAction')}}",
