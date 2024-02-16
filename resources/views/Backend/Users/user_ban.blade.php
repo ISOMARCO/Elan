@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <textarea class="form-control" name="reason" id="reason"></textarea>
+                        <textarea class="form-control" name="reason" id="reason" placeholder="Səbəb"></textarea>
                         <div class="input-group-append">
                             <label for="reason" class="input-group-text"><i class="fas fa-comments"></i></label>
                         </div>
