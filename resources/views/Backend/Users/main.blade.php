@@ -142,6 +142,7 @@
         });
 
         $("#user_ban_btn").on("click", function(){
+            alert("ok");
             $.ajax({
                 type: "post",
                 url: "{{url('/admin/users/changeUserStatusAction')}}",
