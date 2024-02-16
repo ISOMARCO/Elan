@@ -191,13 +191,13 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{url('/admin/users')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-list nav-icon"></i>
                                 <p>Aktiv istifadəçilər</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/forms/advanced.html" class="nav-link">
-                                <i class="fa-solid fa-clock-rotate-left nav-icon"></i>
+                                <i class="fas fa-history nav-icon"></i>
                                 <p>Timeline</p>
                             </a>
                         </li>
