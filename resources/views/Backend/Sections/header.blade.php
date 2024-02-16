@@ -190,7 +190,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{url('/admin/users')}}" class="nav-link">
+                            <a href="{{route('Backend_Users')}}" class="nav-link">
                                 <i class="fas fa-list nav-icon"></i>
                                 <p>Aktiv istifadəçilər</p>
                             </a>
