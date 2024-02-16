@@ -62,7 +62,7 @@ class User_Status_History extends Model
         catch(QueryException $e)
         {
             DB::rollBack();
-            throw new UsersException(2004);
+            throw new UsersException(2004, ['errorMessage' => $e->getMessage()]);
         }
     }
 }
