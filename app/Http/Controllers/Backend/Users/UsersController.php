@@ -45,15 +45,15 @@ class UsersController extends Controller
         if($request->ajax() || $request->wantsJson())
         {
             $userStatusHistory = new User_Status_History();
-            return response()->json(['error' => $request->post('toStatus')], 500);
-//            try
-//            {
-//                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));
-//            }
-//            catch(UsersException $e)
-//            {
-//                #echo $e->getMessage();
-//            }
+            try
+            {
+                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));
+                return response()->json(['error' => $request->post('toStatus')], 500);
+            }
+            catch(UsersException $e)
+            {
+                #echo $e->getMessage();
+            }
         }
         abort(403, 'Unauthorized');
     }
