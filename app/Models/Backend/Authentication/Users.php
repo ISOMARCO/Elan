@@ -2,7 +2,7 @@
 
 namespace App\Models\Backend\Authentication;
 
-use App\Exceptions\Backend\Authentication\Authentication;
+use App\Exceptions\Backend\Authentication\AuthenticationException;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
@@ -17,17 +17,17 @@ class Users extends Model
     {
         if(empty($email) || empty($password))
         {
-            throw new Authentication(1001);
+            throw new AuthenticationException(1001);
         }
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
         {
-            throw new Authentication(1000);
+            throw new AuthenticationException(1000);
         }
         $password = hash('sha256', md5($password));
         $user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email)->where('Role', 'ADMIN');
         if($user->count() == 0)
         {
-            throw new Authentication(1002);
+            throw new AuthenticationException(1002);
         }
         $row = $user->first();
         Session::put('id', $row->Id);

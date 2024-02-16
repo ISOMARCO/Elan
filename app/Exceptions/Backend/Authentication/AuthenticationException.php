@@ -4,7 +4,7 @@ namespace App\Exceptions\Backend\Authentication;
 
 use Exception;
 
-class Authentication extends Exception
+class AuthenticationException extends Exception
 {
     protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)
