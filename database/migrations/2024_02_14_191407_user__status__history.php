@@ -19,7 +19,7 @@ return new class extends Migration
                 $table->integer('User_Id')->nullable();
                 $table->string('From_Status', 10)->nullable();
                 $table->string('To_Status', 10)->nullable();
-                $table->longText('Reason');
+                $table->longText('Reason')->nullable();
                 $table->timestamp('Date')->nullable();
                 $table->integer('Updated_By')->nullable();
             });
