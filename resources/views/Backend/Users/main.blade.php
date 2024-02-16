@@ -177,7 +177,8 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    alert($("#table"+e.id+" tbody td:nth-child(8)").text());
+                    alert($("#table"+e.id+" tbody td:nth-child(7)").text());
+                    alert($("#table"+e.id+" tbody td:nth-child(6)").text());
                     //$("#table"+e.id+" tbody td:nth-child(8)").text(e.status);
                 },
                 complete: function()
