@@ -42,8 +42,8 @@ class UsersController extends Controller
 
     public function changeUserStatusAction(Request $request)
     {
-        #if($request->ajax() || $request->wantsJson())
-        #{
+        if($request->ajax() || $request->wantsJson())
+        {
             $userStatusHistory = new User_Status_History();
             return response()->json(['error' => $request->post('toStatus')], 500);
 //            try
@@ -54,7 +54,7 @@ class UsersController extends Controller
 //            {
 //                #echo $e->getMessage();
 //            }
-        #}
-        #abort(403, 'Unauthorized');
+        }
+        abort(403, 'Unauthorized');
     }
 }
