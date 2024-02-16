@@ -49,7 +49,7 @@ class User_Status_History extends Model
 
     public function changeStatus() :  bool
     {
-        if($this->fromStatus == NULL || $this->toStatus)
+        if($this->fromStatus == NULL || $this->toStatus == NULL)
         {
             throw new UsersException(2005);
         }
