@@ -53,6 +53,10 @@ class User_Status_History extends Model
         {
             return true;
         }
+        if($this->fromStatus == NULL || $this->toStatus)
+        {
+            throw new UsersException(2005);
+        }
         DB::beginTransaction();
         try
         {
