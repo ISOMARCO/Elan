@@ -155,7 +155,6 @@
                 error: function(x)
                 {
                     var errorResponse = x.responseJSON || x.responseText;
-                    alert(errorResponse);
                     Swal.fire({
                         title: '',
                         text: errorResponse.error,
