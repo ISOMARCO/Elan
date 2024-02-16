@@ -45,11 +45,12 @@ class UsersController extends Controller
         if($request->ajax() || $request->wantsJson())
         {
             $userStatusHistory = new User_Status_History();
+            $toStatus = $request->post('toStatus');
             try
             {
-                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'))->reason($request->post('reason'));
+                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($toStatus)->reason($request->post('reason'));
                 $userStatusHistory->changeStatus();
-                return response()->json(['success' => 'İstifadəçi statusu dəyişdirildi']);
+                return response()->json(['success' => 'İstifadəçi statusu dəyişdirildi', 'status' => $toStatus]);
             }
             catch(UsersException $e)
             {
