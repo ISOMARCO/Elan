@@ -104,7 +104,7 @@
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
-            $("#toStatus").val("BAN");
+            $("#toStatus").val(rowData[8]);
         });
 
         $("#user_edit_btn").on("click", function(){
