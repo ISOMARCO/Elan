@@ -94,19 +94,19 @@
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
-            $("#name").val(rowData[0]);
-            $("#surname").val(rowData[1]);
-            $("#email").val(rowData[2]);
-            $("#user_number").val(rowData[7]);
+            $("#user_edit_form #name").val(rowData[0]);
+            $("#user_edit_form #surname").val(rowData[1]);
+            $("#user_edit_form #email").val(rowData[2]);
+            $("#user_edit_form #user_number").val(rowData[7]);
         });
 
         $(".card-footer button:nth-child(2)").on("click", function(){
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
-            $("#toStatus").val(rowData[8]);
-            $("#fromStatus").val(rowData[8]);
-            $("#user_number").val(rowData[7]);
+            $("#user_ban_form #toStatus").val(rowData[8]);
+            $("#user_ban_form #fromStatus").val(rowData[8]);
+            $("#user_ban_form #user_number").val(rowData[7]);
         });
 
         $("#user_edit_btn").on("click", function(){
