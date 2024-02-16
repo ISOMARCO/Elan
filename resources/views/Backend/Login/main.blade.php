@@ -58,7 +58,7 @@
             $("#loginBtn").on("click", function(){
                 $.ajax({
                     type: "post",
-                    url: "{{url('/admin/login/loginAction')}}",
+                    url: "{{route('Backend_LoginAction')}}",
                     data: $("#loginForm").serialize(),
                     dataType: "json",
                     beforeSend: function()
@@ -73,10 +73,10 @@
                             icon: 'success'
                         }).then((result) => {
                             if (result.isConfirmed) {
-                                window.location.href = "{{url('/admin/home')}}";
+                                window.location.href = "{{route('Backend_Home')}}";
                             }
                         });
-                        setTimeout(function(){window.location.href="{{url('/admin/home')}}";},2500);
+                        setTimeout(function(){window.location.href="{{route('Backend_Home')}}";},2500);
                     },
                     error: function(x)
                     {
