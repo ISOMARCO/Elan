@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{url('/admin/')}}">Ana Səhifə</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('Backend_Home')}}">Ana Səhifə</a></li>
                         <li class="breadcrumb-item active">İstifadəçilər</li>
                     </ol>
                 </div>
@@ -112,7 +112,7 @@
         $("#user_edit_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{url('/admin/users/saveChangesAction')}}",
+                url: "{{route('Backend_SaveChangesAction')}}",
                 data: $("#user_edit_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
@@ -153,7 +153,7 @@
         $("#user_ban_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{url('/admin/users/changeUserStatusAction')}}",
+                url: "{{route('Backend_ChangeUserStatusAction')}}",
                 data: $("#user_ban_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
