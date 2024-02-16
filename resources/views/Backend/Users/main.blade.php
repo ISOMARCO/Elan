@@ -68,7 +68,7 @@
                                         <td>@Date_To_String($value->Last_Login_Date)</td>
                                         <td>{{$value->Gender}}</td>
                                         <td style="display: none">{{$value->Id}}</td>
-                                        <td style="display: none;">{{$value->Role}}</td>
+                                        <td style="display: none;">{{$value->Status}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -98,6 +98,13 @@
             $("#surname").val(rowData[1]);
             $("#email").val(rowData[2]);
             $("#user_number").val(rowData[7]);
+        });
+
+        $(".card-footer button:nth-child(2)").on("click", function(){
+            var rowData = $(this).closest('.card').find('tbody td').map(function() {
+                return $(this).text();
+            }).get();
+            $("#toStatus").val(rowData[8]);
         });
 
         $("#user_edit_btn").on("click", function(){
