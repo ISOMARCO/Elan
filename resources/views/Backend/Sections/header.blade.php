@@ -181,10 +181,27 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/admin/users')}}" class="nav-link">
-                        <i class="fas fa-users nav-icon"></i>
-                        <p>İstifadəçilər</p>
+                    <a href="javascript:void(0)" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            İstifadəçilər
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{url('/admin/users')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Aktiv istifadəçilər</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/forms/advanced.html" class="nav-link">
+                                <i class="fa-solid fa-clock-rotate-left nav-icon"></i>
+                                <p>Timeline</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
