@@ -48,11 +48,11 @@ class UsersController extends Controller
             try
             {
                 $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));
-                return response()->json(['error' => $request->post('toStatus')], 500);
+                return response()->json(['success' => $request->post('toStatus')]);
             }
             catch(UsersException $e)
             {
-                #echo $e->getMessage();
+                return response()->json(['error' => $e->getMessage()], 500);
             }
         }
         abort(403, 'Unauthorized');
