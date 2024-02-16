@@ -105,6 +105,8 @@
                 return $(this).text();
             }).get();
             $("#toStatus").val(rowData[8]);
+            $("#fromStatus").val(rowData(8));
+            $("#user_number").val(rowData[7]);
         });
 
         $("#user_edit_btn").on("click", function(){
