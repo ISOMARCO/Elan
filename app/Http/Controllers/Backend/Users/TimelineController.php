@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class TimelineController extends Controller
 {
-    //
+    public function main()
+    {
+        return view('Backend.Users.timeline');
+    }
 }
