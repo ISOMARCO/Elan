@@ -47,7 +47,7 @@ class UsersController extends Controller
             $userStatusHistory = new User_Status_History();
             try
             {
-                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'));
+                $userStatusHistory->userId($request->post('user_number'))->fromStatus($request->post('fromStatus'))->toStatus($request->post('toStatus'))->reason($request->post('reason'));
                 $userStatusHistory->changeStatus();
                 return response()->json(['success' => 'İstifadəçi statusu dəyişdirildi']);
             }

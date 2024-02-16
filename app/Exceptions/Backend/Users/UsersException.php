@@ -24,7 +24,7 @@ class UsersException extends Exception
             '2001' => 'Ulduzlu xanaları doldurmalısınız',
             '2002' => 'Email sistemdə mövcuddur',
             '2003' => 'İstifadəçini dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin',
-            '2004' => 'İstifadəçi statusunu dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin '.$msg['errorMessage']
+            '2004' => 'İstifadəçi statusunu dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin '
         ];
         if(isset($codes[$this->code]))
         {
