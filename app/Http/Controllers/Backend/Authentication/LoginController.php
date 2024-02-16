@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Backend\Authentication;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Authentication\Users;
 use Illuminate\Http\Request;
-use App\Exceptions\Backend\Authentication\Authentication;
+use App\Exceptions\Backend\Authentication\AuthenticationException;
 
 class LoginController extends Controller
 {
@@ -26,7 +26,7 @@ class LoginController extends Controller
                 $users->login($email, $password);
                 return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...'], 200);
             }
-            catch(Authentication $e)
+            catch(AuthenticationException $e)
             {
                 return response()->json(['error' => $e->getMessage()], 500);
             }

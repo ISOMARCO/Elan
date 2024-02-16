@@ -4,7 +4,7 @@ namespace App\Exceptions\Backend\Users;
 
 use Exception;
 
-class Users extends Exception
+class UsersException extends Exception
 {
     protected $code = 500;
     public function __construct($statusCode = NULL, $message = NULL)
@@ -24,7 +24,8 @@ class Users extends Exception
             '2001' => 'Ulduzlu xanaları doldurmalısınız',
             '2002' => 'Email sistemdə mövcuddur',
             '2003' => 'İstifadəçini dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin',
-            '2004' => 'İstifadəçi statusunu dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin'
+            '2004' => 'İstifadəçi statusunu dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin ',
+            '2005' => 'Yanlış əməliyyat'
         ];
         if(isset($codes[$this->code]))
         {
@@ -37,7 +38,8 @@ class Users extends Exception
     {
         $codes = [
             '2003',
-            '2004'
+            '2004',
+            '2005'
         ];
         if(isset($codes[$this->code]))
         {

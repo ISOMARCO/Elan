@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
-use App\Exceptions\Backend\Users\Users as UsersException;
+use App\Exceptions\Backend\Users\UsersException;
 class User_Status_History extends Model
 {
     use HasFactory;
+    protected $allStatus = ['ACTIVE', 'DEACTIVE', 'BAN'];
     protected $table = 'User_Status_History';
     protected $id = NULL;
     protected $fromStatus = NULL;
@@ -22,13 +23,19 @@ class User_Status_History extends Model
         switch($method)
         {
             case "fromStatus":
-                $this->fromStatus = $args[0];
+                if(in_array($args[0], $this->allStatus))
+                {
+                    $this->fromStatus = $args[0];
+                }
                 break;
             case "id":
                 $this->id = $args[0];
                 break;
             case "toStatus":
-                $this->toStatus = $args[0];
+                if(in_array($args[0], $this->allStatus))
+                {
+                    $this->toStatus = $args[0];
+                }
                 break;
             case "userId":
                 $this->userId = $args[0];
@@ -42,6 +49,14 @@ class User_Status_History extends Model
 
     public function changeStatus() :  bool
     {
+        if($this->fromStatus == NULL || $this->toStatus == NULL)
+        {
+            throw new UsersException(2005);
+        }
+        if($this->fromStatus === $this->toStatus)
+        {
+            return true;
+        }
         DB::beginTransaction();
         try
         {

@@ -30,7 +30,7 @@
             </div>
             <div class="card-body">
                 @foreach($userList as $value)
-                    <div class="card collapsed-card" style="border: 1px solid @Border_Random_Color">
+                    <div class="card collapsed-card" style="border: 1px solid {{Border_Random_Color()}}">
                         <div class="card-header">
                             <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> <span id="name{{$value->Id}}">{{$value->Name}}</span> <span id="surname{{$value->Id}}">{{$value->Surname}}</span></h3>
                             <div class="card-tools">
@@ -68,7 +68,7 @@
                                         <td>@Date_To_String($value->Last_Login_Date)</td>
                                         <td>{{$value->Gender}}</td>
                                         <td style="display: none">{{$value->Id}}</td>
-                                        <td style="display: none;">{{$value->Role}}</td>
+                                        <td style="display: none;">{{$value->Status}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -94,10 +94,19 @@
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
-            $("#name").val(rowData[0]);
-            $("#surname").val(rowData[1]);
-            $("#email").val(rowData[2]);
-            $("#user_number").val(rowData[7]);
+            $("#user_edit_form #name").val(rowData[0]);
+            $("#user_edit_form #surname").val(rowData[1]);
+            $("#user_edit_form #email").val(rowData[2]);
+            $("#user_edit_form #user_number").val(rowData[7]);
+        });
+
+        $(".card-footer button:nth-child(2)").on("click", function(){
+            var rowData = $(this).closest('.card').find('tbody td').map(function() {
+                return $(this).text();
+            }).get();
+            $("#user_ban_form #toStatus").val(rowData[8]);
+            $("#user_ban_form #fromStatus").val(rowData[8]);
+            $("#user_ban_form #user_number").val(rowData[7]);
         });
 
         $("#user_edit_btn").on("click", function(){
@@ -141,7 +150,7 @@
             });
         });
 
-        $("#user_ban_btn222").on("click", function(){
+        $("#user_ban_btn").on("click", function(){
             $.ajax({
                 type: "post",
                 url: "{{url('/admin/users/changeUserStatusAction')}}",
@@ -168,6 +177,8 @@
                         text: e.success,
                         icon: 'success'
                     });
+                    alert(e.status);
+                    $("#table"+e.id+" tbody td:nth-child(8)").text(e.status);
                 },
                 complete: function()
                 {

@@ -6,7 +6,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use App\Exceptions\Backend\Users\Users as UsersException;
+use App\Exceptions\Backend\Users\UsersException;
 class Users extends Model
 {
     use HasFactory;

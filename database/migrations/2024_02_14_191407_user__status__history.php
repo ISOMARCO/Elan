@@ -17,9 +17,9 @@ return new class extends Migration
             Schema::create($this->table, function (Blueprint $table) {
                 $table->bigIncrements('Id');
                 $table->integer('User_Id')->nullable();
-                $table->string('From_Status', 6)->nullable();
-                $table->string('To_Status', 6)->nullable();
-                $table->longText('Reason');
+                $table->string('From_Status', 10)->nullable();
+                $table->string('To_Status', 10)->nullable();
+                $table->longText('Reason')->nullable();
                 $table->timestamp('Date')->nullable();
                 $table->integer('Updated_By')->nullable();
             });
