@@ -49,13 +49,13 @@ class User_Status_History extends Model
 
     public function changeStatus() :  bool
     {
-        if($this->fromStatus === $this->toStatus)
-        {
-            return true;
-        }
         if($this->fromStatus == NULL || $this->toStatus)
         {
             throw new UsersException(2005);
+        }
+        if($this->fromStatus === $this->toStatus)
+        {
+            return true;
         }
         DB::beginTransaction();
         try
