@@ -22,7 +22,9 @@ class AuthenticationException extends Exception
         $codes = [
             '1000' => 'Email adresi düzgün yazın',
             '1001' => 'Bütün xanaları doldurmalısınız',
-            '1002' => 'Email və ya şifrə yanlışdır'
+            '1002' => 'Email və ya şifrə yanlışdır',
+            '1003' => 'Hesabınız banlanıb',
+            '1004' => 'Hesabınız deaktiv edilib'
         ];
         if(isset($codes[$this->code]))
         {

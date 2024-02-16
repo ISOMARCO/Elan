@@ -30,6 +30,14 @@ class Users extends Model
             throw new AuthenticationException(1002);
         }
         $row = $user->first();
+        if($row->Status === 'BAN')
+        {
+            throw new AuthenticationException(1003);
+        }
+        if($row->Status === 'DEACTIVE')
+        {
+            throw new AuthenticationException(1004);
+        }
         Session::put('id', $row->Id);
         Cache::store('redis')->put('userInfo_'.$row->Id, json_encode($row, true), 360);
         return true;
