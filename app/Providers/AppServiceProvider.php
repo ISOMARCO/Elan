@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
             return "<?php echo \\Carbon\\Carbon::parse({$expression})->isoFormat('LL LT'); ?>";
         });
 
-        \Blade::directive('Border_Random_Color', function(){
-            $red = rand(0, 255);
+        \Blade::directive('Border_Random_Color', function($number = 1){
+            $red = max(0, min(255, $number * rand(0, 255)));
             $green = rand(0, 255);
             $blue = rand(0, 255);
             return "<?php echo sprintf(\"#%02x%02x%02x\", $red, $green, $blue);?>";

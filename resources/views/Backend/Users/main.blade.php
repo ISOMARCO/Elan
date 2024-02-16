@@ -30,7 +30,7 @@
             </div>
             <div class="card-body">
                 @foreach($userList as $value)
-                    <div class="card collapsed-card" style="border: 1px solid @Border_Random_Color">
+                    <div class="card collapsed-card" style="border: 1px solid @Border_Random_Color({{$value->Id}})">
                         <div class="card-header">
                             <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> <span id="name{{$value->Id}}">{{$value->Name}}</span> <span id="surname{{$value->Id}}">{{$value->Surname}}</span></h3>
                             <div class="card-tools">
