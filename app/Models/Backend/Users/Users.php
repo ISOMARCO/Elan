@@ -43,7 +43,7 @@ class Users extends Model
     }
     public function allUsers()
     {
-        return DB::table($this->table)->get();
+        return DB::table($this->table)->where('Status', '=', 'ACTIVE')->get();
     }
 
     /**
