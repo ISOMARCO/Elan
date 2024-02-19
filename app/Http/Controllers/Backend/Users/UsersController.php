@@ -60,4 +60,11 @@ class UsersController extends Controller
         }
         abort(403, 'Unauthorized');
     }
+
+    public function deactive()
+    {
+        $users = new Users();
+        $userList = $users->allUsers(false);
+        return view('Backend.Users.deactive', compact('userList'));
+    }
 }

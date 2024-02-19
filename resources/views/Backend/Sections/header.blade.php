@@ -196,6 +196,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{route('Backend_Deactive_Users')}}" class="nav-link">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>Deaktiv istifadəçilər</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{route('Backend_Users_Timeline')}}" class="nav-link">
                                 <i class="fas fa-history nav-icon"></i>
                                 <p>Timeline</p>

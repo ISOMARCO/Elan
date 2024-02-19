@@ -41,9 +41,13 @@ class Users extends Model
         }
         return $this;
     }
-    public function allUsers()
+    public function allUsers($active = true)
     {
-        return DB::table($this->table)->where('Status', '=', 'ACTIVE')->get();
+        if($active)
+        {
+            return DB::table($this->table)->where('Status', '=', 'ACTIVE')->get();
+        }
+        return DB::table($this->table)->where('Status', '!=', 'ACTIVE')->get();
     }
 
     /**
