@@ -26,7 +26,7 @@
     <section class="content">
         <div class="card">
             <div class="card-header">
-                <button type="button" class="btn btn-primary" style="float: right;"><i class="fas fa-plus"></i></button>
+                <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#user_add"><i class="fas fa-plus"></i></button>
             </div>
             <div class="card-body">
                 @foreach($userList as $value)
