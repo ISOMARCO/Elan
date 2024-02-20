@@ -9,9 +9,17 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    protected $table = 'Roles';
     public function up(): void
     {
-        //
+        if(!Schema::hasTable($this->table))
+        {
+            Schema::create($this->table, function (Blueprint $table) {
+                $table->bigIncrements('Id');
+                $table->string('Code', 50)->unique();
+
+            });
+        }
     }
 
     /**
@@ -19,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::drop($this->table);
     }
 };
