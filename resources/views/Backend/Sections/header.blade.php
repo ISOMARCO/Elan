@@ -196,7 +196,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('Backend_Deactive_Users')}}" class="nav-link">
+                            <a href="{{route('Backend_Users_Deactive')}}" class="nav-link">
                                 <i class="fas fa-list nav-icon"></i>
                                 <p>Deaktiv istifadəçilər</p>
                             </a>
