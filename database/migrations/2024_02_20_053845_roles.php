@@ -17,7 +17,9 @@ return new class extends Migration
             Schema::create($this->table, function (Blueprint $table) {
                 $table->bigIncrements('Id');
                 $table->string('Code', 50)->unique();
-
+                $table->longText('Description')->nullable();
+                $table->string('Status', 30)->default('ACTIVE');
+                $table->timestamp('Created_Date');
             });
         }
     }

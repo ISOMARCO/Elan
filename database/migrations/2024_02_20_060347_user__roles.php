@@ -9,9 +9,10 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+    protected $table = 'User_Roles';
     public function up(): void
     {
-        //
+
     }
 
     /**
@@ -19,6 +20,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::drop($this->table);
     }
 };
