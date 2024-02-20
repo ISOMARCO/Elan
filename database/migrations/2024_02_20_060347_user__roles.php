@@ -18,6 +18,7 @@ return new class extends Migration
                 $table->bigIncrements('Id');
                 $table->string('Role', 50);
                 $table->integer('User');
+                $table->longText('Description')->nullable();
                 $table->string('Status', 30)->default('ACTIVE');
                 $table->timestamp('Created_Date');
             });
