@@ -12,7 +12,16 @@ return new class extends Migration
     protected $table = 'User_Roles';
     public function up(): void
     {
-
+        if(!Schema::hasTable($this->table))
+        {
+            Schema::create($this->table, function (Blueprint $table) {
+                $table->bigIncrements('Id');
+                $table->string('Role', 50);
+                $table->integer('User');
+                $table->string('Status', 30)->default('ACTIVE');
+                $table->timestamp('Created_Date');
+            });
+        }
     }
 
     /**
