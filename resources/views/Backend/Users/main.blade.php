@@ -30,7 +30,7 @@
             </div>
             <div class="card-body">
                 @foreach($userList as $value)
-                    <div class="card collapsed-card" style="border: 1px solid {{Border_Random_Color()}}">
+                    <div class="card collapsed-card card{{$value->Id}}" style="border: 1px solid {{Border_Random_Color()}}">
                         <div class="card-header">
                             <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> <span id="name{{$value->Id}}">{{$value->Name}}</span> <span id="surname{{$value->Id}}">{{$value->Surname}}</span></h3>
                             <div class="card-tools">
@@ -113,7 +113,7 @@
         $("#user_edit_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_SaveChangesAction')}}",
+                url: "{{route('Backend_Users_SaveChangesAction')}}",
                 data: $("#user_edit_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
@@ -154,7 +154,7 @@
         $("#user_ban_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_ChangeUserStatusAction')}}",
+                url: "{{route('Backend_Users_ChangeUserStatusAction')}}",
                 data: $("#user_ban_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
@@ -178,7 +178,10 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    $("#table"+e.id+" tbody td:nth-child(9)").text(e.status);
+                    //$("#table"+e.id+" tbody td:nth-child(9)").text(e.status);
+                    $("#card"+e.id).fadeOut(1000, function(){
+                        $(this).remove();
+                    });
                 },
                 complete: function()
                 {
@@ -186,6 +189,43 @@
                     $("#user_ban_form input, #user_ban_btn").removeAttr("disabled");
                 }
             });
+        });
+
+        $("#user_add_btn").on("click", function(){
+            $.ajax({
+                type: "post",
+                url: "{{route('Backend_Users_Create')}}",
+                dataType: "json",
+                data: $("#user_add_form").serialize(),
+                beforeSend: function()
+                {
+                    $("#user_add_form #progress").show();
+                    $("#user_add_form input, #user_ban_btn").attr("disabled", "disabled");
+                },
+                error: function(x)
+                {
+                    var errorResponse = x.responseJSON || x.responseText;
+                    Swal.fire({
+                        title: '',
+                        text: errorResponse.error,
+                        icon: 'error'
+                    });
+                },
+                success: function(e)
+                {
+                    Swal.fire({
+                        title: '',
+                        text: e.success,
+                        icon: 'success'
+                    });
+                },
+                complete: function()
+                {
+                    $("#user_add_form #progress").hide();
+                    $("#user_add_form input, #user_ban_btn").removeAttr("disabled");
+                }
+            });
+
         });
     });
 </script>
