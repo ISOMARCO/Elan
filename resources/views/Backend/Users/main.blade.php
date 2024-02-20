@@ -83,6 +83,7 @@
                 @endforeach
                 @include('Backend.Users.user_edit')
                 @include('Backend.Users.user_ban')
+                @include('Backend.Users.user_add')
             </div>
         </div>
     </section>
