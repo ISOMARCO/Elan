@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Translation\FileLoader;
 return [
 
     /*
@@ -181,7 +180,6 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
-    'json' => FileLoader::class,
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
