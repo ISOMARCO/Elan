@@ -15,8 +15,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('Backend_Home')}}">{{__('Backend/Home/home.home')}}</a></li>
-                        <li class="breadcrumb-item active">Blank Page</li>
+                        <li class="breadcrumb-item active">{{__('Backend/Home/home.home')}}</li>
                     </ol>
                 </div>
             </div>
