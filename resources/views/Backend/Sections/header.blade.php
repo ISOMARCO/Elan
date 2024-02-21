@@ -207,13 +207,13 @@
                                 <p>Timeline</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-exclamation-triangle nav-icon"></i>
+                                <p>Xəta kodları</p>
+                            </a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-exclamation-triangle nav-icon"></i>
-                        <p>Xəta kodları</p>
-                    </a>
                 </li>
             </ul>
         </nav>

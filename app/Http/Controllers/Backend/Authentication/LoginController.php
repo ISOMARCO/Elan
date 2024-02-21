@@ -24,7 +24,7 @@ class LoginController extends Controller
             try
             {
                 $users->login($email, $password);
-                return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...'], 200);
+                return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...']);
             }
             catch(AuthenticationException $e)
             {
