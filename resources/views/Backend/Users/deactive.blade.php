@@ -112,7 +112,7 @@
         $("#user_edit_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_SaveChangesAction')}}",
+                url: "{{route('Backend_Users_SaveChangesAction')}}",
                 data: $("#user_edit_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
@@ -153,7 +153,7 @@
         $("#user_ban_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_ChangeUserStatusAction')}}",
+                url: "{{route('Backend_Users_ChangeUserStatusAction')}}",
                 data: $("#user_ban_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
