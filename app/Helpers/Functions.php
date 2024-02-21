@@ -6,3 +6,8 @@ function Border_Random_Color() : string
     $blue = rand(0, 255);
     return sprintf("#%02x%02x%02x", $red, $green, $blue);
 }
+
+function useTranslate($key)
+{
+
+}
