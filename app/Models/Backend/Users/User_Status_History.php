@@ -11,13 +11,13 @@ use App\Exceptions\Backend\Users\UsersException;
 class User_Status_History extends Model
 {
     use HasFactory;
-    protected $allStatus = ['ACTIVE', 'DEACTIVE', 'BAN'];
+    protected array $allStatus = ['ACTIVE', 'DEACTIVE', 'BAN'];
     protected $table = 'User_Status_History';
-    protected $id = NULL;
-    protected $fromStatus = NULL;
-    protected $toStatus = NULL;
-    protected $userId = NULL;
-    protected $reason = NULL;
+    protected int $id;
+    protected string $fromStatus;
+    protected string $toStatus;
+    protected int $userId;
+    protected string $reason;
     public function __call($method, $args = [])
     {
         switch($method)

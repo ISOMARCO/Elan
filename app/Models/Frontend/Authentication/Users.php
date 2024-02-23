@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Session;
 class Users extends Model
 {
     use HasFactory;
-    public function RegisterUser($data = [], $encrypt_password = true) : Array
+    public function RegisterUser(array $data = [], bool $encrypt_password = true) : Array
     {
         $password = $data['password'];
         if($encrypt_password === true)
@@ -52,7 +52,7 @@ class Users extends Model
         }
     }
 
-    public function login($email_or_phone, $password, $remember_me, $encryptPassword = true) : Array
+    public function login(string $email_or_phone, string $password, bool $remember_me, bool $encryptPassword = true) : Array
     {
         if($encryptPassword === true)
         {
@@ -109,7 +109,7 @@ class Users extends Model
 
     }
 
-    public function String_Replace($string) : String
+    public function String_Replace(string $string) : String
     {
         $string = strpos($string, ':') === 0 ? $string : ':' . $string;
         $fields = [
@@ -126,7 +126,7 @@ class Users extends Model
         return $fields[$string];
     }
 
-    public function Login_With_Token($token = NULL) : Bool
+    public function Login_With_Token(string|NULL $token = NULL) : Bool
     {
         if($token === NULL)
         {

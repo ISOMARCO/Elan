@@ -20,7 +20,7 @@ class LoginController extends Controller
         {
             $email_or_phone = $request->post('email_or_phone');
             $password = $request->post('password');
-            $remember_me = $request->post('remember_me');
+            $remember_me = (bool) $request->post('remember_me');
             $users = new Users();
             $checkEmpty = [
                 'email_or_phone' => $email_or_phone,

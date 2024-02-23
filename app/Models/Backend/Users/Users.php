@@ -41,7 +41,7 @@ class Users extends Model
         }
         return $this;
     }
-    public function allUsers($active = true)
+    public function allUsers(bool $active = true)
     {
         if($active)
         {
