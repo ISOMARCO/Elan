@@ -13,7 +13,7 @@ class Users extends Model
 {
     use HasFactory;
     protected $table = 'Users';
-    public function login($email = NULL, $password = NULL)
+    public function login(string $email = NULL, string $password = NULL)
     {
         if(empty($email) || empty($password))
         {
