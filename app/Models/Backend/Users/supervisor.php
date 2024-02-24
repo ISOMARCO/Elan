@@ -47,7 +47,7 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                         }
                     }
                     return $this->sendMessage([
-                        'text' => 'GiriÅŸ etdiniz. Menyudan seÃ§im edÉ™ bilÉ™rsiniz',
+                        'text' => 'Giriş etdiniz. Menyudan seçim edə bilərsiniz',
                         'reply_markup' => json_encode(['remove_keyboard' => true])
                     ]);
                 }
@@ -126,7 +126,7 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                             $this->redis->del($this->chatId."_process");
                             $this->redis->del($this->chatId."_do");
                             return $this->sendMessage([
-                                'text' => "Siz ".$messageText." nÃ¶mrÉ™li tapÅŸÄ±rÄ±qda iÅŸÉ™ baÅŸladÄ±nÄ±z. Ä°ÅŸÉ™ baÅŸlama vaxtÄ±: ".$startDate
+                                'text' => "Siz ".$messageText." nömrəli tapşırıqda işə başladınız. İşə başlama vaxtı ".$startDate
                             ]);
                             ")";
                             break;
@@ -155,7 +155,7 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                                 Supervisor_Status = 'DONE',
                                 Scope = '".$taskManager['Scope']."',
                                 Supervisor = '".$user['uid']."',
-                                Description = '".$comment."',
+                                Description = '',
                                 Author = '".$taskManager['Author']."',
                                 Date_Time = '".$endDate."',
                                 Work_Type = '".$taskManager['Work_Type']."',
@@ -170,7 +170,7 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                             $this->redis->del($this->chatId."_process");
                             $this->redis->del($this->chatId."_do");
                             return $this->sendMessage([
-                                'text' => "Siz ".$messageText." nÃ¶mrÉ™li tapÅŸÄ±rÄ±qda iÅŸi bitirdiniz. BitirmÉ™ vaxtÄ±: ".$endDate
+                                'text' => "Siz ".$messageText." nömrəli tapşırıqda işi bitirdiniz. Bitirmə vaxtı ".$endDate
                             ]);
                             ")";
                             break;
@@ -194,7 +194,7 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                     "(";
                     $this->redis->set($this->chatId."_process", "enter_task_number", ["EX" => 900]);
                     return $this->sendMessage([
-                        'text' => 'TapÅŸÄ±rÄ±q nÃ¶mrÉ™sini yazÄ±n',
+                        'text' => 'Tapşırıq nömrəsini yazın',
                         'reply_markup' => json_encode(['remove_keyboard' => true])
                     ]);
                     ")";
@@ -220,7 +220,7 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                             break;
                         }
                         $sendString .=
-                            "&#x1F517; TapÅŸÄ±rÄ±q nÃ¶mrÉ™si: <code>".sprintf("%05d", $tasks[$i]['id'])."</code>\n&#x1F4CD; ".$tasks[$i]['Location_Code']." - ".$tasks[$i]['Company_Description']." ".$tasks[$i]['Location_Description']."\n&#x1F4DD; ".$tasks[$i]['Description']."\n&#x2699; ".$tasks[$i]['Scope_Description']."\n&#x231B; ".$tasks[$i]['Work_Type_Description']."\n".str_repeat('-', 20)."\n";
+                            "&#x1F517; Tapşırıq nömrəsi: <code>".sprintf("%05d", $tasks[$i]['id'])."</code>\n&#x1F4CD; ".$tasks[$i]['Location_Code']." - ".$tasks[$i]['Company_Description']." ".$tasks[$i]['Location_Description']."\n&#x1F4DD; ".$tasks[$i]['Description']."\n&#x2699; ".$tasks[$i]['Scope_Description']."\n&#x231B; ".$tasks[$i]['Work_Type_Description']."\n".str_repeat('-', 20)."\n";
                         $i++;
                     }
                     if($i == 0)
@@ -242,8 +242,10 @@ if(!class_exists("Supervisor_Telegram_Webhook"))
                     break;
 
                 case "end_task":
+                    "(";
                     $this->redis->set($this->chatId."_do", "end_task", ['EX' => 900]);
                     return $this->next('1');
+                    ")";
                     break;
             }
         }
@@ -312,14 +314,14 @@ else
                     "keyboard" => array(
                         array(
                             array(
-                                "text" => "NÃ¶mrÉ™ni paylaÅŸ",
+                                "text" => "Nömrəni paylaş",
                                 "request_contact" => true
                             ))),
                     'resize_keyboard' => true
                 );
                 return $telegram->sendMessage([
                     'reply_markup' => json_encode($keyboard),
-                    'text' => 'ZÉ™hmÉ™t olmasa nÃ¶mrÉ™nizi paylaÅŸÄ±n'
+                    'text' => 'Zəhmətt olmasa nömrənizi paylaşın'
                 ]);
                 ")";
                 break;
@@ -330,31 +332,31 @@ else
                     "inline_keyboard" => [
                         [
                             [
-                                'text' => 'BÃ¼tÃ¼n aktiv tapÅŸÄ±rÄ±qlar',
+                                'text' => 'Bütün aktiv tapşırıqlar',
                                 'callback_data' => 'show_all_active_tasks'
                             ]
                         ],
                         [
                             [
-                                "text" => "ÅÉ™kil gÃ¶ndÉ™r",
+                                "text" => "Şəkil göndər",
                                 "callback_data" => "send_picture_for_task"
                             ]
                         ],
                         [
                             [
-                                "text" => "TapÅŸÄ±rÄ±ÄŸa baÅŸla",
+                                "text" => "Tapışrığa başla",
                                 "callback_data" => "start_task"
                             ]
                         ],
                         [
                             [
-                                "text" => "TapÅŸÄ±rÄ±ÄŸÄ± izlÉ™",
+                                "text" => "Tapşırığı izlə",
                                 'callback_data' => "view_task"
                             ]
                         ],
                         [
                             [
-                                "text" => "TapÅŸÄ±rÄ±ÄŸÄ± bitir",
+                                "text" => "Tapşırığı bitir",
                                 "callback_data" => "end_task"
                             ]
                         ]
@@ -372,7 +374,7 @@ else
                 $telegram->redis->set($telegram->chatId."_process", "enter_task_number", ['EX' => 900]);
                 $telegram->redis->set($telegram->chatId."_do", "start_task", ['EX' => 900]);
                 return $telegram->sendMessage([
-                    'text' => 'TapÅŸÄ±rÄ±q nÃ¶mrÉ™sini yazÄ±n'
+                    'text' => 'Tapşırıq nömrəsini yazın'
                 ]);
                 ")";
                 break;
@@ -380,7 +382,7 @@ else
             case "/exit":
                 "(";
                 return $telegram->clearCache(true)->sendMessage([
-                    'text' => 'Ã‡Ä±xÄ±ÅŸ verdiniz',
+                    'text' => 'Çıxış verdiniz',
                     'reply_markup' => json_encode(['remove_keyboard' => true])
                 ]);
                 ")";
