@@ -90,7 +90,7 @@ class Users extends Model
         }
     }
 
-    public function createUser() : bool
+    public function createUser() : Object
     {
         if($this->name == NULL || $this->surname == NULL || $this->email == NULL || $this->password == NULL || $this->passwordRepeat == NULL)
         {
@@ -114,7 +114,7 @@ class Users extends Model
                 'Password' => $this->password,
                 'Registration_Date' => date('Y-m-d H:i:s')
             ]);
-            return true;
+            return DB::table($this->table)->where('Email', $this->email)->get();
         }
         catch(QueryException $e)
         {
