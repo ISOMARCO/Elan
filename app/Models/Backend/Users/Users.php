@@ -117,7 +117,7 @@ class Users extends Model
         }
         catch(QueryException $e)
         {
-            throw new UsersException(2005);
+            throw new UsersException(2005, ['errorMessage' => $e->getMessage()]);
         }
     }
 }

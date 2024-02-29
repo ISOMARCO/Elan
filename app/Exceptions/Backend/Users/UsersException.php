@@ -25,7 +25,7 @@ class UsersException extends Exception
             '2002' => 'Email sistemdə mövcuddur',
             '2003' => 'İstifadəçini dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin',
             '2004' => 'İstifadəçi statusunu dəyişdirə bilmədik. Zəhmət olmasa yenidən cəhd edin ',
-            '2005' => 'Yanlış əməliyyat',
+            '2005' => 'Yanlış əməliyyat '.$msg['errorMessage'],
             '2006' => 'Şifrə ilə şifrə təkrarı eyni olmalıdır'
         ];
         if(isset($codes[$this->code]))
