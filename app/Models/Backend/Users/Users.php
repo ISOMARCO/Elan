@@ -111,7 +111,8 @@ class Users extends Model
                 'Name' => $this->name,
                 'Surname' => $this->surname,
                 'Email' => $this->email,
-                'Password' => $this->password
+                'Password' => $this->password,
+                'Registration_Date' => date('Y-m-d H:i:s')
             ]);
             return true;
         }
