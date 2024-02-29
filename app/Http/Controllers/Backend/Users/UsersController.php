@@ -83,20 +83,10 @@ class UsersController extends Controller
             {
                 $users->name($name)->surname($surname)->email($email)->password($password)->password_repeat($passwordRepeat);
                 $user = $users->createUser();
+                $htmlElement = view('Backend.Users.user_card', compact('user'))->render();
                 return response()->json([
                     'success' => 'İstifadəçi əlavə olundu',
-                    'name' => $user->Name,
-                    'user_number' => $user->Id,
-                    'user_number_formatted' => sprintf("%08d", $user->Id),
-                    'surname' => $user->Surname,
-                    'email' => $user->Email,
-                    'status' => $user->Status,
-                    'phone_number' => $user->Phone_Number,
-                    'registration_date' => $user->Registration_Date,
-                    'last_login_date' => $user->Last_Login_Date,
-                    'gender' => $user->Gender,
-                    'role' => $user->Role,
-                    'user' => json_encode($user)
+                    'userCard' => $htmlElement
                 ]);
             }
             catch(UsersException $e)
