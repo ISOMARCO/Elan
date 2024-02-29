@@ -10,12 +10,14 @@ use App\Exceptions\Backend\Users\UsersException;
 class Users extends Model
 {
     use HasFactory;
-    protected $id = NULL;
+    protected int|null $id = NULL;
     protected $table = 'Users';
-    protected $email = NULL;
-    protected $name = NULL;
-    protected $surname = NULL;
-    protected $phone = NULL;
+    protected string|null $email = NULL;
+    protected string|null $name = NULL;
+    protected string|null $surname = NULL;
+    protected int|null $phone = NULL;
+    protected string|null $password = NULL;
+    protected string|null $passwordRepeat = NULL;
 
     /**
      * @param $method
@@ -37,6 +39,12 @@ class Users extends Model
                 break;
             case "id":
                 $this->id = $args[0];
+                break;
+            case "password":
+                $this->password = $args[0];
+                break;
+            case "password_repeat":
+                $this->passwordRepeat = $args[0];
                 break;
         }
         return $this;
@@ -79,6 +87,37 @@ class Users extends Model
                 }
             }
             throw new UsersException(2003);
+        }
+    }
+
+    public function createUser()
+    {
+        if($this->name == NULL || $this->surname == NULL || $this->email == NULL || $this->password == NULL || $this->passwordRepeat == NULL)
+        {
+            throw new UsersException(2001);
+        }
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL))
+        {
+            throw new UsersException(2000);
+        }
+        if($this->password !== $this->passwordRepeat)
+        {
+            throw new UsersException(2006);
+        }
+        try
+        {
+            $this->password = hash('sha256', md5($this->password));
+            $ret = DB::table($this->table)->insert([
+                'Name' => $this->name,
+                'Surname' => $this->surname,
+                'Email' => $this->email,
+                'Password' => $this->password
+            ]);
+            return response()->json(['success' => $ret]);
+        }
+        catch(QueryException $e)
+        {
+            throw new UsersException(2005);
         }
     }
 }

@@ -77,6 +77,18 @@ class UsersController extends Controller
             $name = $request->post('name');
             $surname = $request->post('surname');
             $email = $request->post('email');
+            $password = $request->post('password');
+            $passwordRepeat = $request->post('password_repeat');
+            try
+            {
+                $users->name($name)->surname($surname)->email($email)->password($password)->password_repeat($passwordRepeat);
+                $info = $users->createUser();
+                return response()->json(['success' => 'İstifadəçi əlavə olundu '.json_encode($info)]);
+            }
+            catch(UsersException $e)
+            {
+                return response()->json(['error' => $e->getMessage()], 500);
+            }
         }
         abort(403, 'Unauthorized');
     }
