@@ -96,7 +96,6 @@
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
-            alert(rowData);
             $("#user_edit_form #name").val(rowData[0]);
             $("#user_edit_form #surname").val(rowData[1]);
             $("#user_edit_form #email").val(rowData[2]);
