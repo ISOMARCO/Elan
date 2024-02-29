@@ -83,7 +83,7 @@ class UsersController extends Controller
             {
                 $users->name($name)->surname($surname)->email($email)->password($password)->password_repeat($passwordRepeat);
                 $user = $users->createUser();
-                return response()->json(['success' => 'İstifadəçi əlavə olundu '.json_encode($user)]);
+                return response()->json(['success' => 'İstifadəçi əlavə olundu', 'name' => $user->Name]);
             }
             catch(UsersException $e)
             {
