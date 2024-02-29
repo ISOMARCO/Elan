@@ -253,8 +253,8 @@
                                         <td>`+e.surname+`</td>
                                         <td>`+e.email+`</td>
                                         <td>`+e.phone_number+`</td>
-                                        <td>@Date_To_String(`+e.registration_date+`)</td>
-                                        <td>@Date_To_String(`+e.last_login_date+`)</td>
+                                        <td>`+e.registration_date+`</td>
+                                        <td>`+e.last_login_date+`</td>
                                         <td>`+e.gender+`</td>
                                         <td style="display: none">`+e.user_number+`</td>
                                         <td style="display: none;">`+e.user_status+`</td>
