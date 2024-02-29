@@ -28,9 +28,15 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="password" id="password" placeholder="Şifrə">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Şifrə">
                         <div class="input-group-append">
                             <label for="password" class="input-group-text"><i class="fas fa-lock"></i></label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" name="password_repeat" id="password_repeat" placeholder="Şifrə təkrarı">
+                        <div class="input-group-append">
+                            <label for="password_repeat" class="input-group-text"><i class="fas fa-lock"></i></label>
                         </div>
                     </div>
                 </div>
