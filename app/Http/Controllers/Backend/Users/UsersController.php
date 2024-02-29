@@ -82,7 +82,7 @@ class UsersController extends Controller
             try
             {
                 $users->name($name)->surname($surname)->email($email)->password($password)->password_repeat($passwordRepeat);
-                $info = $users->createUser();
+                $users->createUser();
                 return response()->json(['success' => 'İstifadəçi əlavə olundu']);
             }
             catch(UsersException $e)

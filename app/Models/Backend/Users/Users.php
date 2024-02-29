@@ -90,7 +90,7 @@ class Users extends Model
         }
     }
 
-    public function createUser()
+    public function createUser() : bool
     {
         if($this->name == NULL || $this->surname == NULL || $this->email == NULL || $this->password == NULL || $this->passwordRepeat == NULL)
         {
@@ -107,13 +107,13 @@ class Users extends Model
         try
         {
             $this->password = hash('sha256', md5($this->password));
-            $ret = DB::table($this->table)->insert([
+            DB::table($this->table)->insert([
                 'Name' => $this->name,
                 'Surname' => $this->surname,
                 'Email' => $this->email,
                 'Password' => $this->password
             ]);
-            return response()->json(['success' => $ret]);
+            return true;
         }
         catch(QueryException $e)
         {
