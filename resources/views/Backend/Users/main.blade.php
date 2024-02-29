@@ -218,7 +218,8 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    $(".main-card").html(`
+                    alert(e.user);
+                    /*$(".main-card").html(`
                     <div class="card collapsed-card card`+e.user_number+`" style="border: 1px solid {{Border_Random_Color()}}">
                         <div class="card-header">
                             <h3 class="card-title"><b>`+e.user_number_formatted+`</b> <span id="name`+e.user_number+`">`+e.name+`</span> <span id="surname`+e.user_number+`">`+e.surname+`</span></h3>
@@ -267,7 +268,7 @@
                             <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
                             <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fas fa-ban"></i></button>
                         </div>
-                    `);
+                    `);*/
                 },
                 complete: function()
                 {

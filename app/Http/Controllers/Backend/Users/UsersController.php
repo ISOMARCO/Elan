@@ -95,7 +95,8 @@ class UsersController extends Controller
                     'registration_date' => $user->Registration_Date,
                     'last_login_date' => $user->Last_Login_Date,
                     'gender' => $user->Gender,
-                    'role' => $user->Role
+                    'role' => $user->Role,
+                    'user' => json_encode($user)
                 ]);
             }
             catch(UsersException $e)
