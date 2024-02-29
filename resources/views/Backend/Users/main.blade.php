@@ -217,7 +217,7 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    $(".main-card").prepend(e.userCard);
+                    $(".main-card").append(e.userCard);
                 },
                 complete: function()
                 {
