@@ -17,7 +17,7 @@ class UsersException extends Exception
         parent::__construct($message, $statusCode);
     }
 
-    protected function errorCodeMessage($msg = []) : String|NULL
+    protected function errorCodeMessage(Array $msg = []) : String|NULL
     {
         $codes = [
             '2000' => 'Email adresi düzgün yazın',
