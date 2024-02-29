@@ -114,7 +114,7 @@ class Users extends Model
                 'Password' => $this->password,
                 'Registration_Date' => date('Y-m-d H:i:s')
             ]);
-            return DB::table($this->table)->where('Email', $this->email)->get();
+            return DB::table($this->table)->select(['Id', 'Gender', 'Email', 'Name', 'Surname', 'Status', 'Phone_Number', 'Role'])->where('Email', $this->email)->get();
         }
         catch(QueryException $e)
         {

@@ -218,6 +218,7 @@
                         text: e.success,
                         icon: 'success'
                     });
+                    alert(e.name);
                 },
                 complete: function()
                 {
