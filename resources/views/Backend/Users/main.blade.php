@@ -200,7 +200,7 @@
                 beforeSend: function()
                 {
                     $("#user_add_form #progress").show();
-                    $("#user_add_form input, #user_ban_btn").attr("disabled", "disabled");
+                    $("#user_add_form input, #user_add_btn").attr("disabled", "disabled");
                 },
                 error: function(x)
                 {
@@ -222,7 +222,7 @@
                 complete: function()
                 {
                     $("#user_add_form #progress").hide();
-                    $("#user_add_form input, #user_ban_btn").removeAttr("disabled");
+                    $("#user_add_form input, #user_add_btn").removeAttr("disabled");
                 }
             });
 
