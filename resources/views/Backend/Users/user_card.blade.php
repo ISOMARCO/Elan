@@ -43,7 +43,7 @@
     </div>
     <!-- /.card-body -->
     <div class="card-footer">
-        <button type="button" id="edit_user_btn" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
+        <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
         <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fas fa-ban"></i></button>
     </div>
     <!-- /.card-footer-->

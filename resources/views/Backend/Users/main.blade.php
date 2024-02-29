@@ -75,7 +75,7 @@
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button type="button" id="edit_user_btn" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
                             <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fas fa-ban"></i></button>
                         </div>
                         <!-- /.card-footer-->
@@ -91,7 +91,7 @@
     <script src="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <script>
     $(document).ready(function(){
-        $("#edit_user_btn").on("click", function(){
+        $(".card-footer button:first-child").on("click", function(){
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
