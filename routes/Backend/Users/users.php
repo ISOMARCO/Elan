@@ -8,4 +8,4 @@ Route::match(['post', 'get'], '/saveChangesAction', [UsersController::class, 'sa
 Route::match(['post', 'get'], '/changeUserStatusAction', [UsersController::class, 'changeUserStatusAction'])->name('Backend_Users_ChangeUserStatusAction');
 Route::get('/timeline', [TimelineController::class, 'main'])->name('Backend_Users_Timeline');
 Route::get('/deactive', [UsersController::class, 'deactive'])->name('Backend_Users_Deactive');
-Route::match(['post', 'get'], '/createAction', [UsersController::class, 'create'])->name('Backend_Users_Create');
+Route::match(['post', 'get'], '/createAction', [UsersController::class, 'createAction'])->name('Backend_Users_Create');

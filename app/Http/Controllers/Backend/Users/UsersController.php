@@ -67,4 +67,17 @@ class UsersController extends Controller
         $userList = $users->allUsers(false);
         return view('Backend.Users.deactive', compact('userList'));
     }
+
+    public function createAction(Request $request)
+    {
+        if($request->ajax() || $request->wantsJson())
+        {
+
+            $users = new Users();
+            $name = $request->post('name');
+            $surname = $request->post('surname');
+            $email = $request->post('email');
+        }
+        abort(403, 'Unauthorized');
+    }
 }

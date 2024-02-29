@@ -27,6 +27,12 @@
                             <label for="email" class="input-group-text"><i class="fas fa-envelope"></i></label>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" name="password" id="password" placeholder="Şifrə">
+                        <div class="input-group-append">
+                            <label for="password" class="input-group-text"><i class="fas fa-lock"></i></label>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">Close</button>
