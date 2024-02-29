@@ -117,7 +117,11 @@ class Users extends Model
         }
         catch(QueryException $e)
         {
-            throw new UsersException(2005, ['errorMessage' => $e->getMessage()]);
+            if($e->getCode() == '23505') #duplicate error for postgresql
+            {
+                throw new UsersException(2002);
+            }
+            throw new UsersException(2007);
         }
     }
 }
