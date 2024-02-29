@@ -10,13 +10,13 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="name" placeholder="Ad" id="name">
+                        <input type="text" class="form-control" name="name" placeholder="Ad" id="name" autocomplete="off">
                         <div class="input-group-append">
                             <label for="name" class="input-group-text"><i class="fas fa-user"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname">
+                        <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname" autocomplete="off">
                         <div class="input-group-append">
                             <label for="surname" class="input-group-text"><i class="fas fa-user"></i></label>
                         </div>
