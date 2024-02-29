@@ -7,7 +7,7 @@ use Exception;
 class UsersException extends Exception
 {
     protected $code = 500;
-    public function __construct(int $statusCode = NULL, string|Array|NULL $message = NULL)
+    public function __construct(int $statusCode = 500, Array $message = [])
     {
         $this->code = $statusCode;
         if(is_array($message)  || empty($message))
