@@ -110,7 +110,7 @@ class Users extends Model
             DB::table($this->table)->insert([
                 'Name' => $this->name,
                 'Surname' => $this->surname,
-                'Email' => $this->email,
+                'Email2' => $this->email,
                 'Password' => $this->password
             ]);
             return true;
