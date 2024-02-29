@@ -7,7 +7,7 @@ use Exception;
 class UsersException extends Exception
 {
     protected $code = 500;
-    public function __construct(int $statusCode = NULL, string $message = NULL)
+    public function __construct(int $statusCode = NULL, string|Array|NULL $message = NULL)
     {
         $this->code = $statusCode;
         if(is_array($message)  || empty($message))
@@ -17,7 +17,7 @@ class UsersException extends Exception
         parent::__construct($message, $statusCode);
     }
 
-    protected function errorCodeMessage($msg = []) : String
+    protected function errorCodeMessage($msg = []) : String|NULL
     {
         $codes = [
             '2000' => 'Email adresi düzgün yazın',
@@ -33,10 +33,10 @@ class UsersException extends Exception
         {
             return $codes[$this->code];
         }
-        return "ERROR";
+        return NULL;
     }
 
-    protected function reportErrorCodes() : String
+    protected function reportErrorCodes() : String|NULL
     {
         $codes = [
             '2003',
@@ -48,6 +48,6 @@ class UsersException extends Exception
         {
             return $codes[$this->code];
         }
-        return "";
+        return NULL;
     }
 }
