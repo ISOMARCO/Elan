@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off">
                         <div class="input-group-append">
                             <label for="email" class="input-group-text"><i class="fas fa-envelope"></i></label>
                         </div>
