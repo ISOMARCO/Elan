@@ -24,7 +24,7 @@ class Users extends Model
      * @param $args
      * @return $this
      */
-    public function __call($method, $args = [])
+    public function __call($method, $args = []) : Users
     {
         switch($method)
         {
@@ -49,7 +49,7 @@ class Users extends Model
         }
         return $this;
     }
-    public function allUsers(bool $active = true)
+    public function allUsers(bool $active = true) : string
     {
         if($active)
         {
