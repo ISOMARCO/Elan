@@ -91,7 +91,7 @@
     <script src="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <script>
     $(document).ready(function(){
-        $(".card-footer button:first-child").on("click", function(e){
+        $(".card-footer button:first-child").on("click", ".card-footer button", function(e){
             e.preventDefault();
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
