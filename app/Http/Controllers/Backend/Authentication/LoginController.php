@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend\Authentication;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Authentication\Users;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Exceptions\Backend\Authentication\AuthenticationException;
 use Illuminate\Http\RedirectResponse;
@@ -14,7 +15,7 @@ class LoginController extends Controller
         return view('Backend.Login.main');
     }
 
-    public function loginAction(Request $request) : RedirectResponse|String
+    public function loginAction(Request $request) : RedirectResponse|JsonResponse
     {
         if($request->ajax() || $request->wantsJson())
         {
