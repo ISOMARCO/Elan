@@ -102,7 +102,7 @@
             $("#user_edit_form #user_number").val(rowData[7]);
         });
 
-        $(".card-footer button:nth-child(2)").on("click", function(){
+        $(document).on("click", ".card-footer button:nth-child(2)", function(){
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
