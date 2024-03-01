@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\Authentication\Users;
 use Illuminate\Http\Request;
 use App\Exceptions\Backend\Authentication\AuthenticationException;
-
 class LoginController extends Controller
 {
     public function main() : String
@@ -32,5 +31,12 @@ class LoginController extends Controller
             }
         }
         abort(403, 'Unauthorized');
+    }
+
+    public function logout()
+    {
+        $users = new Users();
+        $users->logout();
+        return redirect()->route('Backend_Login');
     }
 }

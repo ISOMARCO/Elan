@@ -42,4 +42,11 @@ class Users extends Model
         Cache::store('redis')->put('userInfo_'.$row->Id, json_encode($row, true), (60*60*24*365));
         return true;
     }
+
+    public function logout() : bool
+    {
+        Cache::store('redis')->forget('userInfo_'.Session::get('id'));
+        Session::flush();
+        return true;
+    }
 }
