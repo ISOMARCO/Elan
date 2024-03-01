@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Backend\Authentication\Users;
 use Illuminate\Http\Request;
 use App\Exceptions\Backend\Authentication\AuthenticationException;
+use Illuminate\Http\RedirectResponse;
 class LoginController extends Controller
 {
     public function main() : String
@@ -13,7 +14,7 @@ class LoginController extends Controller
         return view('Backend.Login.main');
     }
 
-    public function loginAction(Request $request)
+    public function loginAction(Request $request) : RedirectResponse|String
     {
         if($request->ajax() || $request->wantsJson())
         {
@@ -33,7 +34,7 @@ class LoginController extends Controller
         abort(403, 'Unauthorized');
     }
 
-    public function logout()
+    public function logout() : RedirectResponse
     {
         $users = new Users();
         $users->logout();
