@@ -5,11 +5,12 @@ use App\Models\Logs\Logs;
 class TelegramBot
 {
     const API_URL = 'https://api.telegram.org/bot';
-    public $chatId = NULL;
-    protected $userId = NULL;
-    protected $file_path = NULL;
-    protected  $callBackQueryId = NULL;
-    private function request($method, $posts = [], $file = false)
+    public int|NULL $chatId = NULL;
+    protected int|NULL $userId = NULL;
+    protected string|NULL $file_path = NULL;
+    protected int|NULL $messageId = NULL;
+    protected  int|NULL $callBackQueryId = NULL;
+    private function request(string $method, array $posts = [], bool $file = false)
     {
         if($file)
         {
@@ -66,7 +67,7 @@ class TelegramBot
             'user_id' => $this->userId
         ]);
     }
-    public function getFile($file_id)
+    public function getFile(int $file_id)
     {
         $file_path = $this->request('getFile', [
             'file_id' => $file_id
@@ -75,19 +76,19 @@ class TelegramBot
         $this->file_path = $file_path_array['result']['file_path'];
         return $file_path;
     }
-    public function setWebhook($url)
+    public function setWebhook(string $url)
     {
         return $this->request('setWebhook', [
             'url' => $url
         ]);
     }
 
-    public function setMyCommands($data = [])
+    public function setMyCommands(array $data = [])
     {
         return $this->request('setMyCommands', $data);
     }
 
-    public function sendContact($data = [])
+    public function sendContact(array $data = [])
     {
         if(!isset($data['chat_id']))
         {
@@ -107,11 +108,6 @@ class TelegramBot
             'chat_id' => $this->chatId,
             'message_id' => $messageId
         ]);
-    }
-
-    public function chatId()
-    {
-        return $this->chatId;
     }
 
     public function getData()
@@ -143,7 +139,7 @@ class TelegramBot
         return $data;
     }
 
-    public function sendMessage($data = [])
+    public function sendMessage(array $data = [])
     {
         if(!isset($data['chat_id']))
         {
@@ -153,7 +149,7 @@ class TelegramBot
         return $send;
     }
 
-    public function answerCallBackQuery($data = [])
+    public function answerCallBackQuery(array $data = [])
     {
         if(!isset($data['callback_query_id']))
         {
@@ -164,5 +160,18 @@ class TelegramBot
             $data['show_alert'] = false;
         }
         return $this->request('answerCallBackQuery', $data);
+    }
+
+    public function setMessageReaction(array $data = [])
+    {
+        if(!isset($data['chat_id']))
+        {
+            $data['chat_id'] = $this->chatId;
+        }
+        if(!isset($data['message_id']))
+        {
+            $data['message_id'] = $this->messageId;
+        }
+        return $this->request('setMessageReaction', $data);
     }
 }
