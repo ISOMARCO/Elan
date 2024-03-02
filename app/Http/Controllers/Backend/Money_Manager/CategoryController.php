@@ -9,6 +9,6 @@ class CategoryController extends Controller
 {
     public function main()
     {
-        return view();
+        return view('Backed.Money_Manager.main');
     }
 }
