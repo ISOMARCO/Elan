@@ -233,7 +233,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('Backend_Logout')}}" id="header_exit_button" class="nav-link">
+                    <a href="javascript:void(0)" id="header_exit_button" class="nav-link">
                         <i class="fas fa-sign-out-alt nav-icon"></i>
                         <p>Çıxış</p>
                     </a>
