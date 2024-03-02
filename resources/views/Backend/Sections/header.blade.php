@@ -226,7 +226,7 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="fas fa-list nav-icon"></i>
+                                <i class="fas fa-cubes nav-icon"></i>
                                 <p>Kateqoriyalar</p>
                             </a>
                         </li>
