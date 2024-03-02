@@ -13,13 +13,6 @@ class Users extends Model
 {
     use HasFactory;
     protected $table = 'Users';
-
-    /**
-     * @param string|NULL|NULL $email
-     * @param string|NULL|NULL $password
-     * @return bool
-     * @throws AuthenticationException
-     */
     public function login(string|NULL $email = NULL, string|NULL $password = NULL) :  bool
     {
         if(empty($email) || empty($password))
@@ -50,9 +43,6 @@ class Users extends Model
         return true;
     }
 
-    /**
-     * @return bool
-     */
     public function logout() : bool
     {
         Cache::store('redis')->forget('userInfo_'.Session::get('id'));
