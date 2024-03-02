@@ -9,6 +9,6 @@ class CategoryController extends Controller
 {
     public function main(Request $request) : string
     {
-        return view('Backed.Money_Manager.main');
+        return view('Backend.Money_Manager.main');
     }
 }
