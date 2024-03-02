@@ -152,7 +152,7 @@
             });
         });
 
-        $("#user_ban_btn").on("click", function(){
+        $(document).on("click", "#user_ban_btn", function(){
             $.ajax({
                 type: "post",
                 url: "{{route('Backend_Users_ChangeUserStatusAction')}}",
