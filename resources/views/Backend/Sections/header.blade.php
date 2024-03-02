@@ -225,7 +225,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('Backend_Money_Manager_Category')}}" class="nav-link">
                                 <i class="fas fa-cubes nav-icon"></i>
                                 <p>Kateqoriyalar</p>
                             </a>
