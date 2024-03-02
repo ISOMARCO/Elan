@@ -16,8 +16,8 @@ class User_Status_History extends Model
     protected int $id;
     protected string $fromStatus;
     protected string $toStatus;
-    protected int $userId;
-    protected string $reason;
+    protected int|NULL $userId;
+    protected string|NULL $reason;
 
     public function __call($method, $args = [])
     {
