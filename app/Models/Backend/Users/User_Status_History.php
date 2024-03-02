@@ -24,7 +24,7 @@ class User_Status_History extends Model
      * @param $args
      * @return $this
      */
-    public function __call($method, $args = []) : User_Status_History
+    public function __call($method, $args = [])
     {
         switch($method)
         {
