@@ -124,7 +124,7 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    if(e.status === 'ACTIVE')
+                    if(e.status !== 'ACTIVE')
                     {
                         $("#table"+e.id+" tbody td:nth-child(9)").text(e.status);
                     }
