@@ -74,7 +74,6 @@
                     </div>
                     <!-- /.card-body -->
                     <div class="card-footer">
-                        <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
                         <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fas fa-ban"></i></button>
                     </div>
                     <!-- /.card-footer-->
@@ -106,47 +105,6 @@
             $("#user_ban_form #toStatus").val(rowData[8]);
             $("#user_ban_form #fromStatus").val(rowData[8]);
             $("#user_ban_form #user_number").val(rowData[7]);
-        });
-
-        $("#user_edit_btn").on("click", function(){
-            $.ajax({
-                type: "post",
-                url: "{{route('Backend_Users_SaveChangesAction')}}",
-                data: $("#user_edit_form").serialize(),
-                dataType: "json",
-                beforeSend: function()
-                {
-                    $("#user_edit_form #progress").show();
-                    $("#user_edit_form input, #user_edit_btn").attr("disabled", "disabled");
-                },
-                success: function(e)
-                {
-                    Swal.fire({
-                        title: '',
-                        text: e.success,
-                        icon: 'success'
-                    });
-                    $("#table"+e.id+" tbody td:nth-child(1)").text(e.name);
-                    $("#table"+e.id+" tbody td:nth-child(2)").text(e.surname);
-                    $("#table"+e.id+" tbody td:nth-child(3)").text(e.email);
-                    $("#name"+e.id).text(e.name);
-                    $("#surname"+e.id).text(e.surname);
-                },
-                error: function(x)
-                {
-                    var errorResponse = x.responseJSON || x.responseText;
-                    Swal.fire({
-                        title: '',
-                        text: errorResponse.error,
-                        icon: 'error'
-                    });
-                },
-                complete: function()
-                {
-                    $("#user_edit_form #progress").hide();
-                    $("#user_edit_form input, #user_edit_btn").removeAttr("disabled");
-                }
-            });
         });
 
         $("#user_ban_btn").on("click", function(){
