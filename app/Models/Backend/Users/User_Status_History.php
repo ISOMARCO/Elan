@@ -14,8 +14,8 @@ class User_Status_History extends Model
     protected array $allStatus = ['ACTIVE', 'DEACTIVE', 'BAN'];
     protected $table = 'User_Status_History';
     protected int $id;
-    protected string $fromStatus;
-    protected string $toStatus;
+    protected string|NULL $fromStatus;
+    protected string|NULL $toStatus;
     protected int|NULL $userId;
     protected string|NULL $reason;
 
