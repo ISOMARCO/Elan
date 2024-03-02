@@ -179,8 +179,7 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    alert(e.id);
-                    $("#card"+e.id).fadeOut(1000, function(){
+                    $(".card"+e.id).fadeOut(1000, function(){
                         $(this).remove();
                     });
                 },

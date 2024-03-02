@@ -124,14 +124,13 @@
                         text: e.success,
                         icon: 'success'
                     });
-                    alert(e.status+" "+e.id);
                     if(e.status !== 'ACTIVE')
                     {
                         $("#table"+e.id+" tbody td:nth-child(9)").text(e.status);
                     }
                     else
                     {
-                        $("#card"+e.id).fadeOut(1000, function(){
+                        $(".card"+e.id).fadeOut(1000, function(){
                             $(this).remove();
                         });
                     }
