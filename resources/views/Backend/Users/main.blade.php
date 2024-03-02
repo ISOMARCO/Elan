@@ -4,7 +4,7 @@
     @include('Backend.Sections.head')
     <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.css')}}">
 </head>
-<body>
+<body class="hold-transition sidebar-mini">
     @include('Backend.Sections.header')
     <section class="content-header">
         <div class="container-fluid">
