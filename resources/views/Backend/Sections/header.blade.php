@@ -216,6 +216,41 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Money Manager
+                            <i class="fas fa-money-bill-alt"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('Backend_Users')}}" class="nav-link">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>Aktiv istifadəçilər</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('Backend_Users_Deactive')}}" class="nav-link">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>Deaktiv istifadəçilər</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('Backend_Users_Timeline')}}" class="nav-link">
+                                <i class="fas fa-history nav-icon"></i>
+                                <p>Timeline</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-exclamation-triangle nav-icon"></i>
+                                <p>Xəta kodları</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
                     <a href="{{route('Backend_Logout')}}" class="nav-link">
                         <i class="fas fa-sign-out-alt nav-icon"></i>
                         <p>Çıxış</p>
