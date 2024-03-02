@@ -42,8 +42,8 @@ class UsersController extends Controller
 
     public function changeUserStatusAction(Request $request)
     {
-        if($request->ajax() || $request->wantsJson())
-        {
+        #if($request->ajax() || $request->wantsJson())
+        #{
             $userStatusHistory = new User_Status_History();
             $toStatus = $request->post('toStatus');
             $userId = $request->post('user_number');
@@ -57,8 +57,8 @@ class UsersController extends Controller
             {
                 return response()->json(['error' => $e->getMessage()], 500);
             }
-        }
-        abort(403, 'Unauthorized');
+        #}
+        #abort(403, 'Unauthorized');
     }
 
     public function deactive()
