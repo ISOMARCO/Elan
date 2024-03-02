@@ -12,7 +12,7 @@
                 <a href="javascript:void(0)" class="h1"><b>Admin Panel</b></a>
             </div>
             <div class="card-body">
-                <form action="{{url('/admin/login/loginAction')}}" method="post" id="loginForm">
+                <form method="post" id="loginForm">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" name="email" placeholder="Email">
                         <div class="input-group-append">
