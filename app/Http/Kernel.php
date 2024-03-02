@@ -86,6 +86,9 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             "PullFromGit" => PullFromGit::class,
             "IsLogin" => Backend_IsLogin::class
+        ],
+        'backend_money_manager' => [
+
         ]
     ];
 

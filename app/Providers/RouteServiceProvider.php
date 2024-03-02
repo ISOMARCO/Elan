@@ -55,6 +55,11 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('admin/users')
                 ->namespace($this->namespace."\Backend")
                 ->group(base_path('routes/Backend/Users/users.php'));
+
+            Route::middleware('backend_money_manager')
+                ->prefix('/admin/moneymanager')
+                ->namespace($this->namespace."\Backend")
+                ->group(base_path('routes/Backend/Money_Manager/money_manager.php'));
         });
     }
 }
