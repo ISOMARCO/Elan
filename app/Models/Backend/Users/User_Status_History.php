@@ -57,7 +57,7 @@ class User_Status_History extends Model
      * @return bool
      * @throws UsersException
      */
-    public function changeStatus() :  bool
+    public function changeStatus()
     {
         if($this->fromStatus == NULL || $this->toStatus == NULL)
         {
