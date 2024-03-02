@@ -21,3 +21,25 @@
 <script src="{{asset('Assets/Backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('Assets/Backend/js/adminlte.min.js')}}"></script>
+<!-- Sweet alert2 -->
+<script src="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+<script>
+    $(document).ready(function(){
+       $(document).on("click", "#header_exit_button", function(){
+           Swal.fire({
+               title: "Çıxmaq istədiyinizdən əminsiniz ?",
+               text: "",
+               icon: 'question',
+               showCancelButton: true,
+               confirmButtonColor: '#3085d6',
+               cancelButtonColor: '#d33',
+               confirmButtonText: "Bəli",
+               cancelButtonText: "Xeyr"
+           }).then((result) => {
+               if (result.isConfirmed) {
+                   window.location.href = "{{route('Backend_Logout')}}";
+               }
+           })
+       });
+    });
+</script>

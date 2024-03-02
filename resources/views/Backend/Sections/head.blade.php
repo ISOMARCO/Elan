@@ -8,3 +8,5 @@
 <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/fontawesome-free/css/all.min.css')}}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{asset('Assets/Backend/css/adminlte.min.css')}}">
+<!-- Sweet alert2 -->
+<link rel="stylesheet" href="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.css')}}">

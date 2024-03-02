@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     @include('Backend.Sections.head')
-    <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini">
     @include('Backend.Sections.header')
@@ -88,7 +87,6 @@
         </div>
     </section>
     @include('Backend.Sections.footer')
-    <script src="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
 <script>
     $(document).ready(function(){
         $(document).on("click", ".card-footer button:first-child", function(e){
