@@ -18,7 +18,13 @@ class User_Status_History extends Model
     protected string $toStatus;
     protected int $userId;
     protected string $reason;
-    public function __call($method, $args = [])
+
+    /**
+     * @param $method
+     * @param $args
+     * @return $this
+     */
+    public function __call($method, $args = []) : User_Status_History
     {
         switch($method)
         {
@@ -47,6 +53,10 @@ class User_Status_History extends Model
         return $this;
     }
 
+    /**
+     * @return bool
+     * @throws UsersException
+     */
     public function changeStatus() :  bool
     {
         if($this->fromStatus == NULL || $this->toStatus == NULL)

@@ -15,6 +15,10 @@ class LoginController extends Controller
         return view('Backend.Login.main');
     }
 
+    /**
+     * @param Request $request
+     * @return RedirectResponse|JsonResponse
+     */
     public function loginAction(Request $request) : RedirectResponse|JsonResponse
     {
         if($request->ajax() || $request->wantsJson())
@@ -35,6 +39,9 @@ class LoginController extends Controller
         abort(403, 'Unauthorized');
     }
 
+    /**
+     * @return RedirectResponse
+     */
     public function logout() : RedirectResponse
     {
         $users = new Users();
