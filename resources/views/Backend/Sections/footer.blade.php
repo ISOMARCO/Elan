@@ -45,23 +45,17 @@
 </script>
 <script src="https://js.pusher.com/8.0.1/pusher.min.js"></script>
 <script>
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
+    import Echo from 'laravel-echo'
 
-    var pusher = new Pusher('71182114e39989428ba8', {
-        cluster: 'us2'
+    window.Echo = new Echo({
+        broadcaster: 'pusher',
+        key: '71182114e39989428ba8',
+        cluster: 'us2',
+        forceTLS: true
     });
 
-    var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function(data) {
-        app.messages.push(JSON.stringify(data));
+    var channel = Echo.channel('my-channel');
+    channel.listen('.my-event', function(data) {
+        alert(JSON.stringify(data));
     });
-
-    // Vue application
-    // const app = new Vue({
-    //     el: '#app',
-    //     data: {
-    //         messages: [],
-    //     },
-    // });
 </script>
