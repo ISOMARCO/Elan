@@ -44,18 +44,4 @@
     });
 </script>
 <script src="https://js.pusher.com/8.0.1/pusher.min.js"></script>
-<script>
-    import Echo from 'laravel-echo'
-
-    window.Echo = new Echo({
-        broadcaster: 'pusher',
-        key: '71182114e39989428ba8',
-        cluster: 'us2',
-        forceTLS: true
-    });
-
-    var channel = Echo.channel('my-channel');
-    channel.listen('.my-event', function(data) {
-        alert(JSON.stringify(data));
-    });
-</script>
+<script src="{{asset('Assets/Backend/js/laravel-echo.js')}}"></script>
