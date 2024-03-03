@@ -29,8 +29,8 @@ class UsersController extends Controller
             try
             {
                 $users->name($name)->surname($surname)->email($email)->id($id);
-                $users->changeUser();
-                #event(new MessageNotification(['name' => $name, 'surname' => $surname]));
+                #$users->changeUser();
+                event(new MessageNotification(['name' => $name, 'surname' => $surname]));
                 return response()->json(['success' => 'İstifadəçi dəyişdirildi', 'id' => $id, 'name' => $name, 'surname' => $surname, 'email' => $email]);
             }
             catch(UsersException $e)
