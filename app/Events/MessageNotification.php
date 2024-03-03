@@ -30,7 +30,7 @@ class MessageNotification implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new Channel('notification'),
+            new Channel('notification')
         ];
     }
 }
