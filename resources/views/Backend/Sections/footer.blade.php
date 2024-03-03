@@ -45,12 +45,23 @@
 </script>
 <script src="https://js.pusher.com/8.0.1/pusher.min.js"></script>
 <script>
-    Pusher.LogToConsole = true;
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
     var pusher = new Pusher('71182114e39989428ba8', {
-        cluster : 'us2'
+        cluster: 'us2'
     });
+
     var channel = pusher.subscribe('my-channel');
-    channel.bind('my-event', function(data){
-        alert(JSON.stringify(data));
+    channel.bind('my-event', function(data) {
+        app.messages.push(JSON.stringify(data));
     });
+
+    // Vue application
+    // const app = new Vue({
+    //     el: '#app',
+    //     data: {
+    //         messages: [],
+    //     },
+    // });
 </script>
