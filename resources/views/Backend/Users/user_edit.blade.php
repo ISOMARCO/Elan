@@ -1,4 +1,4 @@
-<form method="post" id="user_edit_form">
+<form method="post" action="{{route('Backend_Users_SaveChangesAction')}}" id="user_edit_form">
     <div class="modal fade" id="user_edit">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">Close</button>
-                    <button type="button" class="btn btn-primary" id="user_edit_btn">Yadda saxla <i class="fas fa-spinner fa-spin" style="display: none;" id="progress"></i></button>
+                    <button type="submit" class="btn btn-primary" id="user_edit_btn">Yadda saxla <i class="fas fa-spinner fa-spin" style="display: none;" id="progress"></i></button>
                 </div>
             </div>
             <!-- /.modal-content -->
