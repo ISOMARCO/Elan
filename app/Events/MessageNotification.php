@@ -31,9 +31,4 @@ class MessageNotification implements ShouldBroadcast
     {
         return ['my-channel'];
     }
-
-    public function broadcastAs() : string
-    {
-        return 'form-submitted';
-    }
 }
