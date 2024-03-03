@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend\Users;
+use App\Events\MessageNotification;
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Users\Users;
 use Illuminate\Http\Request;
@@ -29,6 +30,7 @@ class UsersController extends Controller
             {
                 $users->name($name)->surname($surname)->email($email)->id($id);
                 $users->changeUser();
+                event(new MessageNotification(['name' => $name, 'surname' => $surname]));
                 return response()->json(['success' => 'İstifadəçi dəyişdirildi', 'id' => $id, 'name' => $name, 'surname' => $surname, 'email' => $email]);
             }
             catch(UsersException $e)
