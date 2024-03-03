@@ -43,3 +43,10 @@
        });
     });
 </script>
+<script src="https://js.pusher.com/8.0.1/pusher.min.js"></script>
+<script>
+    Pusher.LogToConsole = true;
+    var pusher = new Pusher('71182114e39989428ba8', {
+        cluster : 'us2'
+    });
+</script>
