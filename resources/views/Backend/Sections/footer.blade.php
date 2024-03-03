@@ -49,4 +49,8 @@
     var pusher = new Pusher('71182114e39989428ba8', {
         cluster : 'us2'
     });
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data){
+        alert(JSON.stringify(data));
+    });
 </script>
