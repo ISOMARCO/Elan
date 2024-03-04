@@ -12,6 +12,7 @@ class UsersController extends Controller
 {
     public function main()
     {
+        echo "ok";
         $users = new Users();
         $userList = $users->allUsers();
         return view('Backend.Users.main', compact('userList'));
