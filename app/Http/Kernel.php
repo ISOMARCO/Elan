@@ -4,10 +4,10 @@ namespace App\Http;
 
 use App\Http\Middleware\Frontend\AutoLogin;
 use App\Http\Middleware\Frontend\IsLogin;
-use App\Http\Middleware\PullFromGit;
 use App\Http\Middleware\Set_Timezone;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
+use Illuminate\Http\Middleware\HandleCors;
 class Kernel extends HttpKernel
 {
     /**
@@ -18,6 +18,7 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected $middleware = [
+        HandleCors::class,
         // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
         \Illuminate\Http\Middleware\HandleCors::class,
