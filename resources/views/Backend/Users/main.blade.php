@@ -90,7 +90,6 @@
 <script>
     $(document).ready(function(){
         $(document).on("click", ".card-footer button:first-child", function(e){
-            console.log(e);
             var rowData = $(this).closest('.card').find('tbody td').map(function() {
                 return $(this).text();
             }).get();
