@@ -19,8 +19,8 @@ class UsersController extends Controller
 
     public function saveChangesAction(Request $request)
     {
-        #if($request->ajax() || $request->wantsJson())
-        #{
+        if($request->ajax() || $request->wantsJson())
+        {
             $users = new Users();
             $id = $request->post('user_number');
             $name = $request->post('name');
@@ -29,8 +29,8 @@ class UsersController extends Controller
             try
             {
                 $users->name($name)->surname($surname)->email($email)->id($id);
-                #$users->changeUser();
-                event(new MessageNotification(['name' => $name, 'surname' => $surname]));
+                $users->changeUser();
+                #event(new MessageNotification(['name' => $name, 'surname' => $surname]));
                 return response()->json(['success' => 'İstifadəçi dəyişdirildi', 'id' => $id, 'name' => $name, 'surname' => $surname, 'email' => $email]);
             }
             catch(UsersException $e)
@@ -38,8 +38,8 @@ class UsersController extends Controller
                 return response()->json(['error' => $e->getMessage()], 500);
             }
 
-        #}
-        #abort(403, 'Unauthorized');
+        }
+        abort(403, 'Unauthorized');
     }
 
     public function changeUserStatusAction(Request $request)
