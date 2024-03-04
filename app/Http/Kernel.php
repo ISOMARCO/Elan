@@ -7,7 +7,6 @@ use App\Http\Middleware\Frontend\IsLogin;
 use App\Http\Middleware\Set_Timezone;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
-use Illuminate\Http\Middleware\HandleCors;
 
 class Kernel extends HttpKernel
 {
@@ -27,7 +26,6 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         "Set_Timezone" => Set_Timezone::class,
-        HandleCors::class
     ];
 
     /**
