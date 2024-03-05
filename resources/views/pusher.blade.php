@@ -8,7 +8,7 @@
         Pusher.logToConsole = true;
 
         var pusher = new Pusher("{{env('PUSHER_APP_KEY')}}", {
-            cluster: {{env('PUSHER_APP_CLUSTER')}}
+            cluster: "{{env('PUSHER_APP_CLUSTER')}}"
         });
 
         var channel = pusher.subscribe('my-channel');
