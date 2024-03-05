@@ -54,7 +54,7 @@
                         </div>
                     </li>
                     <li class="header-item">
-                        <button type="button" class="header-widget"><i class="fas fa-bell"></i><sup>0</sup></button>
+                        <button type="button" class="header-widget"><i class="fas fa-bell"></i><sup id="notification_count">0</sup></button>
                         <div class="dropdown-card">
                             <div class="dropdown-header"><h5>Notification (1)</h5><a href="#">view
                                     all</a></div>
