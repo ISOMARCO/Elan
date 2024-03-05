@@ -29,7 +29,7 @@ class UsersController extends Controller
             {
                 $users->name($name)->surname($surname)->email($email)->id($id);
                 $users->changeUser();
-                #event(new MessageNotification(['name' => $name, 'surname' => $surname]));
+                event(new MessageNotification(['name' => $name, 'surname' => $surname]));
                 return response()->json(['success' => 'İstifadəçi dəyişdirildi', 'id' => $id, 'name' => $name, 'surname' => $surname, 'email' => $email]);
             }
             catch(UsersException $e)
