@@ -189,7 +189,7 @@
             </a>
             <a href="notification.html" class="mobile-widget">
                 <i class="fas fa-bell"></i><span>notify</span>
-                <sup id="notification_count">0</sup>
+                <sup id="notification_count">1</sup>
             </a>
             <a href="message.html" class="mobile-widget">
                 <i class="fas fa-envelope"></i><span>message</span>
