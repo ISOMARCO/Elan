@@ -13,7 +13,7 @@
 
         var channel = pusher.subscribe('my-channel');
         channel.bind('my-event', function(data) {
-            alert(JSON.stringify(data));
+            document.getElementById("data").html(JSON.stringify(data));
         });
     </script>
 </head>
@@ -22,5 +22,6 @@
 <p>
     Try publishing an event to channel <code>my-channel</code>
     with event name <code>my-event</code>.
+    <span id="data"></span>
 </p>
 </body>
