@@ -233,6 +233,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('Home')}}" id="header_exit_button" class="nav-link" target="_blank">
+                        <i class="fas fa-external-link-alt nav-icon"></i>
+                        <p>Sayta keçid</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="javascript:void(0)" id="header_exit_button" class="nav-link">
                         <i class="fas fa-sign-out-alt nav-icon"></i>
                         <p>Çıxış</p>
