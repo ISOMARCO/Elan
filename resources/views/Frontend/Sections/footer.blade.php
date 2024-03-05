@@ -166,6 +166,7 @@
     });
     var channel = pusher.subscribe('my-channel');
     channel.bind('my-event', function(data) {
+        alert(data);
         $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
     });
 </script>
