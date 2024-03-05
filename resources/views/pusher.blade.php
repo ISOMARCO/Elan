@@ -13,7 +13,7 @@
 
         var channel = pusher.subscribe('my-channel');
         channel.bind('my-event', function(data) {
-            document.getElementById("data").html(JSON.stringify(data));
+            document.getElementById("data").innerHTML = JSON.stringify(data);
         });
     </script>
 </head>
