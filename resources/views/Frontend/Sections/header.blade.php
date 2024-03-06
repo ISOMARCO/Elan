@@ -1,5 +1,6 @@
 <header class="header-part">
     <div class="container">
+        <audio id="notificationSound" src="{{asset('Assets/Frontend/sound/notification.mp3')}}" preload="auto" style="display: none"></audio>
         <div class="header-content">
             <div class="header-left">
                 <button type="button" class="header-widget sidebar-btn"><i class="fas fa-align-left"></i></button>

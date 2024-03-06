@@ -172,6 +172,7 @@
         channel.bind('my-event', function(data) {
             $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
             $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);
+            $("#notificationSound").play();
         });
     });
 </script>
