@@ -204,7 +204,6 @@
                             }
                             console.error(x.status+" "+value);
                         });
-                        console.error(errorResponse.location);
                     },
                     complete: function() {
                         $("#login_spinner").hide();
@@ -215,7 +214,7 @@
             $("#register_btn").on("click", function() {
                 $.ajax({
                     type: "post",
-                    url: "{{url('/register/registerAction')}}",
+                    url: "{{route('Frontend.RegisterAction')}}",
                     data: $("#register_form").serialize(),
                     dataType: "json",
                     success: function(e)
@@ -253,7 +252,6 @@
                                 }
                                 console.error(x.status+" "+value);
                             });
-                        console.error(errorResponse.location);
                     }
                 });
             });

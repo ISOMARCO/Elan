@@ -36,7 +36,7 @@ class LoginController extends Controller
             }
             if(count($emptyErrorArray) > 0)
             {
-                return response()->json(['error' => $emptyErrorArray, 'location' => 'LoginController@loginAction@34'], 422);
+                return response()->json(['error' => $emptyErrorArray], 422);
             }
             $user = $users->login($email_or_phone, $password, $remember_me);
             if($user[0] === false)
@@ -44,7 +44,7 @@ class LoginController extends Controller
                 switch($user[1])
                 {
                     case "no_user":
-                        return response()->json(['error' => ['show_alert' => 'Giriş məlumatları doğru deyil'], 'location' => 'LoginController@loginAction@39'], 422);
+                        return response()->json(['error' => ['show_alert' => 'Giriş məlumatları doğru deyil']], 422);
                     break;
                     case "undefined_email_or_phone":
                         return response()->json(['error' => ['email_or_phone' => 'Email adres və ya telefon nömrəsi yazmalısınız']], 422);
@@ -57,7 +57,7 @@ class LoginController extends Controller
             $userInfo = $user[1];
             Session::put('id', $userInfo->Id);
             Cache::store('redis')->put('user_info_'.$userInfo->Id, $userInfo, 360);
-            return response()->json(['success' => 'Giriş məlumatları doğrudur. Ana səhifəyə yönləndirilirsiniz...', 'location' => 'LoginController@loginAction@41']);
+            return response()->json(['success' => 'Giriş məlumatları doğrudur. Ana səhifəyə yönləndirilirsiniz...']);
         }
         else
         {
