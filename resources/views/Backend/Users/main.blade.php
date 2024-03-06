@@ -111,7 +111,7 @@
         $("#user_edit_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_Users_SaveChangesAction')}}",
+                url: "{{route('Backend.Users_SaveChangesAction')}}",
                 data: $("#user_edit_form").serialize(),
                 dataType: "json",
                 beforeSend: function()
@@ -191,7 +191,7 @@
         $("#user_add_btn").on("click", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_Users_Create')}}",
+                url: "{{route('Backend.Users_Create')}}",
                 dataType: "json",
                 data: $("#user_add_form").serialize(),
                 beforeSend: function()
