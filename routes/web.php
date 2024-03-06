@@ -27,7 +27,7 @@ Route::get('/pusher', function(){
 });
 Route::get('/getPusherAppKey', function () {
     $request = new Request();
-    if($request->wantsJson())
+    if($request->ajax())
     {
         return response()->json([
             'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
