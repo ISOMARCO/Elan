@@ -16,7 +16,7 @@ use App\Http\Controllers\Backend\Home\HomeController as BackendHomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'main'])->name('Home');
+Route::get('/', [HomeController::class, 'main'])->name('Frontend.Home');
 Route::redirect('/home', '/');
 Route::match(['post', 'get'],'/telegram_webhook', [TelegramWebhookController::class, 'main'])->withoutMiddleware([VerifyCsrfToken::class]);
 Route::middleware([Backend_IsLogin::class])->get('/admin/', [BackendHomeController::class, 'main'])->name('Backend_Home');
