@@ -37,7 +37,7 @@
                cancelButtonText: "Xeyr"
            }).then((result) => {
                if (result.isConfirmed) {
-                   window.location.href = "{{route('Backend_Logout')}}";
+                   window.location.href = "{{route('Backend.Logout')}}";
                }
            })
        });
