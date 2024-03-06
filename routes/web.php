@@ -26,12 +26,7 @@ Route::get('/pusher', function(){
     return view('pusher');
 });
 Route::get('/getPusherAppKey', function () {
-    $request = new Request();
-    if($request->ajax())
-    {
-        return response()->json([
-            'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
-        ]);
-    }
-    abort(403, 'Unauthorized');
+    return response()->json([
+        'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
+    ]);
 });
