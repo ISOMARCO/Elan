@@ -4,7 +4,7 @@
             <div class="col-lg-6">
                 <div class="news-content"><h2>Subscribe for Latest Offers</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, aliquid reiciendis!
-                        Exercitationem soluta provident non.</p></div>
+                        Exercitationem soluta provident non. App key: {{env('PUSHER_APP_KEY')}}</p></div>
             </div>
             <div class="col-lg-6">
                 <form class="news-form">
