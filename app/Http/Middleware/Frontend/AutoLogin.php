@@ -18,7 +18,7 @@ class AutoLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!Session::has('id') && Cookie::has('Remember_Me'))
+        if(!Session::has('id') && Cookie::has('Remember_Me') && $request->route()->getName() !== 'Frontend.Logout')
         {
             $users = new Users();
             $users->Login_With_Token(Cookie::get('Remember_Me'));
