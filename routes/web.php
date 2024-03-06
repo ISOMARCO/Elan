@@ -6,7 +6,7 @@ use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
 use App\Http\Controllers\Backend\Home\HomeController as BackendHomeController;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +29,12 @@ Route::get('/getPusherAppKey', function () {
     return response()->json([
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
     ]);
+});
+
+Route::get('/sendEmail', function(){
+    $userEmail = 'ismayilnagiyev100@gmail.com';
+    $userName = 'Recipient Name';
+    Mail::raw('Welcome to our website!', function($message) use ($userEmail, $userName) {
+        $message->to($userEmail)->subject('Welcome '.$userName)->from('info@iso.com.az', 'Your Name');
+    });
 });
