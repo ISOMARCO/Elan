@@ -173,7 +173,7 @@
     <div class="container">
         <div class="mobile-group">
             <a href="index.html" class="mobile-widget">
-                <i class="fas fa-home"></i><span>home</span>
+                <i class="fas fa-home"></i><span>Home</span>
             </a>
             @if(!Session::has('id'))
                 <a href="{{url('/login')}}" class="mobile-widget">
@@ -188,7 +188,7 @@
                 <i class="fas fa-plus"></i><span>Ad Post</span>
             </a>
             <a href="notification.html" class="mobile-widget">
-                <i class="fas fa-bell"></i><span>notify</span>
+                <i class="fas fa-bell"></i><span>Notify</span>
                 <sup id="notification_count">0</sup>
             </a>
             <a href="message.html" class="mobile-widget">
