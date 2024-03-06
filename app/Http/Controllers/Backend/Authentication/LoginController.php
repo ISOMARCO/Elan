@@ -21,6 +21,10 @@ class LoginController extends Controller
      */
     public function loginAction(Request $request) : RedirectResponse|JsonResponse
     {
+        if($request->isMethod('POST'))
+        {
+            abort(403, 'Method not allowed');
+        }
         if($request->ajax() || $request->wantsJson())
         {
             $email = (string) $request->isMethod('post') ? $request->input('email') : null;
@@ -28,7 +32,7 @@ class LoginController extends Controller
             $users = new Users();
             try
             {
-                return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...', 'user' => $users->login($email, $password), 'method' => $request->method()]);
+                return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...', 'user' => $users->login($email, $password)]);
             }
             catch(AuthenticationException $e)
             {
