@@ -156,7 +156,7 @@
                     <ul class="navbar-list">
                         <li class="navbar-item"><a class="navbar-link" href="dashboard.html">Dashboard</a></li>
                         @if(Session::has('admin'))
-                            <li class="navbar-item"><a class="navbar-link" href="{{route('Backend.Home')}}">Admin Panel</a></li>
+                            <li class="navbar-item"><a class="navbar-link" target="_blank" href="{{route('Backend.Home')}}">Admin Panel</a></li>
                         @endif
                         <li class="navbar-item"><a class="navbar-link" href="profile.html">Profile</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="ad-post.html">Ad Post</a></li>
