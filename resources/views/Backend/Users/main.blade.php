@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('Backend_Home')}}">Ana Səhifə</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('Backend.Home')}}">Ana Səhifə</a></li>
                         <li class="breadcrumb-item active">İstifadəçilər</li>
                     </ol>
                 </div>
@@ -152,7 +152,7 @@
         $(document).on("click", "#user_ban_btn", function(){
             $.ajax({
                 type: "post",
-                url: "{{route('Backend_Users_ChangeUserStatusAction')}}",
+                url: "{{route('Backend.Users_ChangeUserStatusAction')}}",
                 data: $("#user_ban_form").serialize(),
                 dataType: "json",
                 beforeSend: function()

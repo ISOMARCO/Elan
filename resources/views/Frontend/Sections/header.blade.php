@@ -3,11 +3,11 @@
         <div class="header-content">
             <div class="header-left">
                 <button type="button" class="header-widget sidebar-btn"><i class="fas fa-align-left"></i></button>
-                <a href="{{url('/')}}" class="header-logo">
+                <a href="{{route('Frontend.Home')}}" class="header-logo">
                     <img src="{{asset('Assets/Frontend/images/logo.png')}}" alt="logo">
                 </a>
                 @if(!Session::has('id'))
-                    <a href="{{url('/login')}}" class="header-widget header-user">
+                    <a href="{{route('Frontend.Login')}}" class="header-widget header-user">
                         <img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user">
                         <span>Login / Register</span>
                     </a>
@@ -152,7 +152,7 @@
                         <li class="navbar-item"><a class="navbar-link" href="profile.html">Profile</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="ad-post.html">Ad Post</a></li>
                         <li class="navbar-item"><a class="navbar-link" href="my-ads.html">My Ads</a></li>
-                        <li class="navbar-item"><a class="navbar-link" href="{{url('/user_setting')}}">Parametrlər</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="{{route('Frontend.UserSetting')}}">Parametrlər</a></li>
                         <li class="navbar-item navbar-dropdown"><a class="navbar-link" href="bookmark.html"><span>bookmark</span><span>0</span></a>
                         </li>
                         <li class="navbar-item navbar-dropdown"><a class="navbar-link"
@@ -176,7 +176,7 @@
                 <i class="fas fa-home"></i><span>home</span>
             </a>
             @if(!Session::has('id'))
-                <a href="{{url('/login')}}" class="mobile-widget">
+                <a href="{{route('Frontend.Login')}}" class="mobile-widget">
                     <i class="fas fa-user"></i><span>Login</span>
                 </a>
             @else

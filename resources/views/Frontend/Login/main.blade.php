@@ -147,7 +147,7 @@
     <script src="{{asset('Assets/Frontend/sweetalert2/sweetalert2.js')}}"></script>
     <script>
         $(document).ready(function(){
-            if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Register') }}" == true)
+            if(window.location.hash == '#register-tab' || "{{ request()->routeIs('Frontend.Register') }}" == true)
             {
                 $("#login-tab, #login_li").removeClass("active");
                 $("#register-tab, #register_li").addClass("active");
