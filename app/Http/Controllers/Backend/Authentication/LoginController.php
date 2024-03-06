@@ -23,7 +23,7 @@ class LoginController extends Controller
     {
         if(!$request->isMethod('POST'))
         {
-            abort(405, 'Method not allowed');
+            abort(403, 'Method not allowed');
         }
         if($request->ajax() || $request->wantsJson())
         {
