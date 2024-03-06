@@ -23,12 +23,12 @@ class LoginController extends Controller
     {
         if($request->ajax() || $request->wantsJson())
         {
-            $email = (string) $request->isMethod('post') ? $request->input('email').$request->method() : null;
+            $email = (string) $request->isMethod('post') ? $request->input('email') : null;
             $password = (string) $request->isMethod('post') ? $request->input('password') : null;
             $users = new Users();
             try
             {
-                return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...', 'user' => $users->login($email, $password)]);
+                return response()->json(['success' => 'Ana səhifəyə yönləndirilirsiniz...', 'user' => $users->login($email, $password), 'method' => $request->method()]);
             }
             catch(AuthenticationException $e)
             {
