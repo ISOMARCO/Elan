@@ -46,6 +46,6 @@ class LoginController extends Controller
     {
         $users = new Users();
         $users->logout();
-        return redirect()->route('Backend_Login');
+        return redirect()->route('Backend.Login');
     }
 }
