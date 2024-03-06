@@ -25,6 +25,7 @@ class LoginController extends Controller
         {
             $email = $request->input('email');
             $password = $request->input('password');
+            $request->only('email', 'password');
             $users = new Users();
             try
             {
