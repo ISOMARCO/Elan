@@ -15,14 +15,14 @@ class IsLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-//        if(!Session::has('id') && $request->route()->getName() != 'Backend.Logout' && $request->route()->getName() != 'Backend.Login' && $request->route()->getName() != 'Backend.LoginAction')
-//        {
-//            return redirect()->route('Backend.Login');
-//        }
-//        if(Session::has('id') && $request->route()->getName() == 'Backend.Login')
-//        {
-//            return redirect()->route('Backend.Home');
-//        }
+        if(!Session::has('id') && ($request->route()->getName() != 'Backend.Logout' || $request->route()->getName() != 'Backend.Login' || $request->route()->getName() != 'Backend.LoginAction'))
+        {
+            return redirect()->route('Backend.Login');
+        }
+        if(Session::has('id') && $request->route()->getName() == 'Backend.Login')
+        {
+            return redirect()->route('Backend.Home');
+        }
         return $next($request);
     }
 }
