@@ -7,6 +7,7 @@ class HomeController extends Controller
 {
     public function main() : string
     {
+        echo "ok";
         return view('Frontend.Home.main');
     }
 }
