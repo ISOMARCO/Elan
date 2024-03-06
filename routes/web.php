@@ -26,6 +26,6 @@ Route::get('/pusher', function(){
 });
 Route::get('/getPusherAppKey', function () {
     return response()->json([
-        'pusher_app_key' => env('PUSHER_APP_KEY', '123')
+        'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
     ]);
 });
