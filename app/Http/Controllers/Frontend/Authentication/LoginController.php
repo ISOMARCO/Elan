@@ -2,9 +2,9 @@
 namespace App\Http\Controllers\Frontend\Authentication;
 use App\Http\Controllers\Controller;
 use App\Models\Frontend\Authentication\Users;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
@@ -65,10 +65,10 @@ class LoginController extends Controller
         }
     }
 
-    public function logout()
+    public function logout() : RedirectResponse
     {
-        Session::flush();
-        Cookie::queue(Cookie::forget('Remember_Me'));
+        $users = new Users();
+        $users->logout();
         return redirect()->back();
     }
 }

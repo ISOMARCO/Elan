@@ -145,4 +145,11 @@ class Users extends Model
         ]);
         return true;
     }
+
+    public function logout() : bool
+    {
+        Session::flush();
+        Cookie::queue(Cookie::forget('Remember_Me'));
+        return true;
+    }
 }
