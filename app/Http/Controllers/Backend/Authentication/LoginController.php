@@ -21,7 +21,7 @@ class LoginController extends Controller
      */
     public function loginAction(Request $request) : RedirectResponse|JsonResponse
     {
-        if($request->ajax() && $request->wantsJson())
+        if($request->ajax() || $request->wantsJson())
         {
             $email = $request->post('email');
             $password = $request->post('password');
