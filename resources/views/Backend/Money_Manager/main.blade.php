@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{route('Backend_Home')}}">Ana Səhifə</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('Backend.Home')}}">Ana Səhifə</a></li>
                         <li class="breadcrumb-item active">Kateqoriyalar</li>
                     </ol>
                 </div>
