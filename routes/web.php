@@ -24,3 +24,8 @@ Route::redirect('/admin/home', '/admin/');
 Route::get('/pusher', function(){
     return view('pusher');
 });
+Route::get('/getPusherAppKey', function () {
+    return response()->json([
+        'pusher_app_key' => env('PUSHER_APP_KEY')
+    ]);
+});
