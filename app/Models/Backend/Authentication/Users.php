@@ -13,7 +13,7 @@ class Users extends Model
 {
     use HasFactory;
     protected $table = 'Users';
-    public function login(string|NULL $email = NULL, string|NULL $password = NULL) :  bool|object
+    public function login(string|NULL $email = NULL, string|NULL $password = NULL) :  bool
     {
         if(empty($email) || empty($password))
         {
@@ -40,8 +40,7 @@ class Users extends Model
         }
         Session::put('id', $row->Id);
         Cache::store('redis')->put('userInfo_'.$row->Id, json_encode($row, true), (60*60*24*365));
-        #return true;
-        return $row;
+        return true;
     }
 
     public function logout() : bool
