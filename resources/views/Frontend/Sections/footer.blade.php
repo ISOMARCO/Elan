@@ -161,7 +161,7 @@
 <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 <script>
     Pusher.logToConsole = false;
-    var pusher = new Pusher("71182114e39989428ba8", {
+    var pusher = new Pusher("{{env('PUSHER_APP_KEY')}}", {
         cluster: "us2"
     });
     var channel = pusher.subscribe('my-channel');
