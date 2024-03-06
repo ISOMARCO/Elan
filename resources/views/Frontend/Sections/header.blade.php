@@ -12,6 +12,12 @@
                         <span>Login / Register</span>
                     </a>
                 @endif
+                @if(Session::has('admin'))
+                    <a href="{{route('Backend.Home')}}" target="_blank" class="header-widget header-user">
+                        <img src="{{asset('Assets/Frontend/images/user.png')}}" alt="user">
+                        <span>Admin Panel</span>
+                    </a>
+                @endif
                 <button type="button" class="header-widget search-btn"><i class="fas fa-search"></i></button>
             </div>
             <form class="header-form">
