@@ -161,7 +161,7 @@
             $("#login_btn").on("click", function() {
                 $.ajax({
                     type: "post",
-                    url: "{{url('login/loginAction')}}",
+                    url: "{{route('Frontend.LoginAction')}}",
                     data: $("#login_form").serialize(),
                     dataType: "json",
                     beforeSend: function() {
