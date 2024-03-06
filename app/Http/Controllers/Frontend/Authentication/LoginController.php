@@ -56,6 +56,10 @@ class LoginController extends Controller
             }
             $userInfo = $user[1];
             Session::put('id', $userInfo->Id);
+            if($userInfo->Role == 'ADMIN')
+            {
+                Session::put('admin', 1);
+            }
             Cache::store('redis')->put('user_info_'.$userInfo->Id, $userInfo, 360);
             return response()->json(['success' => 'Giriş məlumatları doğrudur. Ana səhifəyə yönləndirilirsiniz...']);
         }
