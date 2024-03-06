@@ -21,9 +21,9 @@ class LoginController extends Controller
      */
     public function loginAction(Request $request) : RedirectResponse|JsonResponse
     {
-        if($request->isMethod('POST'))
+        if(!$request->isMethod('POST'))
         {
-            abort(403, 'Method not allowed');
+            abort(405, 'Method not allowed');
         }
         if($request->ajax() || $request->wantsJson())
         {
