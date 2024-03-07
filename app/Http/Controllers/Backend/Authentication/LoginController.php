@@ -32,7 +32,7 @@ class LoginController extends Controller
             $users = new Users();
             try
             {
-                return response()->json(['ok' => true, 'success' => 'Ana səhifəyə yönləndirilirsiniz...', 'user' => $users->login($email, $password)]);
+                return response()->json(['ok' => true, 'success' => __('Backend/Authentication/authentication.Login_Success_Message'), 'user' => $users->login($email, $password)]);
             }
             catch(AuthenticationException $e)
             {
