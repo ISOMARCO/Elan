@@ -17,11 +17,13 @@ class IsLogin
     {
         if(!Session::has('id') && ($request->route()->getName() != 'Backend.Logout' || $request->route()->getName() != 'Backend.Login' || $request->route()->getName() != 'Backend.LoginAction'))
         {
-            return redirect()->route('Backend.Login');
+            #return redirect()->route('Backend.Login');
+            echo '1';
         }
         if(Session::has('id') && $request->route()->getName() == 'Backend.Login')
         {
-            return redirect()->route('Backend.Home');
+            echo '2';
+            #return redirect()->route('Backend.Home');
         }
         return $next($request);
     }
