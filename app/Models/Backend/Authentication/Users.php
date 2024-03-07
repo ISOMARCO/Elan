@@ -24,7 +24,7 @@ class Users extends Model
             throw new AuthenticationException(1000);
         }
         $password = hash('sha256', md5($password));
-        $user = DB::table($this->table)->where('Password', '=', $password)->where('Email', '=', $email)->where('Role', 'ADMIN');
+        $user = DB::table($this->table)->select(['Id', 'Name', 'Surname', 'Default_Language', 'Role', 'Phone_Number', 'Last_Login_Date', 'Registration_Date', 'Status', 'Email'])->where('Password', '=', $password)->where('Email', '=', $email)->where('Role', 'ADMIN');
         if($user->count() == 0)
         {
             throw new AuthenticationException(1002);
