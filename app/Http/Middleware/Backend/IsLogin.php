@@ -18,7 +18,7 @@ class IsLogin
         if(!Session::has('id') && ($request->route()->getName() != 'Backend.Logout' || $request->route()->getName() != 'Backend.Login' || $request->route()->getName() != 'Backend.LoginAction'))
         {
             #return redirect()->route('Backend.Login');
-            echo '1';
+            echo $request->route()->getName();
         }
         if(Session::has('id') && $request->route()->getName() == 'Backend.Login')
         {
