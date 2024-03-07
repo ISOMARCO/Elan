@@ -5,4 +5,4 @@ use App\Http\Middleware\VerifyCsrfToken;
 use App\Http\Middleware\Backend\IsLogin;
 
 
-Route::match(['post', 'get'], '/login/loginAction', [LoginController::class, 'loginAction'])->name('Api.Backend.LoginAction')->withoutMiddleware([VerifyCsrfToken::class, IsLogin::class]);
+Route::match(['post', 'get'], '/login/loginAction', [LoginController::class, 'loginAction'])->name('Api.Backend.LoginAction');
