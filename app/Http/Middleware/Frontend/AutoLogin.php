@@ -11,11 +11,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class AutoLogin
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
     public function handle(Request $request, Closure $next): Response
     {
         if(!Session::has('id') && Cookie::has('Remember_Me') && $request->route()->getName() !== 'Frontend.Logout')
