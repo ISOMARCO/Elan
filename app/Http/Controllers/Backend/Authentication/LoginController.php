@@ -8,6 +8,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use App\Exceptions\Backend\Authentication\AuthenticationException;
 use Illuminate\Http\RedirectResponse;
+use PHPOpenSourceSaver\JWTAuth;
 class LoginController extends Controller
 {
     public function main() : String
@@ -27,12 +28,13 @@ class LoginController extends Controller
         }
         if($request->ajax() || $request->wantsJson())
         {
+            $token = JWTAuth::parseToken()->authenticate();
             $email = (string) $request->input('email');
             $password = (string) $request->input('password');
             $users = new Users();
             try
             {
-                return response()->json(['ok' => true, 'success' => __('Backend/Authentication/authentication.Login_Success_Message'), 'user' => $users->login($email, $password)]);
+                return response()->json(['ok' => true, 'success' => __('Backend/Authentication/authentication.Login_Success_Message'), 'user' => $users->login($email, $password), '_token' => $token]);
             }
             catch(AuthenticationException $e)
             {
