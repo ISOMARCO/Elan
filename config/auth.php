@@ -39,10 +39,6 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
-        'api' => [
-            'driver' => 'jwt',
-            'provider' => 'Backend_Users'
         ]
     ],
 
@@ -67,10 +63,6 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
-        ],
-        'Backend_Users' => [
-            'driver' => 'database',
-            'model' => App\Models\Backend\Authentication\Users::class
         ]
         // 'users' => [
         //     'driver' => 'database',
