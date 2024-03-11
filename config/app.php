@@ -167,7 +167,8 @@ return [
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\Backend\TimelineServiceProvider::class
+        App\Providers\Backend\TimelineServiceProvider::class,
+        PHPOpenSourceSaver\JWTAuth\Providers\LaravelServiceProvider::class
     ])->toArray(),
 
     /*
