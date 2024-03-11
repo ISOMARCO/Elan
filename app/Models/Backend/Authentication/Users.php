@@ -8,11 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 
-class Users extends Model
+class Users extends Model implements JWTSubject
 {
     use HasFactory;
     protected $table = 'Users';
+
     public function login(string|NULL $email = NULL, string|NULL $password = NULL) :  object
     {
         if(empty($email) || empty($password))
@@ -48,5 +50,15 @@ class Users extends Model
         Cache::store('redis')->forget('userInfo_'.Session::get('id'));
         Session::flush();
         return true;
+    }
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }
