@@ -6,7 +6,6 @@ use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
 use App\Http\Controllers\Backend\Home\HomeController as BackendHomeController;
-use Illuminate\Support\Facades\Mail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
