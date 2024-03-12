@@ -163,12 +163,6 @@
                                 <textarea class="form-control" placeholder="Describe your message"></textarea>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label class="form-label">ad tag</label>
-                                <textarea class="form-control" placeholder="Maximum of 15 keywords"></textarea>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="adpost-card">
