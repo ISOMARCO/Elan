@@ -29,6 +29,3 @@ Route::get('/getPusherAppKey', function () {
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
     ]);
 });
-Route::get('/post', function(){
-    return view('Frontend.Post.main');
-});
