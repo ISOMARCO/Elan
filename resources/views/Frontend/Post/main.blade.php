@@ -273,66 +273,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="adpost-card">
-                    <div class="adpost-title">
-                        <h3>Plan Information</h3>
-                    </div>
-                    <ul class="adpost-plan-list">
-                        <li>
-                            <div class="adpost-plan-content">
-                                <h6>Free Plan - <span>Submit 5 Ad Listings</span>
-                                </h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Delectus minus Eaque corporis accusantium incidunt officiis deleniti.</p>
-                            </div>
-                            <div class="adpost-plan-meta">
-                                <h3>$00.00</h3>
-                                <button class="btn btn-outline">
-                                    <span>Select</span>
-                                </button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="adpost-plan-content">
-                                <h6>Standerd Plan - <span>Submit 10 Ad Listings</span>
-                                </h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Delectus minus Eaque corporis accusantium incidunt officiis deleniti.</p>
-                            </div>
-                            <div class="adpost-plan-meta">
-                                <h3>$23.00</h3>
-                                <button class="btn btn-outline">
-                                    <span>Select</span>
-                                </button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="adpost-plan-content">
-                                <h6>Premium Plan - <span>Unlimited Ad Listings</span>
-                                </h6>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Delectus minus Eaque corporis accusantium incidunt officiis deleniti.</p>
-                            </div>
-                            <div class="adpost-plan-meta">
-                                <h3>$43.00</h3>
-                                <button class="btn btn-outline">
-                                    <span>Select</span>
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="adpost-card pb-2">
-                    <div class="adpost-agree">
-                        <div class="form-group">
-                            <input type="checkbox" class="form-check">
-                        </div>
-                        <p>Send me Trade Email/SMS Alerts for people looking to buy mobile handsets in www By clicking "Post", you agree to our <a href="#">Terms of Use</a>and <a href="#">Privacy Policy</a>and acknowledge that you are the rightful owner of this item and using Trade to find a genuine buyer. </p>
-                    </div>
-                    <div class="form-group text-right">
-                        <button class="btn btn-inline">
-                            <i class="fas fa-check-circle"></i>
-                            <span>published your ad</span>
-                        </button>
-                    </div>
-                </div>
             </form>
         </div>
     </section>
