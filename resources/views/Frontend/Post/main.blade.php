@@ -122,7 +122,7 @@
     </section>
     <section class="adpost-part">
         <div class="container">
-            <form class="adpost-form">
+            <form class="adpost-form" enctype="multipart/form-data">
                 <div class="adpost-card">
                     <div class="adpost-title">
                         <h3>Ad Information</h3>
