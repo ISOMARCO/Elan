@@ -74,16 +74,6 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="dash-header-alert alert fade show">
-                            <p>From your account dashboard. you can easily check & view your recent orders, manage your shipping and billing addresses and Edit your password and account details.</p>
-                            <button data-dismiss="alert">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
                         <div class="dash-menu-list">
                             <ul>
                                 <li>
