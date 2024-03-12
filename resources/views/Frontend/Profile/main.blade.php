@@ -30,7 +30,7 @@
                         <div class="dash-header-left">
                             <div class="dash-avatar">
                                 <a href="#">
-                                    <img src="images/avatar/01.jpg" alt="avatar">
+                                    <img src="{{asset('Assets/Frontend/images/avatar/01.jpg')}}" alt="avatar">
                                 </a>
                             </div>
                             <div class="dash-intro">
