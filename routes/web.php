@@ -30,11 +30,6 @@ Route::get('/getPusherAppKey', function () {
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
     ]);
 });
-
-Route::get('/sendEmail', function(){
-    $userEmail = 'ismayilnagiyev100@gmail.com';
-    $userName = 'Recipient Name';
-    Mail::raw('Welcome to our website!', function($message) use ($userEmail, $userName) {
-        $message->to($userEmail)->subject('Welcome '.$userName)->from('info@iso.com.az', 'Your Name');
-    });
+Route::get('/profile', function(){
+    return view('Frontend.Profile.main');
 });
