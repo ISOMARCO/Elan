@@ -122,9 +122,7 @@
     </section>
     <section class="adpost-part">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <form class="adpost-form">
+            <form class="adpost-form">
                         <div class="adpost-card">
                             <div class="adpost-title">
                                 <h3>Ad Information</h3>
@@ -336,8 +334,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
         </div>
     </section>
     @include('Frontend.Sections.footer')
