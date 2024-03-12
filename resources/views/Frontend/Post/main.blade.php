@@ -276,7 +276,7 @@
                 <div class="form-group text-right">
                     <button class="btn btn-inline">
                         <i class="fas fa-check-circle"></i>
-                        <span>published your ad</span>
+                        <span>Publish your ad</span>
                     </button>
                 </div>
             </form>
