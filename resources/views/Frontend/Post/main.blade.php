@@ -140,7 +140,7 @@
                                 <input type="file" class="form-control">
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="form-label">Product Category</label>
                                 <select class="form-control custom-select">
@@ -151,81 +151,10 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="form-label">Price</label>
                                 <input type="number" class="form-control" placeholder="Enter your pricing amount">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <div class="form-group">
-                                <ul class="form-check-list">
-                                    <li>
-                                        <label class="form-label">price condition</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="fix-check">
-                                        <label for="fix-check" class="form-check-text">fixed</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="nego-check">
-                                        <label for="nego-check" class="form-check-text">negotiable</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="day-check">
-                                        <label for="day-check" class="form-check-text">daily</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="week-check">
-                                        <label for="week-check" class="form-check-text">weekly</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="month-check">
-                                        <label for="month-check" class="form-check-text">monthly</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="year-check">
-                                        <label for="year-check" class="form-check-text">yearly</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <div class="form-group">
-                                <ul class="form-check-list">
-                                    <li>
-                                        <label class="form-label">ad category</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="sale-check">
-                                        <label for="sale-check" class="flat-badge sale">sale</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="rent-check">
-                                        <label for="rent-check" class="flat-badge rent">rent</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="book-check">
-                                        <label for="book-check" class="flat-badge booking">booking</label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4">
-                            <div class="form-group">
-                                <ul class="form-check-list">
-                                    <li>
-                                        <label class="form-label">product condition</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="use-check">
-                                        <label for="use-check" class="form-check-text">used</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="form-check" id="new-check">
-                                        <label for="new-check" class="form-check-text">new</label>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                         <div class="col-lg-12">
