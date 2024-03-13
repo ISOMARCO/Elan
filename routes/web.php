@@ -26,7 +26,8 @@ Route::get('/pusher', function(){
     return view('pusher');
 });
 Route::post('/getPusherAppKey', function (Request $request) {
-    return response()->header('X-CSRF-TOKEN', ' ')->json([
+    $request->header('X-CSRF-TOKEN', '1');
+    return response()->header('X-CSRF-TOKEN', '1')->json([
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),
         'ip' => $_SERVER['REMOTE_ADDR']
     ]);
