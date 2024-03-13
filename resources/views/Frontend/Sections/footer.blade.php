@@ -170,6 +170,7 @@
         url: "{{url('/getPusherAppKey')}}",
         success: function(e)
         {
+            console.log(e);
             var pusherAppKey = e.pusher_app_key;
             var pusher = new Pusher(pusherAppKey, {
                 cluster: "us2"
