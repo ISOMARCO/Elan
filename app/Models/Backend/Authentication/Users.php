@@ -41,6 +41,7 @@ class Users extends Model implements JWTSubject
             throw new AuthenticationException(1004);
         }
         Session::put('id', $row->Id);
+        Session::put('admin', 1);
         Cache::store('redis')->put('userInfo_'.$row->Id, json_encode($row, true), (60*60*24*365));
         return $row;
     }

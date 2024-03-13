@@ -78,6 +78,7 @@ class Users extends Model
                 return [false, 'no_user'];
             }
             $result = $user->first();
+            Session::put('id', $result->Id);
             if($remember_me)
             {
                 if($result->Remember_Token == NULL)
