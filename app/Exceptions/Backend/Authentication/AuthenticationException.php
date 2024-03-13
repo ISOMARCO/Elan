@@ -22,7 +22,7 @@ class AuthenticationException extends Exception
         $codes = [
             '1000' => __('Backend/Authentication/authentication.Wrong_Email'),
             '1001' => 'Bütün xanaları doldurmalısınız',
-            '1002' => 'Email və ya şifrə yanlışdır',
+            '1002' => __('Backend/Authentication/authentication.Wrong_Login_Information'),
             '1003' => 'Hesabınız banlanıb',
             '1004' => 'Hesabınız deaktiv edilib'
         ];
