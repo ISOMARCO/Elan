@@ -161,22 +161,41 @@
 <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 <script>
     Pusher.logToConsole = false;
-    fetch('/getPusherAppKey', {
-        method: 'post',
-        body: {
+    $.ajax({
+        type : "post",
+        data: {
             "_token" : "{{csrf_token()}}"
+        },
+        url: "{{url('/getPusherAppKey')}}",
+        success: function(e)
+        {
+            var pusherAppKey = data.pusher_app_key;
+            var pusher = new Pusher(pusherAppKey, {
+                cluster: "us2"
+            });
+            var channel = pusher.subscribe('my-channel');
+            channel.bind('my-event', function(data) {
+                $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
+                $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);
+            });
         }
-    })
-    .then(response => response.json())
-    .then(data => {
-        var pusherAppKey = data.pusher_app_key;
-        var pusher = new Pusher(pusherAppKey, {
-            cluster: "us2"
-        });
-        var channel = pusher.subscribe('my-channel');
-        channel.bind('my-event', function(data) {
-            $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
-            $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);
-        });
     });
+    {{--fetch('/getPusherAppKey', {--}}
+    {{--    method: 'post',--}}
+    {{--    body: {--}}
+    {{--        "_token" : "{{csrf_token()}}"--}}
+    {{--    }--}}
+    {{--})--}}
+    {{--.then(response => response.json())--}}
+    {{--.then(data => {--}}
+    {{--    var pusherAppKey = data.pusher_app_key;--}}
+    {{--    var pusher = new Pusher(pusherAppKey, {--}}
+    {{--        cluster: "us2"--}}
+    {{--    });--}}
+    {{--    var channel = pusher.subscribe('my-channel');--}}
+    {{--    channel.bind('my-event', function(data) {--}}
+    {{--        $("#notification_count").html(parseInt($("#notification_count").text()) + 1);--}}
+    {{--        $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);--}}
+    {{--    });--}}
+    // });
 </script>
