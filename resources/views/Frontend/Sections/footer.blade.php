@@ -166,6 +166,7 @@
         data: {
             "_token" : "{{csrf_token()}}"
         },
+        dataType: "json",
         url: "{{url('/getPusherAppKey')}}",
         success: function(e)
         {
