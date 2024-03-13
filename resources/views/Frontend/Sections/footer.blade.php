@@ -161,25 +161,31 @@
 <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 <script>
     Pusher.logToConsole = false;
-    fetch('/getPusherAppKey', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        body: @csrf
-    })
-    .then(response => response.json())
-    .then(data => {
-        var pusherAppKey = data.pusher_app_key;
-        console.log(data);
-        var pusher = new Pusher(pusherAppKey, {
-            cluster: "us2"
+    fetch('/getCsrfToken')
+        .then(response => response.json())
+        .then(token => {
+            const csrfToken = token.csrf_token;
+            fetch('/getPusherAppKey', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    _token: csrfToken
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                var pusherAppKey = data.pusher_app_key;
+                console.log(data);
+                var pusher = new Pusher(pusherAppKey, {
+                    cluster: "us2"
+                });
+                var channel = pusher.subscribe('my-channel');
+                channel.bind('my-event', function(data) {
+                    $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
+                    $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);
+                });
+            });
         });
-        var channel = pusher.subscribe('my-channel');
-        channel.bind('my-event', function(data) {
-            $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
-            $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);
-        });
-    });
 </script>

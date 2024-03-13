@@ -24,6 +24,9 @@ Route::redirect('/admin/home', '/admin/');
 Route::get('/pusher', function(){
     return view('pusher');
 });
+Route::get('/getCsrfToken', function() {
+    return response()->json(['csrf_token' => csrf_token()]);
+});
 Route::middleware([VerifyCsrfToken::class])->post('/getPusherAppKey', function () {
     return response()->json([
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),
