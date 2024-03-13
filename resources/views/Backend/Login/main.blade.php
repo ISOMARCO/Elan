@@ -32,12 +32,12 @@
                     <div class="row">
                         <div class="col-8">
                             <span id="progress" style="display: none;">
-                                Yüklənir &nbsp;&nbsp;<i class="fas fa-spinner fa-spin"></i>
+                                {{__('Backend/Authentication/authentication.Loading')}} &nbsp;&nbsp;<i class="fas fa-spinner fa-spin"></i>
                             </span>
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="button" class="btn btn-primary btn-block" id="loginBtn">Daxil ol</button>
+                            <button type="button" class="btn btn-primary btn-block" id="loginBtn">{{__('Backend/Authentication/authentication.Login')}}</button>
                         </div>
                         <!-- /.col -->
                     </div>
