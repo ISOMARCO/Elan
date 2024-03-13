@@ -170,12 +170,12 @@
         url: "{{url('/getPusherAppKey')}}",
         success: function(e)
         {
-            var pusherAppKey = data.pusher_app_key;
+            var pusherAppKey = e.pusher_app_key;
             var pusher = new Pusher(pusherAppKey, {
                 cluster: "us2"
             });
             var channel = pusher.subscribe('my-channel');
-            channel.bind('my-event', function(data) {
+            channel.bind('my-event', function(datas) {
                 $("#notification_count").html(parseInt($("#notification_count").text()) + 1);
                 $("#notification_count1").html(parseInt($("#notification_count1").text()) + 1);
             });
