@@ -161,7 +161,13 @@
 <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
 <script>
     Pusher.logToConsole = false;
-    fetch('/getPusherAppKey')
+    fetch('/getPusherAppKey', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({'_token' : {{csrf_token()}})
+    })
     .then(response => response.json())
     .then(data => {
         var pusherAppKey = data.pusher_app_key;
