@@ -20,7 +20,7 @@ class AuthenticationException extends Exception
     protected function errorCodeMessage() : String
     {
         $codes = [
-            '1000' => 'Email adresi düzgün yazın',
+            '1000' => __('Backend/Authentication/authentication.Wrong_Email'),
             '1001' => 'Bütün xanaları doldurmalısınız',
             '1002' => 'Email və ya şifrə yanlışdır',
             '1003' => 'Hesabınız banlanıb',

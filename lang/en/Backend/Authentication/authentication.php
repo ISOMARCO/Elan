@@ -2,5 +2,6 @@
 return [
     'Login_Success_Message' => 'You are redirected to the home page...',
     'Loading' => 'Loading',
-    'Login' => 'Login'
+    'Login' => 'Login',
+    'Wrong_Email' => 'Write the correct email address'
 ];
