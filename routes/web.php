@@ -25,11 +25,12 @@ Route::get('/pusher', function(){
     return view('pusher');
 });
 Route::get('/getPusherAppKey', function () {
-    if($_SERVER['REMOTE_ADDR'] == '194.163.165.34')
-    {
+    //if($_SERVER['REMOTE_ADDR'] == '194.163.165.34')
+    //{
         return response()->json([
-            'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
+            'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),
+            'ip' => $_SERVER['REMOTE_ADDR']
         ]);
-    }
-    abort(403, 'Unauthorized');
+    //}
+    //abort(403, 'Unauthorized');
 });
