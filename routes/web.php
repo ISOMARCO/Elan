@@ -6,6 +6,7 @@ use App\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\Backend\IsLogin as Backend_IsLogin;
 use App\Http\Controllers\Backend\Home\HomeController as BackendHomeController;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,8 +25,8 @@ Route::redirect('/admin/home', '/admin/');
 Route::get('/pusher', function(){
     return view('pusher');
 });
-Route::post('/getPusherAppKey', function () {
-    return response()->json([
+Route::post('/getPusherAppKey', function (Request $request) {
+    return response()->header('X-CSRF-TOKEN', ' ')->json([
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),
         'ip' => $_SERVER['REMOTE_ADDR']
     ]);
