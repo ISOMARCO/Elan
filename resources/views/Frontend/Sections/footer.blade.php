@@ -164,9 +164,9 @@
     fetch('/getPusherAppKey', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({'_token' : {{csrf_token()}} })
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
     })
     .then(response => response.json())
     .then(data => {
