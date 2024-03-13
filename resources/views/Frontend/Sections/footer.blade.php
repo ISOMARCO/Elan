@@ -166,7 +166,7 @@
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({'_token' : {{csrf_token()}})
+        body: JSON.stringify({'_token' : {{csrf_token()}} })
     })
     .then(response => response.json())
     .then(data => {
