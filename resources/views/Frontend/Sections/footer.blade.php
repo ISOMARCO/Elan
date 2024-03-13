@@ -163,7 +163,9 @@
     Pusher.logToConsole = false;
     fetch('/getPusherAppKey', {
         method: 'post',
-        body: "@csrf"
+        body: {
+            "_token" : "{{csrf_token()}}"
+        }
     })
     .then(response => response.json())
     .then(data => {
