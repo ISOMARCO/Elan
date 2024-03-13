@@ -164,7 +164,7 @@
     $.ajax({
         type : "post",
         data: {
-            "_token" : "{{csrf_token()}}"
+            _token : "{{csrf_token()}}"
         },
         dataType: "json",
         url: "{{url('/getPusherAppKey')}}",
