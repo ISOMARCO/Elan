@@ -24,7 +24,7 @@ Route::redirect('/admin/home', '/admin/');
 Route::get('/pusher', function(){
     return view('pusher');
 });
-Route::match(['post', 'get'], '/getPusherAppKey', function () {
+Route::post('/getPusherAppKey', function () {
     return response()->json([
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),
         'ip' => $_SERVER['REMOTE_ADDR']
