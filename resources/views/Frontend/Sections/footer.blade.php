@@ -165,6 +165,7 @@
     .then(response => response.json())
     .then(data => {
         var pusherAppKey = data.pusher_app_key;
+        alert(pusherAppKey);
         var pusher = new Pusher(pusherAppKey, {
             cluster: "us2"
         });
