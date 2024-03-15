@@ -79,6 +79,10 @@ class Users extends Model
             }
             $result = $user->first();
             Session::put('id', $result->Id);
+            if($result->Role == 'ADMIN')
+            {
+                Session::put('admin', 1);
+            }
             if($remember_me)
             {
                 if($result->Remember_Token == NULL)
