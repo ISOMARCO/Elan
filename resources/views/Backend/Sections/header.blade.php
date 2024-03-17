@@ -230,6 +230,12 @@
                                 <p>Kateqoriyalar</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('Backend.Ads_CategorySettings')}}" class="nav-link">
+                                <i class="fas fa-cogs nav-icon"></i>
+                                <p>Kateqoriya parametrləri</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
