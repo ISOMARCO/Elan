@@ -21,9 +21,6 @@ Route::redirect('/home', '/');
 Route::match(['post', 'get'],'/telegram_webhook', [TelegramWebhookController::class, 'main'])->withoutMiddleware([VerifyCsrfToken::class]);
 Route::middleware([Backend_IsLogin::class])->get('/admin/', [BackendHomeController::class, 'main'])->name('Backend.Home');
 Route::redirect('/admin/home', '/admin/');
-Route::get('/pusher', function(){
-    return view('pusher');
-});
 Route::post('/getPusherAppKey', function () {
     return response()->json([
         'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),

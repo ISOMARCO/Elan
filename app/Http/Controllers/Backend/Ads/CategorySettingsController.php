@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class CategorySettingsController extends Controller
 {
-
+    public function main()
+    {
+        return view('Backend.Ads.category_settings');
+    }
 }
