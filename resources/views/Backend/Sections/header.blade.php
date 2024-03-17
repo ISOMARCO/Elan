@@ -219,6 +219,23 @@
                     <a href="javascript:void(0)" class="nav-link">
                         <i class="fas fa-money-bill-alt nav-icon"></i>
                         <p>
+                            Elanlar
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('Backend.Ads_Category')}}" class="nav-link">
+                                <i class="fas fa-cubes nav-icon"></i>
+                                <p>Kateqoriyalar</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0)" class="nav-link">
+                        <i class="fas fa-money-bill-alt nav-icon"></i>
+                        <p>
                             Pul idarəsi
                             <i class="fas fa-angle-left right"></i>
                         </p>
