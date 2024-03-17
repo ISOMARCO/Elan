@@ -217,7 +217,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link">
-                        <i class="fas fa-money-bill-alt nav-icon"></i>
+                        <i class="fas fa-box nav-icon"></i>
                         <p>
                             Elanlar
                             <i class="fas fa-angle-left right"></i>
@@ -234,7 +234,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link">
-                        <i class="fas fa-money-bill-alt nav-icon"></i>
+                        <i class="fas fa-wallet nav-icon"></i>
                         <p>
                             Pul idarəsi
                             <i class="fas fa-angle-left right"></i>
