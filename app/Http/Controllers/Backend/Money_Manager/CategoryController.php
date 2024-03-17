@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function main(Request $request) : string
+    public function main(Request $request)
     {
         return view('Backend.Money_Manager.main');
     }
