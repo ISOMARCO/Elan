@@ -65,6 +65,11 @@ class RouteServiceProvider extends ServiceProvider
                 ->prefix('/admin/moneymanager')
                 ->namespace($this->namespace."\Backend")
                 ->group(base_path('routes/Backend/Money_Manager/money_manager.php'));
+
+            Route::middleware('backend_ads')
+                ->prefix('/admin/ads')
+                ->namespace($this->namespace."\Backend")
+                ->group(base_path('routes/Backend/Ads/ads.php'));
         });
     }
 }
