@@ -20,9 +20,9 @@
             </div>
         </div><!-- /.container-fluid -->
     </section>
-    @include('Backend.Sections.footer')
     <section class="content">
         boyuyende kateqoriya parametri olacaq
     </section>
+    @include('Backend.Sections.footer')
 </body>
 </html>
