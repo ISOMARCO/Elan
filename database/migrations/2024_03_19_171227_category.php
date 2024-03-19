@@ -21,6 +21,7 @@ return new class extends Migration
                 $table->integer('Main_Category')->nullable();
                 $table->smallInteger('Level')->default('1');
                 $table->string('Status', 10)->default('ACTIVE');
+                $table->string('Photo', 255)->nullable();
                 $table->timestamp('Created_Date')->nullable();
             });
         }
