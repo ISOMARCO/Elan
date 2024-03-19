@@ -29,6 +29,7 @@
                 </span>
             </div>
             <div class="card-body">
+                @foreach($allCategory as $value)
                 <div class="card collapsed-card">
                     <div class="card-header">
                         <div class="row">
@@ -52,6 +53,7 @@
 
                     </div>
                 </div>
+                @endforeach
             </div>
         </div>
         @include('Backend.Ads.category_add')
