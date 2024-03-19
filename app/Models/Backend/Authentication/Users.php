@@ -6,6 +6,7 @@ use App\Exceptions\Backend\Authentication\AuthenticationException;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
@@ -42,13 +43,12 @@ class Users extends Model implements JWTSubject
         }
         Session::put('id', $row->Id);
         Session::put('admin', 1);
-        //Cache::store('redis')->put('userInfo_'.$row->Id, json_encode($row, true), (60*60*24*365));
         return $row;
     }
 
     public function logout() : bool
     {
-        Cache::store('redis')->forget('userInfo_'.Session::get('id'));
+        Cookie::queue(Cookie::forget('Remember_Me'));
         Session::flush();
         return true;
     }
