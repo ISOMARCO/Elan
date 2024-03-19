@@ -23,7 +23,6 @@ Route::middleware([Backend_IsLogin::class])->get('/admin/', [BackendHomeControll
 Route::redirect('/admin/home', '/admin/');
 Route::post('/getPusherAppKey', function () {
     return response()->json([
-        'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8'),
-        'ip' => $_SERVER['REMOTE_ADDR']
+        'pusher_app_key' => env('PUSHER_APP_KEY', '71182114e39989428ba8')
     ]);
 });
