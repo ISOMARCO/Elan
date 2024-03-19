@@ -29,42 +29,25 @@
                 </span>
             </div>
             <div class="card-body">
-                <!--<div class="row mb-3" id="searchBody" style="display:none">
-                    <div class="col-2"><input type="text" name="qaime" class="form-control" placeholder="Qaimə №" autocomplete="off"></div>
-                    <div class="col-3"><input type="date" name="tarix" id="tarix" class="form-control"></div>
-                    <div class="col-3">
-                        <select class="select2" name="musteri" style="width:100%">
-                            <option value="">Heç biri</option>
-                            <option value="Ismayil">Ismayil</option>
-
-                        </select>
-                    </div>
-                    <div class="col-3">
-                        <select class="select2" id="select2" name="erazi" style="width:100%">
-                            <option value="">Heç biri</option>
-                            <option value="Baku">Baku</option>
-                        </select>
-                    </div>
-                    <div class="col-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
-                </div>-->
                 <div class="card collapsed-card">
                     <div class="card-header">
-                        <div class="row">
-                            <div class="col-1 col-sm-1">
-                                <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>
-                            </div>
-                            <div class="col-10 col-sm-10">
-                                <h3 class="card-title font-weight-bold">
-                                    <img src="{{asset('Assets/Backend/img/Category/apple_music.svg')}}" alt="Apple Music" style="width:25px;height:25px;">
-                                    Name
-                                </h3>
-                            </div>
-                            <div class="card-tools col-1 col-sm-1">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
+{{--                        <div class="row">--}}
+{{--                            <div class="col-1 col-sm-1">--}}
+{{--                                <a href="javascript:void(0)"><i class="fas fa-arrow-circle-right fa-lg"></i></a>--}}
+{{--                            </div>--}}
+{{--                            <div class="col-10 col-sm-10">--}}
+{{--                                <h3 class="card-title font-weight-bold">--}}
+{{--                                    <img src="{{asset('Assets/Backend/img/Category/apple_music.svg')}}" alt="Apple Music" style="width:25px;height:25px;">--}}
+{{--                                    Name--}}
+{{--                                </h3>--}}
+{{--                            </div>--}}
+{{--                            <div class="card-tools col-1 col-sm-1">--}}
+{{--                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">--}}
+{{--                                    <i class="fas fa-plus"></i>--}}
+{{--                                </button>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+                        deneme
                     </div>
                     <div class="card-body">
 
