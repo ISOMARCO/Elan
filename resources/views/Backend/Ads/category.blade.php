@@ -80,6 +80,7 @@
                 </div>
             </div>
         </div>
+        @include('Backend.Ads.category_add')
     </section>
     @include('Backend.Sections.footer')
 </body>
