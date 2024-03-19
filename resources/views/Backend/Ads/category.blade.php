@@ -46,7 +46,7 @@
                         </select>
                     </div>
                     <div class="col-1"><button type="submit" class="btn btn-outline-secondary"><i class="fas fa-search"></i></button></div>
-                </div>
+                </div>-->
                 <div class="card collapsed-card">
                     <div class="card-header">
                         <div class="row">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 </div>
-            </div>-->
+            </div>
         </div>
         @include('Backend.Ads.category_add')
     </section>
