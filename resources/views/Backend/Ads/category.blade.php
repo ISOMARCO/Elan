@@ -29,7 +29,7 @@
                 </span>
             </div>
             <div class="card-body">
-                <div class="row mb-3" id="searchBody" style="display:none">
+                <!--<div class="row mb-3" id="searchBody" style="display:none">
                     <div class="col-2"><input type="text" name="qaime" class="form-control" placeholder="Qaimə №" autocomplete="off"></div>
                     <div class="col-3"><input type="date" name="tarix" id="tarix" class="form-control"></div>
                     <div class="col-3">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         @include('Backend.Ads.category_add')
     </section>
