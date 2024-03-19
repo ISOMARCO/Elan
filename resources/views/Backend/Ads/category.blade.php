@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-10 col-sm-10">
                                 <h3 class="card-title font-weight-bold">
-                                    <img src="#" alt="" style="width:25px;height:25px;">
+                                    <img src="{{asset('Assets/Backend/img/Category/apple_music.svg')}}" alt="Apple Music" style="width:25px;height:25px;">
                                     Name
                                 </h3>
                             </div>
