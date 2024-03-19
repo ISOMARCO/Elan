@@ -25,7 +25,7 @@
             <div class="card-header">
                 <span class="float-right">
                     <button data-toggle="modal" data-target="#create_category" class="btn btn-primary"><i class="fas fa-plus"></i></button>&nbsp;
-                    <button type="button" class="btn btn-outline-secondary" id="searchButton">Search <i class="fas fa-search"></i></button>
+                    <button type="button" class="btn btn-secondary" id="searchButton"><i class="fas fa-search"></i></button>
                 </span>
             </div>
             <div class="card-body">
