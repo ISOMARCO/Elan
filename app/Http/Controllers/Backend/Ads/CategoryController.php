@@ -9,7 +9,7 @@ class CategoryController extends Controller
 {
     public function main()
     {
-        return view('Backend.Ads.main');
+        return view('Backend.Ads.category');
     }
 
 }
