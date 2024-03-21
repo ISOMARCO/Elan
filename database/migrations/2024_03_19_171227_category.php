@@ -19,7 +19,6 @@ return new class extends Migration
                 $table->string('Name', 200)->nullable();
                 $table->integer('Parent')->nullable();
                 $table->integer('Main_Category')->nullable();
-                $table->string('Photo', 255)->nullable();
                 $table->smallInteger('Level')->default('1');
                 $table->string('Status', 10)->default('ACTIVE');
                 $table->string('Photo', 255)->nullable();
