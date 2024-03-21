@@ -176,7 +176,7 @@
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
                     <a href="{{route('Backend.Home')}}" class="nav-link">
-                        <i class="fas fa-home nav-icon"></i>
+                        <i class="fa-solid fa-house nav-icon"></i>
                         <p>Ana Səhifə</p>
                     </a>
                 </li>
