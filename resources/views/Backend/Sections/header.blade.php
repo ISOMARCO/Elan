@@ -257,7 +257,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="{{route('Frontend.Home')}}" class="nav-link" target="_blank">
-                        <i class="fas fa-external-link-alt nav-icon"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square nav-icon"></i>
                         <p>Sayta keçid</p>
                     </a>
                 </li>
