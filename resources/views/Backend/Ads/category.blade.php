@@ -39,7 +39,7 @@
                             <div class="col-10 col-sm-10">
                                 <h3 class="card-title font-weight-bold">
                                     <img src="{{asset('Assets/Backend/img/Category/apple_music.svg')}}" alt="Apple Music" style="width:25px;height:25px;">
-                                    Name
+                                    {{$value->Name}}
                                 </h3>
                             </div>
                             <div class="card-tools col-1 col-sm-1">
