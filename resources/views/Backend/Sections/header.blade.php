@@ -185,7 +185,7 @@
                         <i class="fa-solid fa-users nav-icon"></i>
                         <p>
                             İstifadəçilər
-                            <i class="fas fa-angle-left right"></i>
+                            <i class="fa-solid fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
