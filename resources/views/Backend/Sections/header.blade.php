@@ -240,7 +240,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link">
-                        <i class="fa-solid fa-wallet fa-beat nav-icon"></i>
+                        <i class="fa-solid fa-wallet nav-icon"></i>
                         <p>
                             Pul idarəsi
                             <i class="fa-solid fa-angle-left right"></i>
