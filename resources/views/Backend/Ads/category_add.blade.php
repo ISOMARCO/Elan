@@ -29,7 +29,7 @@
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">Close</button>
-                    <button type="button" class="btn btn-primary" id="user_add_btn">Yadda saxla <i class="fas fa-spinner fa-spin" style="display: none;" id="progress"></i></button>
+                    <button type="button" class="btn btn-primary" id="category_add_btn">Yadda saxla <i class="fas fa-spinner fa-spin" style="display: none;" id="progress"></i></button>
                 </div>
             </div>
             <!-- /.modal-content -->
