@@ -26,6 +26,15 @@
                             <label for="parent" class="input-group-text"><i class="fas fa-level-up-alt"></i></label>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <select name="status" class="form-control" id="status">
+                            <option value="ACTIVE" selected>Aktiv</option>
+                            <option value="DEACTIVE">Deaktiv</option>
+                        </select>
+                        <div class="input-group-append">
+                            <label for="status" class="input-group-text"><i class="fas fa-unlock-alt"></i></label>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">Close</button>
