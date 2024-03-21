@@ -16,19 +16,19 @@
                             <option value="BAN">Ban</option>
                         </select>
                         <div class="input-group-append">
-                            <label for="toStatus" class="input-group-text"><i class="fas fa-ban"></i></label>
+                            <label for="toStatus" class="input-group-text"><i class="fa-solid fa-user-slash"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
                         <textarea class="form-control" name="reason" id="reason" placeholder="Səbəb"></textarea>
                         <div class="input-group-append">
-                            <label for="reason" class="input-group-text"><i class="fas fa-comments"></i></label>
+                            <label for="reason" class="input-group-text"><i class="fa-solid fa-comments"></i></label>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">Close</button>
-                    <button type="button" class="btn btn-primary" id="user_ban_btn">Yadda saxla <i class="fas fa-spinner fa-spin" style="display: none;" id="progress"></i></button>
+                    <button type="button" class="btn btn-primary" id="user_ban_btn">Yadda saxla <i class="fa-solid fa-spinner fa-spin-pulse" style="display: none;" id="progress"></i></button>
                 </div>
             </div>
             <!-- /.modal-content -->
