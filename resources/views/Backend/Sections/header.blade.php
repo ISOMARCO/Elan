@@ -191,25 +191,25 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('Backend.Users')}}" class="nav-link">
-                                <i class="fas fa-list nav-icon"></i>
+                                <i class="fa-solid fa-user-check nav-icon"></i>
                                 <p>Aktiv istifadəçilər</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('Backend.Users_Deactive')}}" class="nav-link">
-                                <i class="fas fa-list nav-icon"></i>
+                                <i class="fa-solid fa-user-lock nav-icon"></i>
                                 <p>Deaktiv istifadəçilər</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('Backend.Users_Timeline')}}" class="nav-link">
-                                <i class="fas fa-history nav-icon"></i>
+                                <i class="fa-solid fa-clock-rotate-left nav-icon"></i>
                                 <p>Timeline</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="fas fa-exclamation-triangle nav-icon"></i>
+                                <i class="fa-solid fa-triangle-exclamation nav-icon"></i>
                                 <p>Xəta kodları</p>
                             </a>
                         </li>
@@ -220,7 +220,7 @@
                         <i class="fas fa-box nav-icon"></i>
                         <p>
                             Elanlar
-                            <i class="fas fa-angle-left right"></i>
+                            <i class="fa-solid fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
