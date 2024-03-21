@@ -23,6 +23,7 @@
 <script src="{{asset('Assets/Backend/js/adminlte.min.js')}}"></script>
 <!-- Sweet alert2 -->
 <script src="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+<script src="{{asset('Assets/Backend/plugins/fontawesome6.5.1/js/all.min.js')}}"></script>
 <script>
     $(document).ready(function(){
        $(document).on("click", "#header_exit_button", function(){

@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="{{asset('Assets/Backend/css/adminlte.min.css')}}">
 <!-- Sweet alert2 -->
 <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/sweetalert2/sweetalert2.min.css')}}">
+<link rel="stylesheet" href="{{asset('Assets/Backend/plugins/fontawesome6.5.1/css/all.min.css')}}">
