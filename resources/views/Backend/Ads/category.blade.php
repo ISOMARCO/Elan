@@ -4,6 +4,9 @@
     @include('Backend.Sections.head')
     <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/select2/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/select2bs4/select2-bootstrap4.min.css')}}">
+    <style>
+        #parent {width:100%!important;}
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     @include('Backend.Sections.header')
