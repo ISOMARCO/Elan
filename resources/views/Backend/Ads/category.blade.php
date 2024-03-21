@@ -67,6 +67,42 @@
             $("#parent").select2({
                 theme: 'bootstrap4'
             });
+            $(document).on("click", "#category_add_btn", function(){
+                $.ajax({
+                    type: "POST",
+                    url: "{{route('Backend.Category_Create')}}",
+                    dataType: "json",
+                    data: $("#category_add_form").serialize(),
+                    beforeSend: function()
+                    {
+                        $("#category_add_form #progress").show();
+                        $("#category_add_form input, #category_add_btn").attr("disabled", "disabled");
+                    },
+                    error: function(x)
+                    {
+                        var errorResponse = x.responseJSON || x.responseText;
+                        Swal.fire({
+                            title: '',
+                            text: errorResponse.error,
+                            icon: 'error'
+                        });
+                    },
+                    success: function(e)
+                    {
+                        Swal.fire({
+                            title: '',
+                            text: e.success,
+                            icon: 'success'
+                        });
+                        //$(".main-card").prepend(e.userCard);
+                    },
+                    complete: function()
+                    {
+                        $("#category_add_form #progress").hide();
+                        $("#category_add_form input, #category_add_btn").removeAttr("disabled");
+                    }
+                });
+            });
         });
     </script>
 </body>

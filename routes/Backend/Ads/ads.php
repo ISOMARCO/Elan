@@ -5,3 +5,4 @@ use App\Http\Controllers\Backend\Ads\CategorySettingsController;
 
 Route::get('/category', [CategoryController::class, 'main'])->name("Backend.Ads_Category");
 Route::get('/categorySettings', [CategorySettingsController::class, 'main'])->name('Backend.Ads_CategorySettings');
+Route::post('/createAction', [CategoryController::class, 'createAction'])->name('Backend.Category_Create');
