@@ -240,16 +240,16 @@
                 </li>
                 <li class="nav-item">
                     <a href="javascript:void(0)" class="nav-link">
-                        <i class="fas fa-wallet nav-icon"></i>
+                        <i class="fa-solid fa-wallet fa-beat nav-icon"></i>
                         <p>
                             Pul idarəsi
-                            <i class="fas fa-angle-left right"></i>
+                            <i class="fa-solid fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{route('Backend.Money_Manager_Category')}}" class="nav-link">
-                                <i class="fas fa-cubes nav-icon"></i>
+                                <i class="fa-solid fa-layer-group nav-icon"></i>
                                 <p>Kateqoriyalar</p>
                             </a>
                         </li>
