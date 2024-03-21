@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     @include('Backend.Sections.head')
+    <link rel="stylesheet" href="{{asset('Assets/Backend/plugins/select2/css/select2.min.css')}}">
 </head>
 <body class="hold-transition sidebar-mini">
     @include('Backend.Sections.header')
@@ -59,5 +60,11 @@
         @include('Backend.Ads.category_add')
     </section>
     @include('Backend.Sections.footer')
+    <script src="{{asset('Assets/Backend/plugins/select2/js/select2.js')}}"></script>
+    <script>
+        $(document).ready(function(){
+            $("#parent").select2();
+        });
+    </script>
 </body>
 </html>
