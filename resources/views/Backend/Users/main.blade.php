@@ -25,7 +25,7 @@
     <section class="content">
         <div class="card">
             <div class="card-header">
-                <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#user_add"><i class="fas fa-plus"></i></button>
+                <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#user_add"><i class="fa-solid fa-plus"></i></button>
             </div>
             <div class="card-body main-card">
                 @foreach($userList as $value)
@@ -34,10 +34,10 @@
                             <h3 class="card-title"><b>{{sprintf("%08d", $value->Id)}}</b> <span id="name{{$value->Id}}">{{$value->Name}}</span> <span id="surname{{$value->Id}}">{{$value->Surname}}</span></h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-plus"></i>
+                                    <i class="fa-solid fa-plus"></i>
                                 </button>
                                 <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
+                                    <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
                         </div>
@@ -48,13 +48,13 @@
                                         <td colspan="7" style="text-align: center; font-weight: bold;">İstifadəçi məlumatları</td>
                                     </tr>
                                     <tr>
-                                        <th><i class="fas fa-male"></i> Ad</th>
-                                        <th><i class="fas fa-male"></i> Soyad</th>
-                                        <th><i class="fas fa-envelope"></i> Email</th>
-                                        <th><i class="fas fa-phone"></i> Telefon nömrəsi</th>
-                                        <th><i class="fas fa-calendar-alt"></i> Qeydiyyat tarixi</th>
-                                        <th><i class="fas fa-calendar-alt"></i> Son giriş tarixi</th>
-                                        <th><i class="fas fa-venus-mars"></i> Cins</th>
+                                        <th><i class="fa-solid fa-person"></i> Ad</th>
+                                        <th><i class="fa-solid fa-person"></i> Soyad</th>
+                                        <th><i class="fa-solid fa-envelope"></i> Email</th>
+                                        <th><i class="fa-solid fa-phone"></i> Telefon nömrəsi</th>
+                                        <th><i class="fa-regular fa-calendar-days"></i> Qeydiyyat tarixi</th>
+                                        <th><i class="fa-regular fa-calendar-days"></i> Son giriş tarixi</th>
+                                        <th><i class="fa-solid fa-venus-mars"></i> Cins</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -74,8 +74,8 @@
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer">
-                            <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fas fa-ban"></i></button>
+                            <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fa-solid fa-user-pen"></i></button>
+                            <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fa-solid fa-user-slash"></i></button>
                         </div>
                         <!-- /.card-footer-->
                     </div>
