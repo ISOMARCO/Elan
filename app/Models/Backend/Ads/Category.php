@@ -12,6 +12,6 @@ class Category extends Model
 
     public function allCategory()
     {
-        return DB::table($this->table)->get();
+        return DB::table($this->table)->where('Level', 1)->get();
     }
 }

@@ -1,9 +1,9 @@
-<form method="post" id="user_add_form">
+<form method="post" id="category_add_form">
     <div class="modal fade" id="create_category">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Əlavə et</h4>
+                    <h4 class="modal-title">Kateqoriya əlavə et</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -12,31 +12,18 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="name" placeholder="Ad" id="name" autocomplete="off">
                         <div class="input-group-append">
-                            <label for="name" class="input-group-text"><i class="fas fa-user"></i></label>
+                            <label for="name" class="input-group-text"><i class="fas fa-text-width"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname" autocomplete="off">
+                        <select name="parent" class="form-control" id="parent">
+                            <option value="">-</option>
+                            @foreach($allCategory as $value)
+                                <option value="{{$value->Id}}">{{$value->Name}}</option>
+                            @endforeach
+                        </select>
                         <div class="input-group-append">
-                            <label for="surname" class="input-group-text"><i class="fas fa-user"></i></label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off">
-                        <div class="input-group-append">
-                            <label for="email" class="input-group-text"><i class="fas fa-envelope"></i></label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Şifrə">
-                        <div class="input-group-append">
-                            <label for="password" class="input-group-text"><i class="fas fa-lock"></i></label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password_repeat" id="password_repeat" placeholder="Şifrə təkrarı">
-                        <div class="input-group-append">
-                            <label for="password_repeat" class="input-group-text"><i class="fas fa-lock"></i></label>
+                            <label for="parent" class="input-group-text"><i class="fas fa-level-up-alt"></i></label>
                         </div>
                     </div>
                 </div>
