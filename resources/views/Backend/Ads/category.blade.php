@@ -78,6 +78,7 @@
                     beforeSend: function()
                     {
                         $("#category_add_form #progress").show();
+                        $("#saveIcon").hide();
                         $("#category_add_form input, #category_add_btn").attr("disabled", "disabled");
                     },
                     error: function(x)
@@ -101,6 +102,7 @@
                     complete: function()
                     {
                         $("#category_add_form #progress").hide();
+                        $("#saveIcon").show();
                         $("#category_add_form input, #category_add_btn").removeAttr("disabled");
                     }
                 });
