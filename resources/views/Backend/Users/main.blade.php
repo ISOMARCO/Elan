@@ -114,6 +114,7 @@
                 beforeSend: function()
                 {
                     $("#user_edit_form #progress").show();
+                    $("#saveIcon").hide();
                     $("#user_edit_form input, #user_edit_btn").attr("disabled", "disabled");
                 },
                 success: function(e)
@@ -141,6 +142,7 @@
                 complete: function()
                 {
                     $("#user_edit_form #progress").hide();
+                    $("#saveIcon").show();
                     $("#user_edit_form input, #user_edit_btn").removeAttr("disabled");
                 }
             });
