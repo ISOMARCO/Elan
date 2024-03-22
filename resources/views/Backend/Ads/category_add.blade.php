@@ -35,6 +35,12 @@
                             <label for="status" class="input-group-text"><i class="fa-solid fa-unlock-keyhole"></i></label>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <input type="file" id="dropzone" class="dropzone" name="img">
+{{--                        <div class="input-group-append">--}}
+{{--                            <label for="dropzone" class="input-group-text"><i class="fa-solid fa-text-width"></i></label>--}}
+{{--                        </div>--}}
+                    </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close"><i class="fa-regular fa-circle-xmark fa-lg"></i></button>

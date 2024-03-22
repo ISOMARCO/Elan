@@ -69,6 +69,7 @@
             $("#parent").select2({
                 theme: 'bootstrap4'
             });
+            Dropzone.options.
             $(document).on("click", "#category_add_btn", function(){
                 $.ajax({
                     type: "POST",
