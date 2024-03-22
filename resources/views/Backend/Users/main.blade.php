@@ -36,9 +36,6 @@
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fa-solid fa-xmark"></i>
-                                </button>
                             </div>
                         </div>
                         <div class="card-body" style="overflow: auto; white-space: nowrap;">
