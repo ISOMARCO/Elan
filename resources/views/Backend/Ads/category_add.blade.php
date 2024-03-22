@@ -12,7 +12,7 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="name" placeholder="Ad" id="name" autocomplete="off">
                         <div class="input-group-append">
-                            <label for="name" class="input-group-text"><i class="fas fa-text-width"></i></label>
+                            <label for="name" class="input-group-text"><i class="fa-solid fa-text-width"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
@@ -23,7 +23,7 @@
                             @endforeach
                         </select>
                         <div class="input-group-append">
-                            <label for="parent" class="input-group-text"><i class="fas fa-level-up-alt"></i></label>
+                            <label for="parent" class="input-group-text"><i class="fa-solid fa-arrow-turn-up"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
@@ -32,13 +32,13 @@
                             <option value="DEACTIVE">Deaktiv</option>
                         </select>
                         <div class="input-group-append">
-                            <label for="status" class="input-group-text"><i class="fas fa-unlock-alt"></i></label>
+                            <label for="status" class="input-group-text"><i class="fa-solid fa-unlock-keyhole"></i></label>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
                     <button type="button" class="btn btn-default" data-dismiss="modal" id="modal-close">Close</button>
-                    <button type="button" class="btn btn-primary" id="category_add_btn">Yadda saxla <i class="fas fa-spinner fa-spin" style="display: none;" id="progress"></i></button>
+                    <button type="button" class="btn btn-primary" id="category_add_btn">Yadda saxla <i class="fa-solid fa-spinner fa-spin-pulse" style="display: none;" id="progress"></i></button>
                 </div>
             </div>
             <!-- /.modal-content -->

@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-8">
                             <span id="progress" style="display: none;">
-                                {{__('Backend/Authentication/authentication.Loading')}} &nbsp;&nbsp;<i class="fas fa-spinner fa-spin"></i>
+                                {{__('Backend/Authentication/authentication.Loading')}} &nbsp;&nbsp;<i class="fa-solid fa-spinner fa-spin-pulse"></i>
                             </span>
                         </div>
                         <!-- /.col -->
