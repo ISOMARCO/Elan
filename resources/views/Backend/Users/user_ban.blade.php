@@ -11,7 +11,7 @@
                 <div class="modal-body">
                     <div class="input-group mb-3">
                         <select class="form-control" name="toStatus" id="toStatus">
-                            <option value="DEACTIVE" seleced="selected">Deaktiv</option>
+                            <option value="DEACTIVE" seleced>Deaktiv</option>
                             <option value="BAN">Ban</option>
                         </select>
                         <div class="input-group-append">
