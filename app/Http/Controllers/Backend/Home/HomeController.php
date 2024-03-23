@@ -31,10 +31,10 @@ class HomeController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         $output = curl_exec($ch);
-        $auth_out = json_decode($output,true);
+        #$auth_out = json_decode($output,true);
 
         print_r ($output); // For debug purposes
-        print_r ($auth_out); // For debug purposes
+        #print_r ($auth_out); // For debug purposes
         return view('Backend.Home.main');
     }
 }
