@@ -28,28 +28,6 @@ class Users extends Model
     {
         $this->$method = $args[0];
         return $this;
-        /*switch($method)
-        {
-            case "email":
-                $this->email = $args[0];
-                break;
-            case "name":
-                $this->name = $args[0];
-                break;
-            case "surname":
-                $this->surname = $args[0];
-                break;
-            case "id":
-                $this->id = $args[0];
-                break;
-            case "password":
-                $this->password = $args[0];
-                break;
-            case "password_repeat":
-                $this->passwordRepeat = $args[0];
-                break;
-        }*/
-        return $this;
     }
     public function allUsers(bool $active = true) : object
     {
