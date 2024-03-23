@@ -20,7 +20,7 @@ class AdsException extends Exception
     protected function errorCodeMessage(Array $msg = []) : String|NULL
     {
         $codes = [
-
+            '3000' => 'Ulduzlu xanalar boş buraxıla bilməz'
         ];
         if(isset($codes[$this->code]))
         {

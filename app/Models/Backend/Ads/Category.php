@@ -2,6 +2,7 @@
 
 namespace App\Models\Backend\Ads;
 
+use App\Exceptions\Backend\Ads\AdsException;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
@@ -32,6 +33,10 @@ class Category extends Model
     public function createCategory() : bool
     {
         $data = json_decode($this->parent);
+        if($this->name == NULL)
+        {
+            throw new AdsException(3000);
+        }
         return DB::table($this->table)->insert([
             'Name' => $this->name,
             'Parent' => $data['parent'],
