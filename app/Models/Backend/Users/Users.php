@@ -26,7 +26,9 @@ class Users extends Model
      */
     public function __call($method, $args = []) : Users
     {
-        switch($method)
+        $this->$method = $args[0];
+        return $this;
+        /*switch($method)
         {
             case "email":
                 $this->email = $args[0];
@@ -46,7 +48,7 @@ class Users extends Model
             case "password_repeat":
                 $this->passwordRepeat = $args[0];
                 break;
-        }
+        }*/
         return $this;
     }
     public function allUsers(bool $active = true) : object

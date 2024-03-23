@@ -43,8 +43,8 @@ class UsersController extends Controller
 
     public function changeUserStatusAction(Request $request)
     {
-        #if($request->ajax() || $request->wantsJson())
-        #{
+        if($request->ajax() || $request->wantsJson())
+        {
             $userStatusHistory = new User_Status_History();
             $toStatus = $request->post('toStatus');
             $userId = $request->post('user_number');
@@ -58,8 +58,8 @@ class UsersController extends Controller
             {
                 return response()->json(['error' => $e->getMessage()], 500);
             }
-        #}
-        #abort(403, 'Unauthorized');
+        }
+        abort(403, 'Unauthorized');
     }
 
     public function deactive()
@@ -75,14 +75,9 @@ class UsersController extends Controller
         {
 
             $users = new Users();
-            $name = $request->post('name');
-            $surname = $request->post('surname');
-            $email = $request->post('email');
-            $password = $request->post('password');
-            $passwordRepeat = $request->post('password_repeat');
             try
             {
-                $users->name($name)->surname($surname)->email($email)->password($password)->password_repeat($passwordRepeat);
+                $users->name($request->post('name'))->surname($request->post('surname'))->email($request->post('email'))->password($request->post('password'))->passwordRepeat($request->post('password_repeat'));
                 $user = $users->createUser();
                 $htmlElement = view('Backend.Users.user_card', compact('user'))->render();
                 return response()->json([ 'success' => 'İstifadəçi əlavə olundu', 'userCard' => $htmlElement ]);
