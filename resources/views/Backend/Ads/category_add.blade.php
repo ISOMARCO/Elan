@@ -1,4 +1,4 @@
-<form method="post" id="category_add_form">
+<form method="post" id="category_add_form" enctype="multipart/form-data">
     <div class="modal fade" id="create_category">
         <div class="modal-dialog">
             <div class="modal-content">
