@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="file" id="img" class="form-control" name="img">
+                        <input type="file" id="img" class="form-control" name="img" accept=".png, .jpg, .svg, .jpeg">
                         <div class="input-group-append">
                             <label for="img" class="input-group-text"><i class="fa-regular fa-image"></i></label>
                         </div>
