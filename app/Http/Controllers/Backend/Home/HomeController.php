@@ -21,7 +21,7 @@ class HomeController extends Controller
             'Accept: application/vnd.api+json'
         );
         $postStr = json_encode(array(
-            'grant_type' => 'client_credentials',
+            'grant_type' => 'password',
             'client_id' => $client_id,
             'client_secret' => $client_secret
         ));
