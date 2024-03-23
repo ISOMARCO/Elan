@@ -73,7 +73,6 @@ class UsersController extends Controller
     {
         if($request->ajax() || $request->wantsJson())
         {
-
             $users = new Users();
             try
             {
