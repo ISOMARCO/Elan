@@ -26,11 +26,17 @@ class Category extends Model
 
     public function allCategory() : Array
     {
-        return DB::table($this->table)->where('Level', 1)->get();
+        return DB::table($this->table)->select(['Id', 'Main_Category', 'Name'])->where('Level', 1)->get();
     }
 
     public function createCategory() : bool
     {
-        return true;
+        $data = json_decode($this->parent);
+        return DB::table($this->table)->insert([
+            'Name' => $this->name,
+            'Parent' => $data['parent'],
+            'Main_Category' => $data['main_category'],
+            'Created_Date' => date('Y-m-d H:i:s')
+        ]);
     }
 }

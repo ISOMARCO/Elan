@@ -19,7 +19,7 @@
                         <select name="parent" class="form-control" id="parent">
                             <option value="">-</option>
                             @foreach($allCategory as $value)
-                                <option value="{{$value->Id}}">{{$value->Name}}</option>
+                                <option value="{{json_encode(['parent' => $value->Id, 'main_category' => $value->Main_Category])}}">{{$value->Name}}</option>
                             @endforeach
                         </select>
                         <div class="input-group-append">
