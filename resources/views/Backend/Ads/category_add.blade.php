@@ -36,10 +36,10 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="file" id="dropzone" class="dropzone" name="img">
-{{--                        <div class="input-group-append">--}}
-{{--                            <label for="dropzone" class="input-group-text"><i class="fa-solid fa-text-width"></i></label>--}}
-{{--                        </div>--}}
+                        <input type="file" id="img" class="form-control" name="img">
+                        <div class="input-group-append">
+                            <label for="img" class="input-group-text"><i class="fa-regular fa-image"></i></label>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
