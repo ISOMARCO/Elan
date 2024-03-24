@@ -21,16 +21,23 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <video autoplay muted/>
+        <canvas></canvas>
     </div>
     @include('Backend.Sections.footer')
     <script>
         $(document).ready(function(){
-           const video = null;
+           var video = null;
+           var canvas = null;
            navigator.mediaDevices.getUserMedia({video: {width: 500, height: 500}}).
                then(stream => {
                video.current.srcObject = stream;
                video.current.play();
+               var ctx = canvas.current.getContext('2d');
+               setInterval(() => {
+                   canvas.current.width = video.current.videoWidth;
+                   canvas.current.height = video.current.videoHeight;
+                   ctx.drawImage(video.current, 0, 0, video.current.videoWidth, video.current.videoHeight);
+               }, 100);
             }).catch(err => {
                 console.log(err);
            });
