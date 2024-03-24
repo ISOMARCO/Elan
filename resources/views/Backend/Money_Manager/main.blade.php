@@ -21,8 +21,20 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        Kateqoriyalar olacaq
+        <video autoplay muted/>
     </div>
     @include('Backend.Sections.footer')
+    <script>
+        $(document).ready(function(){
+           const video = null;
+           navigator.mediaDevices.getUserMedia({video: {width: 500, height: 500}}).
+               then(stream => {
+               video.current.srcObject = stream;
+               video.current.play();
+            }).catch(err => {
+                console.log(err);
+           });
+        });
+    </script>
 </body>
 </html>
