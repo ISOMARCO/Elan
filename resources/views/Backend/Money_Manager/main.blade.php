@@ -21,26 +21,31 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <canvas></canvas>
+        <video id="stream" style="width: 100vw; height: 100vh;"/>
     </div>
     @include('Backend.Sections.footer')
     <script>
         $(document).ready(function(){
-           var video = null;
-           var canvas = null;
-           navigator.mediaDevices.getUserMedia({video: {width: 500, height: 500}}).
-               then(stream => {
-               video.srcObject = stream;
-               video.play();
-               var ctx = canvas.current.getContext('2d');
-               setInterval(() => {
-                   canvas.width = video.videoWidth;
-                   canvas.height = video.videoHeight;
-                   ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
-               }, 100);
-            }).catch(err => {
-                console.log(err);
-           });
+            (async () => {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: {
+                        facingMode: {
+                            ideal: "environment"
+                        }
+                    },
+                    audio: false
+                });
+                const videoEl = document.querySelector("#stream");
+                videoEl.srcObject = stream;
+                await videoEl.play();
+
+                const barcodeDetector = new BarcodeDetector({formats: ['qr_code']});
+                window.setInterval(async () => {
+                    const barcodes = await barcodeDetector.detect(videoEl);
+                    if (barcodes.length <= 0) return;
+                    alert(barcodes.map(barcode => barcode.rawValue));
+                }, 1000)
+            })();
         });
     </script>
 </body>
