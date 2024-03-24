@@ -27,7 +27,7 @@ class Category extends Model
 
     public function allCategory() : Object
     {
-        return DB::table($this->table)->select(['Id', 'Main_Category', 'Name'])->where('Level', 1)->get();
+        return DB::table($this->table)->select(['Id', 'Main_Category', 'Name', 'Photo'])->where('Level', 1)->get();
     }
 
     public function createCategory() : Bool
