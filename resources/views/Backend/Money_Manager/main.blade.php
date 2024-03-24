@@ -84,24 +84,22 @@
         }
 
         docReady(function () {
-            var resultContainer = document.getElementById('qr-reader-results');
-            var lastResult, countResults = 0;
-            function onScanSuccess(decodedText, decodedResult) {
-                if (decodedText !== lastResult) {
-                    ++countResults;
-                    lastResult = decodedText;
-
-                }
-                $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
-            }
-
             var html5QrcodeScanner = new Html5QrcodeScanner(
                 "reader", { fps: 10, qrbox: {width: 500, height: 250}, experimentalFeatures: {
                         useBarCodeDetectorIfSupported: true
                     },
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true});
-            //html5QrcodeScanner.clear();
+            var lastResult, countResults = 0;
+            function onScanSuccess(decodedText, decodedResult) {
+                if (decodedText !== lastResult) {
+                    ++countResults;
+                    lastResult = decodedText;
+                }
+                $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
+                html5QrcodeScanner.clear();
+
+            }
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
