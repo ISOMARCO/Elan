@@ -84,7 +84,6 @@
         }
 
         docReady(function () {
-            html5QrcodeScanner.clear();
             var resultContainer = document.getElementById('qr-reader-results');
             var lastResult, countResults = 0;
             function onScanSuccess(decodedText, decodedResult) {
@@ -97,6 +96,7 @@
 
             var html5QrcodeScanner = new Html5QrcodeScanner(
                 "reader", { fps: 10, qrbox: {width: 500, height: 250}});
+            html5QrcodeScanner.clear();
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
