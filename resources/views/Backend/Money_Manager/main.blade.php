@@ -21,8 +21,8 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <div id="qr-reader" class="col-12" style="height: 400px;"></div>
-        <div id="qr-reader-results"></div>
+        <div id="qr-reader" class="col-12"></div>
+        <div id="qr-reader-results" class="col-12"></div>
     </div>
     @include('Backend.Sections.footer')
     <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
