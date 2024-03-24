@@ -2,6 +2,46 @@
 <html lang="az">
 <head>
     @include('Backend.Sections.head')
+    <style>
+        #reader {
+            width: 640px;
+        }
+        @media(max-width: 600px) {
+            #reader {
+                width: 300px;
+            }
+        }
+        .empty {
+            display: block;
+            width: 100%;
+            height: 20px;
+        }
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .alert-info {
+            color: #31708f;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+        }
+        .alert-success {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+        #scanapp_ad {
+            display: none;
+        }
+        @media(max-width: 1500px) {
+            #scanapp_ad {
+                display: block;
+            }
+        }
+
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     @include('Backend.Sections.header')
@@ -21,8 +61,13 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <div id="qr-reader" class="col-12"></div>
-        <div id="qr-reader-results" class="col-12"></div>
+        <div class="row">
+            <div class="col-12" style="text-align: center;margin-bottom: 20px;">
+                <div id="reader" style="display: inline-block;"></div>
+                <div class="empty"></div>
+                <div id="scanned-result"></div>
+            </div>
+        </div>
     </div>
     @include('Backend.Sections.footer')
     <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
@@ -45,14 +90,14 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
-                    $("#qr-reader-results").html(`${decodedText}`, decodedResult);
+                    $("#scanned-results").html(`${decodedText}`, decodedResult);
                     // Handle on success condition with the decoded message.
                     //console.log(`Scan result ${decodedText}`, decodedResult);
                 }
             }
 
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "qr-reader", { fps: 10, qrbox: {width: 500, height: 250}});
+                "reader", { fps: 10, qrbox: {width: 500, height: 250}});
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
