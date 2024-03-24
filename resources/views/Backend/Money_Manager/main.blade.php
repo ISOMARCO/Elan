@@ -72,6 +72,7 @@
                     ++countResults;
                     lastResult = decodedText;
                     $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
+                    html5QrcodeScanner.stop();
                 }
 
             }
