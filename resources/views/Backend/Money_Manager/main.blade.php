@@ -21,36 +21,38 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <video id="stream" style="width: 300px; height: 300px;"/>
+        <div id="qr-reader" style="width:500px"></div>
+        <div id="qr-reader-results"></div>
     </div>
     @include('Backend.Sections.footer')
+    <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
     <script>
-        $(document).ready(function(){
-            if(!("BarcodeDetector" in globalThis))
-            {
-                alert("Not support");
+        function docReady(fn) {
+            // see if DOM is already available
+            if (document.readyState === "complete"
+                || document.readyState === "interactive") {
+                // call on next available tick
+                setTimeout(fn, 1);
+            } else {
+                document.addEventListener("DOMContentLoaded", fn);
             }
-            (async () => {
-                const stream = await navigator.mediaDevices.getUserMedia({
-                    video: {
-                        facingMode: {
-                            ideal: "environment"
-                        }
-                    },
-                    audio: false
-                });
-                const videoEl = document.querySelector("#stream");
-                videoEl.srcObject = stream;
-                await videoEl.play();
+        }
 
-                const barcodeDetector = new BarcodeDetector({formats: ['code_128', 'code_39', 'code_93', 'codabar', 'ean_13', 'ean_8', 'itf', 'upc_a', 'upc_e']});
-                window.setInterval(async () => {
-                    const barcodes = await barcodeDetector.detect(videoEl);
-                    if (barcodes.length <= 0) return;
-                    //alert(barcodes.map(barcode => barcode.rawValue));
-                    console.log(barcodes.map(barcode => barcode.rawValue));
-                }, 1000)
-            })();
+        docReady(function () {
+            var resultContainer = document.getElementById('qr-reader-results');
+            var lastResult, countResults = 0;
+            function onScanSuccess(decodedText, decodedResult) {
+                if (decodedText !== lastResult) {
+                    ++countResults;
+                    lastResult = decodedText;
+                    // Handle on success condition with the decoded message.
+                    console.log(`Scan result ${decodedText}`, decodedResult);
+                }
+            }
+
+            var html5QrcodeScanner = new Html5QrcodeScanner(
+                "qr-reader", { fps: 10, qrbox: 250 });
+            html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
 </body>
