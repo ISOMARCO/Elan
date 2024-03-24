@@ -21,7 +21,7 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <div id="qr-reader" class="col-10"></div>
+        <div id="qr-reader" class="col-12"></div>
         <div id="qr-reader-results"></div>
     </div>
     @include('Backend.Sections.footer')
@@ -45,8 +45,9 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
+                    $("#qr-reader-results").html(`${decodedText}`, decodedResult);
                     // Handle on success condition with the decoded message.
-                    console.log(`Scan result ${decodedText}`, decodedResult);
+                    //console.log(`Scan result ${decodedText}`, decodedResult);
                 }
             }
 
