@@ -30,13 +30,13 @@
            var canvas = null;
            navigator.mediaDevices.getUserMedia({video: {width: 500, height: 500}}).
                then(stream => {
-               video.current.srcObject = stream;
-               video.current.play();
+               video.srcObject = stream;
+               video.play();
                var ctx = canvas.current.getContext('2d');
                setInterval(() => {
-                   canvas.current.width = video.current.videoWidth;
-                   canvas.current.height = video.current.videoHeight;
-                   ctx.drawImage(video.current, 0, 0, video.current.videoWidth, video.current.videoHeight);
+                   canvas.width = video.videoWidth;
+                   canvas.height = video.videoHeight;
+                   ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight);
                }, 100);
             }).catch(err => {
                 console.log(err);
