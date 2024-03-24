@@ -90,30 +90,12 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
-                    $("#scanned-results").html(`${decodedText}`, decodedResult);
+                    $("#scanned-result").html(`${decodedText}`, decodedResult);
                 }
-            }
-            var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-                var minEdgeSizeThreshold = 250;
-                var edgeSizePercentage = 0.75;
-                var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
-                    viewfinderHeight : viewfinderWidth;
-                var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
-                if (qrboxEdgeSize < minEdgeSizeThreshold) {
-                    if (minEdgeSize < minEdgeSizeThreshold) {
-                        return {width: minEdgeSize, height: minEdgeSize};
-                    } else {
-                        return {
-                            width: minEdgeSizeThreshold,
-                            height: minEdgeSizeThreshold
-                        };
-                    }
-                }
-                return {width: qrboxEdgeSize, height: qrboxEdgeSize};
             }
 
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: qrboxFunction});
+                "reader", { fps: 10, qrbox: {width: 500, height: 250}});
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
