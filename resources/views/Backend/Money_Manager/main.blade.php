@@ -31,8 +31,7 @@
     </div>
     @include('Backend.Sections.footer')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-{{--    <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>--}}
-    <script src="/assets/research/html5qrcode/html5-qrcode.min.v2.3.0.js"></script>
+    <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
     <script>
         function docReady(fn) {
             // see if DOM is already available
