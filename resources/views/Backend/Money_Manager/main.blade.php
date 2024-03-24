@@ -95,8 +95,12 @@
             }
 
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: {width: 500, height: 250}});
-            html5QrcodeScanner.clear();
+                "reader", { fps: 10, qrbox: {width: 500, height: 250}, experimentalFeatures: {
+                        useBarCodeDetectorIfSupported: true
+                    },
+                    rememberLastUsedCamera: true,
+                    showTorchButtonIfSupported: true});
+            //html5QrcodeScanner.clear();
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
