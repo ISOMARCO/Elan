@@ -90,7 +90,7 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
-                    $("#scanned-result").append("<p>"+decodedResult+"</p>");
+                    $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
                 }
             }
 
