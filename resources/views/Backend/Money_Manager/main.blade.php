@@ -42,7 +42,6 @@
                 document.addEventListener("DOMContentLoaded", fn);
             }
         }
-        /** Ugly function to write the results to a table dynamically. */
         function printScanResultPretty(codeId, decodedText, decodedResult) {
             let resultSection = document.getElementById('scanned-result');
             let tableBodyId = "scanned-result-table-body";
@@ -93,7 +92,6 @@
                 }
             }
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-                // Square QR Box, with size = 80% of the min edge.
                 var minEdgeSizeThreshold = 250;
                 var edgeSizePercentage = 0.75;
                 var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
@@ -116,9 +114,6 @@
                 {
                     fps: 10,
                     qrbox: qrboxFunction,
-                    // Important notice: this is experimental feature, use it at your
-                    // own risk. See documentation in
-                    // mebjas@/html5-qrcode/src/experimental-features.ts
                     experimentalFeatures: {
                         useBarCodeDetectorIfSupported: true
                     },
