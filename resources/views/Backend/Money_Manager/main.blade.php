@@ -31,7 +31,8 @@
     </div>
     @include('Backend.Sections.footer')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-    <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
+{{--    <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>--}}
+    <script src="https://blog.minhazav.dev/assets/research/html5qrcode/html5-qrcode.min.v2.3.0.js"></script>
     <script>
         function docReady(fn) {
             // see if DOM is already available
@@ -42,6 +43,7 @@
                 document.addEventListener("DOMContentLoaded", fn);
             }
         }
+        /** Ugly function to write the results to a table dynamically. */
         function printScanResultPretty(codeId, decodedText, decodedResult) {
             let resultSection = document.getElementById('scanned-result');
             let tableBodyId = "scanned-result-table-body";
@@ -85,6 +87,12 @@
             var lastMessage;
             var codeId = 0;
             function onScanSuccess(decodedText, decodedResult) {
+                /**
+                 * If you following the code example of this page by looking at the
+                 * source code of the demo page - good job!!
+                 *
+                 * Tip: update this function with a success callback of your choise.
+                 */
                 if (lastMessage !== decodedText) {
                     lastMessage = decodedText;
                     printScanResultPretty(codeId, decodedText, decodedResult);
@@ -92,6 +100,7 @@
                 }
             }
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+                // Square QR Box, with size = 80% of the min edge.
                 var minEdgeSizeThreshold = 250;
                 var edgeSizePercentage = 0.75;
                 var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
@@ -114,6 +123,9 @@
                 {
                     fps: 10,
                     qrbox: qrboxFunction,
+                    // Important notice: this is experimental feature, use it at your
+                    // own risk. See documentation in
+                    // mebjas@/html5-qrcode/src/experimental-features.ts
                     experimentalFeatures: {
                         useBarCodeDetectorIfSupported: true
                     },
