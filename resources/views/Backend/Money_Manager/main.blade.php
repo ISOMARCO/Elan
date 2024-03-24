@@ -21,7 +21,7 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <video id="stream" style="width: 100vw; height: 100vh;"/>
+        <video id="stream" style="width: 300px; height: 300px;"/>
     </div>
     @include('Backend.Sections.footer')
     <script>
@@ -39,11 +39,11 @@
                 videoEl.srcObject = stream;
                 await videoEl.play();
 
-                const barcodeDetector = new BarcodeDetector({formats: ['qr_code']});
+                const barcodeDetector = new BarcodeDetector({formats: ['code_128', 'code_39', 'code_93', 'codabar', 'ean_13', 'ean_8', 'itf', 'upc_a', 'upc_e']});
                 window.setInterval(async () => {
                     const barcodes = await barcodeDetector.detect(videoEl);
                     if (barcodes.length <= 0) return;
-                    alert(barcodes.map(barcode => barcode.rawValue));
+                    //alert(barcodes.map(barcode => barcode.rawValue));
                 }, 1000)
             })();
         });
