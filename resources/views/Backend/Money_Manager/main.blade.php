@@ -91,13 +91,29 @@
                     ++countResults;
                     lastResult = decodedText;
                     $("#scanned-results").html(`${decodedText}`, decodedResult);
-                    // Handle on success condition with the decoded message.
-                    //console.log(`Scan result ${decodedText}`, decodedResult);
                 }
+            }
+            var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+                var minEdgeSizeThreshold = 250;
+                var edgeSizePercentage = 0.75;
+                var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
+                    viewfinderHeight : viewfinderWidth;
+                var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
+                if (qrboxEdgeSize < minEdgeSizeThreshold) {
+                    if (minEdgeSize < minEdgeSizeThreshold) {
+                        return {width: minEdgeSize, height: minEdgeSize};
+                    } else {
+                        return {
+                            width: minEdgeSizeThreshold,
+                            height: minEdgeSizeThreshold
+                        };
+                    }
+                }
+                return {width: qrboxEdgeSize, height: qrboxEdgeSize};
             }
 
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: {width: 500, height: 250}});
+                "reader", { fps: 10, qrbox: qrboxFunction});
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
