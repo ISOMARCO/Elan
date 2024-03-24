@@ -44,6 +44,7 @@
                     const barcodes = await barcodeDetector.detect(videoEl);
                     if (barcodes.length <= 0) return;
                     //alert(barcodes.map(barcode => barcode.rawValue));
+                    console.log(barcodes.map(barcode => barcode.rawValue));
                 }, 1000)
             })();
         });
