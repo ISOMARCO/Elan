@@ -21,7 +21,7 @@
         </div><!-- /.container-fluid -->
     </section>
     <div class="content">
-        <div id="qr-reader" style="width:500px"></div>
+        <div id="qr-reader" class="col-10"></div>
         <div id="qr-reader-results"></div>
     </div>
     @include('Backend.Sections.footer')
@@ -51,7 +51,7 @@
             }
 
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "qr-reader", { fps: 10, qrbox: 250 });
+                "qr-reader", { fps: 30, qrbox: 180});
             html5QrcodeScanner.render(onScanSuccess);
         });
     </script>
