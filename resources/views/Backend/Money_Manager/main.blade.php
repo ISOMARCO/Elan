@@ -22,7 +22,7 @@
     </section>
     <div class="content">
         <div class="row">
-            <div class="col-md-12" style="text-align: center;margin-bottom: 20px;">
+            <div class="col-12" style="text-align: center;margin-bottom: 20px;">
                 <div id="reader" style="display: inline-block;"></div>
                 <div class="empty"></div>
                 <div id="scanned-result"></div>
@@ -86,12 +86,6 @@
             var lastMessage;
             var codeId = 0;
             function onScanSuccess(decodedText, decodedResult) {
-                /**
-                 * If you following the code example of this page by looking at the
-                 * source code of the demo page - good job!!
-                 *
-                 * Tip: update this function with a success callback of your choise.
-                 */
                 if (lastMessage !== decodedText) {
                     lastMessage = decodedText;
                     printScanResultPretty(codeId, decodedText, decodedResult);
