@@ -95,9 +95,8 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
+                    $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
                 }
-                $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
-                html5QrcodeScanner.clear();
 
             }
             html5QrcodeScanner.render(onScanSuccess);
