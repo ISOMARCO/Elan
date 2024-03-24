@@ -16,30 +16,6 @@
             width: 100%;
             height: 20px;
         }
-        .alert {
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid transparent;
-            border-radius: 4px;
-        }
-        .alert-info {
-            color: #31708f;
-            background-color: #d9edf7;
-            border-color: #bce8f1;
-        }
-        .alert-success {
-            color: #3c763d;
-            background-color: #dff0d8;
-            border-color: #d6e9c6;
-        }
-        #scanapp_ad {
-            display: none;
-        }
-        @media(max-width: 1500px) {
-            #scanapp_ad {
-                display: block;
-            }
-        }
 
     </style>
 </head>
