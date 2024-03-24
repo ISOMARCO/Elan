@@ -26,6 +26,10 @@
     @include('Backend.Sections.footer')
     <script>
         $(document).ready(function(){
+            if(!("BarcodeDetector" in globalThis))
+            {
+                alert("Not support");
+            }
             (async () => {
                 const stream = await navigator.mediaDevices.getUserMedia({
                     video: {
