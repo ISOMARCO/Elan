@@ -25,12 +25,12 @@ class Category extends Model
         return $this;
     }
 
-    public function allCategory() : Array
+    public function allCategory() : Object
     {
         return DB::table($this->table)->select(['Id', 'Main_Category', 'Name'])->where('Level', 1)->get();
     }
 
-    public function createCategory() : bool
+    public function createCategory() : Bool
     {
         $data = json_decode($this->parent);
         if($this->name == NULL)
