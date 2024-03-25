@@ -54,29 +54,22 @@
                 </div>
             </div>
             <div class="card-body">
-                <input type="number" class="form-control">
+                <input type="number" class="form-control" id="qty">
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-danger" style="float: right"><i class="fa-solid fa-circle-minus"></i></button>
-                <button type="button" class="btn btn-success" style="float: left;"><i class="fa-solid fa-circle-plus"></i></button>
+                <button type="button" class="btn btn-danger" style="float: right" id="plus_button"><i class="fa-solid fa-circle-minus"></i></button>
+                <button type="button" class="btn btn-success" style="float: left;" id="minus_button"><i class="fa-solid fa-circle-plus"></i></button>
             </div>
         </div>
     </div>
     @include('Backend.Sections.footer')
     <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
     <script>
-        function docReady(fn) {
-            // see if DOM is already available
-            if (document.readyState === "complete"
-                || document.readyState === "interactive") {
-                // call on next available tick
-                setTimeout(fn, 1);
-            } else {
-                document.addEventListener("DOMContentLoaded", fn);
-            }
-        }
-
-        docReady(function () {
+        $(document).ready(function(){
+            $(document).on("click", "#plus_button", function(){
+               var qtyVal = $(this).closest('.card').find('#qty');
+               qtyVal.val(parseInt(qtyVal.val()) + 1);
+            });
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
                 var minEdgeSizeThreshold = 250;
                 var edgeSizePercentage = 0.50;
@@ -114,6 +107,20 @@
             }
             html5QrcodeScanner.render(onScanSuccess);
         });
+        // function docReady(fn) {
+        //     // see if DOM is already available
+        //     if (document.readyState === "complete"
+        //         || document.readyState === "interactive") {
+        //         // call on next available tick
+        //         setTimeout(fn, 1);
+        //     } else {
+        //         document.addEventListener("DOMContentLoaded", fn);
+        //     }
+        // }
+
+        //docReady(function () {
+
+        //});
     </script>
 </body>
 </html>
