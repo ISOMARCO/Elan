@@ -61,8 +61,8 @@
 
         docReady(function () {
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-                var minEdgeSizeThreshold = 500;
-                var edgeSizePercentage = 0.5;
+                var minEdgeSizeThreshold = 250;
+                var edgeSizePercentage = 0.50;
                 var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
                     viewfinderHeight : viewfinderWidth;
                 var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
@@ -89,7 +89,7 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
-                    $("#scanned-result").append("<p>"+decodedResult.decodedText+"</p>");
+                    $("#scanned-result").append.firstChild("<p>"+decodedResult.decodedText+"</p>");
                     html5QrcodeScanner.stop();
                 }
 
