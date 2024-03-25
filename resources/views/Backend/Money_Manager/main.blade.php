@@ -74,7 +74,10 @@
             $(document).on("click", "#minus_button", function(){
                 var qtyVal = $(this).closest('.card').find('#qty');
                 var currentValue = parseInt(qtyVal.val()) || 0;
-                qtyVal.val(currentValue - 1);
+                if(currentValue > 0)
+                {
+                    qtyVal.val(currentValue - 1);
+                }
             });
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
                 var minEdgeSizeThreshold = 250;
