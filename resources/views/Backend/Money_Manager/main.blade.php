@@ -81,7 +81,7 @@
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-success" style="float: left;" id="plus_button"><i class="fa-solid fa-circle-plus"></i></button>
-                <button type="button" class="btn btn-danger" style="float: left;" id="minus_button"><i class="fa-solid fa-circle-minus"></i></button>
+                <button type="button" class="btn btn-danger ml-2" style="float: left;" id="minus_button"><i class="fa-solid fa-circle-minus"></i></button>
             </div>
         </div>
     </div>
