@@ -55,7 +55,7 @@
             </div>
             <div class="card-body">
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="qty" name="qty">
+                    <input type="number" class="form-control" id="qty" name="qty" value="1">
                     <div class="input-group-append">
                         <label for="qty" class="input-group-text"><i class="fa-solid fa-basket-shopping"></i></label>
                     </div>
