@@ -89,7 +89,7 @@
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
-                    $("#scanned-result").append.firstChild("<p>"+decodedResult.decodedText+"</p>");
+                    $("#scanned-result").prepend("<p>"+decodedResult.decodedText+"</p>");
                     html5QrcodeScanner.stop();
                 }
 
