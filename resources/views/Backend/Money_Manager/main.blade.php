@@ -60,8 +60,27 @@
         }
 
         docReady(function () {
+            var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+                // Square QR Box, with size = 80% of the min edge.
+                var minEdgeSizeThreshold = 250;
+                var edgeSizePercentage = 0.75;
+                var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
+                    viewfinderHeight : viewfinderWidth;
+                var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
+                if (qrboxEdgeSize < minEdgeSizeThreshold) {
+                    if (minEdgeSize < minEdgeSizeThreshold) {
+                        return {width: minEdgeSize, height: minEdgeSize};
+                    } else {
+                        return {
+                            width: minEdgeSizeThreshold,
+                            height: minEdgeSizeThreshold
+                        };
+                    }
+                }
+                return {width: qrboxEdgeSize, height: qrboxEdgeSize};
+            }
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: {width: 500, height: 250}, experimentalFeatures: {
+                "reader", { fps: 10, qrbox: qrboxFunction, experimentalFeatures: {
                         useBarCodeDetectorIfSupported: true
                     },
                     rememberLastUsedCamera: true,
