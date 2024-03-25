@@ -56,7 +56,18 @@
                 <tr>
                     <td>12345</td>
                     <td>Sud</td>
-                    <td><input type="text" class="form-control" id="qty"></td>
+                    <td>
+                        <div class="row">
+                            <div class="col-8">
+                                <input type="text" class="form-control" id="qty">
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success">+</button>
+                                <button type="button" class="btn btn-danger">-</button>
+                            </div>
+                        </div>
+
+                    </td>
                 </tr>
             </tbody>
         </table>
