@@ -57,8 +57,8 @@
                 <input type="number" class="form-control" id="qty">
             </div>
             <div class="card-footer">
-                <button type="button" class="btn btn-danger" style="float: right" id="plus_button"><i class="fa-solid fa-circle-minus"></i></button>
-                <button type="button" class="btn btn-success" style="float: left;" id="minus_button"><i class="fa-solid fa-circle-plus"></i></button>
+                <button type="button" class="btn btn-danger" style="float: right" id="minus_button"><i class="fa-solid fa-circle-minus"></i></button>
+                <button type="button" class="btn btn-success" style="float: left;" id="plus_button"><i class="fa-solid fa-circle-plus"></i></button>
             </div>
         </div>
     </div>
@@ -69,6 +69,17 @@
             $(document).on("click", "#plus_button", function(){
                var qtyVal = $(this).closest('.card').find('#qty');
                qtyVal.val(parseInt(qtyVal.val()) + 1);
+            });
+            $(document).on("click", "#minus_button", function(){
+                var qtyVal = $(this).closest('.card').find('#qty');
+                if(parseInt(qtyVal.val()) == null || parseInt(qtyVal.val()) == 0)
+                {
+                    qtyVal.val("0");
+                }
+                else
+                {
+                    qtyVal.val(parseInt(qtyVal.val()) - 1);
+                }
             });
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
                 var minEdgeSizeThreshold = 250;
