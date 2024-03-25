@@ -62,7 +62,7 @@
                                 <input type="text" class="form-control" id="qty">
                             </div>
                             <div class="col-4 p-2">
-                                <button type="button" class="btn btn-success"><i class="fa-solid fa-circle-plus"></i></button>
+                                <button type="button" class="btn btn-success mb-1"><i class="fa-solid fa-circle-plus"></i></button>
                                 <button type="button" class="btn btn-danger"><i class="fa-solid fa-circle-minus"></i></button>
                             </div>
                         </div>
