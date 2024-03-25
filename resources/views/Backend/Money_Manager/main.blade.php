@@ -72,6 +72,12 @@
                         <label for="divide" class="input-group-text"><i class="fa-solid fa-user-group"></i></label>
                     </div>
                 </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="tax" name="tax" value="18">
+                    <div class="input-group-append">
+                        <label for="tax" class="input-group-text"><i class="fa-solid fa-receipt"></i></label>
+                    </div>
+                </div>
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-danger" style="float: right" id="minus_button"><i class="fa-solid fa-circle-minus"></i></button>
