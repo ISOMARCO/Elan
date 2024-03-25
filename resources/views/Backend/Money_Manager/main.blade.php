@@ -74,7 +74,7 @@
             $(document).on("click", "#minus_button", function(){
                 var qtyVal = $(this).closest('.card').find('#qty');
                 var currentValue = parseInt(qtyVal.val()) || 0;
-                if(isNaN(currentValue))
+                if(currentValue == 0)
                 {
                     qtyVal.val(0);
                 }
