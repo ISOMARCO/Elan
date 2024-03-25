@@ -68,18 +68,13 @@
         $(document).ready(function(){
             $(document).on("click", "#plus_button", function(){
                var qtyVal = $(this).closest('.card').find('#qty');
-               qtyVal.val(parseInt(qtyVal.val()) + 1);
+               var currentValue = parseInt(qtyVal.val()) || 0;
+               qtyVal.val(currentValue + 1);
             });
             $(document).on("click", "#minus_button", function(){
                 var qtyVal = $(this).closest('.card').find('#qty');
-                if(parseInt(qtyVal.val()) == null || parseInt(qtyVal.val()) == 0)
-                {
-                    qtyVal.val("0");
-                }
-                else
-                {
-                    qtyVal.val(parseInt(qtyVal.val()) - 1);
-                }
+                var currentValue = parseInt(qtyVal.val()) || 0;
+                qtyVal.val(currentValue - 1);
             });
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
                 var minEdgeSizeThreshold = 250;
