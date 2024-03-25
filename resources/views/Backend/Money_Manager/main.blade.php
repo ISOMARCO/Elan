@@ -85,7 +85,8 @@
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true});
             var lastResult, countResults = 0;
-            function onScanSuccess(decodedText, decodedResult) {
+            function onScanSuccess(decodedText, decodedResult)
+            {
                 if (decodedText !== lastResult) {
                     ++countResults;
                     lastResult = decodedText;
