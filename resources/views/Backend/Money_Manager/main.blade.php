@@ -90,7 +90,7 @@
                     ++countResults;
                     lastResult = decodedText;
                     $("#scanned-result").prepend("<p>"+decodedResult.decodedText+"</p>");
-                    html5QrcodeScanner.stop();
+                    //html5QrcodeScanner.stop();
                 }
 
             }
