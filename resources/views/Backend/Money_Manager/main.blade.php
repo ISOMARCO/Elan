@@ -61,7 +61,7 @@
 
         docReady(function () {
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-                var minEdgeSizeThreshold = 200;
+                var minEdgeSizeThreshold = 500;
                 var edgeSizePercentage = 0.5;
                 var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
                     viewfinderHeight : viewfinderWidth;
