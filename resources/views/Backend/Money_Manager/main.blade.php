@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="discount" name="discount">
+                    <input type="number" class="form-control" id="discount" name="discount" value="0">
                     <div class="input-group-append">
                         <label for="discount" class="input-group-text"><i class="fa-solid fa-percent"></i></label>
                     </div>
