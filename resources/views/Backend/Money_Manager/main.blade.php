@@ -44,35 +44,23 @@
                 <div id="scanned-result"></div>
             </div>
         </div>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Barcode</th>
-                    <th>Mehsul</th>
-                    <th>Input</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>12345</td>
-                    <td>Sud</td>
-                    <td>
-                        <div class="row">
-                            <div class="col-8">
-                                <input type="text" class="form-control" id="qty">
-                            </div>
-                            <div class="col-2">
-                                <button type="button" class="btn btn-success"><i class="fa-solid fa-circle-plus"></i></button>
-                            </div>
-                            <div class="col-2">
-                                <button type="button" class="btn btn-danger"><i class="fa-solid fa-circle-minus"></i></button>
-                            </div>
-                        </div>
-
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card collapsed-card">
+            <div class="card-header">
+                <h3 class="card-title">12345 - Sud</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <input type="number" class="form-control">
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-danger" style="float: right"><i class="fa-solid fa-circle-minus"></i></button>
+                <button type="button" class="btn btn-success" style="float: left;"><i class="fa-solid fa-circle-plus"></i></button>
+            </div>
+        </div>
     </div>
     @include('Backend.Sections.footer')
     <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
