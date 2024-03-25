@@ -44,6 +44,22 @@
                 <div id="scanned-result"></div>
             </div>
         </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Barcode</th>
+                    <th>Mehsul</th>
+                    <th>Input</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12345</td>
+                    <td>Sud</td>
+                    <td><input type="text" class="form-control" id="qty"></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     @include('Backend.Sections.footer')
     <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
