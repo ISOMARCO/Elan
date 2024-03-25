@@ -60,6 +60,12 @@
                         <label for="qty" class="input-group-text"><i class="fa-solid fa-basket-shopping"></i></label>
                     </div>
                 </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="discount" name="discount">
+                    <div class="input-group-append">
+                        <label for="discount" class="input-group-text"><i class="fa-solid fa-percent"></i></label>
+                    </div>
+                </div>
             </div>
             <div class="card-footer">
                 <button type="button" class="btn btn-danger" style="float: right" id="minus_button"><i class="fa-solid fa-circle-minus"></i></button>
