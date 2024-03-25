@@ -44,11 +44,11 @@
                 <div id="scanned-result"></div>
             </div>
         </div>
-        <div class="card collapsed-card">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">12345 - Sud</h3>
                 <div class="card-tools">
-                    <button type="button" class="btn btn-tool" data-card-widget="collapsed-card" title="Collapse">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                         <i class="fa-solid fa-minus"></i>
                     </button>
                 </div>
