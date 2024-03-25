@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="price" value="1.9" readonly>
+                    <input type="number" class="form-control" id="price" name="price" value="1.9">
                     <div class="input-group-append">
                         <label for="price" class="input-group-text"><i class="fa-solid fa-manat-sign"></i></label>
                     </div>
