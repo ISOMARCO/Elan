@@ -9,6 +9,6 @@ class GoodsController extends Controller
 {
     public function main()
     {
-        return view('Backend.Ads.goods');
+        return view('Backend.Money_Manager.goods');
     }
 }
