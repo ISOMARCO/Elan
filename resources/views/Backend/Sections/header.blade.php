@@ -248,6 +248,12 @@
                                 <p>Kateqoriyalar</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('Backend.Money_Manager_Goods')}}" class="nav-link">
+                                <i class="fa-solid fa-bag-shopping nav-icon"></i>
+                                <p>Məhsullar</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
