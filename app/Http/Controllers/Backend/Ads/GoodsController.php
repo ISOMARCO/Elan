@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class GoodsController extends Controller
 {
-    //
+    public function main()
+    {
+        return view('Backend.Ads.goods');
+    }
 }
