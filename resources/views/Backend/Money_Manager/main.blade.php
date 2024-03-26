@@ -115,7 +115,7 @@
             });
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
             {
-                var minEdgeSizeThreshold = 250;
+                var minEdgeSizeThreshold = 200;
                 var edgeSizePercentage = 0.50;
                 var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
                     viewfinderHeight : viewfinderWidth;
