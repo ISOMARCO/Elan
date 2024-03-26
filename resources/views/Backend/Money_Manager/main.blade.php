@@ -126,8 +126,8 @@
                         return {width: minEdgeSize, height: minEdgeSize};
                     } else {
                         return {
-                            width: (minEdgeSizeThreshold-100)*2,
-                            height: minEdgeSizeThreshold-100
+                            width: (minEdgeSizeThreshold-150)*2,
+                            height: minEdgeSizeThreshold-150
                         };
                     }
                 }
