@@ -120,11 +120,13 @@
                 var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
                     viewfinderHeight : viewfinderWidth;
                 var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
-                console.log(qrboxEdgeSize);
-                if (qrboxEdgeSize < minEdgeSizeThreshold) {
+                if (qrboxEdgeSize < minEdgeSizeThreshold)
+                {
                     if (minEdgeSize < minEdgeSizeThreshold) {
+                        console.log(minEdgeSize+" %");
                         return {width: minEdgeSize, height: minEdgeSize};
                     } else {
+                        console.log(minEdgeSizeThreshold+" px");
                         return {
                             width: minEdgeSizeThreshold,
                             height: minEdgeSizeThreshold
