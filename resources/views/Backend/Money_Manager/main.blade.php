@@ -113,7 +113,6 @@
                     qtyVal.val(currentValue - 1);
                 }
             });
-            alert(viewfinderWidth);
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
             {
                 var minEdgeSizeThreshold = 250;
