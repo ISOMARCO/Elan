@@ -123,12 +123,10 @@
                 if (qrboxEdgeSize < minEdgeSizeThreshold)
                 {
                     if (minEdgeSize < minEdgeSizeThreshold) {
-                        console.log(minEdgeSize+" %");
                         return {width: minEdgeSize, height: minEdgeSize};
                     } else {
-                        console.log(minEdgeSizeThreshold+" px");
                         return {
-                            width: minEdgeSizeThreshold,
+                            width: minEdgeSizeThreshold+250,
                             height: minEdgeSizeThreshold
                         };
                     }
