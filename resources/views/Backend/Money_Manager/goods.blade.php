@@ -76,7 +76,7 @@
     </div>
 </section>
 @include('Backend.Sections.footer')
-<script src="{{asset('Assets/Backend/js/barcodeDetection2.3.4.min.js')}}"></script>
+<script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
 <script>
     $(document).ready(function() {
         $(document).on("click", "#goods_add_card", function(){
