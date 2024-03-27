@@ -139,6 +139,7 @@
                     },
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true});
+            html5QrcodeScanner.clear();
             var lastResult, countResults = 0;
             function onScanSuccess(decodedText, decodedResult)
             {
