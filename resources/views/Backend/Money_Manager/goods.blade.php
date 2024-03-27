@@ -60,6 +60,7 @@
                     <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
+            @include('Backend.Money_Manager.goods_add')
         </div>
     </div>
 </section>
