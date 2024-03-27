@@ -118,9 +118,9 @@
                 }
 
             }
-            $(document).on("click", function()
+            $(document).on("click", ".close, #modal-close", function()
             {
-                if ($(event.target).is($("#goods_add")))
+                if($(event.target).is($("#goods_add")) || $(event.target).hasClass('close') || $(event.target).is('#modal-close'))
                 {
                     html5QrcodeScanner.clear();
                 }
