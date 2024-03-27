@@ -105,10 +105,7 @@
                 {
                     fps: 10,
                     qrbox: qrboxFunction,
-                    experimentalFeatures: {
-                        useBarCodeDetectorIfSupported: true
-                    },
-                    rememberLastUsedCamera: true,
+                    rememberLastUsedCamera: false,
                     showTorchButtonIfSupported: true,
                     aspectRatio: 1,
                     disableFlip: false,
