@@ -79,13 +79,6 @@
 <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
 <script>
     $(document).ready(function() {
-        $(document).on("click", function()
-        {
-            if ($(event.target).is($("#goods_add")))
-            {
-                $("#reader").hide();
-            }
-        });
         $(document).on("click", "#goods_add_btn", function(){
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
             {
@@ -120,11 +113,17 @@
                     ++countResults;
                     lastResult = decodedText;
                     $("#goods_add_form #barcode").val(decodedResult.decodedText);
-                    console.log(decodedResult.decodedText);
                     html5QrcodeScanner.stop();
                 }
 
             }
+            $(document).on("click", function()
+            {
+                if ($(event.target).is($("#goods_add")))
+                {
+                    html5QrcodeScanner.clear();
+                }
+            });
             html5QrcodeScanner.render(onScanSuccess);
         });
     });
