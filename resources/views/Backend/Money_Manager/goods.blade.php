@@ -127,6 +127,10 @@
                 }
             });
         });
+
+        $(document).on("click", "#goods_add_btn", function(e){
+            console.log(e);
+        });
     });
 </script>
 </body>
