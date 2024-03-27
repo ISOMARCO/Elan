@@ -10,7 +10,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12" style="text-align: center;margin-bottom: 20px;">
+                        <div class="col-12" style="text-align: center;">
                             <div id="reader" style="display: inline-block;"></div>
                             <div class="empty"></div>
                         </div>
