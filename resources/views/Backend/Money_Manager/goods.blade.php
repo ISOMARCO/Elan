@@ -111,11 +111,8 @@
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true,
                     aspectRatio: 1,
-                    disableFlip: true,
                     facingMode: {exact: "environment"},
-                    focusMode: "continuous",
-                    showZoomSliderIfSupported: true,
-                    defaultZoomValueIfSupported: 2
+                    focusMode: "continuous"
                 });
             html5QrcodeScanner.clear();
             var lastResult, countResults = 0;
