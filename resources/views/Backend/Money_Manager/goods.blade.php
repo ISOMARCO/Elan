@@ -79,6 +79,13 @@
 <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
 <script>
     $(document).ready(function() {
+        $(document).on("click", function()
+        {
+            if ($(event.target).is($("#goods_add")))
+            {
+                $("#reader").hide();
+            }
+        });
         $(document).on("click", "#goods_add_btn", function(){
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
             {
