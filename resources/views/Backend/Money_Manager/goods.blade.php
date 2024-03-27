@@ -48,6 +48,12 @@
                             <label for="price" class="input-group-text"><i class="fa-solid fa-money-bill-wave"></i></label>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="tax" name="tax" value="1.20" disabled>
+                        <div class="input-group-append">
+                            <label for="tax" class="input-group-text"><i class="fa-solid fa-receipt"></i></label>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-footer">
                     <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fa-solid fa-pen-to-square"></i></button>
