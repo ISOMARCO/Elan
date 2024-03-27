@@ -111,7 +111,7 @@
             if (decodedText !== lastResult) {
                 ++countResults;
                 lastResult = decodedText;
-                $("#barcode").val(decodedResult.decodedText);
+                //$("#barcode").val(decodedResult.decodedText);
                 html5QrcodeScanner.stop();
             }
 
