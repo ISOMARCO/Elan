@@ -122,7 +122,6 @@
             {
                 if($(event.target).is($("#goods_add")) || $(event.target).hasClass('close') || $(event.target).is('#modal-close'))
                 {
-                    html5QrcodeScanner.stop();
                     html5QrcodeScanner.clear();
                 }
             });
