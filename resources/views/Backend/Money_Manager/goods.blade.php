@@ -112,7 +112,7 @@
                 ++countResults;
                 lastResult = decodedText;
                 $("#barcode").val(decodedResult.decodedText);
-                html5QrcodeScanner.stop();
+                //html5QrcodeScanner.stop();
             }
 
         }
