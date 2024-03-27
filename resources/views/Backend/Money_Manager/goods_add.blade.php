@@ -10,33 +10,21 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="name" placeholder="Ad" id="name" autocomplete="off">
+                        <input type="number" class="form-control" id="barcode" name="barcode" value="23343434242" disabled>
                         <div class="input-group-append">
-                            <label for="name" class="input-group-text"><i class="fa-solid fa-user"></i></label>
+                            <label for="barcode" class="input-group-text"><i class="fa-solid fa-barcode"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="surname" placeholder="Soyad" id="surname" autocomplete="off">
+                        <input type="number" class="form-control" id="price" name="price" value="1.20" disabled>
                         <div class="input-group-append">
-                            <label for="surname" class="input-group-text"><i class="fa-solid fa-user"></i></label>
+                            <label for="price" class="input-group-text"><i class="fa-solid fa-money-bill-wave"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" autocomplete="off">
+                        <input type="number" class="form-control" id="tax" name="tax" value="18" disabled>
                         <div class="input-group-append">
-                            <label for="email" class="input-group-text"><i class="fa-solid fa-envelope"></i></label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Şifrə">
-                        <div class="input-group-append">
-                            <label for="password" class="input-group-text"><i class="fa-solid fa-lock"></i></label>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" name="password_repeat" id="password_repeat" placeholder="Şifrə təkrarı">
-                        <div class="input-group-append">
-                            <label for="password_repeat" class="input-group-text"><i class="fa-solid fa-lock"></i></label>
+                            <label for="tax" class="input-group-text"><i class="fa-solid fa-receipt"></i></label>
                         </div>
                     </div>
                 </div>
