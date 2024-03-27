@@ -10,19 +10,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <input type="number" class="form-control" id="barcode" name="barcode" value="23343434242" disabled>
+                        <input type="number" class="form-control" id="barcode" name="barcode">
                         <div class="input-group-append">
                             <label for="barcode" class="input-group-text"><i class="fa-solid fa-barcode"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="number" class="form-control" id="price" name="price" value="1.20" disabled>
+                        <input type="number" class="form-control" id="price" name="price">
                         <div class="input-group-append">
                             <label for="price" class="input-group-text"><i class="fa-solid fa-money-bill-wave"></i></label>
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="number" class="form-control" id="tax" name="tax" value="18" disabled>
+                        <input type="number" class="form-control" id="tax" name="tax">
                         <div class="input-group-append">
                             <label for="tax" class="input-group-text"><i class="fa-solid fa-receipt"></i></label>
                         </div>
