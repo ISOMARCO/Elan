@@ -139,7 +139,11 @@
         });
 
         $(document).on("click", "#goods_add_btn", function(){
+            $.ajax({
+                type: "POST",
+                url: "{{route('Backend.Money_Manager_CreateAction')}}",
 
+            });
         });
     });
 </script>
