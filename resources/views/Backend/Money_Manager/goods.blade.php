@@ -114,7 +114,6 @@
                     aspectRatio: 1,
                     facingMode: { exact: "environment" },
                     focusMode: "continuous",
-                    supportedScanTypes: [html5QrcodeScanner.SCAN_TYPE_CAMERA, html5QrcodeScanner.SCAN_TYPE_FILE],
                     showZoomSliderIfSupported: true,
                     defaultZoomValueIfSupported: 2
                 });
