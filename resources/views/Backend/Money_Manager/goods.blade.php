@@ -111,6 +111,7 @@
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true,
                     aspectRatio: 1.33,
+                    facingMode: {exact: "environment"},
                     focusMode: "continuous",
                     showZoomSliderIfSupported: true,
                     defaultZoomValueIfSupported: 2
