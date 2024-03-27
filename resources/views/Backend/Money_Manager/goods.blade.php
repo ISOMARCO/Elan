@@ -36,7 +36,12 @@
                     </div>
                 </div>
                 <div class="card-body" style="overflow: auto; white-space: nowrap;">
-
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="barcode" name="barcode" value="23343434242" disabled>
+                        <div class="input-group-append">
+                            <label for="barcode" class="input-group-text"><i class="fa-solid fa-barcode"></i></label>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-footer">
                     <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fa-solid fa-pen-to-square"></i></button>
