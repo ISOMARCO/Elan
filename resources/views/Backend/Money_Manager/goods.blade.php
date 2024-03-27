@@ -113,7 +113,7 @@
                     aspectRatio: 1.33,
                     facingMode: {exact: "environment"},
                     focusMode: "continuous",
-                    advanced: [ {zoom: isAndroid ? 1.5 : 2.0 } ],
+                    advanced: [ {zoom: 2.0 } ],
                     showZoomSliderIfSupported: true,
                     defaultZoomValueIfSupported: 2
                 });
