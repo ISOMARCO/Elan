@@ -2,6 +2,22 @@
 <html lang="en">
 <head>
     @include('Backend.Sections.head')
+    <style>
+        #reader {
+            width: 640px;
+        }
+        @media(max-width: 600px) {
+            #reader {
+                width: 300px;
+            }
+        }
+        .empty {
+            display: block;
+            width: 100%;
+            height: 20px;
+        }
+
+    </style>
 </head>
 <body>
 @include('Backend.Sections.header')
@@ -65,5 +81,48 @@
     </div>
 </section>
 @include('Backend.Sections.footer')
+<script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
+<script>
+    $(document).ready(function() {
+        var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
+        {
+            var minEdgeSizeThreshold = 250;
+            var edgeSizePercentage = 0.50;
+            var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
+                viewfinderHeight : viewfinderWidth;
+            var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
+            if (qrboxEdgeSize < minEdgeSizeThreshold)
+            {
+                if (minEdgeSize < minEdgeSizeThreshold) {
+                    return {width: minEdgeSize, height: minEdgeSize};
+                } else {
+                    return {
+                        width: (minEdgeSizeThreshold-150)*2,
+                        height: minEdgeSizeThreshold-150
+                    };
+                }
+            }
+            return {width: qrboxEdgeSize, height: qrboxEdgeSize};
+        }
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "reader", { fps: 10, qrbox: qrboxFunction, experimentalFeatures: {
+                    useBarCodeDetectorIfSupported: true
+                },
+                rememberLastUsedCamera: true,
+                showTorchButtonIfSupported: true});
+        var lastResult, countResults = 0;
+        function onScanSuccess(decodedText, decodedResult)
+        {
+            if (decodedText !== lastResult) {
+                ++countResults;
+                lastResult = decodedText;
+                $("#barcode").val(decodedResult.decodedText);
+                html5QrcodeScanner.stop();
+            }
+
+        }
+        html5QrcodeScanner.render(onScanSuccess);
+    });
+</script>
 </body>
 </html>

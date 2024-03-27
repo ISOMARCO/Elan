@@ -9,6 +9,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12" style="text-align: center;margin-bottom: 20px;">
+                            <div id="reader" style="display: inline-block;"></div>
+                            <div class="empty"></div>
+                        </div>
+                    </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="name" name="name" placeholder="Ad">
                         <div class="input-group-append">
