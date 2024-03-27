@@ -105,7 +105,7 @@
                 {
                     fps: 10,
                     qrbox: qrboxFunction,
-                    rememberLastUsedCamera: false,
+                    rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true,
                     aspectRatio: 1,
                     disableFlip: false,
