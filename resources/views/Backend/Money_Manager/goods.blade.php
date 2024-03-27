@@ -110,6 +110,9 @@
                     aspectRatio: 1,
                     disableFlip: false,
                     facingMode: {exact: "environment"},
+                    formatsToSupport: [
+                        Html5QrcodeSupportedFormats.CODE_128
+                    ],
                     focusMode: "continuous",
                     defaultZoomValueIfSupported: 2
                 });
