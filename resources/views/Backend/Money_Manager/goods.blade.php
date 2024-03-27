@@ -112,7 +112,8 @@
                     showTorchButtonIfSupported: true,
                     aspectRatio: 1,
                     facingMode: {exact: "environment"},
-                    focusMode: "continuous"
+                    focusMode: "continuous",
+                    defaultZoomValueIfSupported: 2
                 });
             html5QrcodeScanner.clear();
             var lastResult, countResults = 0;
