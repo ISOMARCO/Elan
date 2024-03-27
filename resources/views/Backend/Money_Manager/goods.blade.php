@@ -105,15 +105,15 @@
                 {
                     fps: 10,
                     qrbox: qrboxFunction,
-                    experimentalFeatures: {
-                        useBarCodeDetectorIfSupported: true
-                    },
+                    //experimentalFeatures: {
+                      //  useBarCodeDetectorIfSupported: true
+                    //},
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true,
-                    aspectRatio: 1.33,
+                    aspectRatio: 1.5,
                     facingMode: {exact: "environment"},
                     focusMode: "continuous",
-                    showZoomSliderIfSupported: true,
+                    //showZoomSliderIfSupported: true,
                     defaultZoomValueIfSupported: 2
                 });
             html5QrcodeScanner.clear();
