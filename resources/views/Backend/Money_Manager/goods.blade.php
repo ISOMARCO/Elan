@@ -121,7 +121,7 @@
             html5QrcodeScanner.render(onScanSuccess);
             $(document).on("click", function()
             {
-                if($(event.target).is($("#goods_add")) || $(event.target).is('#goods_add_form .close') || $(event.target).is('#goods_add_form #modal-close'))
+                if($(event.target).is($("#goods_add_form #goods_add")) || $(event.target).is('#goods_add_form .close') || $(event.target).is('#goods_add_form #modal-close'))
                 {
                     html5QrcodeScanner.clear();
                 }
