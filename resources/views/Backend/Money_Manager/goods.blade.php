@@ -4,12 +4,7 @@
     @include('Backend.Sections.head')
     <style>
         #reader {
-            width: 640px;
-        }
-        @media(max-width: 600px) {
-            #reader {
-                width: 300px;
-            }
+            width: 100%;
         }
         .empty {
             display: block;
