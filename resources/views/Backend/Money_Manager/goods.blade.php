@@ -105,6 +105,7 @@
                 },
                 rememberLastUsedCamera: true,
                 showTorchButtonIfSupported: true});
+        html5QrcodeScanner.stop();
         var lastResult, countResults = 0;
         function onScanSuccess(decodedText, decodedResult)
         {
@@ -113,7 +114,7 @@
                 lastResult = decodedText;
                 $("#barcode").val(decodedResult.decodedText);
                 console.log(decodedResult.decodedText);
-                //html5QrcodeScanner.stop();
+                html5QrcodeScanner.stop();
             }
 
         }
