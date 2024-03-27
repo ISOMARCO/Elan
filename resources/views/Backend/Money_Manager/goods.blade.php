@@ -118,7 +118,7 @@
                 }
 
             }
-            $(document).on("click", ".close, #modal-close", function()
+            $(document).on("click", function()
             {
                 if($(event.target).is($("#goods_add")) || $(event.target).hasClass('close') || $(event.target).is('#modal-close'))
                 {
