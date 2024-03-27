@@ -102,11 +102,22 @@
                 return {width: qrboxEdgeSize, height: qrboxEdgeSize};
             }
             var html5QrcodeScanner = new Html5QrcodeScanner(
-                "reader", { fps: 10, qrbox: qrboxFunction, experimentalFeatures: {
+                "reader",
+                {
+                    fps: 10,
+                    qrbox: qrboxFunction,
+                    experimentalFeatures: {
                         useBarCodeDetectorIfSupported: true
                     },
                     rememberLastUsedCamera: true,
-                    showTorchButtonIfSupported: true});
+                    showTorchButtonIfSupported: true,
+                    aspectRatio: 1,
+                    facingMode: { exact: "environment" },
+                    focusMode: "continuous",
+                    supportedScanTypes: [html5QrcodeScanner.SCAN_TYPE_CAMERA, html5QrcodeScanner.SCAN_TYPE_FILE],
+                    showZoomSliderIfSupported: true,
+                    defaultZoomValueIfSupported: 2
+                });
             html5QrcodeScanner.clear();
             var lastResult, countResults = 0;
             function onScanSuccess(decodedText, decodedResult)
