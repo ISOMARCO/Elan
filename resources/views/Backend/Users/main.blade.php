@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    @include('Backend.Sections.head')
+    @yield('Backend.Sections.head')
 </head>
 <body class="hold-transition sidebar-mini">
-    @include('Backend.Sections.header')
+    @yield('Backend.Sections.header')
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -83,7 +83,7 @@
             </div>
         </div>
     </section>
-    @include('Backend.Sections.footer')
+    @yield('Backend.Sections.footer')
 <script>
     $(document).ready(function(){
         $(document).on("click", ".card-footer button:first-child", function(e){
