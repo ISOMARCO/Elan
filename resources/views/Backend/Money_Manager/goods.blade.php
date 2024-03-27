@@ -34,7 +34,7 @@
 <section class="content">
     <div class="card">
         <div class="card-header">
-            <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#goods_add" id="goods_add_btn"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#goods_add" id="goods_add_card"><i class="fa-solid fa-plus"></i></button>
         </div>
         <div class="card-body">
             <div class="card collapsed-card" style="border: 1px solid {{Border_Random_Color()}}">
@@ -79,7 +79,7 @@
 <script src="{{asset('Assets/Backend/js/barcodeDetection.min.js')}}"></script>
 <script>
     $(document).ready(function() {
-        $(document).on("click", "#goods_add_btn", function(){
+        $(document).on("click", "#goods_add_card", function(){
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
             {
                 var minEdgeSizeThreshold = 250;
