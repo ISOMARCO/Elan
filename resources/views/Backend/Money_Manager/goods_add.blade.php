@@ -39,9 +39,7 @@
                     <button type="button" class="btn btn-primary" id="goods_add_btn">Yadda saxla <i class="fa-solid fa-spinner fa-spin-pulse" style="display: none;" id="progress"></i></button>
                 </div>
             </div>
-            <!-- /.modal-content -->
         </div>
-        <!-- /.modal-dialog -->
     </div>
     @csrf
 </form>
