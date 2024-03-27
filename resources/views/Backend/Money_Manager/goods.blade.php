@@ -100,7 +100,11 @@
             return {width: qrboxEdgeSize, height: qrboxEdgeSize};
         }
         var html5QrcodeScanner = new Html5QrcodeScanner(
-            "reader", { fps: 10, qrbox: qrboxFunction});
+            "reader", { fps: 10, qrbox: qrboxFunction, experimentalFeatures: {
+                    useBarCodeDetectorIfSupported: true
+                },
+                rememberLastUsedCamera: true,
+                showTorchButtonIfSupported: true});
         var lastResult, countResults = 0;
         function onScanSuccess(decodedText, decodedResult)
         {
