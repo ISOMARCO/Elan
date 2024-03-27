@@ -103,7 +103,7 @@
             var html5QrcodeScanner = new Html5QrcodeScanner(
                 "reader",
                 {
-                    fps: 30,
+                    fps: 60,
                     qrbox: qrboxFunction,
                     rememberLastUsedCamera: true,
                     showTorchButtonIfSupported: true,
