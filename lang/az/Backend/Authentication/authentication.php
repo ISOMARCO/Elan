@@ -4,5 +4,5 @@ return [
     'Loading' => 'Yüklənir',
     'Login' => 'Daxil ol',
     'Wrong_Email' => 'Email adresi düzgün yazın',
-    'Wrong_Login_Information' => 'Email və ya şifrə yanlışdır2'
+    'Wrong_Login_Information' => 'Email və ya şifrə yanlışdır'
 ];
