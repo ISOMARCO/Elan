@@ -111,7 +111,7 @@
                     disableFlip: false,
                     facingMode: {exact: "environment"},
                     focusMode: "continuous",
-                    //showZoomSliderIfSupported: true,
+                    showZoomSliderIfSupported: true,
                     defaultZoomValueIfSupported: 2
                 });
             html5QrcodeScanner.clear();
