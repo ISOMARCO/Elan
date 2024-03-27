@@ -10,6 +10,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ad">
+                        <div class="input-group-append">
+                            <label for="name" class="input-group-text"><i class="fa-solid fa-basket-shopping"></i></label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
                         <input type="number" class="form-control" id="barcode" name="barcode" placeholder="Barkod">
                         <div class="input-group-append">
                             <label for="barcode" class="input-group-text"><i class="fa-solid fa-barcode"></i></label>
