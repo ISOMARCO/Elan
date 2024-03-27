@@ -114,7 +114,7 @@
                     ++countResults;
                     lastResult = decodedText;
                     $("#goods_add_form #barcode").val(decodedResult.decodedText);
-                    html5QrcodeScanner.stop();
+                    //html5QrcodeScanner.stop();
                 }
 
             }
