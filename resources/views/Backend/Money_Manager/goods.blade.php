@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="number" class="form-control" id="tax" name="tax" value="1.20" disabled>
+                        <input type="number" class="form-control" id="tax" name="tax" value="18" disabled>
                         <div class="input-group-append">
                             <label for="tax" class="input-group-text"><i class="fa-solid fa-receipt"></i></label>
                         </div>
