@@ -80,6 +80,7 @@
 <script>
     $(document).ready(function() {
         $(document).on("click", "#goods_add_card", function(){
+            console.log("83");
             var qrboxFunction = function(viewfinderWidth, viewfinderHeight)
             {
                 var minEdgeSizeThreshold = 250;
@@ -121,15 +122,17 @@
             html5QrcodeScanner.render(onScanSuccess);
             $(document).on("click", function()
             {
+                console.log("124");
                 if($(event.target).is($("#goods_add_form #goods_add")) || $(event.target).is('#goods_add_form .close') || $(event.target).is('#goods_add_form #modal-close'))
                 {
+                    console.log("127");
                     html5QrcodeScanner.clear();
                 }
             });
         });
 
-        $(document).on("click", "#goods_add_btn", function(e){
-            console.log(e);
+        $(document).on("click", "#goods_add_btn", function(){
+
         });
     });
 </script>
