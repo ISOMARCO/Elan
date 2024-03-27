@@ -111,7 +111,8 @@
                     disableFlip: false,
                     facingMode: {exact: "environment"},
                     formatsToSupport: [
-                        Html5QrcodeSupportedFormats.CODE_128
+                        Html5QrcodeSupportedFormats.EAN_13,
+                        Html5QrcodeSupportedFormats.ITF
                     ],
                     focusMode: "continuous",
                     defaultZoomValueIfSupported: 2
