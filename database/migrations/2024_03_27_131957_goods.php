@@ -21,7 +21,7 @@ return new class extends Migration
                 $table->string('Barcode', 100)->nullable();
                 $table->decimal('Price', 8, 2)->default(0);
                 $table->decimal('Tax', 8, 2)->default(18);
-                $table->integer('User');
+                $table->uuid('User')->nullable();
                 $table->string('Status', 30)->default('ACTIVE');
                 $table->timestamp('Created_Date');
             });

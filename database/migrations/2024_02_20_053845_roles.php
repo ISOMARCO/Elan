@@ -16,7 +16,7 @@ return new class extends Migration
         if(!Schema::hasTable($this->table))
         {
             Schema::create($this->table, function (Blueprint $table) {
-                $table->bigIncrements('Id')->default(DB::raw('gen_random_uuid()'));
+                $table->uuid('Id')->default(DB::raw('gen_random_uuid()'));
                 $table->string('Code', 50)->unique();
                 $table->longText('Description')->nullable();
                 $table->string('Status', 30)->default('ACTIVE');
