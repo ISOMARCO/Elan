@@ -26,6 +26,7 @@ return new class extends Migration
                 $table->timestamp('Created_Date');
                 $table->unique(['Barcode', 'Status']);
                 $table->foreign('User')->references('Id')->on('Users');
+                $table->index();
             });
         }
     }
