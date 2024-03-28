@@ -7,9 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     protected $table = 'Goods';
     public function up(): void
     {
