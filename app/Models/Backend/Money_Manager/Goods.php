@@ -45,7 +45,7 @@ class Goods extends Model
             'Barcode' => $this->barcode,
             'Price' => $this->price,
             'Tax' => $this->tax,
-            #'User' => Session::get('id'),
+            'User' => Session::get('id'),
             'Status' => $this->status,
             'Created_Date' => date('Y-m-d H:i:s')
         ]);
