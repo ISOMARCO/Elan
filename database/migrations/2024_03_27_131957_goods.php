@@ -15,14 +15,14 @@ return new class extends Migration
         if(!Schema::hasTable($this->table))
         {
             Schema::create($this->table, function (Blueprint $table) {
-                $table->uuid('Id');
+                $table->uuid('Id')->default('gen_random_uuid()');
                 $table->string('Name', 50);
                 $table->string('Barcode', 100)->nullable();
                 $table->decimal('Price', 8, 2)->default(0);
                 $table->decimal('Tax', 8, 2)->default(18);
                 $table->integer('User');
                 $table->string('Status', 30)->default('ACTIVE');
-                $table->timestamp('Created_Date');
+                $table->timestamp('Created_Date')->default("to_char(now(), 'YYYY-MM-DD HH24:MI:SS')");
             });
         }
     }
