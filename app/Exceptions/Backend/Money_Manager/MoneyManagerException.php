@@ -20,7 +20,10 @@ class MoneyManagerException extends Exception
     protected function errorCodeMessage() : String
     {
         $codes = [
-            '4000'
+            '4000' => 'Ulduzlu xanalar boş buraxıla bilməz',
+            '4001' => 'Qiymət 0-dan böyük olmalıdır',
+            '4002' => 'Vergi 0-dan kiçik ola bilməz',
+            '4003' => 'Məhsul əlavə olunmadı. Zəhmət olmasa yenidən cəhd edin'
         ];
         if(isset($codes[$this->code]))
         {
@@ -32,7 +35,7 @@ class MoneyManagerException extends Exception
     protected function reportErrorCodes() : String
     {
         $codes = [
-            '5000'
+            '4003'
         ];
         if(isset($codes[$this->code]))
         {

@@ -142,7 +142,35 @@
             $.ajax({
                 type: "POST",
                 url: "{{route('Backend.Money_Manager_CreateAction')}}",
-
+                data: $("#goods_add_form").serialize(),
+                dataType: "json",
+                beforeSend: function()
+                {
+                    $("#goods_add_form #progress").show();
+                    $("#goods_add_form input, #goods_add_btn").attr("disabled", "disabled");
+                },
+                error: function(x)
+                {
+                    var errorResponse = x.responseJSON || x.responseText;
+                    Swal.fire({
+                        title: '',
+                        text: errorResponse.error,
+                        icon: 'error'
+                    });
+                },
+                success: function(e)
+                {
+                    Swal.fire({
+                        title: '',
+                        text: e.success,
+                        icon: 'success'
+                    });
+                },
+                complete: function()
+                {
+                    $("#goods_add_form #progress").hide();
+                    $("#goods_add_form input, #goods_add_btn").removeAttr("disabled");
+                }
             });
         });
     });

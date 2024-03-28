@@ -27,7 +27,8 @@ class GoodsController extends Controller
             $goods = new Goods();
             try
             {
-                $goods->allGoods();
+                $goods->name($request->post('name'))->barcode($request->post('barcode'))->price($request->post('price'))->tax($request->post('tax'))->status($request->post('status'));
+                return response()->json(['success' => 'Məhsul əlavə olundu', 'goods' => $goods->createGoods()]);
             }
             catch(MoneyManagerException $e)
             {
