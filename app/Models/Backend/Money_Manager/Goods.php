@@ -14,8 +14,8 @@ class Goods extends Model
     protected $table = 'Goods';
     protected string|NULL $name = NULL;
     protected string|NULL $barcode = NULL;
-    protected float $price = 0.0;
-    protected float $tax = 18.0;
+    protected float|NULL $price = 0.0;
+    protected float|NULL $tax = 18.0;
     protected string $status = 'ACTIVE';
     public function __call($method, $args = []) : Goods
     {
