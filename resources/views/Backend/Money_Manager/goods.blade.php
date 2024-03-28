@@ -66,6 +66,12 @@
                             <label for="tax" class="input-group-text"><i class="fa-solid fa-receipt"></i></label>
                         </div>
                     </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="date" value="@Date_To_String($value->Created_Date)" disabled>
+                        <div class="input-group-append">
+                            <label for="date" class="input-group-text"><i class="fa-regular fa-calendar-days"></i></label>
+                        </div>
+                    </div>
                 </div>
                 <div class="card-footer">
                     <button type="button" class="btn btn-outline-secondary" style="float: left;" data-toggle="modal" data-target="#user_edit"><i class="fa-solid fa-pen-to-square"></i></button>
