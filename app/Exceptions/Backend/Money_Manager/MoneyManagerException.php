@@ -12,18 +12,18 @@ class MoneyManagerException extends Exception
         $this->code = $statusCode;
         if($message == NULL)
         {
-            $message = $this->errorCodeMessage();
+            $message = $this->errorCodeMessage($message);
         }
         parent::__construct($message, $statusCode);
     }
 
-    protected function errorCodeMessage() : String
+    protected function errorCodeMessage($message = NULL) : String
     {
         $codes = [
             '4000' => 'Ulduzlu xanalar boş buraxıla bilməz',
             '4001' => 'Qiymət 0-dan böyük olmalıdır',
             '4002' => 'Vergi 0-dan kiçik ola bilməz',
-            '4003' => 'Məhsul əlavə olunmadı. Zəhmət olmasa yenidən cəhd edin'
+            '4003' => 'Məhsul əlavə olunmadı. Zəhmət olmasa yenidən cəhd edin '.$message
         ];
         if(isset($codes[$this->code]))
         {

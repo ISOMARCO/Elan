@@ -40,19 +40,21 @@ class Goods extends Model
         {
             throw new MoneyManagerException(4002);
         }
-        $insert = DB::table($this->table)->insert([
-            'Name' => $this->name,
-            'Barcode' => $this->barcode,
-            'Price' => $this->price,
-            'Tax' => $this->tax,
-            'User' => Session::get('id'),
-            'Status' => $this->status,
-            'Created_Date' => date('Y-m-d H:i:s')
-        ]);
-        return true;
-        if(!$insert)
+        try
         {
-            throw new MoneyManagerException(4003);
+            DB::table($this->table)->insert([
+                'Name' => $this->name,
+                'Barcode' => $this->barcode,
+                'Price' => $this->price,
+                'Tax' => $this->tax,
+                'User' => Session::get('id'),
+                'Status' => $this->status,
+                'Created_Date' => date('Y-m-d H:i:s')
+            ]);
+        }
+        catch(\Exception $e)
+        {
+            throw new MoneyManagerException(4003, $e->getMessage());
         }
         return DB::table($this->table)->where('Barcode', '=', $this->barcode)->first();
     }
