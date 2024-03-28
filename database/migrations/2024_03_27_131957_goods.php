@@ -24,6 +24,7 @@ return new class extends Migration
                 $table->uuid('User')->nullable();
                 $table->string('Status', 30)->default('ACTIVE');
                 $table->timestamp('Created_Date');
+                $table->unique(['Barcode', 'Status']);
             });
         }
     }
