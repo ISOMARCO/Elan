@@ -28,11 +28,11 @@ class Goods extends Model
 
     public function createGoods() : object|bool
     {
-        return true;
         if($this->name == NULL || $this->barcode == NULL || $this->price === NULL || $this->tax === NULL)
         {
             throw new MoneyManagerException(4000);
         }
+        return true;
         if($this->price <= 0)
         {
             throw new MoneyManagerException(4001);
