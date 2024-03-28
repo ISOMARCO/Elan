@@ -18,10 +18,10 @@ class GoodsController extends Controller
 
     public function createAction(Request $request) : RedirectResponse|JsonResponse
     {
-        if(!$request->isMethod('POST'))
-        {
-            return abort(403, 'Method not allowed');
-        }
+//        if(!$request->isMethod('POST'))
+//        {
+//            return abort(403, 'Method not allowed');
+//        }
         if($request->ajax() || $request->wantsJson())
         {
             $goods = new Goods();
