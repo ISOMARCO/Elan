@@ -37,9 +37,10 @@
             <button type="button" class="btn btn-primary" style="float: right;" data-toggle="modal" data-target="#goods_add" id="goods_add_card"><i class="fa-solid fa-plus"></i></button>
         </div>
         <div class="card-body">
+            @foreach($all as $value)
             <div class="card collapsed-card" style="border: 1px solid {{Border_Random_Color()}}">
                 <div class="card-header">
-                    <h3 class="card-title">Sud</h3>
+                    <h3 class="card-title">{{$value->Name}}</h3>
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fa-solid fa-plus"></i>
@@ -71,6 +72,7 @@
                     <button type="button" class="btn btn-outline-danger" style="float: right;" data-toggle="modal" data-target="#user_ban"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
+            @endforeach
             @include('Backend.Money_Manager.goods_add')
         </div>
     </div>

@@ -13,7 +13,17 @@ class GoodsController extends Controller
 {
     public function main()
     {
-        return view('Backend.Money_Manager.goods');
+        try
+        {
+            $goods = new Goods();
+            $all = $goods->allGoods();
+            return view('Backend.Money_Manager.goods', compact('all'));
+        }
+        catch(\Exception $e)
+        {
+            $all = (object) [];
+            return view('Backend.Money_Manager.goods', compact('all'));
+        }
     }
 
     public function createAction(Request $request) : RedirectResponse|JsonResponse

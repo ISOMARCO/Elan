@@ -22,8 +22,20 @@ class Goods extends Model
         $this->$method = $args[0];
         return $this;
     }
-    public function allGoods()
+    public function allGoods($status = NULL) : object
     {
+        try
+        {
+            if($status == NULL)
+            {
+                return DB::table($this->table)->where('User', '=', Session::get('id'))->get();
+            }
+            return DB::table($this->table)->where('User', '=', Session::get('id'))->where('Status', '=', $status)->get();
+        }
+        catch(\Exception $e)
+        {
+            throw new MoneyManagerException(4004);
+        }
     }
 
     public function createGoods() : object|bool

@@ -23,7 +23,8 @@ class MoneyManagerException extends Exception
             '4000' => 'Ulduzlu xanalar boş buraxıla bilməz',
             '4001' => 'Qiymət 0-dan böyük olmalıdır',
             '4002' => 'Vergi 0-dan kiçik ola bilməz',
-            '4003' => 'Məhsul əlavə olunmadı. Zəhmət olmasa yenidən cəhd edin '.$message
+            '4003' => 'Məhsul əlavə olunmadı. Zəhmət olmasa yenidən cəhd edin',
+            '4004' => 'Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin'
         ];
         if(isset($codes[$this->code]))
         {
