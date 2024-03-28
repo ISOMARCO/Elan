@@ -23,7 +23,7 @@ return new class extends Migration
                 $table->decimal('Tax', 8, 2)->default(18);
                 $table->integer('User');
                 $table->string('Status', 30)->default('ACTIVE');
-                $table->timestamp('Created_Date')->default(DB::raw("to_char(now(), 'YYYY-MM-DD HH24:MI:SS')"));
+                $table->timestamp('Created_Date');
             });
         }
     }
