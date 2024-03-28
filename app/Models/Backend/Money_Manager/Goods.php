@@ -16,7 +16,7 @@ class Goods extends Model
     protected string|NULL $barcode = NULL;
     protected float|NULL $price = 0.0;
     protected float|NULL $tax = 18.0;
-    protected string $status = 'ACTIVE';
+    protected string|NULL $status = 'ACTIVE';
     public function __call($method, $args = []) : Goods
     {
         $this->$method = $args[0];
