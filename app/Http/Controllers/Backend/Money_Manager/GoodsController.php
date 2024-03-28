@@ -22,8 +22,8 @@ class GoodsController extends Controller
 //        {
 //            return abort(403, 'Method not allowed');
 //        }
-        if($request->ajax() || $request->wantsJson())
-        {
+        //if($request->ajax() || $request->wantsJson())
+        //{
             $goods = new Goods();
             try
             {
@@ -34,7 +34,7 @@ class GoodsController extends Controller
             {
                 return response()->json(['error' => $e->getMessage()], 500);
             }
-        }
-        return abort(403, 'Unauthorized');
+        //}
+        //return abort(403, 'Unauthorized');
     }
 }
