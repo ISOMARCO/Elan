@@ -32,7 +32,6 @@ class Goods extends Model
         {
             throw new MoneyManagerException(4000);
         }
-        return true;
         if($this->price <= 0)
         {
             throw new MoneyManagerException(4001);
@@ -41,6 +40,7 @@ class Goods extends Model
         {
             throw new MoneyManagerException(4002);
         }
+        return true;
         $insert = DB::table($this->table)->insert([
             'Name' => $this->name,
             'Barcode' => $this->barcode,
