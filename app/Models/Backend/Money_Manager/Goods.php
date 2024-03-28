@@ -66,6 +66,10 @@ class Goods extends Model
         }
         catch(\Exception $e)
         {
+            if($e->getCode() == '23505' && strpos($e->getMessage(), 'goods_barcode_status_unique') !== false)
+            {
+                throw new MoneyManagerException(4005);
+            }
             throw new MoneyManagerException(4003, $e->getMessage());
         }
         return DB::table($this->table)->where('Barcode', '=', $this->barcode)->first();

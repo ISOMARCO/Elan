@@ -24,7 +24,8 @@ class MoneyManagerException extends Exception
             '4001' => 'Qiymət 0-dan böyük olmalıdır',
             '4002' => 'Vergi 0-dan kiçik ola bilməz',
             '4003' => 'Məhsul əlavə olunmadı. Zəhmət olmasa yenidən cəhd edin',
-            '4004' => 'Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin'
+            '4004' => 'Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin',
+            '4005' => 'Barkod sistemdə mövcuddur'
         ];
         if(isset($codes[$this->code]))
         {
