@@ -48,7 +48,7 @@ class Goods extends Model
                 'Price' => $this->price,
                 'Tax' => $this->tax,
                 'User' => Session::get('id'),
-                'Status' => $this->status,
+                'Status' => 'ACTIVE',
                 'Created_Date' => date('Y-m-d H:i:s')
             ]);
         }
