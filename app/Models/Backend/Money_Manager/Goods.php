@@ -40,7 +40,6 @@ class Goods extends Model
         {
             throw new MoneyManagerException(4002);
         }
-        return true;
         $insert = DB::table($this->table)->insert([
             'Name' => $this->name,
             'Barcode' => $this->barcode,
@@ -50,6 +49,7 @@ class Goods extends Model
             'Status' => $this->status,
             'Created_Date' => date('Y-m-d H:i:s')
         ]);
+        return true;
         if(!$insert)
         {
             throw new MoneyManagerException(4003);
