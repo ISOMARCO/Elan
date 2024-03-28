@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 class Goods extends Model
 {
     use HasFactory;
-    protected string $table = 'Goods';
+    protected $table = 'Goods';
     protected string|NULL $name = NULL;
     protected string|NULL $barcode = NULL;
     protected float $price = 0.0;
