@@ -42,10 +42,7 @@ class HomeController extends Controller
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen(json_encode($data)))
-        );
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/html; charset=UTF-8', 'Access-Control-Allow-Credentials: true','Content-Encoding: br', 'X-Robots-Tag: noindex'));
 
 // isteği yap ve cevabı al
         $response = curl_exec($ch);
