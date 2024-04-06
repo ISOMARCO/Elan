@@ -10,7 +10,10 @@ class HomeController extends Controller
         $url = "https://sandbox.booknetic.com/sandboxes/sandbox-saas-6f49ae724d32a0cf3823/wp-admin/admin-ajax.php";
 
 // POST verisi
-        $data = array(
+        $data =
+            array(
+                'cart' =>
+            array(
             'location' => -1,
             'staff' => -1,
             'service_category' => '',
@@ -24,7 +27,12 @@ class HomeController extends Controller
             'recurring_times' => "{}",
             'appointments' => "[]",
             'customer_data' => (object) array()
-        );
+        ),
+                'action' => 'bkntc_get_data_date_time',
+                'current' => '0',
+                'deposit_full_amount' => '0',
+                'step' => 'date_time'
+            );
 
 // curl başlat
         $ch = curl_init();
